@@ -8,7 +8,7 @@ function Question(props) {
 }
 
 Question.propTypes = {
-	optionalString: PropTypes.string
-}
+	content: PropTypes.number.isRequired
+};
 
 export default Question;
