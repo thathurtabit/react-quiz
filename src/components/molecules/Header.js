@@ -9,10 +9,11 @@ const HeaderWrap = styled.header`
 `;
 
 export default function Header(props)  {
-  return (
-  	<HeaderWrap>
-	  <CurrentTitle title="React Quiz" />
-	</HeaderWrap>
-  );
+	return (
+		<HeaderWrap>
+			<CurrentTitle title={props.question} />
+			<h3>Round: {props.round}</h3>
+		</HeaderWrap>
+	);
 }
 
