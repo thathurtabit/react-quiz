@@ -92,7 +92,7 @@ export default class App extends Component {
   }
 
   // React Lifecycle
-  componentDidMount() {
+  componentWillMount() {
     
     // Shuffle Answers
     const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1));
@@ -140,14 +140,15 @@ export default class App extends Component {
 
   checkNextButton() {
     const continueArray = Object.values(this.state.selected);
-    console.log(continueArray);
-
+    
     if(continueArray.every(val => val)) {
       this.setState({
         next: {
           text: "Next",
           disabled: false,
         }
+      }, () => {
+        console.log(continueArray);
       });
     }
   }
@@ -156,8 +157,6 @@ export default class App extends Component {
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
     this.setAnswerSelected(event.currentTarget.name);
-
-    this.checkNextButton();
   }
 
   // Set User Answer
@@ -169,9 +168,9 @@ export default class App extends Component {
 
     this.setState({
         selected: updatedGroupSelected,
+    }, () => {
+      console.log(this.state.selected);
     });
-
-    console.log(this.state.selected);
   }
 
   // Set User Answer
@@ -184,11 +183,12 @@ export default class App extends Component {
     this.setState({
         answersCount: updatedAnswersCount,
         answer: answer
+    }, () => {
+      console.log(this.state.answersCount);
+      this.checkNextButton(); // Check if we're ok to go to the next section
     });
 
   }
-
-
 
 
   // Next button
@@ -215,10 +215,18 @@ export default class App extends Component {
             answer3Choices: quizData[currentIndex].answer3,
             answer4Choices: quizData[currentIndex].answer4,
             answer5Choices: quizData[currentIndex].answer5,
+            selected: {
+              group1: false,
+              group2: false,
+              group3: false,
+              group4: false,
+              group5: false,
+            },
             index: currentIndex,
             round: currentRound,
             next: {
-              text: "Next"
+              text: "Next",
+              disabled: true,
             },
           });
 
