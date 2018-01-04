@@ -1,94 +1,300 @@
 var quizData = [
   {
-      question: "What franchise would you rather play a game from?",
+      question: "Diverge vs. Converge",
       intro: "My intro paragraph",
-      answers: [
+      answer1: [
           {
-              type: "Microsoft",
-              content: "Halo"
+              id: "answer1a",
+              group: "group1",
+              type: "diverge",
+              content: "Starting"
           },
           {
-              type: "Nintendo",
-              content: "Pokemon"
+              id: "answer1b",
+              group: "group1",
+              type: "converge",
+              content: "Finishing"
+          },
+      ],
+      answer2: [
+          {
+              id: "answer2a",
+              group: "group2",
+              type: "diverge",
+              content: "Winning the pitch"
           },
           {
-              type: "Sony",
-              content: "Uncharted"
-          }
-      ]
+              id: "answer2b",
+              group: "group2",
+              type: "converge",
+              content: "Winning the award"
+          },
+      ],
+      answer3: [
+          {
+              id: "answer3a",
+              group: "group3",
+              type: "diverge",
+              content: "Heads on"
+          },
+          {
+              id: "answer3b",
+              group: "group3",
+              type: "converge",
+              content: "Hands on"
+          },
+      ],
+      answer4: [
+          {
+              id: "answer4a",
+              group: "group4",
+              type: "diverge",
+              content: "Wander on the beach"
+          },
+          {
+              id: "answer4b",
+              group: "group4",
+              type: "converge",
+              content: "Climb the mountain"
+          },
+      ],
+      answer5: [
+          {
+              id: "answer5a",
+              group: "group5",
+              type: "diverge",
+              content: "Anything is possible"
+          },
+          {
+              id: "answer5b",
+              group: "group5",
+              type: "converge",
+              content: "Getting it done"
+          },
+      ],
   },
   {
-      question: "Which console would you prefer to play with friends?",
+      question: "Abstract vs. Real",
       intro: "My intro paragraph",
-      answers: [
+      answer1: [
           {
-              type: "Microsoft",
-              content: "X-Box"
+              id: "answer1a",
+              group: "group1",
+              type: "abstract",
+              content: "Head in the clouds"
           },
           {
-              type: "Nintendo",
-              content: "Nintendo 64"
+              id: "answer1b",
+              group: "group1",
+              type: "real",
+              content: "Feet on the ground"
+          },
+      ],
+      answer2: [
+          {
+              id: "answer2a",
+              group: "group2",
+              type: "abstract",
+              content: "Listening"
           },
           {
-              type: "Sony",
-              content: "Playstation 1"
-          }
-      ]
+              id: "answer2a",
+              group: "group2",
+              type: "real",
+              content: "Talking"
+          },
+      ],
+      answer3: [
+          {
+              id: "answer3a",
+              group: "group3",
+              type: "abstract",
+              content: "The big idea"
+          },
+          {
+              id: "answer3b",
+              group: "group3",
+              type: "real",
+              content: "Attention to detail"
+          },
+      ],
+      answer4: [
+          {
+              id: "answer4a",
+              group: "group4",
+              type: "abstract",
+              content: "Principles"
+          },
+          {
+              id: "answer4b",
+              group: "group4",
+              type: "real",
+              content: "Practice"
+          },
+      ],
+      answer5: [
+          {
+              id: "answer5a",
+              group: "group5",
+              type: "abstract",
+              content: "Setting the direction"
+          },
+          {
+              id: "answer5b",
+              group: "group5",
+              type: "real",
+              content: "Going on the journey"
+          },
+      ],
   },
   {
-      question: "Which of these racing franchises would you prefer to play a game from?",
+      question: "Group vs. Individual",
       intro: "My intro paragraph",
-      answers: [
+      answer1: [
           {
-              type: "Microsoft",
-              content: "Forza"
+              id: "answer1a",
+              group: "group1",
+              type: "group",
+              content: "Stand up"
           },
           {
-              type: "Nintendo",
-              content: "Mario Kart"
+              id: "answer1b",
+              group: "group1",
+              type: "individual",
+              content: "Sit down"
+          },
+      ],
+      answer2: [
+          {
+              id: "answer2a",
+              group: "group2",
+              type: "group",
+              content: "Workshop"
           },
           {
-              type: "Sony",
-              content: "Gran Turismo"
-          }
-      ]
+              id: "answer2b",
+              group: "group2",
+              type: "individual",
+              content: "Desk research"
+          },
+      ],
+      answer3: [
+          {
+              id: "answer3a",
+              group: "group3",
+              type: "group",
+              content: "Design crit"
+          },
+          {
+              id: "answer3b",
+              group: "group3",
+              type: "individual",
+              content: "Peer review"
+          },
+      ],
+      answer4: [
+          {
+              id: "answer4a",
+              group: "group4",
+              type: "group",
+              content: "Stereo"
+          },
+          {
+              id: "answer4b",
+              group: "group4",
+              type: "individual",
+              content: "Headphone"
+          },
+      ],
+      answer5: [
+          {
+              id: "answer5a",
+              group: "group5",
+              type: "group",
+              content: "House party"
+          },
+          {
+              id: "answer5b",
+              group: "group5",
+              type: "individual",
+              content: "Me time"
+          },
+      ],
   },
   {
-      question: "Which of these games do you think is best?",
+      question: "Sense vs. Measure",
       intro: "My intro paragraph",
-      answers: [
+      answer1: [
           {
-              type: "Microsoft",
-              content: "BioShock"
+              id: "answer1a",
+              group: "group1",
+              type: "sense",
+              content: "Elevator pitch"
           },
           {
-              type: "Nintendo",
-              content: "The Legend of Zelda: Ocarina of Time"
+              id: "answer1b",
+              group: "group1",
+              type: "measure",
+              content: "Business plan"
+          },
+      ],
+      answer2: [
+          {
+              id: "answer2a",
+              group: "group2",
+              type: "sense",
+              content: "We feel..."
           },
           {
-              type: "Sony",
-              content: "Final Fantasy VII"
-          }
-      ]
+              id: "answer2b",
+              group: "group2",
+              type: "measure",
+              content: "We know..."
+          },
+      ],
+      answer3: [
+          {
+              id: "answer3a",
+              group: "group3",
+              type: "sense",
+              content: "Why people do it"
+          },
+          {
+              id: "answer3b",
+              group: "group3",
+              type: "measure",
+              content: "What people do"
+          },
+      ],
+      answer4: [
+          {
+              id: "answer4a",
+              group: "group4",
+              type: "sense",
+              content: "Art"
+          },
+          {
+              id: "answer4b",
+              group: "group4",
+              type: "measure",
+              content: "Science"
+          },
+      ],
+      answer5: [
+          {
+              id: "answer5a",
+              group: "group5",
+              type: "sense",
+              content: "Always dreaming"
+          },
+          {
+              id: "answer5b",
+              group: "group5",
+              type: "measure",
+              content: "Reality check"
+          },
+      ],
   },
-  {
-      question: "What console would you prefer to own?",
-      intro: "My intro paragraph",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "X-Box One"
-          },
-          {
-              type: "Nintendo",
-              content: "Wii U"
-          },
-          {
-              type: "Sony",
-              content: "Playstation 4"
-          }
-      ]
-  }
 ];
 
 export default quizData;

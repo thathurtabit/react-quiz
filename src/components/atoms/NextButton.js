@@ -9,6 +9,12 @@ const NextButton = styled.button`
   padding: 1rem 2rem;
   text-align: center;
 
+  &[disabled],
+  &[disabled]:hover {
+  	background: palevioletred;
+  	cursor: not-allowed;
+  	opacity: 0.5;
+  }
   &:hover {
   	background: black;
   	cursor: pointer;
@@ -16,5 +22,5 @@ const NextButton = styled.button`
 `;
 
 export default function Next(props)  {
-  return <NextButton onClick={() => props.onClick()}>{props.nextText}</NextButton>
+  return <NextButton onClick={() => props.onClick()} disabled={props.disabled}>{props.nextText}</NextButton>
 }
