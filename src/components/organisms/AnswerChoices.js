@@ -9,6 +9,7 @@ export default function AnswerChoices(props) {
         id={key.id}
         group={key.group}
         key={key.content}
+        checked={key.checked}
         answerContent={key.content}
         answerType={key.type}
         answer={props.answer}

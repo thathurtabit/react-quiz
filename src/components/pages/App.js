@@ -61,6 +61,13 @@ export default class App extends Component {
       answer3Choices: [],
       answer4Choices: [],
       answer5Choices: [],
+      selected: {
+        group1: false,
+        group2: false,
+        group3: false,
+        group4: false,
+        group5: false,
+      },
       answersCount: {
         diverge: 0,
         converge: 0,
@@ -77,7 +84,8 @@ export default class App extends Component {
       next: {
         text: "Next",
         disabled: true,
-      },
+      },      
+
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -130,14 +138,47 @@ export default class App extends Component {
     return array;
   };
 
+  checkNextButton() {
+    const continueArray = Object.values(this.state.selected);
+    console.log(continueArray);
+
+    if(continueArray.every(val => val)) {
+      this.setState({
+        next: {
+          text: "Next",
+          disabled: false,
+        }
+      });
+    }
+  }
+
   // Handle Answer Selected
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
+    this.setAnswerSelected(event.currentTarget.name);
+
+    this.checkNextButton();
   }
 
+  // Set User Answer
+  setAnswerSelected(groupSelected) {
+   
+    const updatedGroupSelected = update(this.state.selected, {
+      [groupSelected]: {$set: true}
+    });
+
+    this.setState({
+        selected: updatedGroupSelected,
+    });
+
+    console.log(this.state.selected);
+  }
+
+  // Set User Answer
   setUserAnswer(answer) {
+   
     const updatedAnswersCount = update(this.state.answersCount, {
-      [answer]: {$apply: (currentValue) => currentValue + 1}
+      [answer]: {$apply: (currentValue) => currentValue += 1}
     });
 
     this.setState({
@@ -145,8 +186,10 @@ export default class App extends Component {
         answer: answer
     });
 
-    console.log(this.state.answersCount);
   }
+
+
+
 
   // Next button
   jumpTo(index) {

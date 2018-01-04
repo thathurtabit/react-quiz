@@ -4,72 +4,72 @@ var quizData = [
       intro: "My intro paragraph",
       answer1: [
           {
-              id: "answer1a",
-              group: "group1",
-              type: "diverge",
-              content: "Starting"
+            id: "answer1a",
+            group: "group1",
+            type: "diverge",
+            content: "Starting"
           },
           {
-              id: "answer1b",
-              group: "group1",
-              type: "converge",
-              content: "Finishing"
+            id: "answer1b",
+            group: "group1",
+            type: "converge",
+            content: "Finishing"
           },
       ],
       answer2: [
           {
-              id: "answer2a",
-              group: "group2",
-              type: "diverge",
-              content: "Winning the pitch"
+            id: "answer2a",
+            group: "group2",
+            type: "diverge",
+            content: "Winning the pitch"
           },
           {
-              id: "answer2b",
-              group: "group2",
-              type: "converge",
-              content: "Winning the award"
+            id: "answer2b",
+            group: "group2",
+            type: "converge",
+            content: "Winning the award"
           },
       ],
       answer3: [
           {
-              id: "answer3a",
-              group: "group3",
-              type: "diverge",
-              content: "Heads on"
+            id: "answer3a",
+            group: "group3",
+            type: "diverge",
+            content: "Heads on"
           },
           {
-              id: "answer3b",
-              group: "group3",
-              type: "converge",
-              content: "Hands on"
+            id: "answer3b",
+            group: "group3",
+            type: "converge",
+            content: "Hands on"
           },
       ],
       answer4: [
           {
-              id: "answer4a",
-              group: "group4",
-              type: "diverge",
-              content: "Wander on the beach"
+            id: "answer4a",
+            group: "group4",
+            type: "diverge",
+            content: "Wander on the beach"
           },
           {
-              id: "answer4b",
-              group: "group4",
-              type: "converge",
-              content: "Climb the mountain"
+            id: "answer4b",
+            group: "group4",
+            type: "converge",
+            content: "Climb the mountain"
           },
       ],
       answer5: [
           {
-              id: "answer5a",
-              group: "group5",
-              type: "diverge",
-              content: "Anything is possible"
+            id: "answer5a",
+            group: "group5",
+            type: "diverge",
+            content: "Anything is possible"
           },
           {
-              id: "answer5b",
-              group: "group5",
-              type: "converge",
-              content: "Getting it done"
+            id: "answer5b",
+            group: "group5",
+            type: "converge",
+            content: "Getting it done"
           },
       ],
   },

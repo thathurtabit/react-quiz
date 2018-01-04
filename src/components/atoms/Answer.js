@@ -8,10 +8,8 @@ export default function Answer(props) {
         type="radio"
         className="radioCustomButton"
         name={props.group}
-        //checked={props.answerType === props.answer}
         id={props.id}
         value={props.answerType}
-        //disabled={props.answer}
         onChange={props.onAnswerSelected}
       />
       <label className="radioCustomLabel" htmlFor={props.id}>

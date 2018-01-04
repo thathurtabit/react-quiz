@@ -22,5 +22,5 @@ const NextButton = styled.button`
 `;
 
 export default function Next(props)  {
-  return <NextButton onClick={() => props.onClick()} disabled={props.disabled}>{props.nextText}</NextButton>
+  return <NextButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}>{props.nextText}</NextButton>
 }
