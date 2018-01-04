@@ -32,6 +32,12 @@ const Quiz = styled.section`
   }
 `;
 
+const Answers = styled.section`
+  background: rgba(0,0,0,0.025);
+  padding: 3rem 5rem;
+  margin: 3rem 0;
+`;
+
 const duration = 300;
 
 // Fade handler
@@ -266,38 +272,33 @@ export default class App extends Component {
         <Quiz>
           <Header question={this.state.question} round={this.state.round} />
           <Intro introText={this.state.questionIntro} />
-          <hr />
-          <AnswerChoices
-            answer={this.state.answer}
-            answerChoices={this.state.answer1Choices}
-            roundTotal={this.state.roundsTotal}
-            onAnswerSelected={this.handleAnswerSelected}
-          />
-          <AnswerChoices
-            answer={this.state.answer}
-            answerChoices={this.state.answer2Choices}
-            roundTotal={this.state.roundsTotal}
-            onAnswerSelected={this.handleAnswerSelected}
-          />
-          <AnswerChoices
-            answer={this.state.answer}
-            answerChoices={this.state.answer3Choices}
-            roundTotal={this.state.roundsTotal}
-            onAnswerSelected={this.handleAnswerSelected}
-          />
-          <AnswerChoices
-            answer={this.state.answer}
-            answerChoices={this.state.answer4Choices}
-            roundTotal={this.state.roundsTotal}
-            onAnswerSelected={this.handleAnswerSelected}
-          />
-          <AnswerChoices
-            answer={this.state.answer}
-            answerChoices={this.state.answer5Choices}
-            roundTotal={this.state.roundsTotal}
-            onAnswerSelected={this.handleAnswerSelected}
-          />
-          <hr />
+          <Answers>
+            <AnswerChoices
+              answer={this.state.answer}
+              answerChoices={this.state.answer1Choices}
+              onAnswerSelected={this.handleAnswerSelected}
+            />
+            <AnswerChoices
+              answer={this.state.answer}
+              answerChoices={this.state.answer2Choices}
+              onAnswerSelected={this.handleAnswerSelected}
+            />
+            <AnswerChoices
+              answer={this.state.answer}
+              answerChoices={this.state.answer3Choices}
+              onAnswerSelected={this.handleAnswerSelected}
+            />
+            <AnswerChoices
+              answer={this.state.answer}
+              answerChoices={this.state.answer4Choices}
+              onAnswerSelected={this.handleAnswerSelected}
+            />
+            <AnswerChoices
+              answer={this.state.answer}
+              answerChoices={this.state.answer5Choices}
+              onAnswerSelected={this.handleAnswerSelected}
+            />
+          </Answers>
           <Next nextText={this.state.next.text} disabled={this.state.next.disabled} onClick={() => this.jumpTo(this.state.index)} />
         </Quiz>
       </Fade>

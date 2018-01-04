@@ -7,13 +7,15 @@ var quizData = [
             id: "answer1a",
             group: "group1",
             type: "diverge",
-            content: "Starting"
+            content: "Starting",
+            active: false,
           },
           {
             id: "answer1b",
             group: "group1",
             type: "converge",
-            content: "Finishing"
+            content: "Finishing",
+            active: false,
           },
       ],
       answer2: [
@@ -21,13 +23,15 @@ var quizData = [
             id: "answer2a",
             group: "group2",
             type: "diverge",
-            content: "Winning the pitch"
+            content: "Winning the pitch",
+            active: false,
           },
           {
             id: "answer2b",
             group: "group2",
             type: "converge",
-            content: "Winning the award"
+            content: "Winning the award",
+            active: false,
           },
       ],
       answer3: [
@@ -35,13 +39,15 @@ var quizData = [
             id: "answer3a",
             group: "group3",
             type: "diverge",
-            content: "Heads on"
+            content: "Heads on",
+            active: false,
           },
           {
             id: "answer3b",
             group: "group3",
             type: "converge",
-            content: "Hands on"
+            content: "Hands on",
+            active: false,
           },
       ],
       answer4: [
@@ -49,13 +55,15 @@ var quizData = [
             id: "answer4a",
             group: "group4",
             type: "diverge",
-            content: "Wander on the beach"
+            content: "Wander on the beach",
+            active: false,
           },
           {
             id: "answer4b",
             group: "group4",
             type: "converge",
-            content: "Climb the mountain"
+            content: "Climb the mountain",
+            active: false,
           },
       ],
       answer5: [
@@ -63,13 +71,15 @@ var quizData = [
             id: "answer5a",
             group: "group5",
             type: "diverge",
-            content: "Anything is possible"
+            content: "Anything is possible",
+            active: false,
           },
           {
             id: "answer5b",
             group: "group5",
             type: "converge",
-            content: "Getting it done"
+            content: "Getting it done",
+            active: false,
           },
       ],
   },
@@ -98,7 +108,7 @@ var quizData = [
               content: "Listening"
           },
           {
-              id: "answer2a",
+              id: "answer2b",
               group: "group2",
               type: "real",
               content: "Talking"
