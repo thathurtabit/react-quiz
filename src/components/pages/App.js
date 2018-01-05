@@ -11,26 +11,30 @@ import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
 
 const Wrapper = styled.section`
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
   color: palevioletred;
 
   &.fade-enter {
     opacity: 0.01;
+    transform: scale(.98);
   }
 
   &.fade-enter.fade-enter-active {
     opacity: 1;
     transition: opacity 300ms ease-out;
+    transform: scale(1);
   }
 
   &.fade-exit {
     opacity: 1;
+    transform: scale(1);
   }
 
   &.fade-exit.fade-exit-active {
     opacity: 0.01;
-    transition: opacity 300ms ease-in;
+    transform: scale(.98);
+    transition: opacity 350ms ease-in, transform 350ms ease-out;
   }
 `;
 
@@ -41,9 +45,9 @@ const Quiz = styled.section`
 `;
 
 const Answers = styled.section`
-  background: rgba(0,0,0,0.025);
-  padding: 3rem 5rem;
-  margin: 3rem 0;
+  background: rgba(0,0,0,0.05);
+  padding: 2rem 3rem;
+  margin: 1rem 0;
 `;
 
 const duration = 300;
@@ -98,6 +102,8 @@ const initialState = {
     text: "Next",
     disabled: true,
   },
+  resultArray: [],
+  resultAcronym: '',
   results: {
     title: resultData.DAIS.title,
     text: resultData.DAIS.text,
@@ -217,8 +223,6 @@ export default class App extends Component {
     console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
     console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
      
-
-
   }
 
     // Set User Answer
@@ -304,7 +308,11 @@ export default class App extends Component {
       setTimeout(() => {
         this.setState({
           show: !this.state.show,
-      });
+        });
+
+        // Process Results
+        this.processResults();
+
         // Transition In
         setTimeout(() => {
           this.setState({
@@ -319,6 +327,39 @@ export default class App extends Component {
       }, duration);
     }
   }
+
+
+  // Unselect answers
+  processResults() {
+    let resultsObj = this.state.answersCount;
+    let resultArray = [];
+    let resultAcronym = '';
+
+    // Loop over results object
+    Object.keys(resultsObj).forEach(key => {
+      if (resultsObj[key] > 0) {
+        resultArray.push(key);
+      }
+    });
+
+    // Create Acronym based on first letters to be referenced to resultsData.js     
+    for (let i = 0; i < resultArray.length; i++) {
+      resultAcronym += resultArray[i].charAt(0).toUpperCase();
+    }
+    
+    this.setState({
+      resultArray: resultArray,
+      resultAcronym: resultAcronym,
+      results: {
+        title: resultData[resultAcronym].title,
+        text: resultData[resultAcronym].text,
+      }
+    }, () => {
+      console.log(`resultArray: ${this.state.resultArray} | resultAcronym: ${this.state.resultAcronym}`);
+    });
+
+  }
+
 
   // Unselect answers
   unSelectAnswers() {
@@ -385,9 +426,11 @@ export default class App extends Component {
               text: "Next",
               disabled: true,
             },
+            resultArray: '',
+            resultAcronym: '',
             results: {
-              title: resultData.DAIS.title,
-              text: resultData.DAIS.text,
+              title: '',
+              text: '',
             }
           }, () => {
             // Unselect answers
@@ -404,9 +447,10 @@ export default class App extends Component {
     return (
       <Fade in={this.state.show}>
         <Wrapper>
+          <Header mainTitle="Design Quiz" question={this.state.question} round={this.state.round} />
+          <Intro style={{display: this.state.display.quiz ? 'block' : 'none'}} introText={this.state.questionIntro} />
           <Quiz style={{display: this.state.display.quiz ? 'block' : 'none'}}>
-            <Header question={this.state.question} round={this.state.round} />
-            <Intro introText={this.state.questionIntro} />
+            
             <Answers onChange={this.handleAnswerSelected}>
               <AnswerChoices
                 answer={this.state.answer}

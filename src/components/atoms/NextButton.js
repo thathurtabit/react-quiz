@@ -5,8 +5,8 @@ const NextButton = styled.button`
   background: palevioletred;
   border: 0;
   color: #fff;
-  font-size: 1em;
-  padding: 1rem 2rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
   text-align: center;
 
   &[disabled],

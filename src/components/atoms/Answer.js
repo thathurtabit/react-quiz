@@ -7,7 +7,7 @@ const AnswerLi = styled.li`
 `;
 
 const AnswerInput = styled.input`
-  margin: 20px;
+  margin: 10px;
   display: none;
 
   &:checked+label{
