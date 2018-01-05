@@ -74,8 +74,6 @@ const initialState = {
   answer4Choices: [],
   answer5Choices: [],
   currentAnswers: [],
-  currentAnswerValueA: '',
-  currentAnswerValueB: '',
   selected: {
     group1: false,
     group2: false,
@@ -176,50 +174,49 @@ export default class App extends Component {
   // Handle Answer Selected
   handleAnswerSelected(event) {
     // Use spread operator to return an array of elements
+    // Get array of radio inside UL
+    let currentAnswersArray = [...event.currentTarget.querySelectorAll('input[type=radio]')];
     let selectedAnswerValueATotal = 0; // Current selected radiobutton value
     let selectedAnswerValueBTotal = 0; // Current selected radiobutton value
     let currentAnswerValueArray = [];
     let totalSelected = 0; // Total selected
-    // Get array of radio inside UL
-    let currentAnswersArray = [...event.currentTarget.querySelectorAll('input[type=radio]')];
+    let currentAnswerValueA = '';
+    let currentAnswerValueB = '';
+    
     // Loop through and get values of the row of LIs
     for(let i = 0; i < 2; i++) {
       currentAnswerValueArray.push(currentAnswersArray[i].value);
     }
-    
-    // Update values
-    this.setState({
-      currentAnswers: currentAnswersArray,
-      currentAnswerValueA: currentAnswerValueArray[0],
-      currentAnswerValueB: currentAnswerValueArray[1],
-    }, () => {
 
-      // After SetState has happened...
-      // Check which radio input which is currently :checked
-      for(let i = 0; i < this.state.currentAnswers.length; i++) {
-        if (this.state.currentAnswers[i].checked) {
-          if (this.state.currentAnswers[i].value === this.state.currentAnswerValueA) {
-            selectedAnswerValueATotal += 1;
-          } else if (this.state.currentAnswers[i].value === this.state.currentAnswerValueB) {
-            selectedAnswerValueBTotal += 1;
-          }
-        }
-        totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal; // Total selected
-      }
+    currentAnswerValueA = currentAnswerValueArray[0];
+    currentAnswerValueB = currentAnswerValueArray[1];
     
-      // If the total selected is the same as the total questions...
-      if (totalSelected === this.state.currentAnswers.length / 2) {
-        // Check which value got the most votes
-        if (selectedAnswerValueATotal > selectedAnswerValueBTotal) {
-          this.setUserAnswer(this.state.currentAnswerValueA, this.state.currentAnswerValueB);
-        } else {
-          this.setUserAnswer(this.state.currentAnswerValueB, this.state.currentAnswerValueA);
+    // After SetState has happened...
+    // Check which radio input which is currently :checked
+    for(let i = 0; i < currentAnswersArray.length; i++) {
+      if (currentAnswersArray[i].checked) {
+        if (currentAnswersArray[i].value === currentAnswerValueA) {
+          selectedAnswerValueATotal += 1;
+        } else if (currentAnswersArray[i].value === currentAnswerValueB) {
+          selectedAnswerValueBTotal += 1;
         }
       }
+      totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal; // Total selected
+    }
+  
+    // If the total selected is the same as the total questions...
+    if (totalSelected === currentAnswersArray.length / 2) {
+      // Check which value got the most votes
+      if (selectedAnswerValueATotal > selectedAnswerValueBTotal) {
+        this.setUserAnswer(currentAnswerValueA, currentAnswerValueB);
+      } else {
+        this.setUserAnswer(currentAnswerValueB, currentAnswerValueA);
+      }
+    }
 
-      console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${this.state.currentAnswerValueA} | value b: ${this.state.currentAnswerValueB}`);
-      console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
-    });    
+    console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
+    console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
+     
 
 
   }
@@ -264,6 +261,7 @@ export default class App extends Component {
     // If there's still questions to ask...
     if (index < quizData.length - 1) {
 
+
       // Transition Out
       setTimeout(() => {
         this.setState({ show: !this.state.show });
@@ -294,6 +292,8 @@ export default class App extends Component {
               disabled: true,
             },
           });
+
+          this.unSelectAnswers();
 
         }, duration);
       }, duration);
@@ -328,10 +328,7 @@ export default class App extends Component {
     // Loop through array and uncheck answers
     for(let i = 0; i < selectedAnswers.length; i++) {
         selectedAnswers[i].checked = false;
-        selectedAnswers[i].removeEventListener('click', this.handleAnswerSelected);
     }
-
-
   }
 
   // Handle Restart
@@ -345,55 +342,61 @@ export default class App extends Component {
     const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5));
 
     // Reset state
-    this.setState({
-     show: false,
-      display: {
-        quiz: true,
-        result: false,
-      },
-      question: quizData[0].question,
-      questionIntro: quizData[0].intro,
-      selected: {
-        group1: false,
-        group2: false,
-        group3: false,
-        group4: false,
-        group5: false,
-      },
-      answer1Choices: shuffledAnswer1Choices[0],
-      answer2Choices: shuffledAnswer2Choices[0],
-      answer3Choices: shuffledAnswer3Choices[0],
-      answer4Choices: shuffledAnswer4Choices[0],
-      answer5Choices: shuffledAnswer5Choices[0],
-      currentAnswers: [],
-      currentAnswerValueA: 'Dick',
-      currentAnswerValueB: 'Cream',
-      answersCount: {
-        diverge: 0,
-        converge: 0,
-        abstract: 0,
-        real: 0,
-        group: 0,
-        individual: 0,
-        sense: 0,
-        measure: 0,
-      },
-      index: 0,
-      round: 1,
-      next: {
-        text: "Next",
-        disabled: true,
-      },
-      results: {
-        title: resultData.DAIS.title,
-        text: resultData.DAIS.text,
-      }
-    }, () => {
-      // Unselect answers
-      this.unSelectAnswers();
-    });
-  };
+     // Transition Out
+      setTimeout(() => {
+        this.setState({ show: !this.state.show });
+        // Transition In
+        setTimeout(() => {
 
+          this.setState({
+           show: !this.state.show,
+            display: {
+              quiz: true,
+              result: false,
+            },
+            question: quizData[0].question,
+            questionIntro: quizData[0].intro,
+            selected: {
+              group1: false,
+              group2: false,
+              group3: false,
+              group4: false,
+              group5: false,
+            },
+            answer1Choices: shuffledAnswer1Choices[0],
+            answer2Choices: shuffledAnswer2Choices[0],
+            answer3Choices: shuffledAnswer3Choices[0],
+            answer4Choices: shuffledAnswer4Choices[0],
+            answer5Choices: shuffledAnswer5Choices[0],
+            currentAnswers: [],
+            answersCount: {
+              diverge: 0,
+              converge: 0,
+              abstract: 0,
+              real: 0,
+              group: 0,
+              individual: 0,
+              sense: 0,
+              measure: 0,
+            },
+            index: 0,
+            round: 1,
+            next: {
+              text: "Next",
+              disabled: true,
+            },
+            results: {
+              title: resultData.DAIS.title,
+              text: resultData.DAIS.text,
+            }
+          }, () => {
+            // Unselect answers
+            this.unSelectAnswers();
+          });
+
+        }, duration);
+      }, duration);
+  }
 
   // Render
   render() {
