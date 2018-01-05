@@ -41,7 +41,6 @@ export default function AnswerChoices(props) {
         answerType={key.type}
         active={key.active}
         answer={props.answer}
-        onAnswerSelected={props.onAnswerSelected}
       />
     );
   }

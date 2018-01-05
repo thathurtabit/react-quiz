@@ -161,9 +161,70 @@ export default class App extends Component {
 
   // Handle Answer Selected
   handleAnswerSelected(event) {
-    this.setUserAnswer(event.currentTarget.value);
-    this.setAnswerSelected(event.currentTarget.name);
+    // Use spread operator to return an array of elements
+    let currentAnswers = [...event.currentTarget.querySelectorAll('input[type=radio]')];
+    let selectedAnswerValueATotal = 0; // Current selected radiobutton value
+    let selectedAnswerValueBTotal = 0; // Current selected radiobutton value
+    let currentAnswerValueArray = [];
+    let currentAnswerValueA; 
+    let currentAnswerValueB;
+    let totalSelected = 0; // Total selected
+  
+    // Get the values of the current round
+    for(let i = 0; i < 2; i++) {
+        currentAnswerValueArray.push(currentAnswers[i].value);
+    }
+
+    // Update values
+    currentAnswerValueA = currentAnswerValueArray[0];
+    currentAnswerValueB = currentAnswerValueArray[1];
+
+    console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
+
+    // Check which radio input which is currently :checked
+    for(let i = 0; i < currentAnswers.length; i++) {
+      if (currentAnswers[i].checked) {
+        if (currentAnswers[i].value === currentAnswerValueA) {
+          selectedAnswerValueATotal += 1;
+        } else if (currentAnswers[i].value === currentAnswerValueB) {
+          selectedAnswerValueBTotal += 1;
+        }
+      }
+      totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal; // Total selected
+    }
+
+    console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
+
+    // If the total selected is the same as the total questions...
+    if (totalSelected === currentAnswers.length / 2) {
+      // Check which value got the most votes
+      if (selectedAnswerValueATotal > selectedAnswerValueBTotal) {
+        this.setUserAnswer(currentAnswerValueA, currentAnswerValueB);
+      } else {
+        this.setUserAnswer(currentAnswerValueB, currentAnswerValueA);
+      }
+    }
   }
+
+
+    // Set User Answer
+  setUserAnswer(selectedAnswer, unselectedAnswer) {
+   
+    const updatedSelectedAnswersCount = update(this.state.answersCount, {
+      [selectedAnswer]: {$set: 1},
+      [unselectedAnswer]: {$set: 0},
+    });
+
+    this.setState({
+        answersCount: updatedSelectedAnswersCount,
+        answer: selectedAnswer
+    }, () => {
+      console.log(this.state.answersCount);
+      this.checkNextButton(); // Check if we're ok to go to the next section
+    });
+
+  }
+
 
   // Set User Answer
   setAnswerSelected(groupSelected) {
@@ -179,22 +240,7 @@ export default class App extends Component {
     });
   }
 
-  // Set User Answer
-  setUserAnswer(answer) {
-   
-    const updatedAnswersCount = update(this.state.answersCount, {
-      [answer]: {$apply: (currentValue) => currentValue += 1}
-    });
 
-    this.setState({
-        answersCount: updatedAnswersCount,
-        answer: answer
-    }, () => {
-      console.log(this.state.answersCount);
-      this.checkNextButton(); // Check if we're ok to go to the next section
-    });
-
-  }
 
 
   // Next button
@@ -272,31 +318,26 @@ export default class App extends Component {
         <Quiz>
           <Header question={this.state.question} round={this.state.round} />
           <Intro introText={this.state.questionIntro} />
-          <Answers>
+          <Answers onChange={this.handleAnswerSelected}>
             <AnswerChoices
               answer={this.state.answer}
               answerChoices={this.state.answer1Choices}
-              onAnswerSelected={this.handleAnswerSelected}
             />
             <AnswerChoices
               answer={this.state.answer}
               answerChoices={this.state.answer2Choices}
-              onAnswerSelected={this.handleAnswerSelected}
             />
             <AnswerChoices
               answer={this.state.answer}
               answerChoices={this.state.answer3Choices}
-              onAnswerSelected={this.handleAnswerSelected}
             />
             <AnswerChoices
               answer={this.state.answer}
               answerChoices={this.state.answer4Choices}
-              onAnswerSelected={this.handleAnswerSelected}
             />
             <AnswerChoices
               answer={this.state.answer}
               answerChoices={this.state.answer5Choices}
-              onAnswerSelected={this.handleAnswerSelected}
             />
           </Answers>
           <Next nextText={this.state.next.text} disabled={this.state.next.disabled} onClick={() => this.jumpTo(this.state.index)} />

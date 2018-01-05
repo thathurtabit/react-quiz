@@ -40,7 +40,7 @@ export default function Answer(props) {
         name={props.group}
         id={props.id}
         value={props.answerType}
-        onChange={props.onAnswerSelected}
+        //onChange={props.onAnswerSelected}
       />
       <AnswerLabel
         className={props.active}
