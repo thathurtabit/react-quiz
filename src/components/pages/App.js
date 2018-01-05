@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import update from 'immutability-helper';
 import quizData from '../../api/quizData';
+import resultData from '../../api/resultData';
 import Header from '../molecules/Header';
 import Intro from '../atoms/Intro';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
+import Results from '../organisms/Results';
 
-const Quiz = styled.section`
+const Wrapper = styled.section`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
@@ -32,6 +34,12 @@ const Quiz = styled.section`
   }
 `;
 
+const Quiz = styled.section`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
 const Answers = styled.section`
   background: rgba(0,0,0,0.025);
   padding: 3rem 5rem;
@@ -51,6 +59,52 @@ const Fade = ({ children, ...props }) => (
   </CSSTransition>
 );
 
+// Set my initial state
+const initialState = {
+  show: false,
+  display: {
+    quiz: true,
+    result: false,
+  },
+  question: quizData[0].question,
+  questionIntro: quizData[0].intro,
+  answer1Choices: [],
+  answer2Choices: [],
+  answer3Choices: [],
+  answer4Choices: [],
+  answer5Choices: [],
+  currentAnswers: [],
+  currentAnswerValueA: '',
+  currentAnswerValueB: '',
+  selected: {
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: false,
+    group5: false,
+  },
+  answersCount: {
+    diverge: 0,
+    converge: 0,
+    abstract: 0,
+    real: 0,
+    group: 0,
+    individual: 0,
+    sense: 0,
+    measure: 0,
+  },
+  index: 0,
+  round: 1,
+  roundsTotal: quizData.length,
+  next: {
+    text: "Next",
+    disabled: true,
+  },
+  results: {
+    title: resultData.DAIS.title,
+    text: resultData.DAIS.text,
+  }
+};
 
 // Create App class
 export default class App extends Component {
@@ -58,41 +112,7 @@ export default class App extends Component {
   // State constructor
   constructor(props) {
     super(props);
-    this.state = {
-      show: false,
-      question: quizData[0].question,
-      questionIntro: quizData[0].intro,
-      answer1Choices: [],
-      answer2Choices: [],
-      answer3Choices: [],
-      answer4Choices: [],
-      answer5Choices: [],
-      selected: {
-        group1: false,
-        group2: false,
-        group3: false,
-        group4: false,
-        group5: false,
-      },
-      answersCount: {
-        diverge: 0,
-        converge: 0,
-        abstract: 0,
-        real: 0,
-        group: 0,
-        individual: 0,
-        sense: 0,
-        measure: 0,
-      },
-      index: 0,
-      round: 1,
-      roundsTotal: quizData.length,
-      next: {
-        text: "Next",
-        disabled: true,
-      },      
-
-    };
+    this.state = initialState;
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
@@ -156,50 +176,53 @@ export default class App extends Component {
   // Handle Answer Selected
   handleAnswerSelected(event) {
     // Use spread operator to return an array of elements
-    let currentAnswers = [...event.currentTarget.querySelectorAll('input[type=radio]')];
     let selectedAnswerValueATotal = 0; // Current selected radiobutton value
     let selectedAnswerValueBTotal = 0; // Current selected radiobutton value
     let currentAnswerValueArray = [];
-    let currentAnswerValueA; 
-    let currentAnswerValueB;
     let totalSelected = 0; // Total selected
-  
-    // Get the values of the current round
+    // Get array of radio inside UL
+    let currentAnswersArray = [...event.currentTarget.querySelectorAll('input[type=radio]')];
+    // Loop through and get values of the row of LIs
     for(let i = 0; i < 2; i++) {
-        currentAnswerValueArray.push(currentAnswers[i].value);
+      currentAnswerValueArray.push(currentAnswersArray[i].value);
     }
-
+    
     // Update values
-    currentAnswerValueA = currentAnswerValueArray[0];
-    currentAnswerValueB = currentAnswerValueArray[1];
+    this.setState({
+      currentAnswers: currentAnswersArray,
+      currentAnswerValueA: currentAnswerValueArray[0],
+      currentAnswerValueB: currentAnswerValueArray[1],
+    }, () => {
 
-    console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
-
-    // Check which radio input which is currently :checked
-    for(let i = 0; i < currentAnswers.length; i++) {
-      if (currentAnswers[i].checked) {
-        if (currentAnswers[i].value === currentAnswerValueA) {
-          selectedAnswerValueATotal += 1;
-        } else if (currentAnswers[i].value === currentAnswerValueB) {
-          selectedAnswerValueBTotal += 1;
+      // After SetState has happened...
+      // Check which radio input which is currently :checked
+      for(let i = 0; i < this.state.currentAnswers.length; i++) {
+        if (this.state.currentAnswers[i].checked) {
+          if (this.state.currentAnswers[i].value === this.state.currentAnswerValueA) {
+            selectedAnswerValueATotal += 1;
+          } else if (this.state.currentAnswers[i].value === this.state.currentAnswerValueB) {
+            selectedAnswerValueBTotal += 1;
+          }
+        }
+        totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal; // Total selected
+      }
+    
+      // If the total selected is the same as the total questions...
+      if (totalSelected === this.state.currentAnswers.length / 2) {
+        // Check which value got the most votes
+        if (selectedAnswerValueATotal > selectedAnswerValueBTotal) {
+          this.setUserAnswer(this.state.currentAnswerValueA, this.state.currentAnswerValueB);
+        } else {
+          this.setUserAnswer(this.state.currentAnswerValueB, this.state.currentAnswerValueA);
         }
       }
-      totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal; // Total selected
-    }
 
-    console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
+      console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${this.state.currentAnswerValueA} | value b: ${this.state.currentAnswerValueB}`);
+      console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
+    });    
 
-    // If the total selected is the same as the total questions...
-    if (totalSelected === currentAnswers.length / 2) {
-      // Check which value got the most votes
-      if (selectedAnswerValueATotal > selectedAnswerValueBTotal) {
-        this.setUserAnswer(currentAnswerValueA, currentAnswerValueB);
-      } else {
-        this.setUserAnswer(currentAnswerValueB, currentAnswerValueA);
-      }
-    }
+
   }
-
 
     // Set User Answer
   setUserAnswer(selectedAnswer, unselectedAnswer) {
@@ -219,7 +242,6 @@ export default class App extends Component {
 
   }
 
-
   // Set User Answer
   setAnswerSelected(groupSelected) {
    
@@ -233,9 +255,6 @@ export default class App extends Component {
       console.log(this.state.selected);
     });
   }
-
-
-
 
   // Next button
   jumpTo(index) {
@@ -279,29 +298,101 @@ export default class App extends Component {
         }, duration);
       }, duration);
 
+    // You've reached the results page
     } else {
        // Transition Out
       setTimeout(() => {
-        this.setState({ show: !this.state.show });
+        this.setState({
+          show: !this.state.show,
+      });
         // Transition In
         setTimeout(() => {
-
           this.setState({
             // Transition Out
             show: !this.state.show,
-            question: "Result:",
-            questionIntro: "Dunno Bruv",
-            index: -1,
-            round: 0,
-            next: {
-              text: "Restart?"
-            },
+            display: {
+              quiz: false,
+              result: true,
+            },         
           });
-
         }, duration);
       }, duration);
     }
   }
+
+  // Unselect answers
+  unSelectAnswers() {
+    // Use spread operator to return an array of elements
+    let selectedAnswers = [...document.querySelectorAll('input[type=radio]')];
+  
+    // Loop through array and uncheck answers
+    for(let i = 0; i < selectedAnswers.length; i++) {
+        selectedAnswers[i].checked = false;
+        selectedAnswers[i].removeEventListener('click', this.handleAnswerSelected);
+    }
+
+
+  }
+
+  // Handle Restart
+  handleReset = () => {
+
+    // Shuffle Answers
+    const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1));
+    const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2));
+    const shuffledAnswer3Choices = quizData.map((round) => this.shuffleArray(round.answer3));
+    const shuffledAnswer4Choices = quizData.map((round) => this.shuffleArray(round.answer4));
+    const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5));
+
+    // Reset state
+    this.setState({
+     show: false,
+      display: {
+        quiz: true,
+        result: false,
+      },
+      question: quizData[0].question,
+      questionIntro: quizData[0].intro,
+      selected: {
+        group1: false,
+        group2: false,
+        group3: false,
+        group4: false,
+        group5: false,
+      },
+      answer1Choices: shuffledAnswer1Choices[0],
+      answer2Choices: shuffledAnswer2Choices[0],
+      answer3Choices: shuffledAnswer3Choices[0],
+      answer4Choices: shuffledAnswer4Choices[0],
+      answer5Choices: shuffledAnswer5Choices[0],
+      currentAnswers: [],
+      currentAnswerValueA: 'Dick',
+      currentAnswerValueB: 'Cream',
+      answersCount: {
+        diverge: 0,
+        converge: 0,
+        abstract: 0,
+        real: 0,
+        group: 0,
+        individual: 0,
+        sense: 0,
+        measure: 0,
+      },
+      index: 0,
+      round: 1,
+      next: {
+        text: "Next",
+        disabled: true,
+      },
+      results: {
+        title: resultData.DAIS.title,
+        text: resultData.DAIS.text,
+      }
+    }, () => {
+      // Unselect answers
+      this.unSelectAnswers();
+    });
+  };
 
 
   // Render
@@ -309,33 +400,45 @@ export default class App extends Component {
 
     return (
       <Fade in={this.state.show}>
-        <Quiz>
-          <Header question={this.state.question} round={this.state.round} />
-          <Intro introText={this.state.questionIntro} />
-          <Answers onChange={this.handleAnswerSelected}>
-            <AnswerChoices
-              answer={this.state.answer}
-              answerChoices={this.state.answer1Choices}
-            />
-            <AnswerChoices
-              answer={this.state.answer}
-              answerChoices={this.state.answer2Choices}
-            />
-            <AnswerChoices
-              answer={this.state.answer}
-              answerChoices={this.state.answer3Choices}
-            />
-            <AnswerChoices
-              answer={this.state.answer}
-              answerChoices={this.state.answer4Choices}
-            />
-            <AnswerChoices
-              answer={this.state.answer}
-              answerChoices={this.state.answer5Choices}
-            />
-          </Answers>
-          <Next nextText={this.state.next.text} disabled={this.state.next.disabled} onClick={() => this.jumpTo(this.state.index)} />
-        </Quiz>
+        <Wrapper>
+          <Quiz style={{display: this.state.display.quiz ? 'block' : 'none'}}>
+            <Header question={this.state.question} round={this.state.round} />
+            <Intro introText={this.state.questionIntro} />
+            <Answers onChange={this.handleAnswerSelected}>
+              <AnswerChoices
+                answer={this.state.answer}
+                answerChoices={this.state.answer1Choices}
+              />
+              <AnswerChoices
+                answer={this.state.answer}
+                answerChoices={this.state.answer2Choices}
+              />
+              <AnswerChoices
+                answer={this.state.answer}
+                answerChoices={this.state.answer3Choices}
+              />
+              <AnswerChoices
+                answer={this.state.answer}
+                answerChoices={this.state.answer4Choices}
+              />
+              <AnswerChoices
+                answer={this.state.answer}
+                answerChoices={this.state.answer5Choices}
+              />
+            </Answers>
+            <Next nextText={this.state.next.text} disabled={this.state.next.disabled} onClick={() => this.jumpTo(this.state.index)} />
+          </Quiz>
+
+          <Results
+            show={this.state.display.result}
+            nextText="Restart"
+            title={this.state.results.title}
+            text={this.state.results.text}
+            disabled={this.state.display.result}
+            handleRestart={this.handleReset}
+          />          
+
+        </Wrapper>
       </Fade>
     );
   }

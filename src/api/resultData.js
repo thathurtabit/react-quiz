@@ -1,89 +1,68 @@
-var resultData = [
-  {
-      question: "What franchise would you rather play a game from?",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "Halo"
-          },
-          {
-              type: "Nintendo",
-              content: "Pokemon"
-          },
-          {
-              type: "Sony",
-              content: "Uncharted"
-          }
-      ]
+var resultData = {
+  DAIS: {
+    title: 'DAIS',
+    text: 'DAIS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
   },
-  {
-      question: "Which console would you prefer to play with friends?",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "X-Box"
-          },
-          {
-              type: "Nintendo",
-              content: "Nintendo 64"
-          },
-          {
-              type: "Sony",
-              content: "Playstation 1"
-          }
-      ]
+  DAGS: {
+    title: 'DAGS',
+    text: 'DAGS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
   },
-  {
-      question: "Which of these racing franchises would you prefer to play a game from?",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "Forza"
-          },
-          {
-              type: "Nintendo",
-              content: "Mario Kart"
-          },
-          {
-              type: "Sony",
-              content: "Gran Turismo"
-          }
-      ]
+  DRGS: {
+    title: 'DRGS',
+    text: 'DRGS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
   },
-  {
-      question: "Which of these games do you think is best?",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "BioShock"
-          },
-          {
-              type: "Nintendo",
-              content: "The Legend of Zelda: Ocarina of Time"
-          },
-          {
-              type: "Sony",
-              content: "Final Fantasy VII"
-          }
-      ]
+  DRIS: {
+    title: 'DRIS',
+    text: 'DRIS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
   },
-  {
-      question: "What console would you prefer to own?",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "X-Box One"
-          },
-          {
-              type: "Nintendo",
-              content: "Wii U"
-          },
-          {
-              type: "Sony",
-              content: "Playstation 4"
-          }
-      ]
-  }
-];
+  DAIM: {
+    title: 'DAIM',
+    text: 'DAIM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  DAGM: {
+    title: 'DAGM',
+    text: 'DAGM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  DRGM: {
+    title: 'DRGM',
+    text: 'DRGM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  DRIM: {
+    title: 'DRIM',
+    text: 'DRIM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CAIM: {
+    title: 'CAIM',
+    text: 'CAIM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CAGM: {
+    title: 'CAGM',
+    text: 'CAGM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CRGM: {
+    title: 'CRGM',
+    text: 'CRGM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CRIM: {
+    title: 'CRIM',
+    text: 'CRIM info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CAIS: {
+    title: 'CAIS',
+    text: 'CAIS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CAGS: {
+    title: 'CAGS',
+    text: 'CAGS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CRGS: {
+    title: 'CRGS',
+    text: 'CRGS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+  CRIS: {
+    title: 'CRIS',
+    text: 'CRIS info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, nunc vitae accumsan ultricies, purus nulla lacinia dui, sit amet consequat lectus nulla vitae urna. Integer placerat, quam quis volutpat maximus, nulla neque laoreet nibh, quis convallis ex purus a risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum porta magna, ornare mollis sapien interdum sed. Ut pretium est ac felis congue, quis ultrices neque dictum. Nunc gravida velit vitae nulla cursus consequat. Phasellus fringilla vel ligula sit amet luctus.'
+  },
+}
 
-export default quizQuestions;
+export default resultData;
