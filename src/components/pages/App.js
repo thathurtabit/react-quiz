@@ -144,19 +144,13 @@ export default class App extends Component {
     return array;
   };
 
-  checkNextButton() {
-    const continueArray = Object.values(this.state.selected);
-    
-    if(continueArray.every(val => val)) {
-      this.setState({
-        next: {
-          text: "Next",
-          disabled: false,
-        }
-      }, () => {
-        console.log(continueArray);
-      });
-    }
+  checkNextButton() { 
+    this.setState({
+      next: {
+        text: "Next",
+        disabled: false,
+      }      
+    });
   }
 
   // Handle Answer Selected
