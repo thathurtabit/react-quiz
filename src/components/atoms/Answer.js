@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const AnswerLi = styled.li`
   margin: 0 5%;
@@ -20,7 +21,7 @@ const AnswerLabel = styled.label`
   padding: 20px;
   background: #fff;
   display: block;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   transition: background 0.25s ease-out, color 0.25s ease-out;
 
   &:hover {
@@ -40,10 +41,8 @@ export default function Answer(props) {
         name={props.group}
         id={props.id}
         value={props.answerType}
-        //onChange={props.onAnswerSelected}
       />
       <AnswerLabel
-        className={props.active}
         htmlFor={props.id}>
         {props.answerContent}
       </AnswerLabel>
@@ -52,9 +51,9 @@ export default function Answer(props) {
 
 }
 
-// Answer.propTypes = {
-//   answerType: React.PropTypes.string.isRequired,
-//   answerContent: React.PropTypes.string.isRequired,
-//   answer: React.PropTypes.string.isRequired,
-//   onAnswerSelected: React.PropTypes.func.isRequired
-// };
+Answer.propTypes = {
+  group: PropTypes.string,
+  id: PropTypes.string,
+  answerType: PropTypes.string,
+  answerContent: PropTypes.string,
+}

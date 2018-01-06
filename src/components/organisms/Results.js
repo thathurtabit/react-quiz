@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Next from '../atoms/NextButton';
+import PropTypes from 'prop-types';
 
 const ResultsWrap = styled.section`
   align-items: center;
@@ -18,6 +19,10 @@ const ResultsTitle = styled.h2`
   font-size: 2rem;
 `;
 
+const ResultsSubtitle = styled.h4`
+  font-size: 1rem;
+`;
+
 const ResultsText = styled.p`
   font-size: 1.25rem;
   line-height: 1.25;
@@ -31,18 +36,19 @@ export default function Results(props) {
       <ResultsTitle>
         {props.title}
       </ResultsTitle>
+      <ResultsSubtitle>
+        You mostly identidy with: <strong>{props.resultArray}</strong>
+      </ResultsSubtitle>
       <ResultsText>
         {props.text}
       </ResultsText>
-      <Next nextText={props.nextText} disabled={!props.disabled} onClick={props.handleRestart} />
+      <Next nextText={props.nextText} disabled={!props.disabled} round={props.round} onClick={props.handleRestart} />
     </ResultsWrap>
   );
-
 }
 
-// AnswerChoices.propTypes = {
-//   answerType: React.PropTypes.string.isRequired,
-//   answerContent: React.PropTypes.string.isRequired,
-//   answer: React.PropTypes.string.isRequired,
-//   onAnswerSelected: React.PropTypes.func.isRequired
-// };
+Results.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  round: PropTypes.number.isRequired,
+}

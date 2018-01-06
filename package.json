@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "immutability-helper": "^2.6.2",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
     "react-transition-group": "^2.2.1",
-    "styled-components": "^2.4.0"
+    "styled-components": "^2.4.0",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -11,6 +11,7 @@ import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
 
 const Wrapper = styled.section`
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.3em;
   text-align: center;
   color: palevioletred;
@@ -105,8 +106,8 @@ const initialState = {
   resultArray: [],
   resultAcronym: '',
   results: {
-    title: resultData.DAIS.title,
-    text: resultData.DAIS.text,
+    title: '',
+    text: '',
   }
 };
 
@@ -123,7 +124,7 @@ export default class App extends Component {
 
   // React Lifecycle
   componentWillMount() {
-    
+
     // Shuffle Answers
     const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1));
     const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2));
@@ -321,7 +322,8 @@ export default class App extends Component {
             display: {
               quiz: false,
               result: true,
-            },         
+            },
+            questionIntro: 'Your are:',
           });
         }, duration);
       }, duration);
@@ -338,7 +340,7 @@ export default class App extends Component {
     // Loop over results object
     Object.keys(resultsObj).forEach(key => {
       if (resultsObj[key] > 0) {
-        resultArray.push(key);
+        resultArray.push(`${key.charAt(0).toUpperCase() + key.slice(1)} `);
       }
     });
 
@@ -371,6 +373,8 @@ export default class App extends Component {
         selectedAnswers[i].checked = false;
     }
   }
+
+
 
   // Handle Restart
   handleReset = () => {
@@ -447,7 +451,7 @@ export default class App extends Component {
     return (
       <Fade in={this.state.show}>
         <Wrapper>
-          <Header mainTitle="Design Quiz" question={this.state.question} round={this.state.round} />
+          <Header mainTitle="Design Quiz" question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
           <Intro style={{display: this.state.display.quiz ? 'block' : 'none'}} introText={this.state.questionIntro} />
           <Quiz style={{display: this.state.display.quiz ? 'block' : 'none'}}>
             
@@ -473,17 +477,21 @@ export default class App extends Component {
                 answerChoices={this.state.answer5Choices}
               />
             </Answers>
-            <Next nextText={this.state.next.text} disabled={this.state.next.disabled} onClick={() => this.jumpTo(this.state.index)} />
+            <Next nextText={this.state.next.text} disabled={this.state.next.disabled} round={this.state.round} onClick={() => this.jumpTo(this.state.index)} />
           </Quiz>
 
           <Results
+
             show={this.state.display.result}
             nextText="Restart"
             title={this.state.results.title}
             text={this.state.results.text}
+            resultArray={this.state.resultArray}
             disabled={this.state.display.result}
+            round={this.state.round}
             handleRestart={this.handleReset}
-          />          
+          />     
+
 
         </Wrapper>
       </Fade>

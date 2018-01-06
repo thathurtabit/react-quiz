@@ -1,6 +1,7 @@
 import React from 'react';
 import Answer from '../atoms/Answer';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const AnswerUl = styled.ul`
   align-items: center;
@@ -36,10 +37,8 @@ export default function AnswerChoices(props) {
         id={key.id}
         group={key.group}
         key={key.content}
-        checked={key.checked}
         answerContent={key.content}
         answerType={key.type}
-        active={key.active}
         answer={props.answer}
       />
     );
@@ -53,9 +52,8 @@ export default function AnswerChoices(props) {
 
 }
 
-// AnswerChoices.propTypes = {
-//   answerType: React.PropTypes.string.isRequired,
-//   answerContent: React.PropTypes.string.isRequired,
-//   answer: React.PropTypes.string.isRequired,
-//   onAnswerSelected: React.PropTypes.func.isRequired
-// };
+AnswerChoices.propTypes = {
+  answer: PropTypes.string,
+  answerChoices: PropTypes.array,
+}
+
