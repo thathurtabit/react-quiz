@@ -1,7 +1,7 @@
 var quizData = [
   {
-      question: "Diverge vs. Converge",
-      intro: "My intro paragraph about DvC",
+      question: "Full of ideas",
+      intro: "Diverge vs. Converge",
       answer1: [
           {
             id: "answer1a",
@@ -74,8 +74,8 @@ var quizData = [
       ],
   },
   {
-      question: "Abstract vs. Real",
-      intro: "My intro paragraph about AvR",
+      question: "Keeping it real",
+      intro: "Abstract vs. Real",
       answer1: [
           {
               id: "answer1a",
@@ -148,8 +148,8 @@ var quizData = [
       ],
   },
   {
-      question: "Group vs. Individual",
-      intro: "My intro paragraph about GvI",
+      question: "Me time",
+      intro: "Group vs. Individual",
       answer1: [
           {
               id: "answer1a",
@@ -217,13 +217,13 @@ var quizData = [
               id: "answer5b",
               group: "group5",
               type: "individual",
-              content: "Me time"
+              content: "A good book"
           },
       ],
   },
   {
-      question: "Sense vs. Measure",
-      intro: "My intro paragraph about SvM",
+      question: "Decisions, decisions",
+      intro: "Sense vs. Measure",
       answer1: [
           {
               id: "answer1a",

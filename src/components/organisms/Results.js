@@ -5,14 +5,15 @@ import PropTypes from 'prop-types';
 
 const ResultsWrap = styled.section`
   align-items: center;
+  background: rgba(0,0,0,0.05);
   display: flex;
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
-  position: relative;
-  padding: 0;
+  margin: 4rem auto;
   max-width: 700px;
-  margin: 0 auto;
+  padding: 2rem 3rem 5rem;
+  position: relative;
 `;
 
 const ResultsTitle = styled.h2`
@@ -37,7 +38,7 @@ export default function Results(props) {
         {props.title}
       </ResultsTitle>
       <ResultsSubtitle>
-        You mostly identidy with: <strong>{props.resultArray}</strong>
+        You mostly identify with: <strong>{props.resultArray}</strong>
       </ResultsSubtitle>
       <ResultsText>
         {props.text}

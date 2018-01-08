@@ -5,7 +5,6 @@ import update from 'immutability-helper';
 import quizData from '../../api/quizData';
 import resultData from '../../api/resultData';
 import Header from '../molecules/Header';
-import Intro from '../atoms/Intro';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
@@ -67,6 +66,7 @@ const Fade = ({ children, ...props }) => (
 // Set my initial state
 const initialState = {
   show: false,
+  mainTitle: 'What Kind of Designer Are You?',
   display: {
     quiz: true,
     result: false,
@@ -131,7 +131,6 @@ export default class App extends Component {
     const shuffledAnswer3Choices = quizData.map((round) => this.shuffleArray(round.answer3));
     const shuffledAnswer4Choices = quizData.map((round) => this.shuffleArray(round.answer4));
     const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5));
-
 
     this.setState({
       answer1Choices: shuffledAnswer1Choices[0],
@@ -451,8 +450,8 @@ export default class App extends Component {
     return (
       <Fade in={this.state.show}>
         <Wrapper>
-          <Header mainTitle="Design Quiz" question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
-          <Intro style={{display: this.state.display.quiz ? 'block' : 'none'}} introText={this.state.questionIntro} />
+          <Header mainTitle={this.state.mainTitle} question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
+          {/*<Intro style={{display: this.state.display.quiz ? 'block' : 'none'}} introText={this.state.questionIntro} />*/}
           <Quiz style={{display: this.state.display.quiz ? 'block' : 'none'}}>
             
             <Answers onChange={this.handleAnswerSelected}>
@@ -481,7 +480,6 @@ export default class App extends Component {
           </Quiz>
 
           <Results
-
             show={this.state.display.result}
             nextText="Restart"
             title={this.state.results.title}
