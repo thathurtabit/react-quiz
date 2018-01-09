@@ -1,7 +1,8 @@
 var quizData = [
   {
       question: "Full of ideas",
-      intro: "In the beginning of design project we can be divergent in our thinking.  Everything is full of potential.  And then, always, the time comes when we need to converge on a final idea in order to deliver our work so that people can use it.  Which mindset do you prefer?",
+      intro: "In the beginning of design project we can be divergent in our thinking.  Everything is full of potential.  And then, always, the time comes when we need to converge on a final idea in order to deliver our work so that people can use it.", 
+      intro2: "Which mindset do you prefer?",
       answer1: [
           {
             id: "answer1a",
@@ -75,7 +76,8 @@ var quizData = [
   },
   {
       question: "Keeping it real",
-      intro: "Design artefacts and deliverables take many forms, often with the next thing building on the thing that came before it.  As we move through our process, this work moves from abstract and high level, to detailed an real.  What type of work do you like to do?",
+      intro: "Design artefacts and deliverables take many forms, often with the next thing building on the thing that came before it.  As we move through our process, this work moves from abstract and high level, to detailed an real.",
+      intro2: "What type of work do you like to do?",
       answer1: [
           {
               id: "answer1a",
@@ -149,7 +151,8 @@ var quizData = [
   },
   {
       question: "Me time",
-      intro: "All design projects involve a blend of time spent working individually and collaborating with others.  Depending on our personality, we can feel more or less comfortable and energised in one situation or the other.  How do you work best?",
+      intro: "All design projects involve a blend of time spent working individually and collaborating with others.  Depending on our personality, we can feel more or less comfortable and energised in one situation or the other.",
+      intro2: "How do you work best?",
       answer1: [
           {
               id: "answer1a",
@@ -223,7 +226,8 @@ var quizData = [
   },
   {
       question: "Decisions, decisions",
-      intro: "Good design is born out of good decisions.  Lots of them, big and small.  We base these decisions on a combination of external factors that we can measure and internal factors such as our values and experiences.  What informs the choices you make?",
+      intro: "Good design is born out of good decisions.  Lots of them, big and small.  We base these decisions on a combination of external factors that we can measure and internal factors such as our values and experiences.",
+      intro2: "What informs the choices you make?",
       answer1: [
           {
               id: "answer1a",

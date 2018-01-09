@@ -16,7 +16,7 @@ const AnswerUl = styled.ul`
     background: rgba(0,0,0,0.5);
     border-radius: 100%;
     color: #fff;
-    content: "or";
+    content: "vs";
     font-size: 1rem;
     height: 30px;
     left: 50%;

@@ -7,6 +7,7 @@ import resultData from '../../api/resultData';
 import Header from '../molecules/Header';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
+import Intro from '../atoms/Intro';
 import Results from '../organisms/Results';
 
 const Wrapper = styled.section`
@@ -73,6 +74,7 @@ const initialState = {
   },
   question: quizData[0].question,
   questionIntro: quizData[0].intro,
+  questionIntro2: quizData[0].intro2,
   answer1Choices: [],
   answer2Choices: [],
   answer3Choices: [],
@@ -277,6 +279,7 @@ export default class App extends Component {
             show: !this.state.show,
             question: quizData[currentIndex].question,
             questionIntro: quizData[currentIndex].intro,
+            questionIntro2: quizData[currentIndex].intro2,
             answer1Choices: quizData[currentIndex].answer1,
             answer2Choices: quizData[currentIndex].answer2,
             answer3Choices: quizData[currentIndex].answer3,
@@ -400,6 +403,7 @@ export default class App extends Component {
             },
             question: quizData[0].question,
             questionIntro: quizData[0].intro,
+            questionIntro2: quizData[0].intro2,
             selected: {
               group1: false,
               group2: false,
@@ -451,7 +455,7 @@ export default class App extends Component {
       <Fade in={this.state.show}>
         <Wrapper>
           <Header mainTitle={this.state.mainTitle} question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
-          {/*<Intro style={{display: this.state.display.quiz ? 'block' : 'none'}} introText={this.state.questionIntro} />*/}
+          <Intro display={this.state.display.quiz} introText={this.state.questionIntro} intro2Text={this.state.questionIntro2} />
           <Quiz style={{display: this.state.display.quiz ? 'block' : 'none'}}>
             
             <Answers onChange={this.handleAnswerSelected}>
@@ -489,7 +493,6 @@ export default class App extends Component {
             round={this.state.round}
             handleRestart={this.handleReset}
           />     
-
 
         </Wrapper>
       </Fade>
