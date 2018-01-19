@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import update from 'immutability-helper';
+import introPageData from '../../api/introPageData';
 import quizData from '../../api/quizData';
 import resultData from '../../api/resultData';
 import Header from '../molecules/Header';
+import IntroPage from '../organisms/IntroPage';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
 import Intro from '../atoms/Intro';
@@ -39,6 +41,10 @@ const Wrapper = styled.section`
   }
 `;
 
+const QuizWrap = styled.section`
+  padding: 20px;
+`;
+
 const Quiz = styled.section`
   font-size: 1.5em;
   text-align: center;
@@ -69,9 +75,11 @@ const initialState = {
   show: false,
   mainTitle: 'What Kind of Designer Are You?',
   display: {
-    quiz: true,
+    intro: true,
+    quiz: false,
     result: false,
   },
+  introPageContent: introPageData,
   question: quizData[0].question,
   questionIntro: quizData[0].intro,
   questionIntro2: quizData[0].intro2,
@@ -98,13 +106,15 @@ const initialState = {
     sense: 0,
     measure: 0,
   },
-  index: 0,
+  currentPage: 0,
+  index: -1,
   round: 1,
   roundsTotal: quizData.length,
   next: {
-    text: "Next",
-    disabled: true,
+    text: "Start",
+    disabled: false,
   },
+  resultData: resultData,
   resultArray: [],
   resultAcronym: '',
   results: {
@@ -152,7 +162,7 @@ export default class App extends Component {
 
   // Shuffle an Array
   shuffleArray(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
@@ -261,12 +271,50 @@ export default class App extends Component {
 
   // Next button
   jumpTo(index) {
-    let currentIndex = index + 1;
-    let currentRound = currentIndex + 1;
+    let currentPage = this.state.currentPage;
+    let currentIndex = this.state.index;
+    currentPage +=1; // increment
+    currentIndex +=1; // increment
 
+    // INTRO PAGE
     // If there's still questions to ask...
-    if (index < quizData.length - 1) {
+    if (currentPage === 1) {
 
+      console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
+
+      // Transition Out
+      setTimeout(() => {
+        this.setState({ show: !this.state.show });
+        // Transition In
+        setTimeout(() => {
+
+          this.setState({
+            // Transition Out
+            show: !this.state.show,
+            display: {
+              intro: false,
+              quiz: true,
+              result: false,
+            },
+            index: currentIndex,
+            currentPage: currentPage,
+            next: {
+              text: "Next",
+              disabled: true,
+            },
+          });
+
+          this.unSelectAnswers();
+
+        }, duration);
+      }, duration);
+
+
+    // START QUIZ
+    // If there's still questions to ask...
+   } else if (currentPage > 1 && currentPage < this.state.roundsTotal + 1) {
+
+      console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
 
       // Transition Out
       setTimeout(() => {
@@ -293,7 +341,8 @@ export default class App extends Component {
               group5: false,
             },
             index: currentIndex,
-            round: currentRound,
+            currentPage: currentPage,
+            round: currentPage,
             next: {
               text: "Next",
               disabled: true,
@@ -322,6 +371,7 @@ export default class App extends Component {
             // Transition Out
             show: !this.state.show,
             display: {
+              intro: false,
               quiz: false,
               result: true,
             },
@@ -333,7 +383,7 @@ export default class App extends Component {
   }
 
 
-  // Unselect answers
+  // Process Results
   processResults() {
     let resultsObj = this.state.answersCount;
     let resultArray = [];
@@ -357,13 +407,12 @@ export default class App extends Component {
       results: {
         title: resultData[resultAcronym].title,
         text: resultData[resultAcronym].text,
-      }
+      },
     }, () => {
       console.log(`resultArray: ${this.state.resultArray} | resultAcronym: ${this.state.resultAcronym}`);
     });
 
   }
-
 
   // Unselect answers
   unSelectAnswers() {
@@ -375,8 +424,6 @@ export default class App extends Component {
         selectedAnswers[i].checked = false;
     }
   }
-
-
 
   // Handle Restart
   handleReset = () => {
@@ -398,7 +445,8 @@ export default class App extends Component {
           this.setState({
            show: !this.state.show,
             display: {
-              quiz: true,
+              intro: true,
+              quiz: false,
               result: false,
             },
             question: quizData[0].question,
@@ -427,7 +475,8 @@ export default class App extends Component {
               sense: 0,
               measure: 0,
             },
-            index: 0,
+            index: -1,
+            currentPage: 0,
             round: 1,
             next: {
               text: "Next",
@@ -454,34 +503,44 @@ export default class App extends Component {
     return (
       <Fade in={this.state.show}>
         <Wrapper>
-          <Header mainTitle={this.state.mainTitle} question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
-          <Intro display={this.state.display.quiz} introText={this.state.questionIntro} intro2Text={this.state.questionIntro2} />
-          <Quiz style={{display: this.state.display.quiz ? 'block' : 'none'}}>
-            
-            <Answers onChange={this.handleAnswerSelected}>
-              <AnswerChoices
-                answer={this.state.answer}
-                answerChoices={this.state.answer1Choices}
-              />
-              <AnswerChoices
-                answer={this.state.answer}
-                answerChoices={this.state.answer2Choices}
-              />
-              <AnswerChoices
-                answer={this.state.answer}
-                answerChoices={this.state.answer3Choices}
-              />
-              <AnswerChoices
-                answer={this.state.answer}
-                answerChoices={this.state.answer4Choices}
-              />
-              <AnswerChoices
-                answer={this.state.answer}
-                answerChoices={this.state.answer5Choices}
-              />
-            </Answers>
-            <Next nextText={this.state.next.text} disabled={this.state.next.disabled} round={this.state.round} onClick={() => this.jumpTo(this.state.index)} />
-          </Quiz>
+          <IntroPage
+            display={this.state.display.intro}
+            title={this.state.mainTitle}
+            content={this.state.introPageContent}
+            nextText={this.state.next.text}
+            round={this.state.round}
+            onClick={() => this.jumpTo(this.state.index)}
+          />
+          <QuizWrap style={{display: this.state.display.quiz ? 'block' : 'none'}}>
+            <Header mainTitle={this.state.mainTitle} question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
+            <Intro display={this.state.display.quiz} introText={this.state.questionIntro} intro2Text={this.state.questionIntro2} />
+            <Quiz>
+              
+              <Answers onChange={this.handleAnswerSelected}>
+                <AnswerChoices
+                  answer={this.state.answer}
+                  answerChoices={this.state.answer1Choices}
+                />
+                <AnswerChoices
+                  answer={this.state.answer}
+                  answerChoices={this.state.answer2Choices}
+                />
+                <AnswerChoices
+                  answer={this.state.answer}
+                  answerChoices={this.state.answer3Choices}
+                />
+                <AnswerChoices
+                  answer={this.state.answer}
+                  answerChoices={this.state.answer4Choices}
+                />
+                <AnswerChoices
+                  answer={this.state.answer}
+                  answerChoices={this.state.answer5Choices}
+                />
+              </Answers>
+              <Next nextText={this.state.next.text} disabled={this.state.next.disabled} round={this.state.round} onClick={() => this.jumpTo(this.state.index)} />
+            </Quiz>
+          </QuizWrap>
 
           <Results
             show={this.state.display.result}

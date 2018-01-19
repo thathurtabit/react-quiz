@@ -34,6 +34,7 @@ export default function Results(props) {
 
   return (
     <ResultsWrap style={{display: props.show ? 'block' : 'none'}}>
+      <p>You are a:</p>
       <ResultsTitle>
         {props.title}
       </ResultsTitle>

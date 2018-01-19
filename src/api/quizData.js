@@ -1,4 +1,4 @@
-var quizData = [
+const quizData = [
   {
       question: "Full of ideas",
       intro: "In the beginning of design project we can be divergent in our thinking.  Everything is full of potential.  And then, always, the time comes when we need to converge on a final idea in order to deliver our work so that people can use it.", 

@@ -28,7 +28,6 @@ const AnswerUl = styled.ul`
   }
 `;
 
-
 export default function AnswerChoices(props) {
 
    function renderAnswerChoices(key) {
