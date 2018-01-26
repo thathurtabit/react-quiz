@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const QuizTitleH1 = styled.h1`
-  color: palevioletred;
-  font-size: 2rem;
-  margin: 0 0 2rem;
-  position: relative;
-  text-align: center;
+const QuizTitleH1 = styled.h1`	
+	background: -webkit-linear-gradient(top,#fd0b58,#a32b68);
+	font-size: 2rem;
+	margin: 0 0 2rem;
+	position: relative;
+	text-align: center;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
   &::after {
   	background: rgba(0,0,0,0.15);
