@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, NavLink, Switch} from 'react-router-dom';
 import styled from 'styled-components';
 import siteInfo from '../../api/siteInfo';
 import Quiz from '../pages/Quiz';
@@ -59,7 +59,13 @@ const LayoutWrap = styled.section`
 const SiteName = styled.h1`
 	color: #8E26B7;
 	font-family: 'Merriweather', serif;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
+`;
+
+const PageTitle = styled.h1`
+	color: #8E26B7;
+	font-family: 'Merriweather', serif;
+	font-size: 4vw;
 `;
 
 const MainHeader = styled.header`
@@ -113,19 +119,23 @@ const MainNav = styled.nav`
 `;
 
 
+
+
 const TakeTheQuiz = () => (
   <Quiz />
 )
 
 const DesignPersonalities = () => (
   <PageWrap>
-    <h2>Design Personalities</h2>
+    <PageTitle>Design Personalities</PageTitle>
+    <p>List of Design Personality types (illustrations) linking to specific pages.</p>
   </PageWrap>
 )
 
 const NotFound = () => (
   <PageWrap>
-    <h2>404</h2>
+    <PageTitle>404</PageTitle>
+    <p>Page not found. ¯\_(ツ)_/¯</p>
   </PageWrap>
 )
 
@@ -161,6 +171,7 @@ const SetUpRoutes = (props) => {
       <PageFade key={locationKey}>
         <Wrapper>
           <Switch location={props.location}>
+          	<Route exact path="/" component={() => <Redirect to="/quiz" />}/>
             <Route exact path="/quiz" component={TakeTheQuiz} />
             <Route exact path="/design-personalities" component={DesignPersonalities} />
             <Route component={NotFound} />

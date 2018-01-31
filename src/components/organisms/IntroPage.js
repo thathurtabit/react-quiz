@@ -10,7 +10,7 @@ const IntroWrap = styled.section`
   justify-content: center;
   list-style-type: none;
   margin: 4rem auto;
-  max-width: 700px;
+  max-width: 750px;
   padding: 2rem 3rem 5rem;
   position: relative;
 `;
@@ -21,8 +21,8 @@ const IntroSubtitle = styled.h2`
 `;
 
 const IntroText = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.1rem;
+  line-height: 1.5;
   margin: 2rem 2rem 2rem;
 `;
 

@@ -17,7 +17,8 @@ const ResultsWrap = styled.section`
 `;
 
 const ResultsTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 3vw;
+  font-family: 'Merriweather', serif;
 `;
 
 const ResultsSubtitle = styled.h4`

@@ -5,11 +5,11 @@ import update from 'immutability-helper';
 import introPageData from '../../api/introPageData';
 import quizData from '../../api/quizData';
 import resultData from '../../api/resultData';
-import Header from '../molecules/Header';
+import QuestionHeader from '../molecules/QuestionHeader';
+import Question from '../atoms/Question';
 import IntroPage from '../organisms/IntroPage';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
-import Intro from '../atoms/Intro';
 import Results from '../organisms/Results';
 
 const Wrapper = styled.section`
@@ -41,7 +41,7 @@ const Wrapper = styled.section`
 `;
 
 const QuizWrap = styled.section`
-  padding: 20px 0;
+  padding: 0 0 3rem;
 `;
 
 const QuizSection = styled.section`
@@ -52,7 +52,7 @@ const QuizSection = styled.section`
 const Answers = styled.section`
   background: rgba(0,0,0,0.05);
   padding: 2rem 0;
-  margin: 1rem 0;
+  margin: 1rem 0 3rem;
 `;
 
 const duration = 300;
@@ -78,8 +78,8 @@ const initialState = {
   },
   introPageContent: introPageData,
   question: quizData[0].question,
+  questionTitle: quizData[0].title,
   questionIntro: quizData[0].intro,
-  questionIntro2: quizData[0].intro2,
   answer1Choices: [],
   answer2Choices: [],
   answer3Choices: [],
@@ -300,7 +300,6 @@ export default class Quiz extends Component {
         }, duration);
       }, duration);
 
-
     // START QUIZ
     // If there's still questions to ask...
    } else if (currentPage > 1 && currentPage < this.state.roundsTotal + 1) {
@@ -317,8 +316,8 @@ export default class Quiz extends Component {
             // Transition Out
             show: !this.state.show,
             question: quizData[currentIndex].question,
+            questionTitle: quizData[currentIndex].title,
             questionIntro: quizData[currentIndex].intro,
-            questionIntro2: quizData[currentIndex].intro2,
             answer1Choices: quizData[currentIndex].answer1,
             answer2Choices: quizData[currentIndex].answer2,
             answer3Choices: quizData[currentIndex].answer3,
@@ -441,8 +440,8 @@ export default class Quiz extends Component {
               result: false,
             },
             question: quizData[0].question,
+            questionTitle: quizData[0].title,
             questionIntro: quizData[0].intro,
-            questionIntro2: quizData[0].intro2,
             selected: {
               group1: false,
               group2: false,
@@ -494,8 +493,7 @@ export default class Quiz extends Component {
     return (
       <div>
         <Fade in={this.state.show}>
-          <Wrapper>           
-
+          <Wrapper>
             <IntroPage
               display={this.state.display.intro}
               title={this.state.mainTitle}
@@ -505,10 +503,9 @@ export default class Quiz extends Component {
               onClick={() => this.jumpTo(this.state.index)}
             />
             <QuizWrap style={{display: this.state.display.quiz ? 'block' : 'none'}}>
-              <Header mainTitle={this.state.mainTitle} question={this.state.question} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
-              <Intro display={this.state.display.quiz} introText={this.state.questionIntro} intro2Text={this.state.questionIntro2} />
-              <QuizSection>
-                
+              <QuestionHeader title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />   
+              <Question question={this.state.question} />           
+              <QuizSection>                
                 <Answers onChange={this.handleAnswerSelected}>
                   <AnswerChoices
                     answer={this.state.answer}

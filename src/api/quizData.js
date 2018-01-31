@@ -1,8 +1,8 @@
 const quizData = [
   {
-      question: "Full of ideas",
-      intro: "In the beginning of design project we can be divergent in our thinking.  Everything is full of potential.  And then, always, the time comes when we need to converge on a final idea in order to deliver our work so that people can use it.", 
-      intro2: "Which mindset do you prefer?",
+      question: "Which mindset do you prefer?",
+      title: "Full of ideas",
+      intro: "<strong>In the beginning of design project</strong> we can be divergent in our thinking.  Everything is full of potential.  And then, always, the time comes when we need to converge on a final idea in order to deliver our work so that people can use it.", 
       answer1: [
           {
             id: "answer1a",
@@ -74,10 +74,10 @@ const quizData = [
           },
       ],
   },
-  {
-      question: "Keeping it real",
-      intro: "Design artefacts and deliverables take many forms, often with the next thing building on the thing that came before it.  As we move through our process, this work moves from abstract and high level, to detailed an real.",
-      intro2: "What type of work do you like to do?",
+  {   
+      question: "What type of work do you like to do?", 
+      title: "Keeping it real",
+      intro: "<strong>Design artefacts and deliverables take many forms</strong>, often with the next thing building on the thing that came before it.  As we move through our process, this work moves from abstract and high level, to detailed an real.",
       answer1: [
           {
               id: "answer1a",
@@ -150,9 +150,9 @@ const quizData = [
       ],
   },
   {
-      question: "Me time",
-      intro: "All design projects involve a blend of time spent working individually and collaborating with others.  Depending on our personality, we can feel more or less comfortable and energised in one situation or the other.",
-      intro2: "How do you work best?",
+      question: "How do you work best?",
+      title: "Me time",
+      intro: "<strong>All design projects involve a blend of time spent</strong> working individually and collaborating with others.  Depending on our personality, we can feel more or less comfortable and energised in one situation or the other.",
       answer1: [
           {
               id: "answer1a",
@@ -224,10 +224,10 @@ const quizData = [
           },
       ],
   },
-  {
-      question: "Decisions, decisions",
-      intro: "Good design is born out of good decisions.  Lots of them, big and small.  We base these decisions on a combination of external factors that we can measure and internal factors such as our values and experiences.",
-      intro2: "What informs the choices you make?",
+  { 
+      question: "What informs the choices you make?", 
+      title: "Decisions, decisions",
+      intro: "<strong>Good design is born out of good decisions.</strong> Lots of them, big and small.  We base these decisions on a combination of external factors that we can measure and internal factors such as our values and experiences.",
       answer1: [
           {
               id: "answer1a",

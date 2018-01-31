@@ -18,7 +18,7 @@ const AnswerInput = styled.input`
 `;
 
 const AnswerLabel = styled.label`
-  padding: 20px;
+  padding: 2rem;
   background: #fff;
   display: block;
   font-size: 1.5rem;

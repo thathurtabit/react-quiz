@@ -17,7 +17,7 @@ const AnswerUl = styled.ul`
     border-radius: 100%;
     color: #fff;
     content: "vs";
-    font-size: 1rem;
+    font-size: 0.8rem;
     height: 30px;
     left: 50%;
     line-height: 30px;
