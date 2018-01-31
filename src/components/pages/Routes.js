@@ -96,29 +96,57 @@ const MainNav = styled.nav`
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+    &:nth-child(even) a::after {
+      border-radius: 100%;
+    }
 	}
 
 	a {
 		color: #8E26B7;
-		padding: 10px 20px;
+    position: relative;
 		font-size: 0.75rem;
 		letter-spacing: 2px;
 		text-decoration: none;
 		text-transform: uppercase;
-		transition: transform 0.25s ease-out; 
-		transform: translateY(0);
-
-		&:hover {
-			transform: translateY(-5px);
-		}
-
-		&.active {
-			background: rgba(0,0,0,0.05);
-		}
 	}
+
+  a span {
+    display: block;
+    padding: 10px 20px;
+    transition: transform 0.25s ease-out; 
+    transform: translateY(0);
+  }
+
+  a:hover span {
+    transform: translateY(-2px);
+  }
+  
+  a:hover::after,
+  a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 10px;
+  }
+
+  a.active {
+    background: rgba(0,0,0,0.02);
+  }
+
+  a::after {
+    content: '';
+    transition: transform 0.25s ease-out, width 0.25s ease-out;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 0;
+    bottom: -5px;
+    left: 50%;
+    border-bottom: 10px solid #8E26B7;
+  }
+
 `;
-
-
 
 
 const TakeTheQuiz = () => (
@@ -153,8 +181,8 @@ const Layout = ({ children }) => (
     	<SiteName>{siteInfo.title}</SiteName>    
 	    	<MainNav>
 		    	<ul>
-		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active">{siteInfo.mainNav[0].name}</NavLink></li>
-	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName="active">{siteInfo.mainNav[1].name}</NavLink></li>
+		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NavLink></li>
+	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName="active"><span>{siteInfo.mainNav[1].name}</span></NavLink></li>
 		    	</ul>
 	    	</MainNav>
     </MainHeader>
@@ -191,9 +219,6 @@ const SetUpRoutes = (props) => {
 
 
 export default class SiteRoutes extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
     	  <Router>

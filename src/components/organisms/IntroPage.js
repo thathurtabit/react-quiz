@@ -16,25 +16,33 @@ const IntroWrap = styled.section`
 `;
 
 const IntroSubtitle = styled.h2`
-  font-size: 7vw;
+  font-size: calc(15vw);
   font-family: 'Merriweather', serif;
+
+  @media only screen and (min-width: 600px)  {
+    font-size: calc(50px + 3vw);
+  }
 `;
 
 const IntroText = styled.p`
   font-size: 1.1rem;
   line-height: 1.5;
   margin: 2rem 2rem 2rem;
+
+  strong {
+    text-transform: uppercase;
+  }
 `;
 
 export default function IntroPage(props) {
 
   return (
     <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
-      <IntroSubtitle>
-        {props.content.p1}
+      <IntroSubtitle>        
+        {props.content.p1}         
       </IntroSubtitle>
       <IntroText>
-        {props.content.p2}
+        <span dangerouslySetInnerHTML={{__html: props.content.p2}} />
       </IntroText>
       <IntroText>
         {props.content.p3}

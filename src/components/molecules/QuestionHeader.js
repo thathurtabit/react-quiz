@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import RoundTitle from '../atoms/RoundTitle';
 import PropTypes from 'prop-types';
 
 const QuestionHeaderWrap = styled.section`

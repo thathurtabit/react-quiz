@@ -25,8 +25,8 @@ const AnswerLabel = styled.label`
   transition: background 0.25s ease-out, color 0.25s ease-out;
 
   &:hover {
-    background: rgba(0,0,0,0.2);
-    color: #fff;
+    background: rgba(0,0,0,0.05);
+    color: #666;
     cursor: pointer;
   }
 `;
