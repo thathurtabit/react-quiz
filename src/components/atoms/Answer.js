@@ -12,7 +12,7 @@ const AnswerInput = styled.input`
   display: none;
 
   &:checked+label{
-    background: palevioletred;
+    background: #8E26B7;
     color: #fff;
   } 
 `;

@@ -3,18 +3,19 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const NextButton = styled.button`
-  background: palevioletred;
+  background: #8E26B7;
   border: 0;
   color: #fff;
+  font-family: 'Merriweather', serif;
   font-size: 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   padding: 1rem 3rem;
   text-align: center;
   text-transform: uppercase;
 
   &[disabled],
   &[disabled]:hover {
-  	background: palevioletred;
+  	background: #8E26B7;
   	cursor: not-allowed;
   	opacity: 0.5;
   }

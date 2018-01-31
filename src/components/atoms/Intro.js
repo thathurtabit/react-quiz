@@ -9,7 +9,6 @@ const IntroTextWrap = styled.section`
 `;
 
 const IntroText = styled.p`
-  color: #999;
   font-size: 0.75em;
   line-height: 1.3;
   margin: 0.5rem 0 1rem;
@@ -17,7 +16,6 @@ const IntroText = styled.p`
 `;
 
 const IntroQuestion = styled.h2`
-  color: palevioletred;
   font-size: 1.75rem;
   text-align: center;
 `;

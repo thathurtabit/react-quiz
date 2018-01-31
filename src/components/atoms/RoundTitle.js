@@ -6,7 +6,6 @@ const RoundTitleH = styled.h4`
   font-size: 1em;
   margin: 0;
   text-align: center;
-  color: #999;
 `;
 
 export default function RoundTitle(props)  {

@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 WebFont.load({
   google: {
-    families: ['Roboto Condensed']
+    families: ['Merriweather', 'Open Sans']
   }
 });
 

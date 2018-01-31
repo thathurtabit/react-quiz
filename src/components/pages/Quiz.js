@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Routes from '../pages/Routes';
 import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import update from 'immutability-helper';
@@ -14,10 +13,9 @@ import Intro from '../atoms/Intro';
 import Results from '../organisms/Results';
 
 const Wrapper = styled.section`
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   text-align: center;
-  color: palevioletred;
 
   &.fade-enter {
     opacity: 0.01;
@@ -43,18 +41,17 @@ const Wrapper = styled.section`
 `;
 
 const QuizWrap = styled.section`
-  padding: 20px;
+  padding: 20px 0;
 `;
 
 const QuizSection = styled.section`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
 `;
 
 const Answers = styled.section`
   background: rgba(0,0,0,0.05);
-  padding: 2rem 3rem;
+  padding: 2rem 0;
   margin: 1rem 0;
 `;
 
@@ -74,7 +71,6 @@ const Fade = ({ children, ...props }) => (
 // Set my initial state
 const initialState = {
   show: true,
-  mainTitle: 'What Kind of Designer Are You?',
   display: {
     intro: true,
     quiz: false,

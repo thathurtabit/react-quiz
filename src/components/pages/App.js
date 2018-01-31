@@ -6,7 +6,7 @@ export default class App extends Component {
   
   // Render
   render() {
-    return <Routes />      
+    return <Routes />
   }
 }
 

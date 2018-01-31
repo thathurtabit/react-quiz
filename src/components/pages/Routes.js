@@ -1,19 +1,20 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Redirect, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 import styled from 'styled-components';
+import siteInfo from '../../api/siteInfo';
 import Quiz from '../pages/Quiz';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-
 const Wrapper = styled.section`
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.3em;
   text-align: center;
-  color: palevioletred;
+  min-height: 100%;
+  position: relative;
 
   &.fade-enter {
-  	position: absolute;
+  	position: relative;
     opacity: 0.01;
     transform: scale(.98);
     width: 100%;
@@ -21,14 +22,14 @@ const Wrapper = styled.section`
   }
 
   &.fade-enter.fade-enter-active {
-
+		position: absolute;
     opacity: 1;
     transition: opacity 300ms ease-out;
     transform: scale(1);
   }
 
   &.fade-exit {
-  	position: absolute;
+  	position: relative;
   	width: 100%;
     top: 0;
     opacity: 1;
@@ -36,7 +37,7 @@ const Wrapper = styled.section`
   }
 
   &.fade-exit.fade-exit-active {
-  	position: absolute;
+  	position: relative;
     opacity: 0.01;
     transform: scale(.98);
     transition: opacity 350ms ease-in, transform 350ms ease-out;
@@ -48,18 +49,67 @@ const PageWrap = styled.section`
 `;
 
 const LayoutWrap = styled.section`
-	background: black;
 	position: absolute;
 	width: 100%;
-  top: 100px;
   bottom: 0;
+  color: #8E26B7;
+  top: 100px;
 `;
 
-const MainHeader = styled.section`
+const SiteName = styled.h1`
+	color: #8E26B7;
+	font-family: 'Merriweather', serif;
+	font-size: 1.75rem;
+`;
+
+const MainHeader = styled.header`
 	background: white;
+	display: flex;
+	justify-content: space-between;
+	left: 0;
+	padding: 1rem 2rem;
 	position: fixed;
-	width: 100%;
-  top: 0;
+	right: 0;
+	top: 0;
+	z-index: 2;
+`;
+
+const MainNav = styled.nav`
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+  margin-left: auto;
+
+  ul {
+  	list-style-type: none;
+  	display: flex;
+  	flex-direction: row;
+	}
+
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	a {
+		color: #8E26B7;
+		padding: 10px 20px;
+		font-size: 0.75rem;
+		letter-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: transform 0.25s ease-out; 
+		transform: translateY(0);
+
+		&:hover {
+			transform: translateY(-5px);
+		}
+
+		&.active {
+			background: rgba(0,0,0,0.05);
+		}
+	}
 `;
 
 
@@ -79,7 +129,6 @@ const NotFound = () => (
   </PageWrap>
 )
 
-
 const PageFade = (props) => (
   <CSSTransition 
     {...props}
@@ -91,10 +140,13 @@ const PageFade = (props) => (
 const Layout = ({ children }) => (
   <LayoutWrap>
     <MainHeader>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/design-personalities">Personalities</Link></li>
-      </ul>
+    	<SiteName>{siteInfo.title}</SiteName>    
+	    	<MainNav>
+		    	<ul>
+		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active">{siteInfo.mainNav[0].name}</NavLink></li>
+	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName="active">{siteInfo.mainNav[1].name}</NavLink></li>
+		    	</ul>
+	    	</MainNav>
     </MainHeader>
     {children}
   </LayoutWrap>
@@ -109,7 +161,7 @@ const SetUpRoutes = (props) => {
       <PageFade key={locationKey}>
         <Wrapper>
           <Switch location={props.location}>
-            <Route exact path="/" component={TakeTheQuiz} />
+            <Route exact path="/quiz" component={TakeTheQuiz} />
             <Route exact path="/design-personalities" component={DesignPersonalities} />
             <Route component={NotFound} />
           </Switch>
@@ -120,10 +172,22 @@ const SetUpRoutes = (props) => {
   )
 }
 
-const SiteRoutes = () => (
-  <Router>
-    <Route path="/" component={SetUpRoutes} />
-  </Router>
-);
+// const SiteRoutes = () => (
 
-export default SiteRoutes
+// );
+
+// export default SiteRoutes
+
+
+export default class SiteRoutes extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+    	  <Router>
+			    <Route path="/" component={SetUpRoutes} />
+			  </Router>
+    );
+  }
+}

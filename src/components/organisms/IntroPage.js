@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 const IntroWrap = styled.section`
   align-items: center;
-  background: rgba(0,0,0,0.05);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,12 +15,9 @@ const IntroWrap = styled.section`
   position: relative;
 `;
 
-const IntroTitle = styled.h1`
-  font-size: 2.5rem;
-`;
-
 const IntroSubtitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 7vw;
+  font-family: 'Merriweather', serif;
 `;
 
 const IntroText = styled.p`
@@ -34,9 +30,6 @@ export default function IntroPage(props) {
 
   return (
     <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
-      <IntroTitle>
-        {props.title}
-      </IntroTitle>
       <IntroSubtitle>
         {props.content.p1}
       </IntroSubtitle>
