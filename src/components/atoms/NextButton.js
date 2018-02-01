@@ -33,7 +33,7 @@ const NextButton = styled.button`
   }
   
   &::before {
-    background: black;
+    background: #333;
     bottom: 0;
     content: '';
     left: 0;

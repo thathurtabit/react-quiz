@@ -8,11 +8,32 @@ const QuestionText = styled.h2`
   margin: 2rem;
   padding: 2rem;
   text-align: center;
+
+  &.not-ready {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 5s ease-out, transform 5s ease-out;
+    transition-delay: 1s;
+  }
+
+  &.ready {
+    opacity: 1;
+    transition-delay: 1s;
+    transform: translateY(0);
+  }
 `;
 
-export default function Question(props)  {
+const applyClassDelay = () => {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+     resolve('ready');
+    }, 300);
+  });
+}
+
+export default function Question(props) {
 	return (
-		<QuestionText>
+		<QuestionText className={`${ props.ready ? 'ready' : 'not-ready' }`}>
       {props.question}
 		</QuestionText>
 	);

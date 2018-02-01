@@ -275,7 +275,9 @@ export default class Quiz extends Component {
 
       // Transition Out
       setTimeout(() => {
-        this.setState({ show: !this.state.show });
+        this.setState({
+          show: !this.state.show
+        });
         // Transition In
         setTimeout(() => {
 
@@ -405,6 +407,7 @@ export default class Quiz extends Component {
       results: {
         title: resultData[resultAcronym].title,
         text: resultData[resultAcronym].text,
+        link: resultData[resultAcronym].slug,
       },
     }, () => {
       console.log(`resultArray: ${this.state.resultArray} | resultAcronym: ${this.state.resultAcronym}`);
@@ -485,6 +488,7 @@ export default class Quiz extends Component {
             results: {
               title: '',
               text: '',
+              link: '',
             }
           }, () => {
             // Unselect answers
@@ -512,7 +516,7 @@ export default class Quiz extends Component {
             />
             <QuizWrap style={{display: this.state.display.quiz ? 'block' : 'none'}}>
               <QuestionHeader title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />   
-              <Question question={this.state.question} />           
+              <Question ready={this.state.show} question={this.state.question} />           
               <QuizSection>                
                 <Answers onChange={this.handleAnswerSelected}>
                   <AnswerChoices
@@ -544,6 +548,7 @@ export default class Quiz extends Component {
               show={this.state.display.result}
               nextText="Restart"
               title={this.state.results.title}
+              moreLink={this.state.results.link}
               text={this.state.results.text}
               resultArray={this.state.resultArray}
               disabled={this.state.display.result}

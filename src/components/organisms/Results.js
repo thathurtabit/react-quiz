@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Next from '../atoms/NextButton';
 import PropTypes from 'prop-types';
 
@@ -27,8 +28,12 @@ const ResultsSubtitle = styled.h4`
 
 const ResultsText = styled.p`
   font-size: 1.25rem;
-  line-height: 1.25;
+  line-height: 1.5;
   margin: 2rem 2rem 3rem;
+
+  strong {
+    text-transform: uppercase;
+  }
 `;
 
 export default function Results(props) {
@@ -43,9 +48,10 @@ export default function Results(props) {
         You mostly identify with: <strong>{props.resultArray}</strong>
       </ResultsSubtitle>
       <ResultsText>
-        {props.text}
-      </ResultsText>
-      <Next nextText={props.nextText} disabled={!props.disabled} round={props.round} onClick={props.handleRestart} />
+        <span dangerouslySetInnerHTML={{__html: props.text}} />
+      </ResultsText>     
+      <Link to="/design-personalities/test/">Test</Link>
+      <Next nextText={props.nextText} onClick={props.handleRestart} />
     </ResultsWrap>
   );
 }

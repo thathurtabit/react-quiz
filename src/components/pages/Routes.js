@@ -60,7 +60,20 @@ const LayoutWrap = styled.section`
 const SiteName = styled.h1`
 	color: #8E26B7;
 	font-family: 'Merriweather', serif;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	a {
+		text-decoration: none;
+	}
+	
+	a:active,
+	a:hover {
+		color: #333;
+	}
 `;
 
 const PageTitle = styled.h1`
@@ -110,6 +123,11 @@ const MainNav = styled.nav`
 		letter-spacing: 2px;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		&:active,
+		&:hover {
+			color: #333;
+		}
 	}
 
   a span {
@@ -134,6 +152,7 @@ const MainNav = styled.nav`
 
   a.active {
     background: rgba(0,0,0,0.02);
+    color: #333;
   }
 
   a::after {
@@ -178,7 +197,7 @@ const PageFade = (props) => (
 const Layout = ({ children }) => (
   <LayoutWrap>
     <MainHeader>
-    	<SiteName>{siteInfo.title}</SiteName>    
+    	<SiteName><NavLink to={siteInfo.mainNav[0].slug}>{siteInfo.title}</NavLink></SiteName>    
 	    	<MainNav>
 		    	<ul>
 		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NavLink></li>
@@ -191,7 +210,7 @@ const Layout = ({ children }) => (
 )
 
 const SetUpRoutes = (props) => {
-  const locationKey = props.location.pathname
+  const locationKey = props.location.pathname;
 
   return (
   <Layout>
@@ -202,6 +221,7 @@ const SetUpRoutes = (props) => {
           	<Route exact path="/" component={() => <Redirect to="/quiz" />}/>
             <Route exact path="/quiz" component={TakeTheQuiz} />
             <Route exact path="/design-personalities" component={DesignPersonalities} />
+            <Route exact path="/design-personalities/test" component={DesignPersonalities} />
             <Route component={NotFound} />
           </Switch>
         </Wrapper>
@@ -210,7 +230,6 @@ const SetUpRoutes = (props) => {
   </Layout>
   )
 }
-
 
 const SiteRoutes = () => {
 	return (
