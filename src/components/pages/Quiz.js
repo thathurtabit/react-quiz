@@ -279,6 +279,8 @@ export default class Quiz extends Component {
         // Transition In
         setTimeout(() => {
 
+          window.scrollTo(0, 0);
+
           this.setState({
             // Transition Out
             show: !this.state.show,
@@ -312,7 +314,10 @@ export default class Quiz extends Component {
         // Transition In
         setTimeout(() => {
 
+          window.scrollTo(0, 0);
+
           this.setState({
+
             // Transition Out
             show: !this.state.show,
             question: quizData[currentIndex].question,
@@ -357,6 +362,9 @@ export default class Quiz extends Component {
 
         // Transition In
         setTimeout(() => {
+
+          window.scrollTo(0, 0);
+
           this.setState({
             // Transition Out
             show: !this.state.show,

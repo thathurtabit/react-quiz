@@ -53,6 +53,5 @@ export default function IntroPage(props) {
 }
 
 IntroPage.propTypes = {
-  title: PropTypes.string.isRequired,
   content: PropTypes.object,
 }

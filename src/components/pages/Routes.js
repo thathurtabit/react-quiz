@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect, NavLink, Switch} from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect, NavLink, Switch} from 'react-router-dom';
+import ScrollToTop from '../../helpers/ScrollToTop'
 import styled from 'styled-components';
 import siteInfo from '../../api/siteInfo';
 import Quiz from '../pages/Quiz';
@@ -145,7 +146,6 @@ const MainNav = styled.nav`
     left: 50%;
     border-bottom: 10px solid #8E26B7;
   }
-
 `;
 
 
@@ -211,19 +211,15 @@ const SetUpRoutes = (props) => {
   )
 }
 
-// const SiteRoutes = () => (
 
-// );
-
-// export default SiteRoutes
-
-
-export default class SiteRoutes extends React.Component {
-  render() {
-    return (
-    	  <Router>
-			    <Route path="/" component={SetUpRoutes} />
-			  </Router>
-    );
-  }
+const SiteRoutes = () => {
+	return (
+	<Router>
+		<ScrollToTop>
+			<Route path="/" component={SetUpRoutes} />
+		</ScrollToTop>
+	</Router>
+	); 
 }
+
+export default SiteRoutes;
