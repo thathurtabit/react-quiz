@@ -10,7 +10,7 @@ const IntroWrap = styled.section`
   justify-content: center;
   list-style-type: none;
   margin: 4rem auto;
-  max-width: 750px;
+  max-width: 780px;
   padding: 2rem 3rem 5rem;
   position: relative;
 `;
@@ -25,12 +25,13 @@ const IntroSubtitle = styled.h2`
 `;
 
 const IntroText = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 2rem 2rem 2rem;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  margin: 2rem 2rem 3rem;
 
   strong {
-    text-transform: uppercase;
+    font-family: Merriweather;
+    font-weight: normal;
   }
 `;
 

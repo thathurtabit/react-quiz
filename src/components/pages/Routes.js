@@ -5,6 +5,7 @@ import ScrollToTop from '../../helpers/ScrollToTop'
 import styled from 'styled-components';
 import resultData from '../../api/resultData';
 import siteInfo from '../../api/siteInfo';
+import DesignPersonalities from '../pages/DesignPersonalities';
 import Quiz from '../pages/Quiz';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
@@ -48,7 +49,7 @@ const Wrapper = styled.section`
 
 const PageWrap = styled.section`
 	position: relative;
-	max-width: 740px;
+	max-width: 780px;
 	margin: 0 auto;
 `;
 
@@ -87,10 +88,14 @@ const PageTitle = styled.h1`
 `;
 
 const PageIntro = styled.p`
-	color: #8E26B7;
-	font-family: 'Merriweather', serif;
-	font-size: 18px;
-	line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  margin: 2rem 2rem 3rem;
+
+  strong {
+    font-family: Merriweather;
+    font-weight: normal;
+  }
 `;
 
 const MainHeader = styled.header`
@@ -181,13 +186,6 @@ const MainNav = styled.nav`
 
 const TakeTheQuiz = () => (
   <Quiz />
-)
-
-const DesignPersonalities = () => (
-  <PageWrap>
-    <PageTitle>Design Personalities</PageTitle>
-    <PageIntro>List of Design Personality types (illustrations) linking to specific pages.</PageIntro>
-  </PageWrap>
 )
 
 const DesignPersonality = (props) => (

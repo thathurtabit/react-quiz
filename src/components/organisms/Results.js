@@ -18,7 +18,7 @@ const ResultsWrap = styled.section`
 `;
 
 const ResultsTitle = styled.h2`
-  font-size: 3vw;
+  font-size: 5vw;
   font-family: 'Merriweather', serif;
 `;
 
@@ -26,20 +26,34 @@ const ResultsSubtitle = styled.h4`
   font-size: 1rem;
 `;
 
+const ResultIntro = styled.p`
+  color: #999;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+`;
+
 const ResultsText = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1.15rem;
+  line-height: 1.65;
   margin: 2rem 2rem 3rem;
 
   strong {
-    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    font-weight: normal;
   }
+`;
+
+const HR = styled.hr`
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
 `;
 
 const More = styled(Link)`
   background: #8E26B7;
   border: 0;
   color: #fff;
+  display: inline-block;
   font-family: 'Merriweather', serif;
   font-size: 1rem;
   letter-spacing: 0.2rem;
@@ -47,6 +61,7 @@ const More = styled(Link)`
   position: relative;
   overflow: hidden;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 
   span {
@@ -92,7 +107,7 @@ export default function Results(props) {
 
   return (
     <ResultsWrap style={{display: props.show ? 'block' : 'none'}}>
-      <p>You are a:</p>
+      <ResultIntro>You are a:</ResultIntro>
       <ResultsTitle>
         {props.title}
       </ResultsTitle>
@@ -102,7 +117,8 @@ export default function Results(props) {
       <ResultsText>
         <span dangerouslySetInnerHTML={{__html: props.text}} />
       </ResultsText>      
-        <More to={`design-personality/${props.moreLink}`}>Learn More</More>      
+      <More to={`design-personality/${props.moreLink}`}><span>Learn More</span></More>
+      <HR />   
       <Restart restartText={props.nextText} onClick={props.handleRestart} />
     </ResultsWrap>
   );
