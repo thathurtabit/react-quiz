@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const NextButton = styled.button`
+const RestartButton = styled.button`
   background: #8E26B7;
   border: 0;
   color: #fff;
@@ -53,10 +53,10 @@ const NextButton = styled.button`
   }
 `;
 
-export default function Next(props)  {
-  return <NextButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}><span>{props.nextText}</span></NextButton>
+export default function Restart(props)  {
+  return <RestartButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}><span>{props.restartText}</span></RestartButton>
 }
 
-Next.propTypes = {
-  nextText: PropTypes.string.isRequired,
+Restart.propTypes = {
+  restartText: PropTypes.string.isRequired,
 }

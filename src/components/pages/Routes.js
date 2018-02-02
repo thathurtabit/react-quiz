@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { HashRouter as Router, Route, Redirect, NavLink, Switch} from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect, NavLink, Link, Switch} from 'react-router-dom';
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled from 'styled-components';
+import resultData from '../../api/resultData';
 import siteInfo from '../../api/siteInfo';
 import Quiz from '../pages/Quiz';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -47,6 +48,8 @@ const Wrapper = styled.section`
 
 const PageWrap = styled.section`
 	position: relative;
+	max-width: 740px;
+	margin: 0 auto;
 `;
 
 const LayoutWrap = styled.section`
@@ -68,6 +71,7 @@ const SiteName = styled.h1`
 
 	a {
 		text-decoration: none;
+		color: #8E26B7;
 	}
 	
 	a:active,
@@ -79,7 +83,14 @@ const SiteName = styled.h1`
 const PageTitle = styled.h1`
 	color: #8E26B7;
 	font-family: 'Merriweather', serif;
-	font-size: 4vw;
+	font-size: 60px;
+`;
+
+const PageIntro = styled.p`
+	color: #8E26B7;
+	font-family: 'Merriweather', serif;
+	font-size: 18px;
+	line-height: 1.8;
 `;
 
 const MainHeader = styled.header`
@@ -175,9 +186,22 @@ const TakeTheQuiz = () => (
 const DesignPersonalities = () => (
   <PageWrap>
     <PageTitle>Design Personalities</PageTitle>
-    <p>List of Design Personality types (illustrations) linking to specific pages.</p>
+    <PageIntro>List of Design Personality types (illustrations) linking to specific pages.</PageIntro>
   </PageWrap>
 )
+
+const DesignPersonality = (props) => (
+  <PageWrap>
+    <PageTitle>{resultData[props.dataKey].title}</PageTitle>
+    [ILLUSTRATION HERE]
+    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
+
+    <p>Not a {resultData[props.dataKey].title}...?</p>
+    <p><Link to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></Link></p>
+
+  </PageWrap>
+);
+
 
 const NotFound = () => (
   <PageWrap>
@@ -211,6 +235,7 @@ const Layout = ({ children }) => (
 
 const SetUpRoutes = (props) => {
   const locationKey = props.location.pathname;
+  const path = '/design-personality';
 
   return (
   <Layout>
@@ -221,8 +246,26 @@ const SetUpRoutes = (props) => {
           	<Route exact path="/" component={() => <Redirect to="/quiz" />}/>
             <Route exact path="/quiz" component={TakeTheQuiz} />
             <Route exact path="/design-personalities" component={DesignPersonalities} />
-            <Route exact path="/design-personalities/test" component={DesignPersonalities} />
+
+            <Route path={`${path}/people-watcher`} render={(props) => <DesignPersonality dataKey="DAIS" {...props} />} />
+            <Route exact path={`${path}/party-animal`} render={(props) => <DesignPersonality dataKey="DAGS" {...props} />} />
+            <Route exact path={`${path}/number-cruncher`} render={(props) => <DesignPersonality dataKey="DAIM" {...props} />} />
+            <Route exact path={`${path}/prototyper`} render={(props) => <DesignPersonality dataKey="DRIS" {...props} />} />
+            <Route exact path={`${path}/workshop-warrior`} render={(props) => <DesignPersonality dataKey="DRGS" {...props} />} />
+            <Route exact path={`${path}/fortune-teller`} render={(props) => <DesignPersonality dataKey="DAGM" {...props} />} />
+            <Route exact path={`${path}/data-driver`} render={(props) => <DesignPersonality dataKey="DRGM" {...props} />} /> 
+            <Route exact path={`${path}/experimenter`} render={(props) => <DesignPersonality dataKey="DRIM" {...props} />} />
+            <Route exact path={`${path}/planner`}  render={(props) => <DesignPersonality dataKey="CAIM" {...props} />} />
+            <Route exact path={`${path}/conductor`} render={(props) => <DesignPersonality dataKey="CAGM" {...props} />} />
+            <Route exact path={`${path}/team-player`} render={(props) => <DesignPersonality dataKey="CRGM"{...props} />} />
+            <Route exact path={`${path}/perfectionist`} render={(props) => <DesignPersonality dataKey="CRIM"{...props} />} />
+            <Route exact path={`${path}/brand-builder`} render={(props) => <DesignPersonality dataKey="CAIS"{...props} />} />
+            <Route exact path={`${path}/visionary`} render={(props) => <DesignPersonality dataKey="CAGS"{...props} />} />
+            <Route exact path={`${path}/user-champion`} render={(props) => <DesignPersonality dataKey="CRGS"{...props} />} />
+            <Route exact path={`${path}/painter`} render={(props) => <DesignPersonality dataKey="CRIS"{...props} />} />
+            
             <Route component={NotFound} />
+           
           </Switch>
         </Wrapper>
       </PageFade>

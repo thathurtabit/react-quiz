@@ -23,14 +23,6 @@ const QuestionText = styled.h2`
   }
 `;
 
-const applyClassDelay = () => {
-  return new Promise(function(resolve, reject) {
-    setTimeout(function() {
-     resolve('ready');
-    }, 300);
-  });
-}
-
 export default function Question(props) {
 	return (
 		<QuestionText className={`${ props.ready ? 'ready' : 'not-ready' }`}>

@@ -148,7 +148,6 @@ export default class Quiz extends Component {
       answer4Choices: shuffledAnswer4Choices[0],
       answer5Choices: shuffledAnswer5Choices[0],
     });
-
   }
 
   // Shuffle an Array
