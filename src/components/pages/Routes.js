@@ -110,6 +110,11 @@ const MainHeader = styled.header`
 	z-index: 2;
 `;
 
+const IMG = styled.img`
+	height: 400px;
+`;
+
+
 const MainNav = styled.nav`
 	font-family: 'Open Sans', sans-serif;
 	display: flex;
@@ -191,7 +196,7 @@ const TakeTheQuiz = () => (
 const DesignPersonality = (props) => (
   <PageWrap>
     <PageTitle>{resultData[props.dataKey].title}</PageTitle>
-    [ILLUSTRATION HERE]
+    <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
     <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
 
     <p>Not a {resultData[props.dataKey].title}...?</p>
@@ -219,7 +224,7 @@ const PageFade = (props) => (
 const Layout = ({ children }) => (
   <LayoutWrap>
     <MainHeader>
-    	<SiteName><NavLink to={siteInfo.mainNav[0].slug}>{siteInfo.title}</NavLink></SiteName>    
+    	<SiteName><Link to={siteInfo.mainNav[0].slug}>{siteInfo.title}</Link></SiteName>    
 	    	<MainNav>
 		    	<ul>
 		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NavLink></li>
