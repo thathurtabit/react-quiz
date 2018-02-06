@@ -52,10 +52,7 @@ const ResultsText = styled.p`
   margin: 2rem 2rem 3rem;
 
   strong {
-    color: #8E26B7;
     font-family: 'Merriweather', serif;
-    font-weight: normal;
-    font-size: 0.9rem;
     letter-spacing: 0;
   }
 `;

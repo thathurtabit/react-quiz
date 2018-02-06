@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Redirect, NavLink, Link, Switch} from 'rea
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled from 'styled-components';
 import resultData from '../../api/resultData';
+import MainFooter from '../molecules/MainFooter';
 import siteInfo from '../../api/siteInfo';
 import DesignPersonalities from '../pages/DesignPersonalities';
 import Quiz from '../pages/Quiz';
@@ -295,6 +296,7 @@ const Layout = ({ children }) => (
 	    	</MainNav>
     </MainHeader>
     {children}
+    <MainFooter />
   </LayoutWrap>
 )
 
