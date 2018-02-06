@@ -24,8 +24,14 @@ const FooterWrap = styled.footer`
   } 
 `;
 
-const Col = styled.section`
-  
+const Link = styled.a`
+  color: ${props => props.theme.primaryLight};
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+
+  &:hover {
+    color: ${props => props.theme.bg};
+  }
 `;
 
 export default function QuestionHeader(props)  {
@@ -33,14 +39,12 @@ export default function QuestionHeader(props)  {
   const Copyright = () => {
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
-    return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} Made with Computerlove</p>
+    return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} <Link href="https://www.codecomputerlove.com/" target="_blank">Made with Computerlove</Link></p>
   }
 
 	return (
 		<FooterWrap>
-     <Col>
       <Copyright />
-     </Col>
 		</FooterWrap>
 	);
 }
