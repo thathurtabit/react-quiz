@@ -6,13 +6,12 @@ import PropTypes from 'prop-types';
 
 const ResultsWrap = styled.section`
   align-items: center;
-  background: rgba(0,0,0,0.05);
   display: flex;
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
-  margin: 4rem auto;
-  max-width: 700px;
+  margin: 0 auto 5rem;
+  max-width: 780px;
   padding: 2rem 3rem 5rem;
   position: relative;
 `;
@@ -20,10 +19,23 @@ const ResultsWrap = styled.section`
 const ResultsTitle = styled.h2`
   font-size: 5vw;
   font-family: 'Merriweather', serif;
+  margin-top: 1rem;
 `;
 
 const ResultsSubtitle = styled.h4`
-  font-size: 1rem;
+  color: #999;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 5rem;
+
+  strong {
+    color: #8E26B7;
+    font-family: 'Merriweather', serif;
+    font-weight: normal;
+    font-size: 0.9rem;
+    letter-spacing: 0;
+  }
 `;
 
 const ResultIntro = styled.p`
@@ -31,6 +43,7 @@ const ResultIntro = styled.p`
   font-size: 0.75rem;
   letter-spacing: 4px;
   text-transform: uppercase;
+  margin-top: 5rem;
 `;
 
 const ResultsText = styled.p`
@@ -39,8 +52,11 @@ const ResultsText = styled.p`
   margin: 2rem 2rem 3rem;
 
   strong {
+    color: #8E26B7;
     font-family: 'Merriweather', serif;
     font-weight: normal;
+    font-size: 0.9rem;
+    letter-spacing: 0;
   }
 `;
 
@@ -102,6 +118,11 @@ const More = styled(Link)`
   }
 `;
 
+const IMG = styled.img`
+  height: 400px;
+  max-width: 100%;
+`;
+
 
 export default function Results(props) {
 
@@ -111,6 +132,7 @@ export default function Results(props) {
       <ResultsTitle>
         {props.title}
       </ResultsTitle>
+      <IMG src={`images/SVG/${props.moreLink}.svg`} alt={props.title} />
       <ResultsSubtitle>
         You mostly identify with: <strong>{props.resultArray}</strong>
       </ResultsSubtitle>

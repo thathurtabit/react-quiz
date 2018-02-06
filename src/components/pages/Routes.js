@@ -50,7 +50,7 @@ const Wrapper = styled.section`
 const PageWrap = styled.section`
 	position: relative;
 	max-width: 780px;
-	margin: 0 auto;
+	margin: 0 auto 10rem;
 `;
 
 const LayoutWrap = styled.section`
@@ -85,6 +85,15 @@ const PageTitle = styled.h1`
 	color: #8E26B7;
 	font-family: 'Merriweather', serif;
 	font-size: 60px;
+	margin-top: 1rem;
+`;
+
+const PageTitleIntro = styled.p`
+  color: #999;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 5rem;
 `;
 
 const PageIntro = styled.p`
@@ -112,8 +121,60 @@ const MainHeader = styled.header`
 
 const IMG = styled.img`
 	height: 400px;
+	max-width: 100%;
 `;
 
+const NextButton = styled(Link)`
+  background: #8E26B7;
+  border: 0;
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem 3rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+  	background: #8E26B7;
+  	cursor: not-allowed;
+  	opacity: 0.5;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+  
+  &::before {
+    background: #333;
+    bottom: 0;
+    content: '';
+    left: 0;
+    perspective: 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotateY(90deg);
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    cursor: pointer;
+    transform: rotateY(0deg);
+  }
+`;
 
 const MainNav = styled.nav`
 	font-family: 'Open Sans', sans-serif;
@@ -195,12 +256,13 @@ const TakeTheQuiz = () => (
 
 const DesignPersonality = (props) => (
   <PageWrap>
+    <PageTitleIntro>Design Personality</PageTitleIntro>
     <PageTitle>{resultData[props.dataKey].title}</PageTitle>
     <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
     <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
 
-    <p>Not a {resultData[props.dataKey].title}...?</p>
-    <p><Link to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></Link></p>
+    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
+    <p><NextButton to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NextButton></p>
 
   </PageWrap>
 );

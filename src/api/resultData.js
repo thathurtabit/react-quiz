@@ -2,17 +2,23 @@ const resultData = {
   DAIS: {
     title: 'People Watcher',
     text: '<strong>You’re fascinated by people,</strong> endlessly curious about what they do and why they do it, trying to work out what makes them tick. Through your natural empathy for others, you’re able to work out what people want and need, and then propose lots of new ways to help them lead more productive and fulfilling lives.',
-    slug: 'people-watcher'
+    slug: 'people-watcher',
+    similars: ['DAGS', 'DAIM', 'CAIS', 'DRIS'],
+    opposite: 'CRGM'
   },
   DAGS: {
     title: 'Party Animal',
     text: '<strong>You’re a people person through and through -</strong> both in looking for problems that people have and working with others to come up with many possible solutions.  You can easily imagine a better future and then love to discuss how to make this a reality.',
-    slug: 'party-animal'
+    slug: 'party-animal',
+    similars: ['CAGS', 'DRGS', 'DAIS', 'DAGM'],
+    opposite: 'CRIM'
   },
   DAIM: {
     title: 'Number Cruncher',
     text: '<strong>You can imagine scenarios that others can’t yet picture,</strong> taking the first steps towards describing a better way to do something.  Your attention to detail is immaculate, allowing you to suggest multiple solutions, each with a clear understanding of potential impact and likelihood of success.',
-    slug: 'number-cruncher'
+    slug: 'number-cruncher',
+    similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
+    opposite: 'CRGS'
   },
   DRIS: {
     title: 'Prototyper',
@@ -27,7 +33,9 @@ const resultData = {
   DAGM: {
     title: 'Fortune Teller',
     text: '<strong>Predicting the future is your superpower.</strong> Having gained a detailed knowledge of a problem space, you’re able to pull information together from lots of different sources, and then present it back and discuss in a way that everyone understands and is able to contribute.',
-    slug: 'fortune-teller'
+    slug: 'fortune-teller',
+    similars: ['CAGM', 'DRGM', 'DAIM', 'DAGS'],
+    opposite: 'CRGS'
   },
   DRGM: {
     title: 'Data Driver',

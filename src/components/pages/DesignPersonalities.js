@@ -109,6 +109,7 @@ const More = styled(Link)`
 
 const IMG = styled.img`
 	height: 200px;
+	max-width: 100%;
 `;
 
 

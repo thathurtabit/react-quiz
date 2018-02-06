@@ -117,6 +117,7 @@ const initialState = {
   results: {
     title: '',
     text: '',
+    link: ''
   }
 };
 
