@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const IntroTextWrap = styled.section`
   margin: 0 auto 10px;
-  max-width: 800px;
+  max-width: ${props => props.theme.maxContentWidth};
   padding: 0 20px;
 `;
 

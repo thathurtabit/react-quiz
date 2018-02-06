@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { HashRouter as Router, Route, Redirect, NavLink, Link, Switch} from 'react-router-dom';
+import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
-import styled from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
 import resultData from '../../api/resultData';
 import MainFooter from '../molecules/MainFooter';
 import siteInfo from '../../api/siteInfo';
@@ -11,8 +12,8 @@ import Quiz from '../pages/Quiz';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const Wrapper = styled.section`
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3em;
+  font-family: ${props => props.theme.fontSecondary};
+  font-size: 1.3rem;
   text-align: center;
   min-height: 100%;
   position: relative;
@@ -50,7 +51,7 @@ const Wrapper = styled.section`
 
 const PageWrap = styled.section`
 	position: relative;
-	max-width: 780px;
+	max-width: ${props => props.theme.maxContentWidth};
 	margin: 0 auto 10rem;
 `;
 
@@ -58,13 +59,14 @@ const LayoutWrap = styled.section`
 	position: absolute;
 	width: 100%;
   bottom: 0;
-  color: #8E26B7;
+  color: ${props => props.theme.primary};
   top: 100px;
 `;
 
 const SiteName = styled.h1`
-	color: #8E26B7;
-	font-family: 'Merriweather', serif;
+	color: ${props => props.theme.primary};
+	font-family: ${props => props.theme.fontPrimary};
+
 	font-size: 1.2rem;
 	margin: 0;
 	display: flex;
@@ -73,24 +75,24 @@ const SiteName = styled.h1`
 
 	a {
 		text-decoration: none;
-		color: #8E26B7;
+		color: ${props => props.theme.primary};
 	}
 	
 	a:active,
 	a:hover {
-		color: #333;
+		color: ${props => props.theme.secondary};
 	}
 `;
 
 const PageTitle = styled.h1`
-	color: #8E26B7;
-	font-family: 'Merriweather', serif;
+	color: ${props => props.theme.primary};
+	font-family: ${props => props.theme.fontPrimary};
 	font-size: 60px;
 	margin-top: 1rem;
 `;
 
 const PageTitleIntro = styled.p`
-  color: #999;
+  color: ${props => props.theme.tertiary};
   font-size: 0.75rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -103,7 +105,7 @@ const PageIntro = styled.p`
   margin: 2rem 2rem 3rem;
 
   strong {
-    font-family: Merriweather;
+    font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
   }
 `;
@@ -126,10 +128,10 @@ const IMG = styled.img`
 `;
 
 const NextButton = styled(Link)`
-  background: #8E26B7;
+  background: ${props => props.theme.primary};
   border: 0;
-  color: #fff;
-  font-family: 'Merriweather', serif;
+  color: ${props => props.theme.bg};
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 1rem;
   letter-spacing: 0.2rem;
   padding: 1rem 3rem;
@@ -146,7 +148,7 @@ const NextButton = styled(Link)`
 
   &[disabled],
   &[disabled]:hover {
-  	background: #8E26B7;
+  	background: ${props => props.theme.primary};
   	cursor: not-allowed;
   	opacity: 0.5;
 
@@ -157,7 +159,7 @@ const NextButton = styled(Link)`
   }
   
   &::before {
-    background: #333;
+    background: ${props => props.theme.secondary};
     bottom: 0;
     content: '';
     left: 0;
@@ -178,7 +180,7 @@ const NextButton = styled(Link)`
 `;
 
 const MainNav = styled.nav`
-	font-family: 'Open Sans', sans-serif;
+	font-family: ${props => props.theme.fontSecondary};
 	display: flex;
   margin-left: auto;
 
@@ -200,7 +202,7 @@ const MainNav = styled.nav`
 	}
 
 	a {
-		color: #8E26B7;
+		color: ${props => props.theme.primary};
     position: relative;
 		font-size: 0.75rem;
 		letter-spacing: 2px;
@@ -209,7 +211,7 @@ const MainNav = styled.nav`
 
 		&:active,
 		&:hover {
-			color: #333;
+			color: ${props => props.theme.secondary};
 		}
 	}
 
@@ -246,7 +248,7 @@ const MainNav = styled.nav`
     width: 0;
     bottom: -5px;
     left: 50%;
-    border-bottom: 10px solid #8E26B7;
+    border-bottom: 10px solid ${props => props.theme.primary};
   }
 `;
 
@@ -344,9 +346,11 @@ const SetUpRoutes = (props) => {
 const SiteRoutes = () => {
 	return (
 	<Router>
-		<ScrollToTop>
-			<Route path="/" component={SetUpRoutes} />
-		</ScrollToTop>
+		<ThemeProvider theme={theme}>
+			<ScrollToTop>
+				<Route path="/" component={SetUpRoutes} />
+			</ScrollToTop>
+		</ThemeProvider>
 	</Router>
 	); 
 }

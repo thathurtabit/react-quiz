@@ -13,7 +13,7 @@ import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
 
 const Wrapper = styled.section`
-  font-family: 'Open Sans', sans-serif;
+  font-family: ${props => props.theme.fontSecondary};
   font-size: 1rem;
   text-align: center;
 

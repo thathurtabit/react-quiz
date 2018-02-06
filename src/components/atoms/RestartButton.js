@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const RestartButton = styled.button`
-  background: #8E26B7;
+  background: ${props => props.theme.primary};
   border: 0;
-  color: #fff;
-  font-family: 'Merriweather', serif;
+  color: ${props => props.theme.bg};
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 1rem;
   letter-spacing: 0.2rem;
   padding: 1rem 3rem;
@@ -22,7 +22,7 @@ const RestartButton = styled.button`
 
   &[disabled],
   &[disabled]:hover {
-  	background: #8E26B7;
+  	background: ${props => props.theme.primary};
   	cursor: not-allowed;
   	opacity: 0.5;
 
@@ -33,7 +33,7 @@ const RestartButton = styled.button`
   }
   
   &::before {
-    background: #333;
+    background: ${props => props.theme.secondary};
     bottom: 0;
     content: '';
     left: 0;

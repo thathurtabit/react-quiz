@@ -9,8 +9,8 @@ const PageWrap = styled.section`
 `;
 
 const PageTitle = styled.h1`
-	color: #8E26B7;
-	font-family: 'Merriweather', serif;
+	color: ${props => props.theme.primary};
+	font-family: ${props => props.theme.fontPrimary};
 	font-size: 60px;
 `;
 
@@ -49,13 +49,13 @@ const PersonalitiesLi = styled.li`
 	width: 100%;
 	
 	h4 {
-		font-family: 'Merriweather', serif;
+		font-family: ${props => props.theme.fontPrimary};
 		font-size: 1rem;
 		letter-spacing: 0.2rem;
 	}
 
 	p {
-		color: #333;
+		color: ${props => props.theme.secondary};
 		font-size: 0.85rem;
 		letter-spacing: 0;
 		overflow: hidden;
@@ -66,15 +66,15 @@ const PersonalitiesLi = styled.li`
 	}
 
 	button {
-		background: #8E26B7;
+		background: ${props => props.theme.primary};
 		border: 0;
 		color: #fff;
-		font-family: 'Merriweather', serif;
+		font-family: ${props => props.theme.fontPrimary};
 		padding: 5px 10px;
 
 		&:hover {
-			background: #fff;
-			color: #8E26B7;
+			background: ${props => props.theme.bg};
+			color: ${props => props.theme.primary};
 			cursor: pointer;
 		}
 	}
@@ -82,7 +82,7 @@ const PersonalitiesLi = styled.li`
 
 const More = styled(Link)`
   border: 0;
-  color: #8E26B7;
+  color: ${props => props.theme.primary};
   display: block;
   margin: 0 auto;
   max-width: 300px;

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const QuestionHeaderWrap = styled.section`
-  background: #8E26B7;
-  color: #fff;
+  background: ${props => props.theme.primary};
+  color: ${props => props.theme.bg};
   display: flex;
   font-size: 1.5rem;
   margin: 0 0 1rem;
@@ -21,7 +21,7 @@ const QuestionHeaderWrap = styled.section`
     position: absolute;
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
-    border-top-color: #8E26B7;
+    border-top-color: ${props => props.theme.primary};;
     border-width: 20px;
     margin-left: -20px;
   }
@@ -39,7 +39,7 @@ const Round = styled.p`
 `;
 
 const QuestionTitle = styled.h3`
-  font-family: 'Merriweather', serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 2rem;
   margin: 0;
   text-align: center;

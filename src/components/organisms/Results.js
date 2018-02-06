@@ -11,14 +11,14 @@ const ResultsWrap = styled.section`
   justify-content: center;
   list-style-type: none;
   margin: 0 auto 5rem;
-  max-width: 780px;
+  max-width: ${props => props.theme.maxContentWidth};
   padding: 2rem 3rem 5rem;
   position: relative;
 `;
 
 const ResultsTitle = styled.h2`
   font-size: 5vw;
-  font-family: 'Merriweather', serif;
+  font-family: ${props => props.theme.fontPrimary};
   margin-top: 1rem;
 `;
 
@@ -30,8 +30,8 @@ const ResultsSubtitle = styled.h4`
   margin-top: 5rem;
 
   strong {
-    color: #8E26B7;
-    font-family: 'Merriweather', serif;
+    color: ${props => props.theme.pPrimary};
+    font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
     font-size: 0.9rem;
     letter-spacing: 0;
@@ -39,7 +39,7 @@ const ResultsSubtitle = styled.h4`
 `;
 
 const ResultIntro = styled.p`
-  color: #999;
+  color: ${props => props.theme.tertiary};
   font-size: 0.75rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -52,7 +52,7 @@ const ResultsText = styled.p`
   margin: 2rem 2rem 3rem;
 
   strong {
-    font-family: 'Merriweather', serif;
+    font-family: ${props => props.theme.fontPrimary};
     letter-spacing: 0;
   }
 `;
@@ -63,11 +63,11 @@ const HR = styled.hr`
 `;
 
 const More = styled(Link)`
-  background: #8E26B7;
+  background: ${props => props.theme.primary};
   border: 0;
-  color: #fff;
+  color: ${props => props.theme.bg};
   display: inline-block;
-  font-family: 'Merriweather', serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 1rem;
   letter-spacing: 0.2rem;
   padding: 1rem 3rem;
@@ -84,7 +84,7 @@ const More = styled(Link)`
 
   &[disabled],
   &[disabled]:hover {
-    background: #8E26B7;
+    background: ${props => props.theme.primary};
     cursor: not-allowed;
     opacity: 0.5;
 
@@ -95,7 +95,7 @@ const More = styled(Link)`
   }
   
   &::before {
-    background: #333;
+    background: ${props => props.theme.secondary};
     bottom: 0;
     content: '';
     left: 0;

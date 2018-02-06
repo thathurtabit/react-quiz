@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const FooterWrap = styled.footer`
-  background: #8E26B7;
-  color: #d8ade8;
+  background: ${props => props.theme.primary};
+  color: ${props => props.theme.primaryLight};
   display: flex;
   font-size: 0.75rem;
-  font-family: 'Open Sans', serif;
+  font-family: ${props => props.theme.fontSecondary};
   margin: 3rem 0 0;
   padding: 0.75rem;
   position: relative;
@@ -22,8 +21,7 @@ const FooterWrap = styled.footer`
     grid-template-columns: 1fr;
     grid-gap: 20px;
     text-align: center;
-  }
- 
+  } 
 `;
 
 const Col = styled.section`

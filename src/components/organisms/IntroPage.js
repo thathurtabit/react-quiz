@@ -10,14 +10,14 @@ const IntroWrap = styled.section`
   justify-content: center;
   list-style-type: none;
   margin: 4rem auto;
-  max-width: 780px;
+  max-width: ${props => props.theme.maxContentWidth};
   padding: 2rem 3rem 5rem;
   position: relative;
 `;
 
 const IntroSubtitle = styled.h2`
   font-size: calc(15vw);
-  font-family: 'Merriweather', serif;
+  font-family: ${props => props.theme.fontPrimary};
 
   @media only screen and (min-width: 600px)  {
     font-size: calc(50px + 3vw);
@@ -30,7 +30,7 @@ const IntroText = styled.p`
   margin: 2rem 2rem 3rem;
 
   strong {
-    font-family: Merriweather;
+    font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
   }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const QuestionText = styled.h2`
-  font-family: 'Merriweather', serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 3rem;
   margin: 2rem;
   padding: 2rem;

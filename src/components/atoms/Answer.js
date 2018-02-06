@@ -12,21 +12,21 @@ const AnswerInput = styled.input`
   display: none;
 
   &:checked+label{
-    background: #8E26B7;
-    color: #fff;
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.bg};
   } 
 `;
 
 const AnswerLabel = styled.label`
   padding: 2rem;
-  background: #fff;
+  background: ${props => props.theme.bg};
   display: block;
   font-size: 1.5rem;
   transition: background 0.25s ease-out, color 0.25s ease-out;
 
   &:hover {
     background: rgba(0,0,0,0.05);
-    color: #666;
+    color: ${props => props.theme.secondary};
     cursor: pointer;
   }
 `;
