@@ -1,43 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
 import personalityInfo from '../../api/personalityInfo';
+import resultData from '../../api/resultData';
 
 const Wrap = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   list-style-type: none;
-  margin: 4rem auto;
-  max-width: ${props => props.theme.maxContentWidth};
-  padding: 2rem 3rem 5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: ${props => props.theme.maxContentWidthWide};
+  padding: 1rem 1rem 3rem;
   position: relative;
+`;
 
+const SectionTitle= styled.h2`
+  font-family: ${props => props.theme.fontPrimary};
+  font-size: 2.5rem;
+`;
+
+const SectionTitleIntro = styled.p`
+  color: ${props => props.theme.tertiary};
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+`;
+
+const ColWrap = styled.section`
   @media screen and (min-width: 480px) {
-    & > section {
-      float: left;  
-      width: 50%;
-    }
     
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    text-align: center;
-  } 
+  }
 `;
 
-const List = styled.section`
-  padding: 0;
+const Col = styled.section`  
+  padding: 0;  
+  text-align: left;
+`;
+
+const ColTitle = styled.h4`
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-family: ${props => props.theme.fontPrimary};
+  font-size: 1.5rem;
+  padding: 20px;
 `;
 
 const PersonalitiesUl = styled.ul`
-  margin: 0;
+  margin: 20px;
   padding: 0;
-  list-style-type: none;
 `;
 
 const PersonalitiesLi = styled.li`
-  font-size: 13px;
+  color: ${props => props.theme.tertiary};
+  font-size: 18px;
 `;
 
 const ListPersonalities = (props) => {
@@ -48,14 +64,12 @@ const ListPersonalities = (props) => {
 
   filteredInfo = personalityKeys.filter((personalityKey) => {
     let infoFirstChar = personalityKey.charAt(0).toUpperCase();
-
     return resultKeyArray.includes(infoFirstChar)
   });
 
   let infoList = filteredInfo.map((infoKey) => {    
     return (
       <PersonalitiesLi key={infoKey}>
-          <h4>{personalityInfo[infoKey].name}</h4>
           <p>{personalityInfo[infoKey][props.info]}</p>
       </PersonalitiesLi>
     )
@@ -68,12 +82,21 @@ export default function PersonalityInfoList(props) {
 
   return (
     <Wrap>
-      <List>
-        <ListPersonalities resultKey={props.resultKey} info="overview" />
-      </List>
-      <List>
-        <ListPersonalities resultKey={props.resultKey} info="insight" />
-      </List>
+      <header>
+        <SectionTitleIntro>Understanding</SectionTitleIntro>
+        <SectionTitle>{resultData[props.resultKey].title}s</SectionTitle>
+        <SectionTitleIntro>[{props.resultKey}]</SectionTitleIntro>
+      </header>
+      <ColWrap>
+        <Col>
+          <ColTitle>Key personality traits:</ColTitle>
+          <ListPersonalities resultKey={props.resultKey} info="overview" />
+        </Col>
+        <Col>
+          <ColTitle>Watch out for:</ColTitle>
+          <ListPersonalities resultKey={props.resultKey} info="insight" />
+        </Col>
+      </ColWrap>
     </Wrap>
   );
 }

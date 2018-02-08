@@ -23,7 +23,7 @@ const PersonalitiesUl = styled.ul`
 	@media screen and (min-width: 480px) {
 		& > * {
 		  float: left;  
-		  width: 33%;
+		  width: 50%;
 		}
 		
 		display: grid;
@@ -34,7 +34,7 @@ const PersonalitiesUl = styled.ul`
 	@media screen and (min-width: 860px) {
 		& > * {
 		  float: left;  
-		  width: 50%;
+		  width: 33%;
 		}
 		
 		display: grid;

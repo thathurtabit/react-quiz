@@ -53,7 +53,7 @@ const Wrapper = styled.section`
 const PageWrap = styled.section`
 	position: relative;
 	max-width: ${props => props.theme.maxContentWidth};
-	margin: 0 auto 10rem;
+	margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
 `;
 
 const LayoutWrap = styled.section`
@@ -100,7 +100,7 @@ const PageTitleIntro = styled.p`
   margin-top: 5rem;
 `;
 
-const PageIntro = styled.p`
+const PageIntro = styled.main`
   font-size: 1.15rem;
   line-height: 1.65;
   margin: 2rem 2rem 3rem;
@@ -259,19 +259,21 @@ const TakeTheQuiz = () => (
 )
 
 const DesignPersonality = (props) => (
-
-  <PageWrap>
-    <PageTitleIntro>Design Personality</PageTitleIntro>
-    <PageTitle>{resultData[props.dataKey].title}</PageTitle>
-    <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
-    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
-    {console.log(`KEY: ${props.dataKey}`)}
-    <PersonalityInfoList resultKey={props.dataKey} />
-
-    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
-    <p><NextButton to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NextButton></p>
-
-  </PageWrap>
+	<section>
+	  <PageWrap>
+	    <PageTitleIntro>Design Personality</PageTitleIntro>
+	    <PageTitle>{resultData[props.dataKey].title}</PageTitle>
+	    <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
+	    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
+	  </PageWrap>
+	 
+	  <PersonalityInfoList resultKey={props.dataKey} />
+	   
+	  <PageWrap extraSpacing>
+	    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
+	    <p><NextButton to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NextButton></p>
+	  </PageWrap>  
+  </section>
 );
 
 

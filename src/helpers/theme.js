@@ -8,7 +8,8 @@ const theme = {
   bg: '#ffffff',
   fontPrimary: `'Merriweather', serif`,
   fontSecondary: `'Open Sans', sans-serif`,
-  maxContentWidth: '780px'
+  maxContentWidth: '780px',
+  maxContentWidthWide: '980px'
 };
 
 export default theme;
