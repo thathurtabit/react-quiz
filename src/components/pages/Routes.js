@@ -6,6 +6,7 @@ import ScrollToTop from '../../helpers/ScrollToTop'
 import styled, {ThemeProvider} from 'styled-components';
 import resultData from '../../api/resultData';
 import MainFooter from '../molecules/MainFooter';
+import PersonalityInfoList from '../organisms/PersonalityInfoList';
 import siteInfo from '../../api/siteInfo';
 import DesignPersonalities from '../pages/DesignPersonalities';
 import Quiz from '../pages/Quiz';
@@ -258,11 +259,14 @@ const TakeTheQuiz = () => (
 )
 
 const DesignPersonality = (props) => (
+
   <PageWrap>
     <PageTitleIntro>Design Personality</PageTitleIntro>
     <PageTitle>{resultData[props.dataKey].title}</PageTitle>
     <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
     <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
+    {console.log(`KEY: ${props.dataKey}`)}
+    <PersonalityInfoList resultKey={props.dataKey} />
 
     <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
     <p><NextButton to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NextButton></p>
