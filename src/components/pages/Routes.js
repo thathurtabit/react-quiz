@@ -90,7 +90,7 @@ const PageTitle = styled.h1`
 	color: ${props => props.theme.primary};
 	font-family: ${props => props.theme.fontPrimary};
 	font-size: 60px;
-	margin-top: 1rem;
+	margin: 1rem 1rem 6rem;
 `;
 
 const PageTitleIntro = styled.p`
@@ -102,16 +102,46 @@ const PageTitleIntro = styled.p`
 `;
 
 const PageIntro = styled.main`
-  font-size: 1.15rem;
-  line-height: 1.65;
-  margin: 2rem 2rem 3rem;
+  font-size: calc(15px + 0.5vw);
+  line-height: 1.75;
+  margin: 4rem 2rem 3rem;
+  position: relative;
 
   strong {
     font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
   }
+
+  &::before {
+  	content: '';
+  	width: 50px;
+  	height: 1px;
+  	border-top: 5px solid rgba(0, 0, 0, 0.05);
+  	left: 50%;
+  	top: -50px;
+  	position: absolute;
+  	transform: translateX(-50%);
+  }
 `;
 
+const HR = styled.hr`
+	border: 0;
+	margin: 5rem 0 8rem;
+	overflow: visible;
+	padding: 0;
+	position: relative;
+
+	&::before {
+  	border-top: 5px solid rgba(0, 0, 0, 0.05);
+  	content: '';
+  	height: 1px;
+  	left: 50%;
+  	position: absolute;
+  	transform: translateX(-50%);
+  	width: 50px;
+  }
+
+`;
 const MainHeader = styled.header`
 	background: white;
 	display: flex;
@@ -267,10 +297,16 @@ const DesignPersonality = (props) => (
 	    <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
 	    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
 	  </PageWrap>
+
+	  <HR />
 	 
 	  <PersonalityInfoList resultKey={props.dataKey} />
+
+	  <HR />
 	  
 	  <SimilarsOpposite resultKey={props.dataKey} />
+
+	  <HR />
 
 	  <PageWrap extraSpacing>
 	    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>

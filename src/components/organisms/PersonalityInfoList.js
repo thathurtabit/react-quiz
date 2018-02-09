@@ -40,7 +40,8 @@ const Col = styled.section`
 `;
 
 const ColTitle = styled.h4`
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+  border-left: 1px solid;
   font-family: ${props => props.theme.fontPrimary};
   font-size: 1.5rem;
   padding: 20px;
@@ -49,11 +50,28 @@ const ColTitle = styled.h4`
 const PersonalitiesUl = styled.ul`
   margin: 20px;
   padding: 0;
+  list-style-type: none;
 `;
 
 const PersonalitiesLi = styled.li`
   color: ${props => props.theme.tertiary};
-  font-size: 18px;
+  font-size: 1.15rem;
+  position: relative;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  padding-left: 5px;
+
+  &::before {
+    content: '';
+    background: ${props => props.theme.primary};
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    margin-left: -1em;
+    top: 12px;
+    transform: rotate(45deg);
+  }
 `;
 
 const ListPersonalities = (props) => {
