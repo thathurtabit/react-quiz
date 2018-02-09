@@ -9,7 +9,7 @@ const theme = {
   fontPrimary: `'Merriweather', serif`,
   fontSecondary: `'Open Sans', sans-serif`,
   maxContentWidth: '780px',
-  maxContentWidthWide: '980px'
+  maxContentWidthWide: '1000px'
 };
 
 export default theme;

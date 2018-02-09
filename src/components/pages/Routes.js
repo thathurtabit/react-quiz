@@ -7,6 +7,7 @@ import styled, {ThemeProvider} from 'styled-components';
 import resultData from '../../api/resultData';
 import MainFooter from '../molecules/MainFooter';
 import PersonalityInfoList from '../organisms/PersonalityInfoList';
+import SimilarsOpposite from '../organisms/SimilarsOpposite';
 import siteInfo from '../../api/siteInfo';
 import DesignPersonalities from '../pages/DesignPersonalities';
 import Quiz from '../pages/Quiz';
@@ -268,7 +269,9 @@ const DesignPersonality = (props) => (
 	  </PageWrap>
 	 
 	  <PersonalityInfoList resultKey={props.dataKey} />
-	   
+	  
+	  <SimilarsOpposite resultKey={props.dataKey} />
+
 	  <PageWrap extraSpacing>
 	    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
 	    <p><NextButton to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NextButton></p>
