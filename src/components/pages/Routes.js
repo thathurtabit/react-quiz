@@ -102,7 +102,7 @@ const PageTitleIntro = styled.p`
 `;
 
 const PageIntro = styled.main`
-  font-size: calc(15px + 0.5vw);
+  font-size: calc(1rem + 0.5vw);
   line-height: 1.75;
   margin: 4rem 2rem 3rem;
   position: relative;
@@ -110,17 +110,6 @@ const PageIntro = styled.main`
   strong {
     font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
-  }
-
-  &::before {
-  	content: '';
-  	width: 50px;
-  	height: 1px;
-  	border-top: 5px solid rgba(0, 0, 0, 0.05);
-  	left: 50%;
-  	top: -50px;
-  	position: absolute;
-  	transform: translateX(-50%);
   }
 `;
 

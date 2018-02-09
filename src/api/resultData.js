@@ -93,7 +93,7 @@ const resultData = {
     title: 'Data Driver',
     text: '<strong>You like helping people work out where they need to go.</strong> You can also suggest options and alternatives and work with people to find the best one.  Then, you’re also great at coming up with lots of ways to get there, and can give clear directions and information to help people recognise when they’re reached their destination.',
     slug: 'data-driver',
-    similars: ['CRGM', 'DAGM', 'DRIM', 'DAGI'],
+    similars: ['CRGM', 'DAGM', 'DRIM', 'DAGS'],
     opposite: {
       key: 'CAIS',
       text: 'Text about the opposite'

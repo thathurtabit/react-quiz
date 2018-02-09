@@ -14,7 +14,7 @@ const Wrap = styled.section`
 
 const SectionTitle= styled.h2`
   font-family: ${props => props.theme.fontPrimary};
-  font-size: 2.5rem;
+  font-size: calc(1rem + 2vw);
 `;
 
 const SectionTitleIntro = styled.p`
@@ -43,7 +43,7 @@ const ColTitle = styled.h4`
   background: rgba(0, 0, 0, 0.02);
   border-left: 1px solid;
   font-family: ${props => props.theme.fontPrimary};
-  font-size: 1.5rem;
+  font-size: calc(1rem + 0.5vw);
   padding: 20px;
 `;
 
@@ -54,8 +54,8 @@ const PersonalitiesUl = styled.ul`
 `;
 
 const PersonalitiesLi = styled.li`
-  color: ${props => props.theme.tertiary};
-  font-size: 1.15rem;
+  color: ${props => props.theme.tertiary};  
+  font-size: calc(1rem + 0.2vw);
   position: relative;
   line-height: 1.75;
   margin-bottom: 20px;

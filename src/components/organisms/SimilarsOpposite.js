@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import personalityInfo from '../../api/personalityInfo';
 import resultData from '../../api/resultData';
 
 const Wrap = styled.section`
@@ -15,7 +14,7 @@ const Wrap = styled.section`
 
 const SectionTitle= styled.h2`
   font-family: ${props => props.theme.fontPrimary};
-  font-size: 2.5rem;
+  font-size: calc(1rem + 1.75vw);
 `;
 
 const SectionTitleIntro = styled.p`
@@ -27,20 +26,13 @@ const SectionTitleIntro = styled.p`
 `;
 
 const ListWrap = styled.section`
-
-`;
-
-const ColTitle = styled.h4`
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  font-family: ${props => props.theme.fontPrimary};
-  font-size: 1.5rem;
-  padding: 20px;
+  position: relative;
 `;
 
 const PersonalitiesLiTitle = styled.h5`
   font-family: ${props => props.theme.fontPrimary};
   color: ${props => props.theme.primary};
-  font-size: 0.85rem;
+  font-size: calc(1rem + 0.1vw);
   padding: 10px 0 0;
   margin: 0;
   text-transform: none;
@@ -49,7 +41,7 @@ const PersonalitiesLiTitle = styled.h5`
 const PersonalitiesText = styled.p`
   font-family: ${props => props.theme.fontSecondary};
   color: ${props => props.theme.tertiary};
-  font-size: 0.85rem;
+  font-size: calc(1rem + 0.05vw);
   padding: 20px 0 0;
   margin: 0;
   text-transform: none;
