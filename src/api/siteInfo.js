@@ -2,11 +2,11 @@ const siteInfo = {
   title: "What kind of designer are you?",
   mainNav: [
     {
-      name: "Take the Quiz",
+      name: "<i>Take the</i> Quiz",
       slug: "/quiz"
     },
     {
-      name: "Design Personalities",
+      name: "<i>Design</i> Personalities",
       slug: "/design-personalities"
     },
   ]

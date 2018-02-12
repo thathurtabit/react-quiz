@@ -58,22 +58,31 @@ const PageWrap = styled.section`
 `;
 
 const LayoutWrap = styled.section`
-	position: absolute;
-	width: 100%;
-  bottom: 0;
   color: ${props => props.theme.primary};
-  top: 100px;
+
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+		position: absolute;
+		width: 100%;
+	  bottom: 0;
+	  top: 100px;
+	}
 `;
 
 const SiteName = styled.h1`
 	color: ${props => props.theme.primary};
 	font-family: ${props => props.theme.fontPrimary};
-
-	font-size: 1.2rem;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	font-size: 1.1rem;
+	margin: 20px 0 15px;
+	text-align: center;
+	
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+		display: flex;
+		font-size: 1.2rem;
+		flex-direction: column;
+		justify-content: center;
+		margin: 20px 0;
+		text-align: left;
+  }
 
 	a {
 		text-decoration: none;
@@ -89,8 +98,19 @@ const SiteName = styled.h1`
 const PageTitle = styled.h1`
 	color: ${props => props.theme.primary};
 	font-family: ${props => props.theme.fontPrimary};
-	font-size: 60px;
-	margin: 1rem 1rem 6rem;
+	margin: 1rem 1rem 2rem;	
+	font-size: calc(15vw);
+
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+			font-size: calc(20px + 5vw);
+			margin: 1rem 1rem 4rem;	
+	}
+	
+	@media screen and (min-width: ${props => props.theme.breakpointMD}) {
+			font-size: calc(20px + 4vw);
+			margin: 1rem 1rem 5rem;	
+	}
+
 `;
 
 const PageTitleIntro = styled.p`
@@ -133,14 +153,19 @@ const HR = styled.hr`
 `;
 const MainHeader = styled.header`
 	background: white;
-	display: flex;
-	justify-content: space-between;
 	left: 0;
-	padding: 1rem 2rem;
-	position: fixed;
+	padding: 1rem;
 	right: 0;
+	text-align: center;
 	top: 0;
 	z-index: 2;
+	
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+		position: fixed;
+	}
 `;
 
 const IMG = styled.img`
@@ -206,14 +231,18 @@ const MainNav = styled.nav`
   margin-left: auto;
 
   ul {
-  	list-style-type: none;
   	display: flex;
   	flex-direction: row;
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	width: 100%;
 	}
 
 	li {
 		display: flex;
 		flex-direction: column;
+		flex: 1;
 		align-items: center;
 		justify-content: center;
 
@@ -226,13 +255,26 @@ const MainNav = styled.nav`
 		color: ${props => props.theme.primary};
     position: relative;
 		font-size: 0.75rem;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+			letter-spacing: 2px;
+		}
 
 		&:active,
 		&:hover {
 			color: ${props => props.theme.secondary};
+		}
+	}
+
+	a i {
+		display: none;
+		font-style: normal;
+
+		@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+			display: inline-block;
 		}
 	}
 
@@ -287,14 +329,10 @@ const DesignPersonality = (props) => (
 	    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
 	  </PageWrap>
 
-	  <HR />
-	 
+	  <HR />	 
 	  <PersonalityInfoList resultKey={props.dataKey} />
-
-	  <HR />
-	  
+	  <HR />	  
 	  <SimilarsOpposite resultKey={props.dataKey} />
-
 	  <HR />
 
 	  <PageWrap extraSpacing>
@@ -326,8 +364,8 @@ const Layout = ({ children }) => (
     	<SiteName><Link to={siteInfo.mainNav[0].slug}>{siteInfo.title}</Link></SiteName>    
 	    	<MainNav>
 		    	<ul>
-		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NavLink></li>
-	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName="active"><span>{siteInfo.mainNav[1].name}</span></NavLink></li>
+		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span dangerouslySetInnerHTML={{__html: siteInfo.mainNav[0].name}}></span></NavLink></li>
+	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName="active"><span dangerouslySetInnerHTML={{__html: siteInfo.mainNav[1].name}}></span></NavLink></li>
 		    	</ul>
 	    	</MainNav>
     </MainHeader>

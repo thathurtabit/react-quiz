@@ -11,7 +11,11 @@ const PageWrap = styled.section`
 const PageTitle = styled.h1`
 	color: ${props => props.theme.primary};
 	font-family: ${props => props.theme.fontPrimary};
-	font-size: 60px;
+	font-size: calc(10vw);
+
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
+			font-size: calc(20px + 4vw);
+	}
 `;
 
 // Grid fallback

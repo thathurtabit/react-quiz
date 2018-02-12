@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const FooterWrap = styled.footer`
@@ -10,18 +10,7 @@ const FooterWrap = styled.footer`
   margin: 3rem 0 0;
   padding: 0.75rem;
   position: relative;
-
-  @media screen and (min-width: 480px) {
-    & > section {
-      float: left;  
-      width: 100%;
-    }
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    text-align: center;
-  } 
+  text-align: center;
 `;
 
 const Link = styled.a`
@@ -34,18 +23,41 @@ const Link = styled.a`
   }
 `;
 
-export default function QuestionHeader(props)  {
+const Copyright = () => {
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
+  return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} <Link href="https://www.codecomputerlove.com/" target="_blank">Made with Computerlove</Link></p>
+}
 
-  const Copyright = () => {
-    let currentDate = new Date();
-    let currentYear = currentDate.getFullYear();
-    return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} <Link href="https://www.codecomputerlove.com/" target="_blank">Made with Computerlove</Link></p>
+export default class MainFooter extends Component {
+
+  // State constructor
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: {
+        footer: false
+      }
+    }
   }
 
-	return (
-		<FooterWrap>
-      <Copyright />
-		</FooterWrap>
-	);
+  // React Lifecycle
+  componentDidMount() {
+    console.log('Component Did Mount');
+    this.setState({
+      display: {
+        footer: true
+      }
+    })
+  }
+
+  // Render
+  render() {
+    	return (
+    		<FooterWrap style={{display: this.state.display.footer ? 'block' : 'none'}}>
+          <Copyright />
+    		</FooterWrap>
+    	);
+    }
 }
 

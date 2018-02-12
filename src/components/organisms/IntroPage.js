@@ -9,25 +9,31 @@ const IntroWrap = styled.section`
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
-  margin: 4rem auto;
+  margin: 1rem auto;
   max-width: ${props => props.theme.maxContentWidth};
-  padding: 2rem 3rem 5rem;
+  padding: 2rem 1rem 5rem;
   position: relative;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    margin: 4rem auto;
+    padding: 2rem 3rem 5rem;
+  }
 `;
 
 const IntroSubtitle = styled.h2`
   font-size: calc(15vw);
   font-family: ${props => props.theme.fontPrimary};
 
-  @media only screen and (min-width: 600px)  {
-    font-size: calc(50px + 3vw);
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    font-size: calc(50px + 3.75vw);
   }
 `;
 
 const IntroText = styled.p`
-  font-size: 1.15rem;
+  font-size: calc(1rem + 0.25vw);
   line-height: 1.65;
-  margin: 2rem 2rem 3rem;
+  margin: 1rem 1rem 2.5rem;
+  padding: 0;
 
   strong {
     font-family: ${props => props.theme.fontPrimary};
