@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import Restart from '../atoms/RestartButton';
 import HeroImage from '../atoms/HeroImage';
 import SocialShare from '../molecules/SocialShare';
@@ -86,59 +85,6 @@ const HR = styled.hr`
     position: absolute;
     transform: translateX(-50%);
     width: 50px;
-  }
-`;
-
-const More = styled(Link)`
-  background: ${props => props.theme.primary};
-  border: 0;
-  color: ${props => props.theme.bg};
-  display: inline-block;
-  font-family: ${props => props.theme.fontPrimary};
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
-  padding: 1rem 3rem;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  span {
-    position: relative;
-    z-index: 2;
-  }
-
-  &[disabled],
-  &[disabled]:hover {
-    background: ${props => props.theme.primary};
-    cursor: not-allowed;
-    opacity: 0.5;
-
-    &::after,
-    &::before {
-      display: none;
-    }
-  }
-  
-  &::before {
-    background: ${props => props.theme.secondary};
-    bottom: 0;
-    content: '';
-    left: 0;
-    perspective: 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: rotateY(90deg);
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-    z-index: 1;
-  }
-
-  &:hover::before {
-    opacity: 1;
-    cursor: pointer;
-    transform: rotateY(0deg);
   }
 `;
 

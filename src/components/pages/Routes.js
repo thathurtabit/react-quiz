@@ -287,7 +287,7 @@ const DesignPersonality = (props) => (
 	  <SimilarsOpposite resultKey={props.dataKey} />
 	  <HR />
 
-	  <PageTitleIntro>Share your result</PageTitleIntro>
+	  <PageTitleIntro>Share</PageTitleIntro>
 	  <SocialShare personality={resultData[props.dataKey].title} />
 
 	  <PageWrap extraSpacing>
