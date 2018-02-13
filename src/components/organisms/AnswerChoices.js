@@ -4,16 +4,19 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const AnswerUl = styled.ul`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   list-style-type: none;
   position: relative;
   padding: 0;
 
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   &::before {
-    background: rgba(0,0,0,0.5);
+    background: ${props => props.theme.tertiary};
     border-radius: 100%;
     color: #fff;
     content: "vs";
@@ -25,6 +28,7 @@ const AnswerUl = styled.ul`
     top: 50%;
     transform: translate(-50%, -50%);
     width: 30px;
+    z-index: 10;
   }
 `;
 

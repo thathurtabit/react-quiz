@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const NextButton = styled.button`
+const GoToQuizButton = styled(Link)`
   background: ${props => props.theme.primary};
   border: 0;
   color: ${props => props.theme.bg};
@@ -13,6 +14,7 @@ const NextButton = styled.button`
   position: relative;
   overflow: hidden;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 
   span {
@@ -26,9 +28,9 @@ const NextButton = styled.button`
 
   &[disabled],
   &[disabled]:hover {
-  	background: ${props => props.theme.primary};
-  	cursor: not-allowed;
-  	opacity: 0.5;
+    background: ${props => props.theme.primary};
+    cursor: not-allowed;
+    opacity: 0.5;
 
     &::after,
     &::before {
@@ -57,10 +59,11 @@ const NextButton = styled.button`
   }
 `;
 
-export default function Next(props)  {
-  return <NextButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}><span>{props.nextText}</span></NextButton>
+export default function QuizButton(props)  {
+  return <GoToQuizButton to={props.to}><span dangerouslySetInnerHTML={{__html: props.text}}></span></GoToQuizButton>
 }
 
-Next.propTypes = {
-  nextText: PropTypes.string.isRequired,
+QuizButton.propTypes = {
+  to: PropTypes.string,
+  text: PropTypes.string,
 }

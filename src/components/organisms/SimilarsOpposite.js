@@ -6,7 +6,6 @@ import resultData from '../../api/resultData';
 const Wrap = styled.section`
   list-style-type: none;
   margin: 0 auto;
-  width: 100%;
   max-width: ${props => props.theme.maxContentWidthWide};
   padding: 1rem 1rem 3rem;
   position: relative;
@@ -56,12 +55,22 @@ const PersonalitiesUl = styled.ul`
 
 const PersonalitiesLi = styled.li`
   color: ${props => props.theme.tertiary};
-  display: inline-block;
+  display: block;
   font-size: 18px;
-  margin: 0;  
-  max-width: ${props => props.long ? '30%' : '25%'};
+  margin: 0 auto;  
+  max-width: 50%;
   padding: 0;
-  width: 100%;
+  
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    display: inline-block;
+    width: 50%;
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+    display: inline-block;
+    width: 25%;
+  }
+
 `;
 
 const More = styled(Link)`
@@ -69,7 +78,6 @@ const More = styled(Link)`
   color: ${props => props.theme.primary};
   display: block;
   margin: 1rem 0;
-  width: 100%;
   overflow: hidden;
   padding: 30px 0;
   position: relative;
@@ -93,7 +101,7 @@ const More = styled(Link)`
 
 
 const IMG = styled.img`
-  height: 120px;
+  height: 150px;
   max-width: 100%;
 `;
 
@@ -125,8 +133,8 @@ const OppositePersonalities = (props) => {
  
   return  (
     <PersonalitiesUl>
-      <PersonalitiesLi long>
-        <More to={`/design-personality/${resultData[oppositeKey].slug}`} long>
+      <PersonalitiesLi>
+        <More to={`/design-personality/${resultData[oppositeKey].slug}`}>
           <IMG src={`images/SVG/${resultData[oppositeKey].slug}.svg`} alt={resultData[oppositeKey].title} />
           <PersonalitiesLiTitle>{resultData[oppositeKey].title}</PersonalitiesLiTitle>
           <PersonalitiesText>{resultData[props.resultKey].opposite.text}</PersonalitiesText>
@@ -137,7 +145,6 @@ const OppositePersonalities = (props) => {
 }
 
 export default function SimilarsOpposite(props) {
-
   return (
     <Wrap>
       <header>

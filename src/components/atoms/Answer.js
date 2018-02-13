@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 
 const AnswerLi = styled.li`
   margin: 0 5%;
-  width: 50%;
+
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+    width: 50%;
+  }
 `;
 
 const AnswerInput = styled.input`

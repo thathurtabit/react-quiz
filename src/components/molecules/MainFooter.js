@@ -43,7 +43,6 @@ export default class MainFooter extends Component {
 
   // React Lifecycle
   componentDidMount() {
-    console.log('Component Did Mount');
     this.setState({
       display: {
         footer: true

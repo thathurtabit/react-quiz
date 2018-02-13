@@ -113,7 +113,7 @@ const initialState = {
   },
   resultData: resultData,
   resultArray: [],
-  resultAcronym: '',
+  resultAcronym: 'DAIS', // needs a value by default
   results: {
     title: '',
     text: '',
@@ -223,8 +223,8 @@ export default class Quiz extends Component {
       }
     }
 
-    console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
-    console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
+    // console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
+    // console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
      
   }
 
@@ -240,7 +240,7 @@ export default class Quiz extends Component {
         answersCount: updatedSelectedAnswersCount,
         answer: selectedAnswer
     }, () => {
-      console.log(this.state.answersCount);
+      // console.log(this.state.answersCount);
       this.checkNextButton(); // Check if we're ok to go to the next section
     });
 
@@ -255,8 +255,6 @@ export default class Quiz extends Component {
 
     this.setState({
         selected: updatedGroupSelected,
-    }, () => {
-      console.log(this.state.selected);
     });
   }
 
@@ -271,7 +269,7 @@ export default class Quiz extends Component {
     // If there's still questions to ask...
     if (currentPage === 1) {
 
-      console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
+      //console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
 
       // Transition Out
       setTimeout(() => {
@@ -308,7 +306,7 @@ export default class Quiz extends Component {
     // If there's still questions to ask...
    } else if (currentPage > 1 && currentPage < this.state.roundsTotal + 1) {
 
-      console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
+      //console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
 
       // Transition Out
       setTimeout(() => {
@@ -409,8 +407,6 @@ export default class Quiz extends Component {
         text: resultData[resultAcronym].text,
         link: resultData[resultAcronym].slug,
       },
-    }, () => {
-      console.log(`resultArray: ${this.state.resultArray} | resultAcronym: ${this.state.resultAcronym}`);
     });
 
   }
@@ -484,7 +480,7 @@ export default class Quiz extends Component {
               disabled: true,
             },
             resultArray: '',
-            resultAcronym: '',
+            resultAcronym: 'DAIS', // Needs a value by default
             results: {
               title: '',
               text: '',
@@ -546,11 +542,12 @@ export default class Quiz extends Component {
 
             <Results
               show={this.state.display.result}
-              nextText="Restart"
+              nextText="Restart the test"
               title={this.state.results.title}
               moreLink={this.state.results.link}
               text={this.state.results.text}
               resultArray={this.state.resultArray}
+              resultKey={this.state.resultAcronym}
               disabled={this.state.display.result}
               round={this.state.round}
               handleRestart={this.handleReset}

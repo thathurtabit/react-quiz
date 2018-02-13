@@ -6,7 +6,6 @@ import resultData from '../../api/resultData';
 const Wrap = styled.section`
   list-style-type: none;
   margin: 0 auto;
-  width: 100%;
   max-width: ${props => props.theme.maxContentWidthWide};
   padding: 1rem 1rem 3rem;
   position: relative;

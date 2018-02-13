@@ -5,6 +5,9 @@ import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled, {ThemeProvider} from 'styled-components';
 import resultData from '../../api/resultData';
+import HeroImage from '../atoms/HeroImage';
+import QuizButton from '../atoms/QuizButton';
+import SocialShare from '../molecules/SocialShare';
 import MainFooter from '../molecules/MainFooter';
 import PersonalityInfoList from '../organisms/PersonalityInfoList';
 import SimilarsOpposite from '../organisms/SimilarsOpposite';
@@ -124,12 +127,16 @@ const PageTitleIntro = styled.p`
 const PageIntro = styled.main`
   font-size: calc(1rem + 0.5vw);
   line-height: 1.75;
-  margin: 4rem 2rem 3rem;
+  margin: 2rem;
   position: relative;
 
   strong {
     font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+		margin: 4rem 2rem 3rem;
   }
 `;
 
@@ -168,62 +175,7 @@ const MainHeader = styled.header`
 	}
 `;
 
-const IMG = styled.img`
-	height: 400px;
-	max-width: 100%;
-`;
 
-const NextButton = styled(Link)`
-  background: ${props => props.theme.primary};
-  border: 0;
-  color: ${props => props.theme.bg};
-  font-family: ${props => props.theme.fontPrimary};
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
-  padding: 1rem 3rem;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  span {
-    position: relative;
-    z-index: 2;
-  }
-
-  &[disabled],
-  &[disabled]:hover {
-  	background: ${props => props.theme.primary};
-  	cursor: not-allowed;
-  	opacity: 0.5;
-
-    &::after,
-    &::before {
-      display: none;
-    }
-  }
-  
-  &::before {
-    background: ${props => props.theme.secondary};
-    bottom: 0;
-    content: '';
-    left: 0;
-    perspective: 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: rotateY(90deg);
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-    z-index: 1;
-  }
-
-  &:hover::before {
-    opacity: 1;
-    cursor: pointer;
-    transform: rotateY(0deg);
-  }
-`;
 
 const MainNav = styled.nav`
 	font-family: ${props => props.theme.fontSecondary};
@@ -325,7 +277,7 @@ const DesignPersonality = (props) => (
 	  <PageWrap>
 	    <PageTitleIntro>Design Personality</PageTitleIntro>
 	    <PageTitle>{resultData[props.dataKey].title}</PageTitle>
-	    <IMG src={`images/SVG/${resultData[props.dataKey].slug}.svg`} alt={resultData[props.dataKey].title} />
+	    <HeroImage src={resultData[props.dataKey].slug} alt={resultData[props.dataKey].title} />
 	    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
 	  </PageWrap>
 
@@ -335,9 +287,12 @@ const DesignPersonality = (props) => (
 	  <SimilarsOpposite resultKey={props.dataKey} />
 	  <HR />
 
+	  <PageTitleIntro>Share your result</PageTitleIntro>
+	  <SocialShare personality={resultData[props.dataKey].title} />
+
 	  <PageWrap extraSpacing>
 	    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
-	    <p><NextButton to={siteInfo.mainNav[0].slug} activeClassName="active"><span>{siteInfo.mainNav[0].name}</span></NextButton></p>
+	    <p><QuizButton to={siteInfo.mainNav[0].slug} text={siteInfo.mainNav[0].name}  /></p>
 	  </PageWrap>  
   </section>
 );

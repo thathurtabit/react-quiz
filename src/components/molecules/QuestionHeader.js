@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 const QuestionHeaderWrap = styled.section`
   background: ${props => props.theme.primary};
   color: ${props => props.theme.bg};
-  display: flex;
   font-size: 1.5rem;
   margin: 0 0 1rem;
   padding: 1rem;
   position: relative;
-  text-align: left;
+  text-align: center;
   &::after {
     top: 100%;
     left: 50%;
@@ -21,9 +20,14 @@ const QuestionHeaderWrap = styled.section`
     position: absolute;
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
-    border-top-color: ${props => props.theme.primary};;
+    border-top-color: ${props => props.theme.primary};
     border-width: 20px;
     margin-left: -20px;
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+    display: flex;
+    text-align: left;
   }
 `;
 
@@ -55,17 +59,26 @@ const QuestionIntro = styled.p`
 `;
 
 const Col = styled.section`
-  width: 40%;
-  padding: 2rem;
+  padding: 0 1rem 1rem;
+
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+    width: 40%;
+    padding: 2rem;
+  }
 `;
 
 const ColTitle = styled.section`
-  width: 40%;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+    align-items: flex-end;
+    padding: 2rem;
+    width: 40%;
+  }
 `;
 
 

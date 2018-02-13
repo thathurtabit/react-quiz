@@ -4,10 +4,20 @@ import PropTypes from 'prop-types';
 
 const QuestionText = styled.h2`
   font-family: ${props => props.theme.fontPrimary};
-  font-size: 3rem;
-  margin: 2rem;
-  padding: 2rem;
+  font-size: calc(2rem + 2vw);
+  margin: 2rem 1rem;
+  padding: 2rem 1rem;
   text-align: center;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    font-size: calc(2rem + 1.5vw);
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpointLG}) {
+    font-size: 3.5rem;
+  }
 
   &.not-ready {
     opacity: 0;

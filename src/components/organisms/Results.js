@@ -2,24 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Restart from '../atoms/RestartButton';
+import HeroImage from '../atoms/HeroImage';
+import SocialShare from '../molecules/SocialShare';
+import PersonalityInfoList from '../organisms/PersonalityInfoList';
+import SimilarsOpposite from '../organisms/SimilarsOpposite';
 import PropTypes from 'prop-types';
 
 const ResultsWrap = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0 auto 5rem;
-  max-width: ${props => props.theme.maxContentWidth};
-  padding: 2rem 3rem 5rem;
-  position: relative;
+
 `;
 
+const PageWrap = styled.section`
+  position: relative;
+  max-width: ${props => props.theme.maxContentWidth};
+  margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
+`;
+
+
 const ResultsTitle = styled.h2`
-  font-size: 5vw;
   font-family: ${props => props.theme.fontPrimary};
-  margin-top: 1rem;
+  margin: 1rem 1rem 2rem; 
+  font-size: calc(15vw);
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+      font-size: calc(20px + 5vw);
+      margin: 1rem 1rem 4rem; 
+  }
+  
+  @media screen and (min-width: ${props => props.theme.breakpointMD}) {
+      font-size: calc(20px + 4vw);
+      margin: 1rem 1rem 5rem; 
+  }
 `;
 
 const ResultsSubtitle = styled.h4`
@@ -47,9 +60,10 @@ const ResultIntro = styled.p`
 `;
 
 const ResultsText = styled.p`
-  font-size: 1.15rem;
-  line-height: 1.65;
-  margin: 2rem 2rem 3rem;
+  font-size: calc(1rem + 0.5vw);
+  line-height: 1.75;
+  margin: 2rem;
+  position: relative;
 
   strong {
     font-family: ${props => props.theme.fontPrimary};
@@ -58,8 +72,21 @@ const ResultsText = styled.p`
 `;
 
 const HR = styled.hr`
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  margin: 2rem 0;
+  border: 0;
+  margin: 5rem 0 8rem;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    border-top: 5px solid rgba(0, 0, 0, 0.05);
+    content: '';
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 50px;
+  }
 `;
 
 const More = styled(Link)`
@@ -115,30 +142,37 @@ const More = styled(Link)`
   }
 `;
 
-const IMG = styled.img`
-  height: 400px;
-  max-width: 100%;
-`;
-
 
 export default function Results(props) {
-
   return (
     <ResultsWrap style={{display: props.show ? 'block' : 'none'}}>
-      <ResultIntro>You are a:</ResultIntro>
-      <ResultsTitle>
-        {props.title}
-      </ResultsTitle>
-      <IMG src={`images/SVG/${props.moreLink}.svg`} alt={props.title} />
-      <ResultsSubtitle>
-        You mostly identify with: <strong>{props.resultArray}</strong>
-      </ResultsSubtitle>
-      <ResultsText>
-        <span dangerouslySetInnerHTML={{__html: props.text}} />
-      </ResultsText>      
-      <More to={`design-personality/${props.moreLink}`}><span>Learn More</span></More>
+      <PageWrap>
+        <ResultIntro>You are a:</ResultIntro>
+        <ResultsTitle>
+          {props.title}
+        </ResultsTitle>
+        <HeroImage src={props.moreLink} alt={props.title} />
+        <ResultsSubtitle>
+          You mostly identify with: <strong>{props.resultArray}</strong>
+        </ResultsSubtitle>
+        <ResultsText>
+          <span dangerouslySetInnerHTML={{__html: props.text}} />
+        </ResultsText>
+      </PageWrap>
+
       <HR />   
-      <Restart restartText={props.nextText} onClick={props.handleRestart} />
+      <PersonalityInfoList resultKey={props.resultKey} />
+      <HR />    
+      <SimilarsOpposite resultKey={props.resultKey} />
+      <HR />
+
+      <PageWrap>
+        <ResultIntro>Share your result</ResultIntro>
+        <SocialShare personality={props.title} />
+        <HR />
+        <ResultIntro>Not a {props.title}?</ResultIntro>
+        <Restart restartText={props.nextText} onClick={props.handleRestart} />
+      </PageWrap>
     </ResultsWrap>
   );
 }
@@ -147,4 +181,5 @@ Results.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   round: PropTypes.number.isRequired,
+  resultKey: PropTypes.string.isRequired
 }
