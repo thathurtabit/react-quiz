@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Next from '../atoms/NextButton';
 import PropTypes from 'prop-types';
-import { Transition } from 'react-transition-group'
 
 const IntroWrap = styled.section`
   align-items: center;
