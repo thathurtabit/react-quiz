@@ -19,21 +19,20 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const Wrapper = styled.section`
   font-family: ${props => props.theme.fontSecondary};
   font-size: 1.3rem;
+  position: relative;
   text-align: center;
   top: 0;
-  position: relative;
 
   &.fade-enter {
-  	position: relative;
-    opacity: 0.01;
+    opacity: 0;
     top: 0;
-    width: 100%;
+    transform: translateY(-10px);
   }
 
   &.fade-enter.fade-enter-active {
-		position: absolute;
-    opacity: 1;
-    transition: opacity 300ms ease-out;
+  	opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-out, transform 350ms ease-out;
 
     @media screen and (max-width: ${props => props.theme.breakpointSM}) {
 			top: 126px;
@@ -41,15 +40,14 @@ const Wrapper = styled.section`
   }
 
   &.fade-exit {
-  	position: relative;
-  	width: 100%;
+  	opacity: 1;
+  	transform: translateY(0);
     top: 0;
-    opacity: 1;
   }
 
   &.fade-exit.fade-exit-active {
-  	position: relative;
-    opacity: 0.01;
+  	opacity: 0;
+  	transform: translateY(-10px);
     transition: opacity 350ms ease-in, transform 350ms ease-out;
   }
 `;

@@ -69,21 +69,72 @@ const IntroText = styled.p`
   }
 `;
 
-export default function IntroPage(props) {
-  return (
-    <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
-      <IntroSubtitle>        
-        {props.content.p1}         
-      </IntroSubtitle>        
-      <IntroText>
-        <span dangerouslySetInnerHTML={{__html: props.content.p2}} />
-      </IntroText>
-      <IntroText>
-        <span dangerouslySetInnerHTML={{__html: props.content.p3}} />
-      </IntroText>
-      <Next nextText={props.nextText} round={props.round} onClick={props.onClick} />
-    </IntroWrap>
-  );  
+const duration = 500;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
+  opacity: 0,
+  display: 'inline-block',
+}
+
+const transitionStyles = {
+  entering: {
+    opacity: 0,
+  },
+  entered: {
+    opacity: 1,
+  },
+};
+
+const TransitionCustom = ({ in: inProp, children }) => (
+  <Transition in={inProp} timeout={duration}>
+    {(state) => (
+      <div style={{
+        ...defaultStyle,
+        ...transitionStyles[state]
+      }}>
+        {children}
+      </div>
+    )}
+  </Transition>
+);
+
+export default class IntroPage extends Component {
+//export default function IntroPage(props) {
+  constructor(props) {
+    super(props);
+    this.state = { show: false }
+
+    setTimeout(() => {
+      this.setState({
+        show: !this.state.show
+      });
+    }, 1);
+  }
+
+  render() {
+    return (
+      <IntroWrap style={{display: this.props.display ? 'block' : 'none'}}>
+        
+        <TransitionCustom in={this.state.show}>
+        
+          <IntroSubtitle>        
+            {this.props.content.p1}         
+          </IntroSubtitle>
+          
+          <IntroText>
+            <span dangerouslySetInnerHTML={{__html: this.props.content.p2}} />
+          </IntroText>
+          <IntroText>
+            <span dangerouslySetInnerHTML={{__html: this.props.content.p3}} />
+          </IntroText>
+          <Next nextText={this.props.nextText} round={this.props.round} onClick={this.props.onClick} />
+        
+        </TransitionCustom>
+        
+      </IntroWrap>
+    );
+  }
 }
 
 IntroPage.propTypes = {
