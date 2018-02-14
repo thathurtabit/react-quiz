@@ -20,22 +20,24 @@ const Wrapper = styled.section`
   font-family: ${props => props.theme.fontSecondary};
   font-size: 1.3rem;
   text-align: center;
-  min-height: 100%;
+  top: 0;
   position: relative;
 
   &.fade-enter {
   	position: relative;
     opacity: 0.01;
-    transform: scale(.98);
-    width: 100%;
     top: 0;
+    width: 100%;
   }
 
   &.fade-enter.fade-enter-active {
 		position: absolute;
     opacity: 1;
     transition: opacity 300ms ease-out;
-    transform: scale(1);
+
+    @media screen and (max-width: ${props => props.theme.breakpointSM}) {
+			top: 126px;
+    }
   }
 
   &.fade-exit {
@@ -43,13 +45,11 @@ const Wrapper = styled.section`
   	width: 100%;
     top: 0;
     opacity: 1;
-    transform: scale(1);
   }
 
   &.fade-exit.fade-exit-active {
   	position: relative;
     opacity: 0.01;
-    transform: scale(.98);
     transition: opacity 350ms ease-in, transform 350ms ease-out;
   }
 `;
@@ -103,7 +103,7 @@ const PageTitle = styled.h1`
 	color: ${props => props.theme.primary};
 	font-family: ${props => props.theme.fontPrimary};
 	margin: 1rem 1rem 2rem;	
-	font-size: calc(15vw);
+	font-size: calc(13vw);
 
 	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
 			font-size: calc(20px + 5vw);
@@ -162,6 +162,7 @@ const HR = styled.hr`
 const MainHeader = styled.header`
 	background: white;
 	left: 0;
+	max-height: 126px;
 	padding: 1rem;
 	right: 0;
 	text-align: center;
@@ -171,8 +172,10 @@ const MainHeader = styled.header`
 	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
 		display: flex;
 		justify-content: space-between;
+		max-height: initial;
 		padding: 1rem 2rem;
 		position: fixed;
+
 	}
 `;
 

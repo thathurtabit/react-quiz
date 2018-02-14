@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const IMG = styled.img`
-  height: 300px;
+  height: 250px;
   max-width: 100%;
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {

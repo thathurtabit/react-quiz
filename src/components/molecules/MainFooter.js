@@ -43,11 +43,14 @@ export default class MainFooter extends Component {
 
   // React Lifecycle
   componentDidMount() {
-    this.setState({
-      display: {
-        footer: true
-      }
-    })
+    // Delay state change to give page time to load
+    setTimeout(() => {
+      this.setState({
+        display: {
+          footer: true
+        }
+      });
+    }, 1000);
   }
 
   // Render

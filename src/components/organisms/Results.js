@@ -21,7 +21,7 @@ const PageWrap = styled.section`
 const ResultsTitle = styled.h2`
   font-family: ${props => props.theme.fontPrimary};
   margin: 1rem 1rem 2rem; 
-  font-size: calc(15vw);
+  font-size: calc(13vw);
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
       font-size: calc(20px + 5vw);
