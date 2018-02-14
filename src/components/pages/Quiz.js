@@ -12,6 +12,10 @@ import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
 
+const PageWrapper = styled.section`
+  min-height: 100%;
+`;
+
 const Wrapper = styled.section`
   font-family: ${props => props.theme.fontSecondary};
   font-size: 1rem;
@@ -115,9 +119,9 @@ const initialState = {
   resultArray: [],
   resultAcronym: 'DAIS', // needs a value by default
   results: {
-    title: '',
+    title: '', 
     text: '',
-    link: ''
+    link: 'people-watcher', // needs a value by default
   }
 };
 
@@ -484,7 +488,7 @@ export default class Quiz extends Component {
             results: {
               title: '',
               text: '',
-              link: '',
+              link: 'people-watcher', // Needs a value by default
             }
           }, () => {
             // Unselect answers
@@ -499,7 +503,7 @@ export default class Quiz extends Component {
   render() {
 
     return (
-      <div>
+      <PageWrapper>
         <Fade in={this.state.show}>
           <Wrapper>
             <IntroPage
@@ -555,7 +559,7 @@ export default class Quiz extends Component {
 
           </Wrapper>
         </Fade>
-      </div>
+      </PageWrapper>
     );
   }
 }

@@ -26,7 +26,7 @@ const Link = styled.a`
 const Copyright = () => {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
-  return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} <Link href="https://www.codecomputerlove.com/" target="_blank">Made with Computerlove</Link></p>
+  return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} <Link href="https://www.codecomputerlove.com/" target="_blank" rel="noopener">Made with Computerlove</Link></p>
 }
 
 export default class MainFooter extends Component {

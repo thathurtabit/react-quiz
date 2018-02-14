@@ -7,7 +7,7 @@ const Wrap = styled.section`
   list-style-type: none;
   margin: 0 auto;
   max-width: ${props => props.theme.maxContentWidthWide};
-  padding: 1rem 1rem 3rem;
+  padding: 1rem;
   position: relative;
 `;
 

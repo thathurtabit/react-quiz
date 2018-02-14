@@ -34,22 +34,6 @@ const ResultsTitle = styled.h2`
   }
 `;
 
-const ResultsSubtitle = styled.h4`
-  color: #999;
-  font-size: 0.75rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-top: 5rem;
-
-  strong {
-    color: ${props => props.theme.pPrimary};
-    font-family: ${props => props.theme.fontPrimary};
-    font-weight: normal;
-    font-size: 0.9rem;
-    letter-spacing: 0;
-  }
-`;
-
 const ResultIntro = styled.p`
   color: ${props => props.theme.tertiary};
   font-size: 0.75rem;
@@ -98,9 +82,6 @@ export default function Results(props) {
           {props.title}
         </ResultsTitle>
         <HeroImage src={props.moreLink} alt={props.title} />
-        <ResultsSubtitle>
-          You mostly identify with: <strong>{props.resultArray}</strong>
-        </ResultsSubtitle>
         <ResultsText>
           <span dangerouslySetInnerHTML={{__html: props.text}} />
         </ResultsText>

@@ -37,10 +37,10 @@ export default function SocialShare(props)  {
 
   return (
     <SocialWrap>
-      <ShareLink href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Fwhatkindofdesigner.com&text=My%20design%20personality%20is%20${personality}.%20You%20can%20find%20out%20yours%20at%3A&hashtags=whatkindofdesigner`} target="_blank">
+      <ShareLink href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Fwhatkindofdesigner.com&text=My%20design%20personality%20is%20${personality}.%20You%20can%20find%20out%20yours%20at%3A&hashtags=whatkindofdesigner`} target="_blank" rel="noopener">
   	   <IMG src="images/SVG/twitter_icon.svg" alt="Share your results on Twitter" />
       </ShareLink>
-      <ShareLink href="https://www.facebook.com/sharer/sharer.php?u=https%3A//whatkindofdesigner.com" target="_blank">
+      <ShareLink href="https://www.facebook.com/sharer/sharer.php?u=https%3A//whatkindofdesigner.com" target="_blank" rel="noopener">
        <IMG src="images/SVG/facebook_icon.svg" alt="Share your results on Facebook" />
       </ShareLink>
     </SocialWrap>

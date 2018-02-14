@@ -62,6 +62,7 @@ const PageWrap = styled.section`
 
 const LayoutWrap = styled.section`
   color: ${props => props.theme.primary};
+  min-height: 100vh;
 
 	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
 		position: absolute;
@@ -174,8 +175,6 @@ const MainHeader = styled.header`
 		position: fixed;
 	}
 `;
-
-
 
 const MainNav = styled.nav`
 	font-family: ${props => props.theme.fontSecondary};
