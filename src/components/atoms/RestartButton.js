@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 const RestartButton = styled.button`
   background: ${props => props.theme.primary};
-  border: 0;
+  border: 0;  
+  border-radius: 40px;
   color: ${props => props.theme.bg};
   font-family: ${props => props.theme.fontPrimary};
   font-size: 1rem;

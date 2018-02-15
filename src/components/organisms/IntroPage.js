@@ -23,23 +23,20 @@ const IntroWrap = styled.section`
 `;
 
 const IntroSubtitle = styled.h2`
-  background: rgba(255, 255, 255, 0.5);
   font-size: calc(15vw);
   font-family: ${props => props.theme.fontPrimary};
   margin-bottom: 3rem;
-  text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.5);
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
     font-size: calc(50px + 3.75vw);
   }
 
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
-    font-size: calc(50px + 3vw);
+    font-size: calc(50px + 2vw);
   }
 `;
 
 const IntroText = styled.p`
-  background: rgba(255, 255, 255, 0.5);
   font-size: calc(1rem + 0.25vw);
   line-height: 1.65;
   margin: 1rem 1rem 2.5rem;
@@ -55,8 +52,6 @@ export default function IntroPage(props) {
   return (
     <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
       <SvgExperimenter />
-      <SvgBrandBuilder />
-      <SvgConductor />
       <IntroSubtitle>        
         {props.content.p1}         
       </IntroSubtitle>        
