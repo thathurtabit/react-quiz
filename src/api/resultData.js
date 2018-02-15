@@ -6,7 +6,7 @@ const resultData = {
     similars: ['DAGS', 'DAIM', 'CAIS', 'DRIS'],
     opposite: {
       key: 'CRGM',
-      text: 'Text about the opposite'
+      text: 'Likely to want to know when they can get on and make something - working together and making decisions based on the facts.'
     }
   },
   DAIM: {
@@ -16,7 +16,7 @@ const resultData = {
     similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
     opposite: {
       key: 'CRGS',
-      text: 'Text about the opposite'
+      text: 'May think you’re wasting time thinking about things too much and not getting on with solving the real problems that people have.'
     }
   },
   CAIM: {
@@ -26,7 +26,7 @@ const resultData = {
     similars: ['DAIM', 'CRIM', 'CAGM', 'CAIS'],
     opposite: {
       key: 'DRGS',
-      text: 'Text about the opposite'
+      text: 'Thinks plans are out of date as soon as they’re published and time is better spent working together to make decisions.'
     }
   },
   CAIS: {
@@ -36,7 +36,7 @@ const resultData = {
     similars: ['DAIS', 'CRIS', 'CAGS', 'CAIM'],
     opposite: {
       key: 'DRGM',
-      text: 'Text about the opposite'
+      text: 'Probably thinks you’re being vague.  They’ll believe it when they see it.'
     }
   },
   DAGS: {
@@ -46,7 +46,7 @@ const resultData = {
     similars: ['CAGS', 'DRGS', 'DAIS', 'DAGM'],
     opposite: {
       key: 'CRIM',
-      text: 'Text about the opposite'
+      text: 'Thinks they could do a good job if you would just leave them alone for a minute!'
     }
   },
   DAGM: {
@@ -56,7 +56,7 @@ const resultData = {
     similars: ['CAGM', 'DRGM', 'DAIM', 'DAGS'],
     opposite: {
       key: 'CRIS',
-      text: 'Text about the opposite'
+      text: 'Prefers getting on with something rather than thinking too much about it - they’re happy to get feedback but wants something tangible to discuss.'
     }
   },
   CAGM: {
@@ -66,7 +66,7 @@ const resultData = {
     similars: ['DAGM', 'CRGM', 'CAIM', 'CAGS'],
     opposite: {
       key: 'DRIS',
-      text: 'Text about the opposite'
+      text: 'While you’re getting organised, they’ll probably be getting on with something.  They probably need your help b ut probably won’t admit it!'
     }
   },
   CAGS: {
@@ -76,7 +76,7 @@ const resultData = {
     similars: ['DAGS', 'CRGS', 'CAIS', 'CAGM'],
     opposite: {
       key: 'DRIM',
-      text: 'Text about the opposite'
+      text: 'Might think you’re sketchy on the details - and knowing you - they could be waiting for a long time.'
     }
   },
   DRGS: {
@@ -86,7 +86,7 @@ const resultData = {
     similars: ['CRGS', 'DAGS', 'DRIS', 'DRGM'],
     opposite: {
       key: 'CAIM',
-      text: 'Text about the opposite'
+      text: 'Needs a decision. Any decision!!'
     }
   },  
   DRGM: {
@@ -96,7 +96,7 @@ const resultData = {
     similars: ['CRGM', 'DAGM', 'DRIM', 'DAGS'],
     opposite: {
       key: 'CAIS',
-      text: 'Text about the opposite'
+      text: 'Not everything that counts can be counted. Right?'
     }
   },
   CRGM: {
@@ -106,7 +106,7 @@ const resultData = {
     similars: ['DRGM', 'CAGM', 'CRIM', 'CRGS'],
     opposite: {
       key: 'DAIS',
-      text: 'Text about the opposite'
+      text: 'Wants to be left alone for a minute - worried about missing something important for the sake of progress.'
     }
   },
   CRGS: {
@@ -116,7 +116,7 @@ const resultData = {
     similars: ['DRGS', 'CAGS', 'CRIS', 'CRGM'],
     opposite: {
       key: 'DAIM',
-      text: 'Text about the opposite'
+      text: 'Before you start - let’s just get the story straight...'
     }
   },  
   DRIS: {
@@ -126,7 +126,7 @@ const resultData = {
     similars: ['CRIS', 'DAIS', 'DRGS', 'DRIM'],
     opposite: {
       key: 'CAGM',
-      text: 'Text about the opposite'
+      text: 'Will want to get buy-in and agreement from everyone before you start changing things.'
     }
   },
   DRIM: {
@@ -135,8 +135,8 @@ const resultData = {
     slug: 'experimenter',
     similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
     opposite: {
-      key: 'CRGS',
-      text: 'Text about the opposite'
+      key: 'CAGS',
+      text: 'Will be always be looking for the big picture. They’re thinking about the end result - not how you get there.'
     }
   },
   CRIM: {
@@ -145,8 +145,8 @@ const resultData = {
     slug: 'perfectionist',
     similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
     opposite: {
-      key: 'CRGS',
-      text: 'Text about the opposite'
+      key: 'DAGS',
+      text: 'Never mind all that... let’s party!'
     }
   },
   CRIS: {
@@ -156,7 +156,7 @@ const resultData = {
     similars: ['DRIS', 'CAIS', 'CRGS', 'CRIM'],
     opposite: {
       key: 'DAGM',
-      text: 'Text about the opposite'
+      text: 'Where you like to keep it real - they’re more interested in the abstract - always uncovering new possibilities and unlikely to want to commit to one direction.'
     }
   },
 }
