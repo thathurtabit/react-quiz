@@ -62,6 +62,7 @@ const PersonalitiesLi = styled.li`
 		color: ${props => props.theme.secondary};
 		font-size: 0.85rem;
 		letter-spacing: 0;
+		max-height: 60px;
 		overflow: hidden;
 		text-transform: none;
 		display: -webkit-box;

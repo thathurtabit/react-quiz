@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Next from '../atoms/NextButton';
+import SvgExperimenter from '../atoms/svgs/Experimenter';
 import PropTypes from 'prop-types';
 
 const IntroWrap = styled.section`
@@ -11,31 +12,11 @@ const IntroWrap = styled.section`
   list-style-type: none;
   margin: 0 auto;
   max-width: ${props => props.theme.maxContentWidth};
-  padding: 15rem 1rem 5rem;
+  padding: 5rem 1rem 5rem;
   position: relative;
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
-    padding: 20rem 3rem 5rem;
-  }
-
-  &::before {
-    background-size: contain;
-    background: url(../images/SVG/experimenter.svg) no-repeat center top;
-    content: '';
-    height: 15%;
-    left: 0;
-    opacity: 0.9;
-    position: absolute;
-    right: 0;
-    top: 7%;
-    transform: translateX(-3%);
-    z-index: -1;
-    
-    @media screen and (min-width: ${props => props.theme.breakpointSM}) {
-      height: 200px;
-      top: 10%;
-    }
-
+    padding: 10rem 3rem 5rem;
   }
 `;
 
@@ -71,6 +52,7 @@ const IntroText = styled.p`
 export default function IntroPage(props) {
   return (
     <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
+      <SvgExperimenter />
       <IntroSubtitle>        
         {props.content.p1}         
       </IntroSubtitle>        

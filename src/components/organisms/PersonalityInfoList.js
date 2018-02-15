@@ -25,8 +25,7 @@ const SectionTitleIntro = styled.p`
 `;
 
 const ColWrap = styled.section`
-  @media screen and (min-width: 480px) {
-    
+  @media screen and (min-width: 480px) {    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -34,7 +33,8 @@ const ColWrap = styled.section`
 `;
 
 const Col = styled.section`  
-  padding: 0;  
+  margin: 1rem;
+  padding: 0;
   text-align: left;
 `;
 
@@ -47,7 +47,7 @@ const ColTitle = styled.h4`
 `;
 
 const PersonalitiesUl = styled.ul`
-  margin: 20px;
+  margin: 1rem;
   padding: 0;
   list-style-type: none;
 `;
