@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter as Router, Route, Redirect, NavLink, Link, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, NavLink, Link, Switch} from 'react-router-dom';
 import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled, {ThemeProvider} from 'styled-components';
@@ -339,7 +339,7 @@ const SetUpRoutes = (props) => {
       <PageFade key={locationKey}>
         <Wrapper>
           <Switch location={props.location}>
-          	<Route exact path="/" component={() => <Redirect to="/quiz" />}/>
+          	<Route exact path="/" component={TakeTheQuiz}/>
             <Route exact path="/quiz" component={TakeTheQuiz} />
             <Route exact path="/design-personalities" component={DesignPersonalities} />
 
@@ -372,13 +372,13 @@ const SetUpRoutes = (props) => {
 
 const SiteRoutes = () => {
 	return (
-	<Router>
+	<BrowserRouter basename={'/'}	>
 		<ThemeProvider theme={theme}>
 			<ScrollToTop>
 				<Route path="/" component={SetUpRoutes} />
 			</ScrollToTop>
 		</ThemeProvider>
-	</Router>
+	</BrowserRouter>
 	); 
 }
 

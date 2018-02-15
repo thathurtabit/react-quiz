@@ -116,7 +116,7 @@ const SimilarPersonalities = (props) => {
     return (
       <PersonalitiesLi key={similarKey}>
         <More key={similarKey} to={`/design-personality/${resultData[similarKey].slug}`}>
-          <IMG src={`images/SVG/${resultData[similarKey].slug}.svg`} alt={resultData[similarKey].title} />
+          <IMG src={`../images/SVG/${resultData[similarKey].slug}.svg`} alt={resultData[similarKey].title} />
           <PersonalitiesLiTitle>{resultData[similarKey].title}</PersonalitiesLiTitle>
         </More>
       </PersonalitiesLi>
@@ -135,7 +135,7 @@ const OppositePersonalities = (props) => {
     <PersonalitiesUl>
       <PersonalitiesLi>
         <More to={`/design-personality/${resultData[oppositeKey].slug}`}>
-          <IMG src={`images/SVG/${resultData[oppositeKey].slug}.svg`} alt={resultData[oppositeKey].title} />
+          <IMG src={`../images/SVG/${resultData[oppositeKey].slug}.svg`} alt={resultData[oppositeKey].title} />
           <PersonalitiesLiTitle>{resultData[oppositeKey].title}</PersonalitiesLiTitle>
           <PersonalitiesText>{resultData[props.resultKey].opposite.text}</PersonalitiesText>
         </More>
