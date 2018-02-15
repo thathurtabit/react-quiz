@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import update from 'immutability-helper';
-import introPageData from '../../api/introPageData';
 import quizData from '../../api/quizData';
 import resultData from '../../api/resultData';
 import QuestionHeader from '../molecules/QuestionHeader';
 import Question from '../atoms/Question';
-import IntroPage from '../organisms/IntroPage';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
@@ -76,11 +74,9 @@ const Fade = ({ children, ...props }) => (
 const initialState = {
   show: true,
   display: {
-    intro: true,
-    quiz: false,
+    quiz: true,
     result: false,
   },
-  introPageContent: introPageData,
   question: quizData[0].question,
   questionTitle: quizData[0].title,
   questionIntro: quizData[0].intro,
@@ -152,6 +148,9 @@ export default class Quiz extends Component {
       answer3Choices: shuffledAnswer3Choices[0],
       answer4Choices: shuffledAnswer4Choices[0],
       answer5Choices: shuffledAnswer5Choices[0],
+    }, () => {
+      // Let's get going
+      this.jumpTo(0);
     });
   }
 
@@ -269,52 +268,46 @@ export default class Quiz extends Component {
     currentPage +=1; // increment
     currentIndex +=1; // increment
 
-    // INTRO PAGE
-    // If there's still questions to ask...
-    if (currentPage === 1) {
+    if (currentPage === 1 ) {
 
-      //console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
+      window.scrollTo(0, 0);
 
-      // Transition Out
+      this.setState({
+
+        // Transition Out
+        question: quizData[currentIndex].question,
+        questionTitle: quizData[currentIndex].title,
+        questionIntro: quizData[currentIndex].intro,
+        answer1Choices: quizData[currentIndex].answer1,
+        answer2Choices: quizData[currentIndex].answer2,
+        answer3Choices: quizData[currentIndex].answer3,
+        answer4Choices: quizData[currentIndex].answer4,
+        answer5Choices: quizData[currentIndex].answer5,
+        selected: {
+          group1: false,
+          group2: false,
+          group3: false,
+          group4: false,
+          group5: false,
+        },
+        index: currentIndex,
+        currentPage: currentPage,
+        round: currentPage,
+        next: {
+          text: "Pick your answers",
+          disabled: true,
+        },
+      });
+
+      this.unSelectAnswers();
+
+    } else if (currentPage < this.state.roundsTotal + 1) {
+
+            // Transition Out
       setTimeout(() => {
         this.setState({
-          show: !this.state.show
+          show: !this.state.show,
         });
-        // Transition In
-        setTimeout(() => {
-
-          window.scrollTo(0, 0);
-
-          this.setState({
-            // Transition Out
-            show: !this.state.show,
-            display: {
-              intro: false,
-              quiz: true,
-              result: false,
-            },
-            index: currentIndex,
-            currentPage: currentPage,
-            next: {
-              text: "Next",
-              disabled: true,
-            },
-          });
-
-          this.unSelectAnswers();
-
-        }, duration);
-      }, duration);
-
-    // START QUIZ
-    // If there's still questions to ask...
-   } else if (currentPage > 1 && currentPage < this.state.roundsTotal + 1) {
-
-      //console.log(`CurrentPage: ${currentPage} | CurrentIndex: ${currentIndex}`);
-
-      // Transition Out
-      setTimeout(() => {
-        this.setState({ show: !this.state.show });
         // Transition In
         setTimeout(() => {
 
@@ -343,7 +336,7 @@ export default class Quiz extends Component {
             currentPage: currentPage,
             round: currentPage,
             next: {
-              text: "Next",
+              text: "Pick your answers",
               disabled: true,
             },
           });
@@ -373,7 +366,6 @@ export default class Quiz extends Component {
             // Transition Out
             show: !this.state.show,
             display: {
-              intro: false,
               quiz: false,
               result: true,
             },
@@ -446,8 +438,7 @@ export default class Quiz extends Component {
           this.setState({
            show: !this.state.show,
             display: {
-              intro: true,
-              quiz: false,
+              quiz: true,
               result: false,
             },
             question: quizData[0].question,
@@ -480,7 +471,7 @@ export default class Quiz extends Component {
             currentPage: 0,
             round: 1,
             next: {
-              text: "Next",
+              text: "Pick your answers",
               disabled: true,
             },
             resultArray: '',
@@ -505,15 +496,7 @@ export default class Quiz extends Component {
     return (
       <PageWrapper>
         <Fade in={this.state.show}>
-          <Wrapper>
-            <IntroPage
-              display={this.state.display.intro}
-              title={this.state.mainTitle}
-              content={this.state.introPageContent}
-              nextText={this.state.next.text}
-              round={this.state.round}
-              onClick={() => this.jumpTo(this.state.index)}
-            />
+          <Wrapper>            
             <QuizWrap style={{display: this.state.display.quiz ? 'block' : 'none'}}>
               <QuestionHeader title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />   
               <Question ready={this.state.show} question={this.state.question} />           

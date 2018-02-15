@@ -80,8 +80,6 @@ const ListPersonalities = (props) => {
 
   let filteredInfo = []
 
-  console.log(`Result key: ${props.resultKey}`);
-
   filteredInfo = personalityKeys.filter((personalityKey) => {
     let infoFirstChar = personalityKey.charAt(0).toUpperCase();
     return resultKeyArray.includes(infoFirstChar)

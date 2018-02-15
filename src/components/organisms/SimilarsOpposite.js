@@ -154,8 +154,8 @@ export default function SimilarsOpposite(props) {
         <SimilarPersonalities resultKey={props.resultKey} info="similars" />
       </ListWrap>
 
-      <SectionTitle>Opposite Personality</SectionTitle>
-      <SectionTitleIntro>Nemesis of {resultData[props.resultKey].title}s</SectionTitleIntro>
+      <SectionTitle>Opposites Attract</SectionTitle>
+      <SectionTitleIntro>Opposite of {resultData[props.resultKey].title}s</SectionTitleIntro>
       <ListWrap>
         <OppositePersonalities resultKey={props.resultKey} info="opposite" />
       </ListWrap>

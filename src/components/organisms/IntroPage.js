@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Next from '../atoms/NextButton';
+import QuizButton from '../atoms/QuizButton';
 import SvgExperimenter from '../atoms/svgs/experimenter';
-import SvgBrandBuilder from '../atoms/svgs/brand-builder';
-import SvgConductor from '../atoms/svgs/conductor';
+import introPageData from '../../api/introPageData';
 import PropTypes from 'prop-types';
 
 const IntroWrap = styled.section`
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   list-style-type: none;
   margin: 0 auto;
@@ -50,18 +49,18 @@ const IntroText = styled.p`
 
 export default function IntroPage(props) {
   return (
-    <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
+    <IntroWrap>
       <SvgExperimenter />
       <IntroSubtitle>        
-        {props.content.p1}         
+        {introPageData.p1}         
       </IntroSubtitle>        
       <IntroText>
-        <span dangerouslySetInnerHTML={{__html: props.content.p2}} />
+        <span dangerouslySetInnerHTML={{__html: introPageData.p2}} />
       </IntroText>
       <IntroText>
-        <span dangerouslySetInnerHTML={{__html: props.content.p3}} />
+        <span dangerouslySetInnerHTML={{__html: introPageData.p3}} />
       </IntroText>
-      <Next nextText={props.nextText} round={props.round} onClick={props.onClick} />
+      <QuizButton text="Start" to="/quiz"  />
     </IntroWrap>
   );  
 }

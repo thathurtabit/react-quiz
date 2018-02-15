@@ -123,3 +123,7 @@ export default function PersonalityElements(props)  {
     </ElementsWrap>
   )
 }
+
+PersonalityElements.propTypes = {
+  resultKey: PropTypes.string,
+}

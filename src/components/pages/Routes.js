@@ -5,6 +5,7 @@ import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled, {ThemeProvider} from 'styled-components';
 import resultData from '../../api/resultData';
+import IntroPage from '../organisms/IntroPage';
 import HeroImage from '../atoms/HeroImage';
 import QuizButton from '../atoms/QuizButton';
 import SocialShare from '../molecules/SocialShare';
@@ -272,6 +273,10 @@ const TakeTheQuiz = () => (
   <Quiz />
 )
 
+const ShowIntroPage = () => (
+  <IntroPage />
+)
+
 const DesignPersonality = (props) => (
 	<section>
 	  <PageWrap>
@@ -316,7 +321,7 @@ const PageFade = (props) => (
 const Layout = ({ children }) => (
   <LayoutWrap>
     <MainHeader>
-    	<SiteName><Link to={siteInfo.mainNav[0].slug}>{siteInfo.title}</Link></SiteName>    
+    	<SiteName><Link to="/">{siteInfo.title}</Link></SiteName>    
 	    	<MainNav>
 		    	<ul>
 		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span dangerouslySetInnerHTML={{__html: siteInfo.mainNav[0].name}}></span></NavLink></li>
@@ -339,7 +344,7 @@ const SetUpRoutes = (props) => {
       <PageFade key={locationKey}>
         <Wrapper>
           <Switch location={props.location}>
-          	<Route exact path="/" component={TakeTheQuiz}/>
+          	<Route exact path="/" component={ShowIntroPage}/>
             <Route exact path="/quiz" component={TakeTheQuiz} />
             <Route exact path="/design-personalities" component={DesignPersonalities} />
 
