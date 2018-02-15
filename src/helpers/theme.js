@@ -14,6 +14,17 @@ const theme = {
   breakpointMD: '960px',
   breakpointLG: '1200px',
   breakpointXL: '1400px',
+  personality: {
+  	diverge: 'red',
+  	converge: 'green',
+  	abstract: 'yellow',
+  	real: 'pink',
+  	individual: 'purple',
+  	group: 'black',
+  	sense: 'blue',
+  	measure: 'orange'
+  }
+
 };
 
 export default theme;

@@ -5,6 +5,7 @@ import styled, {keyframes} from 'styled-components';
 const SVG = styled.svg`
   height: 200px;
   max-width: 100%;
+  position: relative;
   transform: translateX(-10%);
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
@@ -23,33 +24,38 @@ const moveEyeAnim = keyframes`
 
 const Eye = styled.circle`
   animation: 1s ease-in-out 0s infinite alternate ${moveEyeAnim};
+  position: relative;
+  transform-box:fill-box;
 `;
 
 // PEN
 const movePenAnim = keyframes`
   0% {
-    transform: translateX(-20%) rotate(0deg);
+    transform: translateX(-30%) rotate(0deg);
   } 100% {
-    transform: translateX(40%) rotate(-10deg);
+    transform: translateX(70%) rotate(-10deg);
   }
 `;
 
 const Pen = styled.path`
   animation: 1s ease-in-out 0s infinite alternate ${movePenAnim};
-  transform-origin: 50% 100%;
+  transform-origin: 100% 100%;
+  transform-box: fill-box;
 `;
 
 // HAND
 const moveHandAnim = keyframes`
   0% {
-    transform: translateX(-20%);
+    transform: translateX(-10%);
   } 100% {
-    transform: translateX(20%);
+    transform: translateX(40%);
   }
 `;
 
 const Hand = styled.path`
   animation: 1s ease-in-out 0s infinite alternate ${moveHandAnim};
+  transform-origin: 50% 100%;
+  transform-box:fill-box;
 `;
 
 // Tail
@@ -64,22 +70,24 @@ const moveTailAnim = keyframes`
 const Tail = styled.path`
   animation: 1s ease-in-out 0s infinite alternate ${moveTailAnim};
   transform-origin: 50% 100%;
+  transform-box:fill-box;
 `;
 
 // Smoke
 const moveSmokeAnim = keyframes`
   0% {
     opacity: 0.25;
-    transform: scale(1) rotateY(0deg);
+    transform: scale(1) rotateY(0deg) translateX(15%);
   } 100% {
     opacity: 0.2;
-    transform: scale(0.9) rotateY(180deg);
+    transform: scale(0.9) rotateY(180deg) translateX(-25%);
   }
 `;
 
 const Smoke = styled.path`
   animation: 5s ease-in-out 0s infinite alternate ${moveSmokeAnim};
-  transform-origin: 50% 100%;
+  transform-origin: center bottom;
+  transform-box:fill-box;
 `;
 
 const SvgExperimenter = props => (

@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Next from '../atoms/NextButton';
-import SvgExperimenter from '../atoms/svgs/Experimenter';
+import SvgExperimenter from '../atoms/svgs/experimenter';
+import SvgBrandBuilder from '../atoms/svgs/brand-builder';
+import SvgConductor from '../atoms/svgs/conductor';
 import PropTypes from 'prop-types';
 
 const IntroWrap = styled.section`
@@ -53,6 +55,8 @@ export default function IntroPage(props) {
   return (
     <IntroWrap style={{display: props.display ? 'block' : 'none'}}>
       <SvgExperimenter />
+      <SvgBrandBuilder />
+      <SvgConductor />
       <IntroSubtitle>        
         {props.content.p1}         
       </IntroSubtitle>        

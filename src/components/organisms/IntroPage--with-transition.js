@@ -114,24 +114,19 @@ export default class IntroPage extends Component {
 
   render() {
     return (
-      <IntroWrap style={{display: this.props.display ? 'block' : 'none'}}>
-        
-        <TransitionCustom in={this.state.show}>
-        
+      <IntroWrap style={{display: this.props.display ? 'block' : 'none'}}>        
+        <TransitionCustom in={this.state.show}>        
           <IntroSubtitle>        
             {this.props.content.p1}         
-          </IntroSubtitle>
-          
+          </IntroSubtitle>          
           <IntroText>
             <span dangerouslySetInnerHTML={{__html: this.props.content.p2}} />
           </IntroText>
           <IntroText>
             <span dangerouslySetInnerHTML={{__html: this.props.content.p3}} />
           </IntroText>
-          <Next nextText={this.props.nextText} round={this.props.round} onClick={this.props.onClick} />
-        
-        </TransitionCustom>
-        
+          <Next nextText={this.props.nextText} round={this.props.round} onClick={this.props.onClick} />        
+        </TransitionCustom>        
       </IntroWrap>
     );
   }

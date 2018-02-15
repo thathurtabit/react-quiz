@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import personalityInfo from '../../api/personalityInfo';
+import PersonalityElements from '../molecules/PersonalityElements';
 import resultData from '../../api/resultData';
 
 const Wrap = styled.section`
@@ -79,6 +80,8 @@ const ListPersonalities = (props) => {
 
   let filteredInfo = []
 
+  console.log(`Result key: ${props.resultKey}`);
+
   filteredInfo = personalityKeys.filter((personalityKey) => {
     let infoFirstChar = personalityKey.charAt(0).toUpperCase();
     return resultKeyArray.includes(infoFirstChar)
@@ -102,7 +105,7 @@ export default function PersonalityInfoList(props) {
       <header>
         <SectionTitleIntro>Understanding</SectionTitleIntro>
         <SectionTitle>{resultData[props.resultKey].title}s</SectionTitle>
-        <SectionTitleIntro>[{props.resultKey}]</SectionTitleIntro>
+        <PersonalityElements resultKey={props.resultKey} />
       </header>
       <ColWrap>
         <Col>
