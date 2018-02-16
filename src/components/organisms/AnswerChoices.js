@@ -28,7 +28,7 @@ const AnswerUl = styled.ul`
     top: 50%;
     transform: translate(-50%, -50%);
     width: 30px;
-    z-index: 10;
+    z-index: 1;
   }
 `;
 

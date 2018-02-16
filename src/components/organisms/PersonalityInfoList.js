@@ -8,7 +8,7 @@ const Wrap = styled.section`
   list-style-type: none;
   margin: 0 auto;
   max-width: ${props => props.theme.maxContentWidthWide};
-  padding: 1rem 1rem 3rem;
+  padding: 1rem 1rem 0;
   position: relative;
 `;
 
@@ -35,16 +35,14 @@ const ColWrap = styled.section`
 
 const Col = styled.section`  
   margin: 1rem;
-  padding: 0;
+  padding: 0 3rem;
   text-align: left;
 `;
 
 const ColTitle = styled.h4`
-  background: rgba(0, 0, 0, 0.02);
-  border-left: 1px solid;
   font-family: ${props => props.theme.fontPrimary};
-  font-size: calc(1rem + 0.5vw);
-  padding: 20px;
+  font-size: calc(1.25rem + 0.5vw);
+  padding: 0;
 `;
 
 const PersonalitiesUl = styled.ul`
@@ -55,7 +53,7 @@ const PersonalitiesUl = styled.ul`
 
 const PersonalitiesLi = styled.li`
   color: ${props => props.theme.tertiary};  
-  font-size: calc(1rem + 0.2vw);
+  font-size: calc(1rem + 0.15vw);
   position: relative;
   line-height: 1.75;
   margin-bottom: 20px;

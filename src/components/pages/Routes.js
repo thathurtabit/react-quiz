@@ -252,7 +252,7 @@ const MainNav = styled.nav`
   }
 
   a.active {
-    background: rgba(0,0,0,0.02);
+    background: ${props => props.theme.bgTrans};
     color: #333;
   }
 

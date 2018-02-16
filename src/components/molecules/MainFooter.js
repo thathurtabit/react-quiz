@@ -7,7 +7,7 @@ const FooterWrap = styled.footer`
   display: flex;
   font-size: 0.75rem;
   font-family: ${props => props.theme.fontSecondary};
-  margin: 3rem 0 0;
+  margin: 0;
   padding: 0.75rem;
   position: relative;
   text-align: center;

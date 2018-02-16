@@ -5,7 +5,7 @@ import resultData from '../../api/resultData';
 
 const PageWrap = styled.section`
 	position: relative;
-	margin: 0 2rem;
+	margin: 0 2rem 5rem;
 `;
 
 const PageTitle = styled.h1`
@@ -24,7 +24,7 @@ const PersonalitiesUl = styled.ul`
 	margin: 0;
 	padding: 0;
 	
-	@media screen and (min-width: 480px) {
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
 		& > * {
 		  float: left;  
 		  width: 50%;
@@ -35,15 +35,20 @@ const PersonalitiesUl = styled.ul`
 	  grid-gap: 20px;
 	}
 
-	@media screen and (min-width: 860px) {
+	@media screen and (min-width: ${props => props.theme.breakpointMD}) {
 		& > * {
-		  float: left;  
 		  width: 33%;
 		}
 		
-		display: grid;
 	  grid-template-columns: 1fr 1fr 1fr;
-	  grid-gap: 20px;
+	}
+
+	@media screen and (min-width: ${props => props.theme.breakpointXL}) {
+		& > * {
+		  width: 25%;
+		}
+		
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 
 `;
@@ -86,7 +91,10 @@ const PersonalitiesLi = styled.li`
 `;
 
 const More = styled(Link)`
+	background: rgba(255, 255, 255, 0);
   border: 0;
+  border-radius: 20px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0);
   color: ${props => props.theme.primary};
   display: block;
   margin: 0 auto;
@@ -97,7 +105,7 @@ const More = styled(Link)`
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background 0.25s ease-out;
+  transition: background, 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.25s ease-out;
 
   span {
     position: relative;
@@ -105,18 +113,28 @@ const More = styled(Link)`
   }
   
   &:hover {
-  	background: rgba(0, 0, 0, 0.05);
+  	background: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.015);
     cursor: pointer;
     opacity: 1;
-    transform: rotateY(0deg);
+    transform: translateY(-3px);
+
+    img {
+    	transform: scale(1.025);
+    }
   }
 `;
 
 const IMG = styled.img`
 	height: 200px;
 	max-width: 100%;
-`;
+	transform: scale(1);
+	transition: transform 0.25s ease-out;
 
+	@media screen and (min-width: ${props => props.theme.breakpointXL}) {
+		height: 175px;
+	}
+`;
 
 const ListPersonalities = () => {
 	let personalityKeys = Object.keys(resultData);
@@ -142,10 +160,8 @@ const DesignPersonalities = () => {
 
 	return (
 	 <PageWrap>
-	 	<PageTitle>Design Personalities</PageTitle>
-	 	
-	 	<ListPersonalities />
-	 	
+	 	<PageTitle>Design Personalities</PageTitle>	 	
+	 	<ListPersonalities />	 	
 	 </PageWrap>
 	);
 }

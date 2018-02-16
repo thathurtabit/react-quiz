@@ -95,7 +95,7 @@ export default function Results(props) {
 
       <PageWrap>
         <ResultIntro>Share your result</ResultIntro>
-        <SocialShare personality={props.title} />
+        <SocialShare resultTweet personality={props.title} />
         <HR />
         <ResultIntro>Not a {props.title}?</ResultIntro>
         <Restart restartText={props.nextText} onClick={props.handleRestart} />

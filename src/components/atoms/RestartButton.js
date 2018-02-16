@@ -36,6 +36,7 @@ const RestartButton = styled.button`
   &::before {
     background: ${props => props.theme.secondary};
     bottom: 0;
+    border-radius: 40px;
     content: '';
     left: 0;
     perspective: 1000px;

@@ -43,16 +43,17 @@ const Wrapper = styled.section`
 `;
 
 const QuizWrap = styled.section`
-  padding: 0 0 3rem;
+  background: #fff;
 `;
 
 const QuizSection = styled.section`
+  background: rgba(222, 199, 228, 0.17);
   font-size: 1.5em;
+  padding: 0 0 3rem;
   text-align: center;
 `;
 
 const Answers = styled.section`
-  background: rgba(0,0,0,0.05);
   padding: 2rem 0;
   margin: 1rem 0 3rem;
 `;

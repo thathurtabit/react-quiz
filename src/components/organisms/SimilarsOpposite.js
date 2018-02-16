@@ -38,11 +38,12 @@ const PersonalitiesLiTitle = styled.h5`
 `;
 
 const PersonalitiesText = styled.p`
-  font-family: ${props => props.theme.fontSecondary};
   color: ${props => props.theme.tertiary};
-  font-size: calc(1rem + 0.05vw);
-  padding: 20px 0 0;
+  font-family: ${props => props.theme.fontSecondary};
+  font-size: calc(0.9rem);
+  line-height: 1.5;
   margin: 0;
+  padding: 20px 0 0;
   text-transform: none;
 `;
 
@@ -75,11 +76,12 @@ const PersonalitiesLi = styled.li`
 
 const More = styled(Link)`
   border: 0;
+  border-radius: 30px;
   color: ${props => props.theme.primary};
   display: block;
   margin: 1rem 0;
   overflow: hidden;
-  padding: 30px 0;
+  padding: 2rem;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -92,7 +94,7 @@ const More = styled(Link)`
   }
   
   &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: #fff;
     cursor: pointer;
     opacity: 1;
     transform: rotateY(0deg);
@@ -136,7 +138,7 @@ const OppositePersonalities = (props) => {
       <PersonalitiesLi>
         <More to={`/design-personality/${resultData[oppositeKey].slug}`}>
           <IMG src={`../images/SVG/${resultData[oppositeKey].slug}.svg`} alt={resultData[oppositeKey].title} />
-          <PersonalitiesLiTitle>{resultData[oppositeKey].title}</PersonalitiesLiTitle>
+          <PersonalitiesLiTitle>{resultData[oppositeKey].title}s</PersonalitiesLiTitle>
           <PersonalitiesText>{resultData[props.resultKey].opposite.text}</PersonalitiesText>
         </More>
       </PersonalitiesLi>

@@ -6,6 +6,7 @@ const theme = {
   secondary: '#333333',
   tertiary: '#999999',
   bg: '#ffffff',
+  bgTrans: 'rgba(241, 93, 15, 0.02)',
   fontPrimary: `'Merriweather', serif`,
   fontSecondary: `'Open Sans', sans-serif`,
   maxContentWidth: '780px',
@@ -15,16 +16,15 @@ const theme = {
   breakpointLG: '1200px',
   breakpointXL: '1400px',
   personality: {
-  	diverge: 'red',
-  	converge: 'green',
-  	abstract: 'yellow',
-  	real: 'pink',
-  	individual: 'purple',
-  	group: 'black',
-  	sense: 'blue',
-  	measure: 'orange'
+  	diverge: '#7191b5',
+  	converge: '#8aaa5e',
+  	abstract: '#f9b76b',
+  	real: '#aa6fc3',
+  	individual: '#94ebda',
+  	group: '#E0687A',
+  	sense: '#ff8065',
+  	measure: '#6e8ab2'
   }
-
 };
 
 export default theme;

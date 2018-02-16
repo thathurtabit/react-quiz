@@ -15,7 +15,6 @@ const PersonalityElementsUl = styled.ul`
 `;
 
 const PersonalityElementsLi = styled.li`
-  border-radius: 0 10px 0 0;
   display: inline-block;
   font-size: 0.5rem;
   margin: 1rem;
@@ -23,10 +22,6 @@ const PersonalityElementsLi = styled.li`
   width: 95px;
   position: relative;
 
-  &:nth-child(even)::before {
-    border-radius: 100%;
-  }
-  
   &::before {
     border: 5px solid;
     content: '';
@@ -44,30 +39,82 @@ const PersonalityElementsLi = styled.li`
   
   &.personality-converge::before {
     border-color: ${props => props.theme.personality.converge};
+    border-radius: 100%;
   }
 
   &.personality-abstract::before {
-    border-color: red;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid ${props => props.theme.personality.abstract};
+    top: -15px;
   }
 
   &.personality-real::before {
-    border-color: red;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid ${props => props.theme.personality.real};
+    top: -15px;
   }
 
   &.personality-individual::before {
-    border-color: red;
+    border-color: ${props => props.theme.personality.individual};
+    transform: rotate(45deg) translate(-3px, 5px);
+    top: -12px;
   }
 
   &.personality-group::before {
-    border-color: red;
+    border-right: 6px solid transparent;
+    border-top: 6px solid ${props => props.theme.personality.group};
+    border-left: 6px solid ${props => props.theme.personality.group};
+    border-bottom: 6px solid ${props => props.theme.personality.group};
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 
-  &.personality-sense::before {
-    border-color: red;
+  &.personality-sense {
+    background: transparent;
+    position: relative;
+
+    &::before {
+      background: ${props => props.theme.personality.sense};
+      border-radius: 0;
+      border: 0;
+      content: "";
+      height: 4px;
+      left: 50%;
+      translateX(-50%);
+      position: absolute;
+      top: -8px;
+      width: 14px;
+    }
+
+    &::after {
+      background: ${props => props.theme.personality.sense};
+      border-radius: 0;
+      border: 0;
+      content: "";
+      height: 14px;
+      left: 50%;
+      translateX(-50%);
+      position: absolute;
+      transform: translateX(-2px);
+      top: -13px;
+      width: 4px;
+    }
   }
 
   &.personality-measure::before {
-    border-color: red;
+    border-color: ${props => props.theme.personality.measure};
+    transform: skew(20deg) translateX(-7px);
+    width: 0px;
   }
 `;
 
@@ -104,7 +151,7 @@ const ListPersonalityElements = (props) => {
     let infoFirstChar = infoKey.charAt(0).toUpperCase();
 
     return (
-      <PersonalityElementsLi personality={infoKey} key={infoKey}>
+      <PersonalityElementsLi className={`personality-${infoKey}`} key={infoKey}>
           <PersonalityElementTitle>
             <span>{infoFirstChar}</span>
             {personalityInfo[infoKey].name}

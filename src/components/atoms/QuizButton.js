@@ -41,6 +41,7 @@ const GoToQuizButton = styled(Link)`
   
   &::before {
     background: ${props => props.theme.secondary};
+    border-radius: 40px;
     bottom: 0;
     content: '';
     left: 0;

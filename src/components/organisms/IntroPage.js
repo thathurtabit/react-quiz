@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import QuizButton from '../atoms/QuizButton';
 import SvgExperimenter from '../atoms/svgs/experimenter';
+import { Link } from 'react-router-dom';
 import introPageData from '../../api/introPageData';
 import PropTypes from 'prop-types';
 
@@ -17,7 +18,7 @@ const IntroWrap = styled.section`
   position: relative;
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
-    padding: 10rem 3rem 5rem;
+    padding: 5rem 3rem 5rem;
   }
 `;
 
@@ -36,21 +37,89 @@ const IntroSubtitle = styled.h2`
 `;
 
 const IntroText = styled.p`
-  font-size: calc(1rem + 0.25vw);
+  font-size: calc(1rem + 0.2vw);
   line-height: 1.65;
-  margin: 1rem 1rem 2.5rem;
+  margin: 1rem 1rem 1rem;
   padding: 0;
 
   strong {
     font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
   }
+
+  &:last-of-type {
+    margin-bottom: 4rem;
+  }
+`;
+
+const QuizBubble = styled(Link)`
+  position: relative;
+
+  &:hover p {
+    transform: translateY(-5px);
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.bg};
+
+    &::after {
+      border-top-color: ${props => props.theme.primary};
+    }
+  }
+`;
+
+const SpeechBubble = styled.p`
+  background: ${props => props.theme.bg};
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 3px;
+  color: ${props => props.theme.tertiary};
+  font-size: 10px;
+  padding: 5px 10px;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  transition: background 0.25s ease-out, transform 0.25s ease-out;
+  top: -30px;
+  z-index: 10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.02);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -8.5px;
+    margin-bottom: -10px;
+    transition: border-top-color 0.25s ease-out;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: ${props => props.theme.bg};
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -8.5px;
+    margin-bottom: -10px;
+    transition: border-top-color 0.25s ease-out;
+  }
 `;
 
 export default function IntroPage(props) {
   return (
     <IntroWrap>
-      <SvgExperimenter />
+      <QuizBubble to="/quiz">
+        <SpeechBubble>Ready to test?</SpeechBubble>
+        <SvgExperimenter />
+      </QuizBubble>
       <IntroSubtitle>        
         {introPageData.p1}         
       </IntroSubtitle>        

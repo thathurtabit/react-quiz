@@ -17,12 +17,15 @@ const AnswerInput = styled.input`
   &:checked+label{
     background: ${props => props.theme.primary};
     color: ${props => props.theme.bg};
+    box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.05);
   } 
 `;
 
 const AnswerLabel = styled.label`
   padding: 2rem;
   background: ${props => props.theme.bg};
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
   display: block;
   font-size: 1.5rem;
   transition: background 0.25s ease-out, color 0.25s ease-out;
