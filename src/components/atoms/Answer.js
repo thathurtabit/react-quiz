@@ -42,15 +42,17 @@ export default function Answer(props) {
   return (
     <AnswerLi>
       <AnswerInput
-        type="radio"
+        type="radio"        
         className="radioCustomButton"
         name={props.group}
         id={props.id}
         value={props.answerType}
+        tabIndex="0"
       />
       <AnswerLabel
-        htmlFor={props.id}>
-        {props.answerContent}
+        htmlFor={props.id}
+        >
+        {props.answerContent}        
       </AnswerLabel>
     </AnswerLi>
   );

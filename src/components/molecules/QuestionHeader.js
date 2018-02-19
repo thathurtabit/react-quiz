@@ -40,21 +40,36 @@ const Round = styled.p`
   margin: 0 0 1rem;
   padding: 5px 10px;
   text-align: center;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    
+  }
 `;
 
 const QuestionTitle = styled.h3`
   font-family: ${props => props.theme.fontPrimary};
-  font-size: 2rem;
+  font-size: 1.7rem;
+  padding: 0;
   margin: 0;
   text-align: center;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    font-size: 2rem;
+    padding: 0;
+  }
 `;
 
 const QuestionIntro = styled.p`
-  font-size: 1rem;
-  line-height: 2;
+  font-size: 0.9rem;
+  line-height: 1.75;
 
   strong {
     text-transform: uppercase;
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    font-size: 1rem;
+    line-height: 2;
   }
 `;
 
@@ -68,11 +83,15 @@ const Col = styled.section`
 `;
 
 const ColTitle = styled.section`
-  padding: 2rem 2rem 1rem;
+  padding: 2rem 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    padding: 2rem 2rem 1rem;
+  }
 
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
     align-items: flex-end;

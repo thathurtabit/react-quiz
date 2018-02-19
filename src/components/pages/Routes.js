@@ -174,7 +174,7 @@ const MainHeader = styled.header`
 		max-height: initial;
 		padding: 1rem 2rem;
 		position: fixed;
-
+		z-index: 11;
 	}
 `;
 

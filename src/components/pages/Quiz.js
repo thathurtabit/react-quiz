@@ -55,7 +55,8 @@ const QuizSection = styled.section`
 
 const Answers = styled.section`
   padding: 2rem 0;
-  margin: 1rem 0 3rem;
+  margin: 1rem auto 3rem;  
+  max-width: 1800px;
 `;
 
 const duration = 300;

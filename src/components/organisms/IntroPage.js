@@ -129,7 +129,7 @@ export default function IntroPage(props) {
       <IntroText>
         <span dangerouslySetInnerHTML={{__html: introPageData.p3}} />
       </IntroText>
-      <QuizButton text="Start" to="/quiz"  />
+      <QuizButton text="Take the Quiz" to="/quiz"  />
     </IntroWrap>
   );  
 }

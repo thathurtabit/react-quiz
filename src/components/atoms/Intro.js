@@ -9,8 +9,8 @@ const IntroTextWrap = styled.section`
 `;
 
 const IntroText = styled.p`
-  font-size: 0.75em;
-  line-height: 1.3;
+  font-size: 0.6em;
+  line-height: 1;
   margin: 0.5rem 0 1rem;
   text-align: center;
 `;
