@@ -16,7 +16,7 @@ const AnswerUl = styled.ul`
   }
 
   &::before {
-    background: ${props => props.theme.tertiary};
+    background: ${props => props.theme.quaternary};
     border-radius: 100%;
     color: #fff;
     content: "vs";

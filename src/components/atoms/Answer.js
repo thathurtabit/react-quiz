@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const AnswerLi = styled.li`
   margin: 0 5%;
+  position: relative;
 
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
     width: 50%;
@@ -11,13 +12,24 @@ const AnswerLi = styled.li`
 `;
 
 const AnswerInput = styled.input`
-  margin: 10px;
-  display: none;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
 
-  &:checked+label{
+  &:focus+label {
+    outline: 2px solid ${props => props.theme.secondary};
+    outline: 2px auto -webkit-focus-ring-color;
+  }
+
+  &:checked+label {
     background: ${props => props.theme.primary};
     color: ${props => props.theme.bg};
     box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.05);
+    outline: 0;
   } 
 `;
 
@@ -50,7 +62,7 @@ export default function Answer(props) {
         tabIndex="0"
       />
       <AnswerLabel
-        htmlFor={props.id}
+        htmlFor={props.id} 
         >
         {props.answerContent}        
       </AnswerLabel>

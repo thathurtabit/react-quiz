@@ -101,7 +101,6 @@ const More = styled(Link)`
   }
 `;
 
-
 const IMG = styled.img`
   height: 150px;
   max-width: 100%;

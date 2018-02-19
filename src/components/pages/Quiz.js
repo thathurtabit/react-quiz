@@ -5,7 +5,6 @@ import update from 'immutability-helper';
 import quizData from '../../api/quizData';
 import resultData from '../../api/resultData';
 import QuestionHeader from '../molecules/QuestionHeader';
-import Question from '../atoms/Question';
 import AnswerChoices from '../organisms/AnswerChoices';
 import Next from '../atoms/NextButton';
 import Results from '../organisms/Results';
@@ -55,7 +54,7 @@ const QuizSection = styled.section`
 
 const Answers = styled.section`
   padding: 2rem 0;
-  margin: 1rem auto 3rem;  
+  margin: 0 auto 3rem;  
   max-width: 1800px;
 `;
 
@@ -498,10 +497,10 @@ export default class Quiz extends Component {
     return (
       <PageWrapper>
         <Fade in={this.state.show}>
-          <Wrapper>            
+          <Wrapper> 
             <QuizWrap style={{display: this.state.display.quiz ? 'block' : 'none'}}>
-              <QuestionHeader title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />   
-              <Question ready={this.state.show} question={this.state.question} />           
+              <QuestionHeader question={this.state.question} title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />   
+              {/*<Question ready={this.state.show} question={this.state.question} />*/}
               <QuizSection>                
                 <Answers onChange={this.handleAnswerSelected}>
                   <AnswerChoices

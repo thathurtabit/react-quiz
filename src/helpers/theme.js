@@ -5,6 +5,7 @@ const theme = {
   primaryLight: '#d8ade8',
   secondary: '#333333',
   tertiary: '#999999',
+  quaternary: '#666666',
   bg: '#ffffff',
   bgTrans: 'rgba(241, 93, 15, 0.02)',
   fontPrimary: `'Merriweather', serif`,
