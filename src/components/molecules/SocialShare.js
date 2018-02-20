@@ -8,6 +8,10 @@ const IMG = styled.img`
 `;
 
 const SocialWrap = styled.section`
+  & > a {
+    display: inline-block;
+  }
+
   background: #fff;
   border-radius: 3rem;
   display: grid;
@@ -20,6 +24,7 @@ const SocialWrap = styled.section`
 
 const ShareLink = styled.a`
   display: block;
+
   
   img {
     transition: transform 0.25s ease-out;

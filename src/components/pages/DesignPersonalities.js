@@ -15,48 +15,67 @@ const PageTitle = styled.h1`
 	font-size: calc(10vw);
 
 	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
-			font-size: calc(20px + 4vw);
+		font-size: calc(20px + 4vw);
 	}
 `;
 
-// Grid fallback
+// Grid fallback 
 const PersonalitiesUl = styled.ul`
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+
+	&::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
 	
-	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
-		& > * {
-		  float: left;  
-		  width: 50%;
-		}
-		
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {		
 		display: grid;
 	  grid-template-columns: 1fr 1fr;
 	  grid-gap: 20px;
 	}
 
 	@media screen and (min-width: ${props => props.theme.breakpointMD}) {
-		& > * {
-		  width: 33%;
-		}
-		
-	  grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	@media screen and (min-width: ${props => props.theme.breakpointXL}) {
-		& > * {
-		  width: 25%;
-		}
-		
-	  grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
-
 `;
 
 const PersonalitiesLi = styled.li`
 	list-style-type: none;
 	width: 100%;
+
+	@media screen and (min-width: ${props => props.theme.breakpointSM}) {		
+		float: left;
+		width: 50%;
+
+		@supports (display: grid) {
+	    width: auto;
+	  }
+	}
+
+	@media screen and (min-width: ${props => props.theme.breakpointMD}) {
+		float: left;
+		width: 33.33%;
+
+		@supports (display: grid) {
+	    width: auto;
+	  }
+	}
+
+	@media screen and (min-width: ${props => props.theme.breakpointXL}) {
+		float: left;
+		width: 25%;
+
+		@supports (display: grid) {
+	    width: auto;
+	  }
+	}
 	
 	h4 {
 		font-family: ${props => props.theme.fontPrimary};
