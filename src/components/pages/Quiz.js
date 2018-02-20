@@ -175,10 +175,10 @@ export default class Quiz extends Component {
     return array;
   };
 
-  checkNextButton() { 
+  checkNextButton() {
     this.setState({
       next: {
-        text: "Next",
+        text: (this.state.round === this.state.roundsTotal) ? 'See Results' : 'Next',
         disabled: false,
       }      
     });
