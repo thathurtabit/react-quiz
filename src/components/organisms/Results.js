@@ -1,21 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
-import Restart from '../atoms/RestartButton';
-import HeroImage from '../atoms/HeroImage';
-import SocialShare from '../molecules/SocialShare';
-import PersonalityInfoList from '../organisms/PersonalityInfoList';
-import SimilarsOpposite from '../organisms/SimilarsOpposite';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import Restart from '../atoms/RestartButton'
+import HeroImage from '../atoms/HeroImage'
+import SocialShare from '../molecules/SocialShare'
+import PersonalityInfoList from '../organisms/PersonalityInfoList'
+import SimilarsOpposite from '../organisms/SimilarsOpposite'
+import PropTypes from 'prop-types'
 
 const ResultsWrap = styled.section`
   margin-bottom: 6rem;
-`;
+`
 
 const PageWrap = styled.section`
   position: relative;
   max-width: ${props => props.theme.maxContentWidth};
   margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
-`;
+`
 
 
 const ResultsTitle = styled.h2`
@@ -32,7 +32,7 @@ const ResultsTitle = styled.h2`
       font-size: calc(20px + 4vw);
       margin: 1rem 1rem 5rem; 
   }
-`;
+`
 
 const ResultIntro = styled.p`
   color: ${props => props.theme.tertiary};
@@ -40,7 +40,7 @@ const ResultIntro = styled.p`
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-top: 5rem;
-`;
+`
 
 const ResultsText = styled.p`
   font-size: calc(1rem + 0.5vw);
@@ -52,7 +52,7 @@ const ResultsText = styled.p`
     font-family: ${props => props.theme.fontPrimary};
     letter-spacing: 0;
   }
-`;
+`
 
 const HR = styled.hr`
   border: 0;
@@ -70,12 +70,11 @@ const HR = styled.hr`
     transform: translateX(-50%);
     width: 50px;
   }
-`;
-
+`
 
 export default function Results(props) {
   return (
-    <ResultsWrap style={{display: props.show ? 'block' : 'none'}}>
+    <ResultsWrap style={{ display: props.show ? 'block' : 'none' }}>
       <PageWrap>
         <ResultIntro>You are a:</ResultIntro>
         <ResultsTitle>
@@ -83,13 +82,13 @@ export default function Results(props) {
         </ResultsTitle>
         <HeroImage src={props.moreLink} alt={props.title} />
         <ResultsText>
-          <span dangerouslySetInnerHTML={{__html: props.text}} />
+          <span dangerouslySetInnerHTML={{ __html: props.text }} />
         </ResultsText>
       </PageWrap>
 
-      <HR />   
+      <HR />
       <PersonalityInfoList resultKey={props.resultKey} />
-      <HR />    
+      <HR />
       <SimilarsOpposite resultKey={props.resultKey} />
       <HR />
 
@@ -101,7 +100,7 @@ export default function Results(props) {
         <Restart restartText={props.nextText} onClick={props.handleRestart} />
       </PageWrap>
     </ResultsWrap>
-  );
+  )
 }
 
 Results.propTypes = {

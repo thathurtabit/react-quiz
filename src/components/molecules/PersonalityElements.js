@@ -1,18 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import personalityInfo from '../../api/personalityInfo';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import personalityInfo from '../../api/personalityInfo'
 
 const ElementsWrap = styled.section`
   margin: 0 auto;
   padding: 1rem;
-`;
+`
 
 const PersonalityElementsUl = styled.ul`
   text-align: center;
   margin: 0;
   padding: 0;
-`;
+`
 
 const PersonalityElementsLi = styled.li`
   display: inline-block;
@@ -84,7 +84,7 @@ const PersonalityElementsLi = styled.li`
     -webkit-mask:  url('../images/SVG/icons/measure.svg') no-repeat 50% 50%;
     mask: url('../images/SVG/icons/measure.svg') no-repeat 50% 50%;
   }
-`;
+`
 
 const PersonalityElementTitle = styled.h5`
   color: ${props => props.theme.tertiary};
@@ -101,37 +101,36 @@ const PersonalityElementTitle = styled.h5`
     letter-spacing: 0;
     padding: 0 0 0.5rem;
   }
-
-`;
+`
 
 const ListPersonalityElements = (props) => {
-  let resultKeyArray = Array.from(props.resultKey);
-  let personalityKeys = Object.keys(personalityInfo);
+  let resultKeyArray = Array.from(props.resultKey)
+  let personalityKeys = Object.keys(personalityInfo)
 
-  let filteredInfo = [];
+  let filteredInfo = []
 
   filteredInfo = personalityKeys.filter((personalityKey) => {
-    let infoFirstChar = personalityKey.charAt(0).toUpperCase();
+    let infoFirstChar = personalityKey.charAt(0).toUpperCase()
     return resultKeyArray.includes(infoFirstChar)
-  });
+  })
 
-  let infoList = filteredInfo.map((infoKey) => {  
-    let infoFirstChar = infoKey.charAt(0).toUpperCase();
+  let infoList = filteredInfo.map((infoKey) => {
+    let infoFirstChar = infoKey.charAt(0).toUpperCase()
 
     return (
       <PersonalityElementsLi className={`personality-${infoKey}`} key={infoKey}>
-          <PersonalityElementTitle>
-            <span>{infoFirstChar}</span>
-            {personalityInfo[infoKey].name}
-          </PersonalityElementTitle>
+        <PersonalityElementTitle>
+          <span>{infoFirstChar}</span>
+          {personalityInfo[infoKey].name}
+        </PersonalityElementTitle>
       </PersonalityElementsLi>
     )
-  });
+  })
 
-  return  <PersonalityElementsUl>{ infoList }</PersonalityElementsUl>
+  return <PersonalityElementsUl>{ infoList }</PersonalityElementsUl>
 }
 
-export default function PersonalityElements(props)  {
+export default function PersonalityElements(props) {
   return (
     <ElementsWrap>
       <ListPersonalityElements resultKey={props.resultKey} />
@@ -140,5 +139,5 @@ export default function PersonalityElements(props)  {
 }
 
 PersonalityElements.propTypes = {
-  resultKey: PropTypes.string,
+  resultKey: PropTypes.string
 }

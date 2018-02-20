@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const NextButton = styled.button`
   background: ${props => props.theme.primary};
@@ -39,6 +39,7 @@ const NextButton = styled.button`
   
   &::before {
     background: ${props => props.theme.secondary};
+    border-radius: 40px;
     bottom: 0;
     content: '';
     left: 0;
@@ -56,12 +57,19 @@ const NextButton = styled.button`
     cursor: pointer;
     transform: rotateY(0deg);
   }
-`;
+`
 
-export default function Next(props)  {
-  return <NextButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}><span>{props.nextText}</span></NextButton>
+export default function Next(props) {
+  return (
+    <NextButton
+      id={`button${props.round}`}
+      onClick={() => props.onClick()}
+      disabled={props.disabled}>
+      <span>{props.nextText}</span>
+    </NextButton>
+  )
 }
 
 Next.propTypes = {
-  nextText: PropTypes.string.isRequired,
+  nextText: PropTypes.string.isRequired
 }

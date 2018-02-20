@@ -1,6 +1,5 @@
 // Define what styled components base-theme will look like
 const theme = {
-  //primary: '#8E26B7',
   primary: '#9740B0',
   primaryLight: '#d8ade8',
   secondary: '#333333',
@@ -26,6 +25,6 @@ const theme = {
   	sense: '#ff8065',
   	measure: '#6e8ab2'
   }
-};
+}
 
-export default theme;
+export default theme

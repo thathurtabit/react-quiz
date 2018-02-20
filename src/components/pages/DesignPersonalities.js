@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import resultData from '../../api/resultData';
-import siteInfo from '../../api/siteInfo';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import resultData from '../../api/resultData'
+import siteInfo from '../../api/siteInfo'
 
 const PageWrap = styled.section`
 	position: relative;
 	margin: 0 2rem 5rem;
-`;
+`
 
 const PageTitle = styled.h1`
 	color: ${props => props.theme.primary};
@@ -17,9 +17,9 @@ const PageTitle = styled.h1`
 	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
 		font-size: calc(20px + 4vw);
 	}
-`;
+`
 
-// Grid fallback 
+// Grid fallback
 const PersonalitiesUl = styled.ul`
 	list-style-type: none;
 	margin: 0;
@@ -44,7 +44,7 @@ const PersonalitiesUl = styled.ul`
 	@media screen and (min-width: ${props => props.theme.breakpointXL}) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
-`;
+`
 
 const PersonalitiesLi = styled.li`
 	list-style-type: none;
@@ -108,7 +108,7 @@ const PersonalitiesLi = styled.li`
 			cursor: pointer;
 		}
 	}
-`;
+`
 
 const More = styled(Link)`
 	background: rgba(255, 255, 255, 0);
@@ -143,7 +143,7 @@ const More = styled(Link)`
     	transform: scale(1.025);
     }
   }
-`;
+`
 
 const IMG = styled.img`
 	height: 200px;
@@ -154,35 +154,34 @@ const IMG = styled.img`
 	@media screen and (min-width: ${props => props.theme.breakpointXL}) {
 		height: 175px;
 	}
-`;
+`
 
 const ListPersonalities = () => {
-	let personalityKeys = Object.keys(resultData);
-	
-  let linkList = personalityKeys.map(function(key) {
-    return (    	
+  let personalityKeys = Object.keys(resultData)
+
+  let linkList = personalityKeys.map(function (key) {
+    return (
   		<PersonalitiesLi key={key}>
     		<More key={key} to={`${siteInfo.singularType.slug}/${resultData[key].slug}`}>
     			<IMG src={`images/SVG/${resultData[key].slug}.svg`} alt={resultData[key].title} />
     			<h4>{resultData[key].title}</h4>
-    			<p dangerouslySetInnerHTML={{__html: resultData[key].text}}></p>
+    			<p dangerouslySetInnerHTML={{ __html: resultData[key].text }} />
     			<button>Learn More</button>
   			</More>
-  		</PersonalitiesLi>			
+  		</PersonalitiesLi>
     )
   })
 
-  return  <PersonalitiesUl>{ linkList }</PersonalitiesUl>
+  return <PersonalitiesUl>{ linkList }</PersonalitiesUl>
 }
 
 const DesignPersonalities = () => {
-
-	return (
-	 <PageWrap>
-	 	<PageTitle>{siteInfo.singularType.name}s</PageTitle>	 	
-	 	<ListPersonalities />	 	
-	 </PageWrap>
-	);
+  return (
+    <PageWrap>
+      <PageTitle>{siteInfo.singularType.name}s</PageTitle>
+      <ListPersonalities />
+    </PageWrap>
+  )
 }
 
-export default DesignPersonalities;
+export default DesignPersonalities

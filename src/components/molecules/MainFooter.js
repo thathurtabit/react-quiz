@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
 const FooterWrap = styled.footer`
   background: ${props => props.theme.primary};
@@ -11,7 +11,7 @@ const FooterWrap = styled.footer`
   padding: 0.75rem;
   position: relative;
   text-align: center;
-`;
+`
 
 const Link = styled.a`
   color: ${props => props.theme.primaryLight};
@@ -21,19 +21,34 @@ const Link = styled.a`
   &:hover {
     color: ${props => props.theme.bg};
   }
-`;
+`
+
+const Col = styled.p`
+  color: ${props => props.theme.primaryLight};
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  text-align: center;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    width: 50%;
+  }
+`
 
 const Copyright = () => {
-  let currentDate = new Date();
-  let currentYear = currentDate.getFullYear();
-  return <p><span dangerouslySetInnerHTML={{__html: '&copy;'}} /> {currentYear} <Link href="https://www.codecomputerlove.com/" target="_blank" rel="noopener">Made with Computerlove</Link></p>
+  let currentDate = new Date()
+  let currentYear = currentDate.getFullYear()
+  return <Col><span dangerouslySetInnerHTML={{ __html: '&copy;' }} /> {currentYear} <Link href='https://www.codecomputerlove.com/' target='_blank' rel='noopener'>Made with Computerlove</Link></Col>
 }
 
-export default class MainFooter extends Component {
+const Feedback = () => {
+  return <Col><Link href='https://goo.gl/PibK8C' target='_blank' rel='noopener'>Feedback</Link></Col>
+}
 
+
+export default class MainFooter extends Component {
   // State constructor
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       display: {
         footer: false
@@ -49,17 +64,18 @@ export default class MainFooter extends Component {
         display: {
           footer: true
         }
-      });
-    }, 1000);
+      })
+    }, 1000)
   }
 
   // Render
   render() {
-    	return (
-    		<FooterWrap style={{display: this.state.display.footer ? 'block' : 'none'}}>
-          <Copyright />
-    		</FooterWrap>
-    	);
-    }
+    return (
+      <FooterWrap style={{ display: this.state.display.footer ? 'block' : 'none' }}>
+        <Copyright />
+        <Feedback />
+      </FooterWrap>
+    )
+  }
 }
 

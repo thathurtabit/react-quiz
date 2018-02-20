@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { CSSTransition } from 'react-transition-group';
-import update from 'immutability-helper';
-import quizData from '../../api/quizData';
-import resultData from '../../api/resultData';
-import QuestionHeader from '../molecules/QuestionHeader';
-import AnswerChoices from '../organisms/AnswerChoices';
-import Next from '../atoms/NextButton';
-import Results from '../organisms/Results';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { CSSTransition } from 'react-transition-group'
+import update from 'immutability-helper'
+import quizData from '../../api/quizData'
+import resultData from '../../api/resultData'
+import QuestionHeader from '../molecules/QuestionHeader'
+import AnswerChoices from '../organisms/AnswerChoices'
+import Next from '../atoms/NextButton'
+import Results from '../organisms/Results'
 
 const PageWrapper = styled.section`
   min-height: 100%;
-`;
+`
 
 const Wrapper = styled.section`
   font-family: ${props => props.theme.fontSecondary};
@@ -39,37 +39,37 @@ const Wrapper = styled.section`
     transform: scale(.98);
     transition: opacity 350ms ease-in, transform 350ms ease-out;
   }
-`;
+`
 
 const QuizWrap = styled.section`
   background: #fff;
-`;
+`
 
 const QuizSection = styled.section`
   background: rgba(222, 199, 228, 0.17);
   font-size: 1.5em;
   padding: 0 0 3rem;
   text-align: center;
-`;
+`
 
 const Answers = styled.section`
   padding: 2rem 0;
   margin: 0 auto 3rem;  
   max-width: 1800px;
-`;
+`
 
-const duration = 300;
+const duration = 300
 
 // Fade handler
 const Fade = ({ children, ...props }) => (
   <CSSTransition
     {...props}
     timeout={duration}
-    classNames="fade"
+    classNames='fade'
   >
     {children}
   </CSSTransition>
-);
+)
 
 // Set my initial state
 const initialState = {
@@ -109,39 +109,37 @@ const initialState = {
   round: 1,
   roundsTotal: quizData.length,
   next: {
-    text: "Start",
+    text: 'Start',
     disabled: false,
   },
   resultData: resultData,
   resultArray: [],
   resultAcronym: 'DAIS', // needs a value by default
   results: {
-    title: '', 
+    title: '',
     text: '',
     link: 'people-watcher', // needs a value by default
-  }
-};
+  },
+}
 
 // Create Quiz class
 export default class Quiz extends Component {
-
   // State constructor
   constructor(props) {
-    super(props);
-    this.state = initialState;
+    super(props)
+    this.state = initialState
 
-    this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    this.handleAnswerSelected = this.handleAnswerSelected.bind(this)
   }
 
   // React Lifecycle
   componentWillMount() {
-
     // Shuffle Answers
-    const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1));
-    const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2));
-    const shuffledAnswer3Choices = quizData.map((round) => this.shuffleArray(round.answer3));
-    const shuffledAnswer4Choices = quizData.map((round) => this.shuffleArray(round.answer4));
-    const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5));
+    const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1))
+    const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2))
+    const shuffledAnswer3Choices = quizData.map((round) => this.shuffleArray(round.answer3))
+    const shuffledAnswer4Choices = quizData.map((round) => this.shuffleArray(round.answer4))
+    const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5))
 
     this.setState({
       answer1Choices: shuffledAnswer1Choices[0],
@@ -151,127 +149,123 @@ export default class Quiz extends Component {
       answer5Choices: shuffledAnswer5Choices[0],
     }, () => {
       // Let's get going
-      this.jumpTo(0);
-    });
+      this.jumpTo(0)
+    })
   }
 
   // Shuffle an Array
   shuffleArray(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex
 
     // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-
+    while (currentIndex !== 0) {
       // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+      randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex -= 1
 
       // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+      temporaryValue = array[currentIndex]
+      array[currentIndex] = array[randomIndex]
+      array[randomIndex] = temporaryValue
     }
 
-    return array;
-  };
+    return array
+  }
 
   checkNextButton() {
     this.setState({
       next: {
         text: (this.state.round === this.state.roundsTotal) ? 'See Results' : 'Next',
         disabled: false,
-      }      
-    });
+      },
+    })
   }
 
+  // TODO - Change over to (map) etc.
   // Handle Answer Selected
   handleAnswerSelected(event) {
     // Use spread operator to return an array of elements
     // Get array of radio inside UL
-    let currentAnswersArray = [...event.currentTarget.querySelectorAll('input[type=radio]')];
-    let selectedAnswerValueATotal = 0; // Current selected radiobutton value
-    let selectedAnswerValueBTotal = 0; // Current selected radiobutton value
-    let currentAnswerValueArray = [];
-    let totalSelected = 0; // Total selected
-    let currentAnswerValueA = '';
-    let currentAnswerValueB = '';
-    
+    let currentAnswersArray = [...event.currentTarget.querySelectorAll('input[type=radio]')]
+    let selectedAnswerValueATotal = 0 // Current selected radiobutton value
+    let selectedAnswerValueBTotal = 0 // Current selected radiobutton value
+    let currentAnswerValueArray = []
+    let totalSelected = 0 // Total selected
+    let currentAnswerValueA = ''
+    let currentAnswerValueB = ''
+
     // Loop through and get values of the row of LIs
-    for(let i = 0; i < 2; i++) {
-      currentAnswerValueArray.push(currentAnswersArray[i].value);
+    for (let i = 0; i < 2; i++) {
+      currentAnswerValueArray.push(currentAnswersArray[i].value)
     }
 
-    currentAnswerValueA = currentAnswerValueArray[0];
-    currentAnswerValueB = currentAnswerValueArray[1];
-    
+    currentAnswerValueA = currentAnswerValueArray[0]
+    currentAnswerValueB = currentAnswerValueArray[1]
+
     // After SetState has happened...
     // Check which radio input which is currently :checked
-    for(let i = 0; i < currentAnswersArray.length; i++) {
+    for (let i = 0; i < currentAnswersArray.length; i++) {
       if (currentAnswersArray[i].checked) {
         if (currentAnswersArray[i].value === currentAnswerValueA) {
-          selectedAnswerValueATotal += 1;
+          selectedAnswerValueATotal += 1
         } else if (currentAnswersArray[i].value === currentAnswerValueB) {
-          selectedAnswerValueBTotal += 1;
+          selectedAnswerValueBTotal += 1
         }
       }
-      totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal; // Total selected
+      totalSelected = selectedAnswerValueATotal + selectedAnswerValueBTotal // Total selected
     }
-  
+
     // If the total selected is the same as the total questions...
     if (totalSelected === currentAnswersArray.length / 2) {
       // Check which value got the most votes
       if (selectedAnswerValueATotal > selectedAnswerValueBTotal) {
-        this.setUserAnswer(currentAnswerValueA, currentAnswerValueB);
+        this.setUserAnswer(currentAnswerValueA, currentAnswerValueB)
       } else {
-        this.setUserAnswer(currentAnswerValueB, currentAnswerValueA);
+        this.setUserAnswer(currentAnswerValueB, currentAnswerValueA)
       }
     }
 
     // console.log(`currentAnswerValueArray: ${currentAnswerValueArray} | value a: ${currentAnswerValueA} | value b: ${currentAnswerValueB}`);
     // console.log(`TotalSelected: ${totalSelected} | selectedAnswerValueATotal: ${selectedAnswerValueATotal} | selectedAnswerValueBTotal: ${selectedAnswerValueBTotal} `);
-     
   }
 
-    // Set User Answer
-  setUserAnswer(selectedAnswer, unselectedAnswer) {
-   
+  // Set User Answer
+  setUserAnswer(selectedAnswer, unselectedAnswer) {   
     const updatedSelectedAnswersCount = update(this.state.answersCount, {
-      [selectedAnswer]: {$set: 1},
-      [unselectedAnswer]: {$set: 0},
-    });
+      [selectedAnswer]: { $set: 1 },
+      [unselectedAnswer]: { $set: 0 },
+    })
 
     this.setState({
-        answersCount: updatedSelectedAnswersCount,
-        answer: selectedAnswer
+      answersCount: updatedSelectedAnswersCount,
+      answer: selectedAnswer,
     }, () => {
       // console.log(this.state.answersCount);
-      this.checkNextButton(); // Check if we're ok to go to the next section
-    });
-
+      this.checkNextButton() // Check if we're ok to go to the next section
+    })
   }
 
   // Set User Answer
   setAnswerSelected(groupSelected) {
-   
     const updatedGroupSelected = update(this.state.selected, {
-      [groupSelected]: {$set: true}
-    });
+      [groupSelected]: { $set: true }
+    })
 
     this.setState({
-        selected: updatedGroupSelected,
-    });
+      selected: updatedGroupSelected,
+    })
   }
 
   // Next button
-  jumpTo(index) {
-    let currentPage = this.state.currentPage;
-    let currentIndex = this.state.index;
-    currentPage +=1; // increment
-    currentIndex +=1; // increment
+  jumpTo() {
+    let currentPage = this.state.currentPage
+    let currentIndex = this.state.index
+    currentPage +=1 // increment
+    currentIndex +=1 // increment
 
     if (currentPage === 1 ) {
 
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0)
 
       this.setState({
 
@@ -295,24 +289,24 @@ export default class Quiz extends Component {
         currentPage: currentPage,
         round: currentPage,
         next: {
-          text: "Pick your answers",
+          text: 'Pick your answers',
           disabled: true,
         },
-      });
+      })
 
-      this.unSelectAnswers();
+      this.unSelectAnswers()
 
     } else if (currentPage < this.state.roundsTotal + 1) {
 
-            // Transition Out
+    // Transition Out
       setTimeout(() => {
         this.setState({
           show: !this.state.show,
-        });
+        })
         // Transition In
         setTimeout(() => {
 
-          window.scrollTo(0, 0);
+          window.scrollTo(0, 0)
 
           this.setState({
 
@@ -337,15 +331,15 @@ export default class Quiz extends Component {
             currentPage: currentPage,
             round: currentPage,
             next: {
-              text: "Pick your answers",
+              text: 'Pick your answers',
               disabled: true,
             },
-          });
+          })
 
-          this.unSelectAnswers();
+          this.unSelectAnswers()
 
-        }, duration);
-      }, duration);
+        }, duration)
+      }, duration)
 
     // You've reached the results page
     } else {
@@ -353,15 +347,14 @@ export default class Quiz extends Component {
       setTimeout(() => {
         this.setState({
           show: !this.state.show,
-        });
+        })
 
         // Process Results
-        this.processResults();
+        this.processResults()
 
         // Transition In
         setTimeout(() => {
-
-          window.scrollTo(0, 0);
+          window.scrollTo(0, 0)
 
           this.setState({
             // Transition Out
@@ -371,31 +364,31 @@ export default class Quiz extends Component {
               result: true,
             },
             questionIntro: 'Your are:',
-          });
-        }, duration);
-      }, duration);
+          })
+        }, duration)
+      }, duration)
     }
   }
 
 
   // Process Results
   processResults() {
-    let resultsObj = this.state.answersCount;
-    let resultArray = [];
-    let resultAcronym = '';
+    let resultsObj = this.state.answersCount
+    let resultArray = []
+    let resultAcronym = ''
 
     // Loop over results object
     Object.keys(resultsObj).forEach(key => {
       if (resultsObj[key] > 0) {
-        resultArray.push(`${key.charAt(0).toUpperCase() + key.slice(1)} `);
+        resultArray.push(`${key.charAt(0).toUpperCase() + key.slice(1)} `)
       }
-    });
+    })
 
     // Create Acronym based on first letters to be referenced to resultsData.js     
     for (let i = 0; i < resultArray.length; i++) {
-      resultAcronym += resultArray[i].charAt(0).toUpperCase();
+      resultAcronym += resultArray[i].charAt(0).toUpperCase()
     }
-    
+
     this.setState({
       resultArray: resultArray,
       resultAcronym: resultAcronym,
@@ -404,18 +397,17 @@ export default class Quiz extends Component {
         text: resultData[resultAcronym].text,
         link: resultData[resultAcronym].slug,
       },
-    });
-
+    })
   }
 
   // Unselect answers
   unSelectAnswers() {
     // Use spread operator to return an array of elements
-    let selectedAnswers = [...document.querySelectorAll('input[type=radio]')];
-  
+    let selectedAnswers = [...document.querySelectorAll('input[type=radio]')]
+
     // Loop through array and uncheck answers
     for(let i = 0; i < selectedAnswers.length; i++) {
-        selectedAnswers[i].checked = false;
+      selectedAnswers[i].checked = false;
     }
   }
 
@@ -423,11 +415,11 @@ export default class Quiz extends Component {
   handleReset = () => {
 
     // Shuffle Answers
-    const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1));
-    const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2));
-    const shuffledAnswer3Choices = quizData.map((round) => this.shuffleArray(round.answer3));
-    const shuffledAnswer4Choices = quizData.map((round) => this.shuffleArray(round.answer4));
-    const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5));
+    const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1))
+    const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2))
+    const shuffledAnswer3Choices = quizData.map((round) => this.shuffleArray(round.answer3))
+    const shuffledAnswer4Choices = quizData.map((round) => this.shuffleArray(round.answer4))
+    const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5))
 
     // Reset state
      // Transition Out

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import personalityInfo from '../../api/personalityInfo';
-import PersonalityElements from '../molecules/PersonalityElements';
-import resultData from '../../api/resultData';
+import React from 'react'
+import styled from 'styled-components'
+import personalityInfo from '../../api/personalityInfo'
+import PersonalityElements from '../molecules/PersonalityElements'
+import resultData from '../../api/resultData'
 
 const Wrap = styled.section`
   list-style-type: none;
@@ -10,12 +10,12 @@ const Wrap = styled.section`
   max-width: ${props => props.theme.maxContentWidthWide};
   padding: 1rem 1rem 0;
   position: relative;
-`;
+`
 
-const SectionTitle= styled.h2`
+const SectionTitle = styled.h2`
   font-family: ${props => props.theme.fontPrimary};
   font-size: calc(1rem + 2vw);
-`;
+`
 
 const SectionTitleIntro = styled.p`
   color: ${props => props.theme.tertiary};
@@ -23,7 +23,7 @@ const SectionTitleIntro = styled.p`
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-top: 2rem;
-`;
+`
 
 const ColWrap = styled.section`
   @media screen and (min-width: 480px) {    
@@ -31,7 +31,7 @@ const ColWrap = styled.section`
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
-`;
+`
 
 const Col = styled.section`  
   margin: 1rem;
@@ -41,19 +41,19 @@ const Col = styled.section`
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
     padding: 0 3rem;
   }
-`;
+`
 
 const ColTitle = styled.h4`
   font-family: ${props => props.theme.fontPrimary};
   font-size: calc(1.25rem + 0.5vw);
   padding: 0;
-`;
+`
 
 const PersonalitiesUl = styled.ul`
   margin: 1rem;
   padding: 0;
   list-style-type: none;
-`;
+`
 
 const PersonalitiesLi = styled.li`
   color: ${props => props.theme.tertiary};  
@@ -74,32 +74,31 @@ const PersonalitiesLi = styled.li`
     top: 12px;
     transform: rotate(45deg);
   }
-`;
+`
 
 const ListPersonalities = (props) => {
-  let resultKeyArray = Array.from(props.resultKey);
-  let personalityKeys = Object.keys(personalityInfo);
+  let resultKeyArray = Array.from(props.resultKey)
+  let personalityKeys = Object.keys(personalityInfo)
 
   let filteredInfo = []
 
   filteredInfo = personalityKeys.filter((personalityKey) => {
-    let infoFirstChar = personalityKey.charAt(0).toUpperCase();
+    let infoFirstChar = personalityKey.charAt(0).toUpperCase()
     return resultKeyArray.includes(infoFirstChar)
-  });
+  })
 
-  let infoList = filteredInfo.map((infoKey) => {    
+  let infoList = filteredInfo.map((infoKey) => {
     return (
       <PersonalitiesLi key={infoKey}>
-          <p>{personalityInfo[infoKey][props.info]}</p>
+        <p>{personalityInfo[infoKey][props.info]}</p>
       </PersonalitiesLi>
     )
-  });
+  })
 
-  return  <PersonalitiesUl>{ infoList }</PersonalitiesUl>
+  return <PersonalitiesUl>{ infoList }</PersonalitiesUl>
 }
 
 export default function PersonalityInfoList(props) {
-
   return (
     <Wrap>
       <header>
@@ -110,14 +109,14 @@ export default function PersonalityInfoList(props) {
       <ColWrap>
         <Col>
           <ColTitle>Key traits:</ColTitle>
-          <ListPersonalities resultKey={props.resultKey} info="overview" />
+          <ListPersonalities resultKey={props.resultKey} info='overview' />
         </Col>
         <Col>
           <ColTitle>Watch out for:</ColTitle>
-          <ListPersonalities resultKey={props.resultKey} info="insight" />
+          <ListPersonalities resultKey={props.resultKey} info='insight' />
         </Col>
       </ColWrap>
     </Wrap>
-  );
+  )
 }
 
