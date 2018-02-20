@@ -23,98 +23,66 @@ const PersonalityElementsLi = styled.li`
   position: relative;
 
   &::before {
-    border: 5px solid;
     content: '';
-    position: absolute;
-    top: -10px;
+    height: 15px;
     left: 50%;
-    width: 0;
-    height: 0;
-    transform: translateX(-50%);
+    position: absolute;
+    top: -20px;
+    transform: translate(-50%, 0) scale(1);
+    transition: transform 0.25s ease-out;
+    width: 15px;
+  }
+
+  &:hover::before {
+    transform: translate(-50%, -5px) scale(1.5);
   }
 
   &.personality-diverge::before {
-    border-color: ${props => props.theme.personality.diverge};
+    background-color: ${props => props.theme.personality.diverge};
+    -webkit-mask:  url('../images/SVG/icons/diverge.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/diverge.svg') no-repeat 50% 50%;
   }
   
   &.personality-converge::before {
-    border-color: ${props => props.theme.personality.converge};
-    border-radius: 100%;
+    background-color: ${props => props.theme.personality.converge};
+    -webkit-mask:  url('../images/SVG/icons/converge.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/converge.svg') no-repeat 50% 50%;
   }
 
   &.personality-abstract::before {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid ${props => props.theme.personality.abstract};
-    top: -15px;
+    background-color: ${props => props.theme.personality.abstract};
+    -webkit-mask:  url('../images/SVG/icons/abstract.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/abstract.svg') no-repeat 50% 50%;
   }
 
   &.personality-real::before {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid ${props => props.theme.personality.real};
-    top: -15px;
+    background-color: ${props => props.theme.personality.real};
+    -webkit-mask:  url('../images/SVG/icons/real.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/real.svg') no-repeat 50% 50%;
   }
 
   &.personality-individual::before {
-    border-color: ${props => props.theme.personality.individual};
-    transform: rotate(45deg) translate(-3px, 5px);
-    top: -12px;
+    background-color: ${props => props.theme.personality.individual};
+    -webkit-mask:  url('../images/SVG/icons/individual.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/individual.svg') no-repeat 50% 50%;
   }
 
   &.personality-group::before {
-    border-right: 6px solid transparent;
-    border-top: 6px solid ${props => props.theme.personality.group};
-    border-left: 6px solid ${props => props.theme.personality.group};
-    border-bottom: 6px solid ${props => props.theme.personality.group};
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    background-color: ${props => props.theme.personality.group};
+    -webkit-mask:  url('../images/SVG/icons/group.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/group.svg') no-repeat 50% 50%;
   }
 
-  &.personality-sense {
-    background: transparent;
-    position: relative;
-
-    &::before {
-      background: ${props => props.theme.personality.sense};
-      border-radius: 0;
-      border: 0;
-      content: "";
-      height: 4px;
-      left: 50%;
-      translateX(-50%);
-      position: absolute;
-      top: -8px;
-      width: 14px;
-    }
-
-    &::after {
-      background: ${props => props.theme.personality.sense};
-      border-radius: 0;
-      border: 0;
-      content: "";
-      height: 14px;
-      left: 50%;
-      translateX(-50%);
-      position: absolute;
-      transform: translateX(-2px);
-      top: -13px;
-      width: 4px;
-    }
+  &.personality-sense::before {
+    background-color: ${props => props.theme.personality.sense};
+    -webkit-mask:  url('../images/SVG/icons/sense.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/sense.svg') no-repeat 50% 50%;
   }
 
   &.personality-measure::before {
-    border-color: ${props => props.theme.personality.measure};
-    transform: skew(20deg) translateX(-7px);
-    width: 0px;
+    background-color: ${props => props.theme.personality.measure};
+    -webkit-mask:  url('../images/SVG/icons/measure.svg') no-repeat 50% 50%;
+    mask: url('../images/SVG/icons/measure.svg') no-repeat 50% 50%;
   }
 `;
 

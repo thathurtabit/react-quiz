@@ -8,7 +8,7 @@ import SimilarsOpposite from '../organisms/SimilarsOpposite';
 import PropTypes from 'prop-types';
 
 const ResultsWrap = styled.section`
-
+  margin-bottom: 6rem;
 `;
 
 const PageWrap = styled.section`

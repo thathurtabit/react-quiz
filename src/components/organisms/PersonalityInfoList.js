@@ -35,8 +35,12 @@ const ColWrap = styled.section`
 
 const Col = styled.section`  
   margin: 1rem;
-  padding: 0 3rem;
+  padding: 0 1rem;
   text-align: left;
+
+  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    padding: 0 3rem;
+  }
 `;
 
 const ColTitle = styled.h4`

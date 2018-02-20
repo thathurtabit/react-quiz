@@ -26,10 +26,11 @@ const IntroWrap = styled.section`
 const IntroSubtitle = styled.h2`
   font-size: calc(15vw);
   font-family: ${props => props.theme.fontPrimary};
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
     font-size: calc(50px + 3.75vw);
+    margin-bottom: 3rem;
   }
 
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {

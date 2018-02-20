@@ -60,7 +60,7 @@ const PersonalitiesLi = styled.li`
   display: block;
   font-size: 18px;
   margin: 0 auto;  
-  max-width: 50%;
+  max-width: 75%;
   padding: 0;
   
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
