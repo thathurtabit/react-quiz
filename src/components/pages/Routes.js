@@ -4,14 +4,9 @@ import { BrowserRouter, Route, NavLink, Link, Switch} from 'react-router-dom';
 import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled, {ThemeProvider} from 'styled-components';
-import resultData from '../../api/resultData';
 import IntroPage from '../organisms/IntroPage';
-import HeroImage from '../atoms/HeroImage';
-import QuizButton from '../atoms/QuizButton';
-import SocialShare from '../molecules/SocialShare';
+import DesignPersonality from '../pages/DesignPersonality';
 import MainFooter from '../molecules/MainFooter';
-import PersonalityInfoList from '../organisms/PersonalityInfoList';
-import SimilarsOpposite from '../organisms/SimilarsOpposite';
 import siteInfo from '../../api/siteInfo';
 import DesignPersonalities from '../pages/DesignPersonalities';
 import Quiz from '../pages/Quiz';
@@ -36,7 +31,6 @@ const Wrapper = styled.section`
     transition: opacity 300ms ease-out, transform 350ms ease-out;
 
     @media screen and (max-width: ${props => props.theme.breakpointSM}) {
-			top: 126px;
     }
   }
 
@@ -116,52 +110,9 @@ const PageTitle = styled.h1`
 
 `;
 
-const PageTitleIntro = styled.p`
-  color: ${props => props.theme.tertiary};
-  font-size: 0.75rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-top: 5rem;
-`;
-
-const PageIntro = styled.main`
-  font-size: calc(1rem + 0.5vw);
-  line-height: 1.75;
-  margin: 2rem;
-  position: relative;
-
-  strong {
-    font-family: ${props => props.theme.fontPrimary};
-    font-weight: normal;
-  }
-
-  @media screen and (min-width: ${props => props.theme.breakpointSM}) {
-		margin: 4rem 2rem 3rem;
-  }
-`;
-
-const HR = styled.hr`
-	border: 0;
-	margin: 5rem 0 8rem;
-	overflow: visible;
-	padding: 0;
-	position: relative;
-
-	&::before {
-  	border-top: 5px solid rgba(0, 0, 0, 0.05);
-  	content: '';
-  	height: 1px;
-  	left: 50%;
-  	position: absolute;
-  	transform: translateX(-50%);
-  	width: 50px;
-  }
-
-`;
 const MainHeader = styled.header`
 	background: white;
 	left: 0;
-	max-height: 126px;
 	padding: 1rem;
 	right: 0;
 	text-align: center;
@@ -201,6 +152,10 @@ const MainNav = styled.nav`
 
     &:nth-child(even) a::after {
       border-radius: 100%;
+    }
+
+    @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+			min-width: 160px;
     }
 	}
 
@@ -269,40 +224,6 @@ const MainNav = styled.nav`
 `;
 
 
-const TakeTheQuiz = () => (
-  <Quiz />
-)
-
-const ShowIntroPage = () => (
-  <IntroPage />
-)
-
-const DesignPersonality = (props) => (
-	<section>
-	  <PageWrap>
-	    <PageTitleIntro>Design Personality</PageTitleIntro>
-	    <PageTitle>{resultData[props.dataKey].title}</PageTitle>
-	    <HeroImage src={resultData[props.dataKey].slug} alt={resultData[props.dataKey].title} />
-	    <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
-	  </PageWrap>
-
-	  <HR />	 
-	  <PersonalityInfoList resultKey={props.dataKey} />
-	  <HR />	  
-	  <SimilarsOpposite resultKey={props.dataKey} />
-	  <HR />
-
-	  <PageTitleIntro>Share</PageTitleIntro>
-	  <SocialShare personality={resultData[props.dataKey].title} />
-
-	  <PageWrap extraSpacing>
-	    <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
-	    <p><QuizButton to={siteInfo.mainNav[0].slug} text={siteInfo.mainNav[0].name}  /></p>
-	  </PageWrap>  
-  </section>
-);
-
-
 const NotFound = () => (
   <PageWrap>
     <PageTitle>404</PageTitle>
@@ -336,7 +257,7 @@ const Layout = ({ children }) => (
 
 const SetUpRoutes = (props) => {
   const locationKey = props.location.pathname;
-  const path = '/design-personality';
+  const path = siteInfo.singularType.slug;
 
   return (
   <Layout>
@@ -344,9 +265,9 @@ const SetUpRoutes = (props) => {
       <PageFade key={locationKey}>
         <Wrapper>
           <Switch location={props.location}>
-          	<Route exact path="/" component={ShowIntroPage}/>
-            <Route exact path="/quiz" component={TakeTheQuiz} />
-            <Route exact path="/design-personalities" component={DesignPersonalities} />
+          	<Route exact path="/" component={IntroPage}/>
+            <Route exact path={siteInfo.mainNav[0].slug} component={Quiz} />
+            <Route exact path={siteInfo.mainNav[1].slug} component={DesignPersonalities} />
 
             <Route path={`${path}/people-watcher`} render={(props) => <DesignPersonality dataKey="DAIS" {...props} />} />
             <Route exact path={`${path}/party-animal`} render={(props) => <DesignPersonality dataKey="DAGS" {...props} />} />

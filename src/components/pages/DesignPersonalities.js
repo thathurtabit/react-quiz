@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import resultData from '../../api/resultData';
+import siteInfo from '../../api/siteInfo';
 
 const PageWrap = styled.section`
 	position: relative;
@@ -142,7 +143,7 @@ const ListPersonalities = () => {
   let linkList = personalityKeys.map(function(key) {
     return (    	
   		<PersonalitiesLi key={key}>
-    		<More key={key} to={`design-personality/${resultData[key].slug}`}>
+    		<More key={key} to={`${siteInfo.singularType.slug}/${resultData[key].slug}`}>
     			<IMG src={`images/SVG/${resultData[key].slug}.svg`} alt={resultData[key].title} />
     			<h4>{resultData[key].title}</h4>
     			<p dangerouslySetInnerHTML={{__html: resultData[key].text}}></p>
@@ -155,12 +156,11 @@ const ListPersonalities = () => {
   return  <PersonalitiesUl>{ linkList }</PersonalitiesUl>
 }
 
-
 const DesignPersonalities = () => {
 
 	return (
 	 <PageWrap>
-	 	<PageTitle>Design Personalities</PageTitle>	 	
+	 	<PageTitle>{siteInfo.singularType.name}s</PageTitle>	 	
 	 	<ListPersonalities />	 	
 	 </PageWrap>
 	);

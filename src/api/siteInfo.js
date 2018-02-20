@@ -3,13 +3,18 @@ const siteInfo = {
   mainNav: [
     {
       name: "<i>Take the</i> Quiz",
-      slug: "/quiz"
+      slug: "/take-the-quiz"
     },
     {
-      name: "<i>Design</i> Personalities",
-      slug: "/design-personalities"
+      name: "<i>Design</i> Types",
+      slug: "/design-types"
     },
-  ]
+  ],
+  singularType: {
+    name: 'Design Type',
+    slug: '/design-type'
+  },
+  collectiveNoun: 'Types'
 }
 
 export default siteInfo;

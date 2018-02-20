@@ -105,7 +105,7 @@ export default function PersonalityInfoList(props) {
       </header>
       <ColWrap>
         <Col>
-          <ColTitle>Key personality traits:</ColTitle>
+          <ColTitle>Key traits:</ColTitle>
           <ListPersonalities resultKey={props.resultKey} info="overview" />
         </Col>
         <Col>

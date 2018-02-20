@@ -1,7 +1,7 @@
 const resultData = {
   DAIS: {
     title: 'People Watcher',
-    text: '<strong>You’re fascinated by people,</strong> endlessly curious about what they do and why they do it, trying to work out what makes them tick. Through your natural empathy for others, you’re able to work out what people want and need, and then propose lots of new ways to help them lead more productive and fulfilling lives.',
+    text: 'You’re fascinated by people, endlessly curious about what they do and why they do it, trying to work out what makes them tick. Through your natural empathy for others, you’re able to work out what people want and need, and then propose lots of new ways to help them lead more productive and fulfilling lives.',
     slug: 'people-watcher',
     similars: ['DAGS', 'DAIM', 'CAIS', 'DRIS'],
     opposite: {

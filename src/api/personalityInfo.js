@@ -2,7 +2,7 @@ const personalityInfo = {
 	diverge: {
 		name: 'Diverge',
 		overview: 'You enjoy exploring lots of ideas',
-		insight: ' Is it time to stop looking for new ideas and make a decision?' 
+		insight: 'Is it time to stop looking for new ideas and make a decision?' 
 	},
 	converge: {
 		name: 'Converge',

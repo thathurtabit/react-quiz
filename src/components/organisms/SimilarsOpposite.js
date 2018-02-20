@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import resultData from '../../api/resultData';
+import siteInfo from '../../api/siteInfo';
 
 const Wrap = styled.section`
   list-style-type: none;
@@ -116,7 +117,7 @@ const SimilarPersonalities = (props) => {
 
     return (
       <PersonalitiesLi key={similarKey}>
-        <More key={similarKey} to={`/design-personality/${resultData[similarKey].slug}`}>
+        <More key={similarKey} to={`${siteInfo.singularType.slug}/${resultData[similarKey].slug}`}>
           <IMG src={`../images/SVG/${resultData[similarKey].slug}.svg`} alt={resultData[similarKey].title} />
           <PersonalitiesLiTitle>{resultData[similarKey].title}</PersonalitiesLiTitle>
         </More>
@@ -135,7 +136,7 @@ const OppositePersonalities = (props) => {
   return  (
     <PersonalitiesUl>
       <PersonalitiesLi>
-        <More to={`/design-personality/${resultData[oppositeKey].slug}`}>
+        <More to={`${siteInfo.singularType.slug}/${resultData[oppositeKey].slug}`}>
           <IMG src={`../images/SVG/${resultData[oppositeKey].slug}.svg`} alt={resultData[oppositeKey].title} />
           <PersonalitiesLiTitle>{resultData[oppositeKey].title}s</PersonalitiesLiTitle>
           <PersonalitiesText>{resultData[props.resultKey].opposite.text}</PersonalitiesText>
@@ -150,7 +151,7 @@ export default function SimilarsOpposite(props) {
     <Wrap>
       <header>
         <SectionTitleIntro>Neighbours of {resultData[props.resultKey].title}s</SectionTitleIntro>
-        <SectionTitle>Similar Personalities</SectionTitle>
+        <SectionTitle>Similar {siteInfo.collectiveNoun}</SectionTitle>
       </header>
       <ListWrap>       
         <SimilarPersonalities resultKey={props.resultKey} info="similars" />

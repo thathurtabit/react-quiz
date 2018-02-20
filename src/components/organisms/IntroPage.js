@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import QuizButton from '../atoms/QuizButton';
 import SvgExperimenter from '../atoms/svgs/experimenter';
 import { Link } from 'react-router-dom';
+import siteInfo from '../../api/siteInfo';
 import introPageData from '../../api/introPageData';
 import PropTypes from 'prop-types';
 
@@ -116,12 +117,12 @@ const SpeechBubble = styled.p`
 export default function IntroPage(props) {
   return (
     <IntroWrap>
-      <QuizBubble to="/quiz">
+      <QuizBubble to={siteInfo.mainNav[0].slug}>
         <SpeechBubble>Ready to test?</SpeechBubble>
         <SvgExperimenter />
       </QuizBubble>
-      <IntroSubtitle>        
-        {introPageData.p1}         
+      <IntroSubtitle>
+        {introPageData.p1}
       </IntroSubtitle>        
       <IntroText>
         <span dangerouslySetInnerHTML={{__html: introPageData.p2}} />
@@ -129,7 +130,7 @@ export default function IntroPage(props) {
       <IntroText>
         <span dangerouslySetInnerHTML={{__html: introPageData.p3}} />
       </IntroText>
-      <QuizButton text="Take the Quiz" to="/quiz"  />
+      <QuizButton text={siteInfo.mainNav[0].name} to={siteInfo.mainNav[0].slug}  />
     </IntroWrap>
   );  
 }
