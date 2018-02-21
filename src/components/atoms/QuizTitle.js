@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const QuizTitleH1 = styled.h1`	
 	background: -webkit-linear-gradient(top,#fd0b58,#a32b68);
@@ -21,9 +21,9 @@ const QuizTitleH1 = styled.h1`
   	transform: translate(-50%, -50%);
   	width: 40px;
   }
-`;
+`
 
-export default function QuizTitle(props)  {
+export default function QuizTitle(props) {
   return (
   	<QuizTitleH1>{props.mainTitle}</QuizTitleH1>
   )

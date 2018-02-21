@@ -1,16 +1,16 @@
 
-import React from 'react';
-import { BrowserRouter, Route, NavLink, Link, Switch} from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route, NavLink, Link, Switch, } from 'react-router-dom'
 import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
-import styled, {ThemeProvider} from 'styled-components';
-import IntroPage from '../organisms/IntroPage';
-import DesignPersonality from '../pages/DesignPersonality';
-import MainFooter from '../molecules/MainFooter';
-import siteInfo from '../../api/siteInfo';
-import DesignPersonalities from '../pages/DesignPersonalities';
-import Quiz from '../pages/Quiz';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import styled, { ThemeProvider, } from 'styled-components'
+import IntroPage from '../organisms/IntroPage'
+import DesignPersonality from '../pages/DesignPersonality'
+import MainFooter from '../molecules/MainFooter'
+import siteInfo from '../../api/siteInfo'
+import DesignPersonalities from '../pages/DesignPersonalities'
+import Quiz from '../pages/Quiz'
+import { TransitionGroup, CSSTransition, } from 'react-transition-group'
 
 const Wrapper = styled.section`
   font-family: ${props => props.theme.fontSecondary};
@@ -45,13 +45,13 @@ const Wrapper = styled.section`
   	transform: translateY(-10px);
     transition: opacity 350ms ease-in, transform 350ms ease-out;
   }
-`;
+`
 
 const PageWrap = styled.section`
 	position: relative;
 	max-width: ${props => props.theme.maxContentWidth};
 	margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
-`;
+`
 
 const LayoutWrap = styled.section`
   color: ${props => props.theme.primary};
@@ -63,7 +63,7 @@ const LayoutWrap = styled.section`
 	  bottom: 0;
 	  top: 100px;
 	}
-`;
+`
 
 const SiteName = styled.h1`
 	color: ${props => props.theme.primary};
@@ -90,7 +90,7 @@ const SiteName = styled.h1`
 	a:hover {
 		color: ${props => props.theme.secondary};
 	}
-`;
+`
 
 const PageTitle = styled.h1`
 	color: ${props => props.theme.primary};
@@ -107,8 +107,7 @@ const PageTitle = styled.h1`
 			font-size: calc(20px + 4vw);
 			margin: 1rem 1rem 5rem;	
 	}
-
-`;
+`
 
 const MainHeader = styled.header`
 	background: white;
@@ -127,7 +126,7 @@ const MainHeader = styled.header`
 		position: fixed;
 		z-index: 11;
 	}
-`;
+`
 
 const MainNav = styled.nav`
 	font-family: ${props => props.theme.fontSecondary};
@@ -221,7 +220,7 @@ const MainNav = styled.nav`
     left: 50%;
     border-bottom: 10px solid ${props => props.theme.primary};
   }
-`;
+`
 
 
 const NotFound = () => (
@@ -232,21 +231,21 @@ const NotFound = () => (
 )
 
 const PageFade = (props) => (
-  <CSSTransition 
+  <CSSTransition
     {...props}
-    classNames="fade"
+    classNames='fade'
     timeout={1000}
   />
 )
 
-const Layout = ({ children }) => (
+const Layout = ({ children, }) => (
   <LayoutWrap>
     <MainHeader>
-    	<SiteName><Link to="/">{siteInfo.title}</Link></SiteName>    
+    	<SiteName><Link to='/'>{siteInfo.title}</Link></SiteName>
 	    	<MainNav>
 		    	<ul>
-		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName="active"><span dangerouslySetInnerHTML={{__html: siteInfo.mainNav[0].name}}></span></NavLink></li>
-	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName="active"><span dangerouslySetInnerHTML={{__html: siteInfo.mainNav[1].name}}></span></NavLink></li>
+		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName='active'><span dangerouslySetInnerHTML={{ __html: siteInfo.mainNav[0].name, }} /></NavLink></li>
+	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName='active'><span dangerouslySetInnerHTML={{ __html: siteInfo.mainNav[1].name, }} /></NavLink></li>
 		    	</ul>
 	    	</MainNav>
     </MainHeader>
@@ -256,56 +255,56 @@ const Layout = ({ children }) => (
 )
 
 const SetUpRoutes = (props) => {
-  const locationKey = props.location.pathname;
-  const path = siteInfo.singularType.slug;
+  const locationKey = props.location.pathname
+  const path = siteInfo.singularType.slug
 
   return (
-  <Layout>
-    <TransitionGroup>
-      <PageFade key={locationKey}>
-        <Wrapper>
-          <Switch location={props.location}>
-          	<Route exact path="/" component={IntroPage}/>
-            <Route exact path={siteInfo.mainNav[0].slug} component={Quiz} />
-            <Route exact path={siteInfo.mainNav[1].slug} component={DesignPersonalities} />
+	  <Layout>
+	    <TransitionGroup>
+	      <PageFade key={locationKey}>
+	        <Wrapper>
+	          <Switch location={props.location}>
+	          	<Route exact path='/' component={IntroPage}/>
+	            <Route exact path={siteInfo.mainNav[0].slug} component={Quiz} />
+	            <Route exact path={siteInfo.mainNav[1].slug} component={DesignPersonalities} />
 
-            <Route path={`${path}/people-watcher`} render={(props) => <DesignPersonality dataKey="DAIS" {...props} />} />
-            <Route exact path={`${path}/party-animal`} render={(props) => <DesignPersonality dataKey="DAGS" {...props} />} />
-            <Route exact path={`${path}/number-cruncher`} render={(props) => <DesignPersonality dataKey="DAIM" {...props} />} />
-            <Route exact path={`${path}/prototyper`} render={(props) => <DesignPersonality dataKey="DRIS" {...props} />} />
-            <Route exact path={`${path}/workshop-warrior`} render={(props) => <DesignPersonality dataKey="DRGS" {...props} />} />
-            <Route exact path={`${path}/fortune-teller`} render={(props) => <DesignPersonality dataKey="DAGM" {...props} />} />
-            <Route exact path={`${path}/data-driver`} render={(props) => <DesignPersonality dataKey="DRGM" {...props} />} /> 
-            <Route exact path={`${path}/experimenter`} render={(props) => <DesignPersonality dataKey="DRIM" {...props} />} />
-            <Route exact path={`${path}/planner`}  render={(props) => <DesignPersonality dataKey="CAIM" {...props} />} />
-            <Route exact path={`${path}/conductor`} render={(props) => <DesignPersonality dataKey="CAGM" {...props} />} />
-            <Route exact path={`${path}/team-player`} render={(props) => <DesignPersonality dataKey="CRGM"{...props} />} />
-            <Route exact path={`${path}/perfectionist`} render={(props) => <DesignPersonality dataKey="CRIM"{...props} />} />
-            <Route exact path={`${path}/brand-builder`} render={(props) => <DesignPersonality dataKey="CAIS"{...props} />} />
-            <Route exact path={`${path}/visionary`} render={(props) => <DesignPersonality dataKey="CAGS"{...props} />} />
-            <Route exact path={`${path}/user-champion`} render={(props) => <DesignPersonality dataKey="CRGS"{...props} />} />
-            <Route exact path={`${path}/painter`} render={(props) => <DesignPersonality dataKey="CRIS"{...props} />} />
-            
-            <Route component={NotFound} />
-           
-          </Switch>
-        </Wrapper>
-      </PageFade>
-    </TransitionGroup>
-  </Layout>
+	            <Route path={`${path}/people-watcher`} render={() => <DesignPersonality dataKey='DAIS' {...props} />} />
+	            <Route exact path={`${path}/party-animal`} render={() => <DesignPersonality dataKey='DAGS' {...props} />} />
+	            <Route exact path={`${path}/number-cruncher`} render={() => <DesignPersonality dataKey='DAIM' {...props} />} />
+	            <Route exact path={`${path}/prototyper`} render={() => <DesignPersonality dataKey='DRIS' {...props} />} />
+	            <Route exact path={`${path}/workshop-warrior`} render={() => <DesignPersonality dataKey='DRGS' {...props} />} />
+	            <Route exact path={`${path}/fortune-teller`} render={() => <DesignPersonality dataKey='DAGM' {...props} />} />
+	            <Route exact path={`${path}/data-driver`} render={() => <DesignPersonality dataKey='DRGM' {...props} />} />
+	            <Route exact path={`${path}/experimenter`} render={() => <DesignPersonality dataKey='DRIM' {...props} />} />
+	            <Route exact path={`${path}/planner`} render={() => <DesignPersonality dataKey='CAIM' {...props} />} />
+	            <Route exact path={`${path}/conductor`} render={() => <DesignPersonality dataKey='CAGM' {...props} />} />
+	            <Route exact path={`${path}/team-player`} render={() => <DesignPersonality dataKey='CRGM'{...props} />} />
+	            <Route exact path={`${path}/perfectionist`} render={() => <DesignPersonality dataKey='CRIM'{...props} />} />
+	            <Route exact path={`${path}/brand-builder`} render={() => <DesignPersonality dataKey='CAIS'{...props} />} />
+	            <Route exact path={`${path}/visionary`} render={() => <DesignPersonality dataKey='CAGS'{...props} />} />
+	            <Route exact path={`${path}/user-champion`} render={() => <DesignPersonality dataKey='CRGS'{...props} />} />
+	            <Route exact path={`${path}/painter`} render={() => <DesignPersonality dataKey='CRIS'{...props} />} />
+
+	            <Route component={NotFound} />
+
+	          </Switch>
+	        </Wrapper>
+	      </PageFade>
+	    </TransitionGroup>
+	  </Layout>
   )
 }
 
 const SiteRoutes = () => {
-	return (
-	<BrowserRouter basename={'/'}	>
-		<ThemeProvider theme={theme}>
-			<ScrollToTop>
-				<Route path="/" component={SetUpRoutes} />
-			</ScrollToTop>
-		</ThemeProvider>
-	</BrowserRouter>
-	); 
+  return (
+    <BrowserRouter basename={'/'}	>
+      <ThemeProvider theme={theme}>
+        <ScrollToTop>
+          <Route path='/' component={SetUpRoutes} />
+        </ScrollToTop>
+      </ThemeProvider>
+    </BrowserRouter>
+  )
 }
 
-export default SiteRoutes;
+export default SiteRoutes

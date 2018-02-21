@@ -407,13 +407,12 @@ export default class Quiz extends Component {
 
     // Loop through array and uncheck answers
     for(let i = 0; i < selectedAnswers.length; i++) {
-      selectedAnswers[i].checked = false;
+      selectedAnswers[i].checked = false
     }
   }
 
   // Handle Restart
   handleReset = () => {
-
     // Shuffle Answers
     const shuffledAnswer1Choices = quizData.map((round) => this.shuffleArray(round.answer1))
     const shuffledAnswer2Choices = quizData.map((round) => this.shuffleArray(round.answer2))
@@ -422,78 +421,74 @@ export default class Quiz extends Component {
     const shuffledAnswer5Choices = quizData.map((round) => this.shuffleArray(round.answer5))
 
     // Reset state
-     // Transition Out
+    // Transition Out
+    setTimeout(() => {
+      this.setState({ show: !this.state.show, })
+      // Transition In
       setTimeout(() => {
-        this.setState({ show: !this.state.show });
-        // Transition In
-        setTimeout(() => {
-
-          this.setState({
-           show: !this.state.show,
-            display: {
-              quiz: true,
-              result: false,
-            },
-            question: quizData[0].question,
-            questionTitle: quizData[0].title,
-            questionIntro: quizData[0].intro,
-            selected: {
-              group1: false,
-              group2: false,
-              group3: false,
-              group4: false,
-              group5: false,
-            },
-            answer1Choices: shuffledAnswer1Choices[0],
-            answer2Choices: shuffledAnswer2Choices[0],
-            answer3Choices: shuffledAnswer3Choices[0],
-            answer4Choices: shuffledAnswer4Choices[0],
-            answer5Choices: shuffledAnswer5Choices[0],
-            currentAnswers: [],
-            answersCount: {
-              diverge: 0,
-              converge: 0,
-              abstract: 0,
-              real: 0,
-              group: 0,
-              individual: 0,
-              sense: 0,
-              measure: 0,
-            },
-            index: -1,
-            currentPage: 0,
-            round: 1,
-            next: {
-              text: "Pick your answers",
-              disabled: true,
-            },
-            resultArray: '',
-            resultAcronym: 'DAIS', // Needs a value by default
-            results: {
-              title: '',
-              text: '',
-              link: 'people-watcher', // Needs a value by default
-            }
-          }, () => {
-            // Unselect answers
-            this.unSelectAnswers();
-          });
-
-        }, duration);
-      }, duration);
+        this.setState({
+          show: !this.state.show,
+          display: {
+            quiz: true,
+            result: false,
+          },
+          question: quizData[0].question,
+          questionTitle: quizData[0].title,
+          questionIntro: quizData[0].intro,
+          selected: {
+            group1: false,
+            group2: false,
+            group3: false,
+            group4: false,
+            group5: false,
+          },
+          answer1Choices: shuffledAnswer1Choices[0],
+          answer2Choices: shuffledAnswer2Choices[0],
+          answer3Choices: shuffledAnswer3Choices[0],
+          answer4Choices: shuffledAnswer4Choices[0],
+          answer5Choices: shuffledAnswer5Choices[0],
+          currentAnswers: [],
+          answersCount: {
+            diverge: 0,
+            converge: 0,
+            abstract: 0,
+            real: 0,
+            group: 0,
+            individual: 0,
+            sense: 0,
+            measure: 0,
+          },
+          index: -1,
+          currentPage: 0,
+          round: 1,
+          next: {
+            text: 'Choose your answers',
+            disabled: true,
+          },
+          resultArray: '',
+          resultAcronym: 'DAIS', // Needs a value by default
+          results: {
+            title: '',
+            text: '',
+            link: 'people-watcher', // Needs a value by default
+          },
+        }, () => {
+          // Unselect answers
+          this.unSelectAnswers()
+        })
+      }, duration)
+    }, duration)
   }
 
   // Render
   render() {
-
     return (
       <PageWrapper>
         <Fade in={this.state.show}>
-          <Wrapper> 
-            <QuizWrap style={{display: this.state.display.quiz ? 'block' : 'none'}}>
-              <QuestionHeader question={this.state.question} title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />   
-              {/*<Question ready={this.state.show} question={this.state.question} />*/}
-              <QuizSection>                
+          <Wrapper>
+            <QuizWrap style={{ display: this.state.display.quiz ? 'block' : 'none', }}>
+              <QuestionHeader question={this.state.question} title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
+              <QuizSection>            
                 <Answers onChange={this.handleAnswerSelected}>
                   <AnswerChoices
                     answer={this.state.answer}
@@ -522,7 +517,7 @@ export default class Quiz extends Component {
 
             <Results
               show={this.state.display.result}
-              nextText="Restart the test"
+              nextText='Restart the test'
               title={this.state.results.title}
               moreLink={this.state.results.link}
               text={this.state.results.text}
@@ -531,12 +526,12 @@ export default class Quiz extends Component {
               disabled={this.state.display.result}
               round={this.state.round}
               handleRestart={this.handleReset}
-            />     
+            />  
 
           </Wrapper>
         </Fade>
       </PageWrapper>
-    );
+    )
   }
 }
 

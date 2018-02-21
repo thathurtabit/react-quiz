@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React, { Component, } from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const QuestionHeaderWrap = styled.section`
   background: ${props => props.theme.primary};
@@ -26,7 +26,7 @@ const QuestionHeaderWrap = styled.section`
     border-width: 20px;
     margin-left: -20px;
   }
-`;
+`
 
 const Round = styled.p`
   background: rgba(0,0,0,0.25);
@@ -41,7 +41,7 @@ const Round = styled.p`
   span {
     text-transform: uppercase;
   }
-`;
+`
 
 const QuestionTitle = styled.h3`
   font-family: ${props => props.theme.fontPrimary};
@@ -54,20 +54,20 @@ const QuestionTitle = styled.h3`
     font-size: 3.5rem;
     padding: 0;
   }
-`;
+`
 
 const transition = `
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
-`;
+`
 
 const SectionInfoTitle = styled.h4`
   font-family: ${props => props.theme.fontPrimary};
   margin: 3rem 0 0;
   padding: 0;
   ${transition}
-`;
+`
 
 const QuestionIntro = styled.p`
   font-size: 0.9rem;
@@ -83,7 +83,7 @@ const QuestionIntro = styled.p`
     font-size: 1rem;
     line-height: 2;
   }
-`;
+`
 
 const SectionInfo = styled.section`
   background: rgba(0, 0, 0, 0.05);
@@ -112,7 +112,7 @@ const SectionInfo = styled.section`
       transition-delay: 0.2s;
     }
   }
-`;
+`
 
 const SectionTitle = styled.section`
   padding: 0 2rem;
@@ -120,7 +120,7 @@ const SectionTitle = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const InfoButton = styled.button`
   background: ${props => props.theme.bg};
@@ -144,36 +144,35 @@ const InfoButton = styled.button`
     cursor: pointer;
     transform: scale(1.2);
   }
-`;
+`
 
 
-export default class QuestionHeader extends Component  {
-  
+export default class QuestionHeader extends Component {
   // State constructor
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       display: {
-        info: false
-      }
+        info: false,
+      },
     }
     // This binding is necessary to make `this` work in the callback
-    this.toggleInfo = this.toggleInfo.bind(this);
+    this.toggleInfo = this.toggleInfo.bind(this)
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps() {
     this.setState({
       display: {
-        info: false
-      }
+        info: false,
+      },
     })
   }
 
   toggleInfo() {
     this.setState(prevState => ({
       display: {
-        info: !prevState.display.info
-      } 
+        info: !prevState.display.info,
+      },
     }))
   }
 
@@ -181,18 +180,18 @@ export default class QuestionHeader extends Component  {
   	return (
   		<QuestionHeaderWrap>
         <SectionTitle>
-          <Round style={{display: this.props.showRound ? 'inline-block' : 'none'}}>Round: {this.props.round} of {this.props.roundsTotal}</Round>
+          <Round style={{ display: this.props.showRound ? 'inline-block' : 'none' }}>Round: {this.props.round} of {this.props.roundsTotal}</Round>
           <QuestionTitle>
             {this.props.question}
           </QuestionTitle>
-          <InfoButton onClick={this.toggleInfo} title="More / Less Info" tabIndex="0">i</InfoButton>
+          <InfoButton onClick={this.toggleInfo} title='More / Less Info' tabIndex='0'>i</InfoButton>
         </SectionTitle>
-        <SectionInfo className={this.state.display.info ? 'show-info' : null} > 
-          <SectionInfoTitle>{this.props.title}</SectionInfoTitle>       
-          <QuestionIntro dangerouslySetInnerHTML={{__html: this.props.intro}} />
+        <SectionInfo className={this.state.display.info ? 'show-info' : null} >
+          <SectionInfoTitle>{this.props.title}</SectionInfoTitle>
+          <QuestionIntro dangerouslySetInnerHTML={{ __html: this.props.intro, }} />
         </SectionInfo>
   		</QuestionHeaderWrap>
-  	);
+  	)
   }
 }
 

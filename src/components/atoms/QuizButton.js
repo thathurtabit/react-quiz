@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import { Link, } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const GoToQuizButton = styled(Link)`
   background: ${props => props.theme.primary};
@@ -59,10 +59,10 @@ const GoToQuizButton = styled(Link)`
     cursor: pointer;
     transform: rotateY(0deg);
   }
-`;
+`
 
-export default function QuizButton(props)  {
-  return <GoToQuizButton to={props.to}><span dangerouslySetInnerHTML={{__html: props.text}}></span></GoToQuizButton>
+export default function QuizButton(props) {
+  return <GoToQuizButton to={props.to}><span dangerouslySetInnerHTML={{ __html: props.text, }} /></GoToQuizButton>
 }
 
 QuizButton.propTypes = {

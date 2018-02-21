@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const RestartButton = styled.button`
   background: ${props => props.theme.primary};
@@ -53,9 +53,9 @@ const RestartButton = styled.button`
     cursor: pointer;
     transform: rotateY(0deg);
   }
-`;
+`
 
-export default function Restart(props)  {
+export default function Restart(props) {
   return <RestartButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}><span>{props.restartText}</span></RestartButton>
 }
 

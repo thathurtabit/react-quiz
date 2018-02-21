@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const AnswerLi = styled.li`
   margin: 0 5%;
@@ -9,7 +9,7 @@ const AnswerLi = styled.li`
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
     width: 50%;
   }
-`;
+`
 
 const AnswerInput = styled.input`
   bottom: 0;
@@ -31,7 +31,7 @@ const AnswerInput = styled.input`
     box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.05);
     outline: 0;
   } 
-`;
+`
 
 const AnswerLabel = styled.label`
   padding: 2rem;
@@ -47,28 +47,24 @@ const AnswerLabel = styled.label`
     color: ${props => props.theme.secondary};
     cursor: pointer;
   }
-`;
+`
 
 export default function Answer(props) {
-
   return (
     <AnswerLi>
       <AnswerInput
-        type="radio"        
-        className="radioCustomButton"
+        type='radio'
+        className='radioCustomButton'
         name={props.group}
         id={props.id}
         value={props.answerType}
-        tabIndex="0"
+        tabIndex='0'
       />
-      <AnswerLabel
-        htmlFor={props.id} 
-        >
-        {props.answerContent}        
+      <AnswerLabel htmlFor={props.id}>
+        {props.answerContent}
       </AnswerLabel>
     </AnswerLi>
-  );
-
+  )
 }
 
 Answer.propTypes = {

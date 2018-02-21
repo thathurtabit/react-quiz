@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Next from '../atoms/NextButton';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import Next from '../atoms/NextButton'
+import PropTypes from 'prop-types'
 import { Transition } from 'react-transition-group'
 
 const IntroWrap = styled.section`
@@ -38,7 +38,7 @@ const IntroWrap = styled.section`
     }
 
   }
-`;
+`
 
 const IntroSubtitle = styled.h2`
   font-size: calc(15vw);
@@ -52,7 +52,7 @@ const IntroSubtitle = styled.h2`
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
     font-size: calc(50px + 3vw);
   }
-`;
+`
 
 const IntroText = styled.p`
   font-size: calc(1rem + 0.25vw);
@@ -64,9 +64,9 @@ const IntroText = styled.p`
     font-family: ${props => props.theme.fontPrimary};
     font-weight: normal;
   }
-`;
+`
 
-const duration = 500;
+const duration = 500
 
 const defaultStyle = {
   transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
@@ -81,51 +81,50 @@ const transitionStyles = {
   entered: {
     opacity: 1,
   },
-};
+}
 
-const TransitionCustom = ({ in: inProp, children }) => (
+const TransitionCustom = ({ in: inProp, children, }) => (
   <Transition in={inProp} timeout={duration}>
     {(state) => (
       <div style={{
         ...defaultStyle,
-        ...transitionStyles[state]
+        ...transitionStyles[state],
       }}>
         {children}
       </div>
     )}
   </Transition>
-);
+)
 
 export default class IntroPage extends Component {
-//export default function IntroPage(props) {
   constructor(props) {
-    super(props);
-    this.state = { show: false }
+    super(props)
+    this.state = { show: false, }
 
     setTimeout(() => {
       this.setState({
-        show: !this.state.show
-      });
-    }, 1);
+        show: !this.state.show,
+      })
+    }, 1)
   }
 
   render() {
     return (
-      <IntroWrap style={{display: this.props.display ? 'block' : 'none'}}>        
-        <TransitionCustom in={this.state.show}>        
-          <IntroSubtitle>        
-            {this.props.content.p1}         
-          </IntroSubtitle>          
+      <IntroWrap style={{ display: this.props.display ? 'block' : 'none', }}>
+        <TransitionCustom in={this.state.show}>
+          <IntroSubtitle>
+            {this.props.content.p1}
+          </IntroSubtitle>
           <IntroText>
-            <span dangerouslySetInnerHTML={{__html: this.props.content.p2}} />
+            <span dangerouslySetInnerHTML={{ __html: this.props.content.p2, }} />
           </IntroText>
           <IntroText>
-            <span dangerouslySetInnerHTML={{__html: this.props.content.p3}} />
+            <span dangerouslySetInnerHTML={{ __html: this.props.content.p3, }} />
           </IntroText>
-          <Next nextText={this.props.nextText} round={this.props.round} onClick={this.props.onClick} />        
-        </TransitionCustom>        
+          <Next nextText={this.props.nextText} round={this.props.round} onClick={this.props.onClick} />
+        </TransitionCustom>
       </IntroWrap>
-    );
+    )
   }
 }
 

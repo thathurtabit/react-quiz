@@ -1,19 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
-import resultData from '../../api/resultData';
-import HeroImage from '../atoms/HeroImage';
-import QuizButton from '../atoms/QuizButton';
-import SocialShare from '../molecules/SocialShare';
-import siteInfo from '../../api/siteInfo';
-import PersonalityInfoList from '../organisms/PersonalityInfoList';
-import SimilarsOpposite from '../organisms/SimilarsOpposite';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'styled-components'
+import resultData from '../../api/resultData'
+import HeroImage from '../atoms/HeroImage'
+import QuizButton from '../atoms/QuizButton'
+import SocialShare from '../molecules/SocialShare'
+import siteInfo from '../../api/siteInfo'
+import PersonalityInfoList from '../organisms/PersonalityInfoList'
+import SimilarsOpposite from '../organisms/SimilarsOpposite'
+import PropTypes from 'prop-types'
 
 const PageWrap = styled.section`
   position: relative;
   max-width: ${props => props.theme.maxContentWidth};
   margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
-`;
+`
 
 const PageTitle = styled.h1`
   color: ${props => props.theme.primary};
@@ -30,7 +30,7 @@ const PageTitle = styled.h1`
       font-size: calc(20px + 4vw);
       margin: 1rem 1rem 5rem; 
   }
-`;
+`
 
 const PageTitleIntro = styled.p`
   color: ${props => props.theme.tertiary};
@@ -38,7 +38,7 @@ const PageTitleIntro = styled.p`
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-top: 5rem;
-`;
+`
 
 const PageIntro = styled.main`
   font-size: calc(1rem + 0.5vw);
@@ -54,7 +54,7 @@ const PageIntro = styled.main`
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
     margin: 4rem 2rem 3rem;
   }
-`;
+`
 
 const HR = styled.hr`
   border: 0;
@@ -72,7 +72,7 @@ const HR = styled.hr`
     transform: translateX(-50%);
     width: 50px;
   }
-`;
+`
 
 export default function DesignPersonality(props) {
   return (
@@ -81,12 +81,12 @@ export default function DesignPersonality(props) {
         <PageTitleIntro>{siteInfo.singularType.name}</PageTitleIntro>
         <PageTitle>{resultData[props.dataKey].title}</PageTitle>
         <HeroImage src={resultData[props.dataKey].slug} alt={resultData[props.dataKey].title} />
-        <PageIntro dangerouslySetInnerHTML={{__html: resultData[props.dataKey].text}} />
+        <PageIntro dangerouslySetInnerHTML={{ __html: resultData[props.dataKey].text, }} />
       </PageWrap>
 
-      <HR />   
+      <HR />
       <PersonalityInfoList resultKey={props.dataKey} />
-      <HR />    
+      <HR />
       <SimilarsOpposite resultKey={props.dataKey} />
       <HR />
 
@@ -95,15 +95,15 @@ export default function DesignPersonality(props) {
 
       <PageWrap extraSpacing>
         <PageTitleIntro>Are you a {resultData[props.dataKey].title}?</PageTitleIntro>
-        <p><QuizButton to={siteInfo.mainNav[0].slug} text={siteInfo.mainNav[0].name}  /></p>
-      </PageWrap>  
+        <p><QuizButton to={siteInfo.mainNav[0].slug} text={siteInfo.mainNav[0].name} /></p>
+      </PageWrap>
     </section>
-  );
+  )
 }
 
 DesignPersonality.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   round: PropTypes.number,
-  resultKey: PropTypes.string
+  resultKey: PropTypes.string,
 }
