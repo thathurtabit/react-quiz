@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, } from 'react'
 import styled from 'styled-components'
-import { CSSTransition } from 'react-transition-group'
+import { CSSTransition, } from 'react-transition-group'
 import update from 'immutability-helper'
 import quizData from '../../api/quizData'
 import resultData from '../../api/resultData'
