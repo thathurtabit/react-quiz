@@ -75,7 +75,8 @@ const QuestionIntro = styled.p`
   padding: 0 2rem 2rem;
   ${transition}
 
-  strong {
+  &::first-line {
+    font-weight: bold;
     font-family: ${props => props.theme.fontPrimary};
   }
 
@@ -132,6 +133,7 @@ const InfoButton = styled.button`
   height: 25px;
   line-height: 25px;
   margin: 1.75rem 2rem 0;
+  padding: 0;
   position: relative;
   transition: background 0.25s ease-out, color 0.25s ease-out, transform 0.25s ease-out;
   transform: scale(1);

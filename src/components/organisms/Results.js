@@ -18,11 +18,10 @@ const PageWrap = styled.section`
   margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
 `
 
-
 const ResultsTitle = styled.h2`
   font-family: ${props => props.theme.fontPrimary};
   margin: 1rem 1rem 2rem; 
-  font-size: calc(13vw);
+  font-size: calc(12vw);
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
       font-size: calc(20px + 5vw);
@@ -49,9 +48,9 @@ const ResultsText = styled.p`
   margin: 2rem;
   position: relative;
 
-  strong {
+  &::first-line {
+    font-weight: bold;
     font-family: ${props => props.theme.fontPrimary};
-    letter-spacing: 0;
   }
 `
 
@@ -94,9 +93,7 @@ export default function Results(props) {
           {props.title}
         </ResultsTitle>
         <HeroImage src={props.moreLink} alt={props.title} />
-        <ResultsText>
-          <span dangerouslySetInnerHTML={{ __html: props.text, }} />
-        </ResultsText>
+        <ResultsText dangerouslySetInnerHTML={{ __html: props.text, }} />
       </PageWrap>
 
       <HR />

@@ -54,6 +54,13 @@ const IntroText = styled.p`
   }
 `
 
+const IntroTextFirstLine = IntroText.extend`
+  &::first-line {
+    font-weight: bold;
+    font-family: ${props => props.theme.fontPrimary};
+  }
+`
+
 const QuizBubble = styled(Link)`
   position: relative;
 
@@ -125,12 +132,8 @@ export default function IntroPage() {
       <IntroSubtitle>
         {introPageData.p1}
       </IntroSubtitle>
-      <IntroText>
-        <span dangerouslySetInnerHTML={{ __html: introPageData.p2, }} />
-      </IntroText>
-      <IntroText>
-        <span dangerouslySetInnerHTML={{ __html: introPageData.p3, }} />
-      </IntroText>
+      <IntroTextFirstLine dangerouslySetInnerHTML={{ __html: introPageData.p2, }} />
+      <IntroText dangerouslySetInnerHTML={{ __html: introPageData.p3, }} />
       <QuizButton text={siteInfo.mainNav[0].name} to={siteInfo.mainNav[0].slug} />
     </IntroWrap>
   )

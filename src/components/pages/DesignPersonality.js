@@ -19,7 +19,7 @@ const PageTitle = styled.h1`
   color: ${props => props.theme.primary};
   font-family: ${props => props.theme.fontPrimary};
   margin: 1rem 1rem 2rem; 
-  font-size: calc(13vw);
+  font-size: calc(12vw);
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
       font-size: calc(20px + 5vw);
@@ -46,9 +46,9 @@ const PageIntro = styled.main`
   margin: 2rem;
   position: relative;
 
-  strong {
+  &::first-line {
+    font-weight: bold;
     font-family: ${props => props.theme.fontPrimary};
-    font-weight: normal;
   }
 
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
