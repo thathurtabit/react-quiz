@@ -6,6 +6,7 @@ import SocialShare from '../molecules/SocialShare'
 import PersonalityInfoList from '../organisms/PersonalityInfoList'
 import SimilarsOpposite from '../organisms/SimilarsOpposite'
 import PropTypes from 'prop-types'
+import GoogleAnalytics from 'react-ga'
 
 const ResultsWrap = styled.section`
   margin-bottom: 6rem;
@@ -72,9 +73,21 @@ const HR = styled.hr`
   }
 `
 
+let sentResult = false
+
 export default function Results(props) {
+  if (props.show && !sentResult && props.title !== '') {
+    GoogleAnalytics.event({
+      category: 'Quiz',
+      action: 'Result',
+      label: props.title,
+    })
+    sentResult = true
+  }
+
   return (
-    <ResultsWrap style={{ display: props.show ? 'block' : 'none' }}>
+    <ResultsWrap style={{ display: props.show ? 'block' : 'none', }}>
+
       <PageWrap>
         <ResultIntro>You are a:</ResultIntro>
         <ResultsTitle>
@@ -82,7 +95,7 @@ export default function Results(props) {
         </ResultsTitle>
         <HeroImage src={props.moreLink} alt={props.title} />
         <ResultsText>
-          <span dangerouslySetInnerHTML={{ __html: props.text }} />
+          <span dangerouslySetInnerHTML={{ __html: props.text, }} />
         </ResultsText>
       </PageWrap>
 
@@ -99,6 +112,7 @@ export default function Results(props) {
         <ResultIntro>Not a {props.title}?</ResultIntro>
         <Restart restartText={props.nextText} onClick={props.handleRestart} />
       </PageWrap>
+
     </ResultsWrap>
   )
 }
@@ -107,5 +121,5 @@ Results.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   round: PropTypes.number.isRequired,
-  resultKey: PropTypes.string.isRequired
+  resultKey: PropTypes.string.isRequired,
 }

@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { BrowserRouter, Route, NavLink, Link, Switch, } from 'react-router-dom'
+import GATracker from '../../helpers/GATracker.js'
 import theme from '../../helpers/theme.js'
 import ScrollToTop from '../../helpers/ScrollToTop'
 import styled, { ThemeProvider, } from 'styled-components'
@@ -300,7 +301,7 @@ const SiteRoutes = () => {
     <BrowserRouter basename={'/'}	>
       <ThemeProvider theme={theme}>
         <ScrollToTop>
-          <Route path='/' component={SetUpRoutes} />
+          <Route path='/' component={GATracker(SetUpRoutes, { /* additional attributes */ } )} />
         </ScrollToTop>
       </ThemeProvider>
     </BrowserRouter>
