@@ -1,4 +1,5 @@
 import React from 'react'
+import styled, { keyframes, } from 'styled-components'
 
 // SVG wrapper
 const SVG = styled.svg`
@@ -10,6 +11,22 @@ const SVG = styled.svg`
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
     height: 225px;
   }
+`
+
+// BATON
+const moveBaton = keyframes`
+  0% {
+    transform: rotate(5deg);
+  } 100% {
+    transform: rotate(-5deg);
+  }
+`
+
+const Baton = styled.path`
+  animation: 1s ease-in-out 0s infinite alternate ${moveBaton};
+  position: relative;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
 `
 
 
@@ -50,7 +67,7 @@ const SvgConductor = props => (
     />
     <circle cx={677.74} cy={201.52} r={31.52} fill='#fff' />
     <circle cx={689.42} cy={191.76} r={8.6} fill='#324915' />
-    <path
+    <Baton
       fill='#1a1a1a'
       d='M41.154 206.71l6.138-.716 25.931 222.413-6.138.716z'
     />
