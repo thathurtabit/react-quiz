@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
+import styled, { keyframes, } from 'styled-components'
 
 // SVG wrapper
 const SVG = styled.svg`
@@ -11,6 +11,39 @@ const SVG = styled.svg`
     height: 225px;
   }
 `
+
+// HoneyHex
+const moveHex = keyframes`
+  0% {
+    transform: rotate(5deg) translateY(0);
+  } 100% {
+    transform: rotate(-5deg) translateY(-10px);
+  }
+`
+
+const HoneyHex = styled.path`
+  animation: 1.5s ease-in-out 0s infinite alternate ${moveHex};
+  position: relative;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+`
+
+// Hands
+const moveHands = keyframes`
+  0% {
+    transform: rotate(3deg) translateY(0);
+  } 100% {
+    transform: rotate(-3deg) translateY(-5px);
+  }
+`
+
+const Hands = styled.path`
+  animation: 1.5s ease-in-out 0s infinite alternate ${moveHands};
+  position: relative;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+`
+
 
 const SvgBrandBuilder = props => (
   <SVG viewBox='0 0 1531.78 1484.38' {...props}>
@@ -175,11 +208,11 @@ const SvgBrandBuilder = props => (
       fill='#847049'
       d='M1099.51 560.91L936.36 875l-37.26 10.92 173.28-340.5 27.13 15.49z'
     />
-    <path
+    <HoneyHex
       fill='#ffeea9'
       d='M825.52 460.58l-274.18 65.27-80.57 270.07 193.61 204.82 274.18-65.27 80.57-270.08-193.61-204.81z'
     />
-    <path
+    <Hands
       fill='#e0bc63'
       d='M597.82 966.39l59.33-50.87 82.12 19.8 30.81 57.44-94.46 21.35-77.8-47.72zM812.84 969.03l7.14-33.43 49.3-53.39 85.36 18.24 5.46 43.11-56.66 24.85-90.6.62z'
     />

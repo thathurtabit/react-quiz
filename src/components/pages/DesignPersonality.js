@@ -76,7 +76,7 @@ const HR = styled.hr`
 
 export default function DesignPersonality(props) {
   return (
-    <section>
+    <section role='article'>
       <PageWrap>
         <PageTitleIntro>{siteInfo.singularType.name}</PageTitleIntro>
         <PageTitle>{resultData[props.dataKey].title}</PageTitle>

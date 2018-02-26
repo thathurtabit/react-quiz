@@ -241,9 +241,9 @@ const PageFade = (props) => (
 
 const Layout = ({ children, }) => (
   <LayoutWrap>
-    <MainHeader>
+    <MainHeader role='banner'>
     	<SiteName><Link to='/'>{siteInfo.title}</Link></SiteName>
-	    	<MainNav>
+	    	<MainNav role='navigation'>
 		    	<ul>
 		    		<li><NavLink to={siteInfo.mainNav[0].slug} activeClassName='active'><span dangerouslySetInnerHTML={{ __html: siteInfo.mainNav[0].name, }} /></NavLink></li>
 	    			<li><NavLink to={siteInfo.mainNav[1].slug} activeClassName='active'><span dangerouslySetInnerHTML={{ __html: siteInfo.mainNav[1].name, }} /></NavLink></li>
@@ -263,7 +263,7 @@ const SetUpRoutes = (props) => {
 	  <Layout>
 	    <TransitionGroup>
 	      <PageFade key={locationKey}>
-	        <Wrapper>
+	        <Wrapper role='main'>
 	          <Switch location={props.location}>
 	          	<Route exact path='/' component={IntroPage}/>
 	            <Route exact path={siteInfo.mainNav[0].slug} component={Quiz} />

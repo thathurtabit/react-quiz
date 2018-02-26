@@ -17,7 +17,7 @@ const IMG = styled.img`
 
 export default function HeroImage(props) {
   return (
-  	<IMG src={`../images/SVG/${props.src}.svg`} alt={props.title} />
+  	<IMG src={`../images/SVG/${props.src}.svg`} alt={props.alt} />
   )
 }
 

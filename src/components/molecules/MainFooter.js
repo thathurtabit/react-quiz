@@ -1,7 +1,7 @@
 import React, { Component, } from 'react'
 import styled from 'styled-components'
 
-const FooterWrap = styled.footer`
+const FooterWrap = styled.div`
   background: ${props => props.theme.primary};
   color: ${props => props.theme.primaryLight};
   font-family: ${props => props.theme.fontSecondary};
@@ -12,7 +12,7 @@ const FooterWrap = styled.footer`
   text-align: center;
 `
 
-const FeedbackWrap = styled.footer`
+const FeedbackWrap = styled.div`
   background: rgba(255, 255, 255, 0.05);
   color: ${props => props.theme.primary};
   font-family: ${props => props.theme.fontSecondary};
@@ -111,14 +111,14 @@ export default class MainFooter extends Component {
   // Render
   render() {
     return (
-      <section style={{ display: this.state.display.footer ? 'block' : 'none', }}>
+      <footer style={{ display: this.state.display.footer ? 'block' : 'none', }} role='contentinfo'>
         <FeedbackWrap>
           <Feedback />
         </FeedbackWrap>
         <FooterWrap>
           <Copyright />
         </FooterWrap>
-      </section>
+      </footer>
     )
   }
 }

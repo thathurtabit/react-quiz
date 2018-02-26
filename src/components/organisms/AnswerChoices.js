@@ -47,7 +47,7 @@ export default function AnswerChoices(props) {
   }
 
   return (
-    <AnswerUl>
+    <AnswerUl role='group'>
       {props.answerChoices.map(renderAnswerChoices)}
     </AnswerUl>
   )
