@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { keyframes, } from 'styled-components'
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 // SVG wrapper
 const SVG = styled.svg`
@@ -25,7 +25,7 @@ const moveEyeAnim = keyframes`
 const Eye = styled.circle`
   animation: 1s ease-in-out 0s infinite alternate ${moveEyeAnim};
   position: relative;
-  transform-box:fill-box;
+  transform-box: fill-box;
 `;
 
 // PEN
@@ -55,7 +55,7 @@ const moveHandAnim = keyframes`
 const Hand = styled.path`
   animation: 1s ease-in-out 0s infinite alternate ${moveHandAnim};
   transform-origin: 50% 100%;
-  transform-box:fill-box;
+  transform-box: fill-box;
 `;
 
 // Tail
@@ -70,7 +70,7 @@ const moveTailAnim = keyframes`
 const Tail = styled.path`
   animation: 1s ease-in-out 0s infinite alternate ${moveTailAnim};
   transform-origin: 50% 100%;
-  transform-box:fill-box;
+  transform-box: fill-box;
 `;
 
 // Smoke
@@ -87,7 +87,7 @@ const moveSmokeAnim = keyframes`
 const Smoke = styled.path`
   animation: 5s ease-in-out 0s infinite alternate ${moveSmokeAnim};
   transform-origin: center bottom;
-  transform-box:fill-box;
+  transform-box: fill-box;
 `;
 
 const SvgExperimenter = props => (
@@ -219,10 +219,8 @@ const SvgExperimenter = props => (
         fillOpacity={0.15}
         d="M1108 1120l69-98-146 65 118-98-139 33 134-157-160 82 174-156-196 113 99-135-99 51 38-38-8-88-56.75 59.05L963 640l-71 102 36-107-79 72 43-133-92 89 56-119-82 49 76-103-66 44 82.92-80H935l77-46-92 28 90-79-129 51 140-103-186 41 77.59-73.58L774 336l62.1-84.26L737 319l37-56-83 56 32.6-77.7L670 311l1.19-5.3-4.2 6.34-5.57 39.61v2.36l-6.25 13.62 4.17 25.02 21.72 4.17.6-.16 25.63 14.76 84.1-1.39 16.46-3.39L806.6 433l-9.37-4.55-12.79 23.45 2.21 1.91H708.1L632 453l-18 27 .17 41.92 26.41 48.65 15.98 34.75 33.36 83.4 9.03 51.42-9.03 29.19h21.48l3.19 12.51h32.92l-7.55 281.47 55.05 58.11-62.35 39.88-12.16 31.97 28.84 14.6 75.41-12.51 64.98-31.28 3.42-11.5 67.81 8.72 9.68-10.56 10.6 10.56 29.47-3.46-26.83 52.49 4.64 25.48 79.09-9.68 53.58-53.75-6-26.82 25.68-3.02 40.31-38.9L1199 1042l-91 78z"
       />
-
     </g>
   </SVG>
 );
 
 export default SvgExperimenter;
-

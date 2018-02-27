@@ -1,12 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
-import QuizButton from '../atoms/QuizButton'
-import SvgExperimenter from '../atoms/svgs/experimenter'
-import { Link, } from 'react-router-dom'
-import siteInfo from '../../api/siteInfo'
-import introPageData from '../../api/introPageData'
-import PropTypes from 'prop-types'
-import { Helmet, } from 'react-helmet'
+import React from "react";
+import styled from "styled-components";
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import QuizButton from "../atoms/QuizButton";
+import SvgExperimenter from "../atoms/svgs/experimenter";
+import siteInfo from "../../api/siteInfo";
+import introPageData from "../../api/introPageData";
 
 const IntroWrap = styled.section`
   align-items: center;
@@ -22,7 +21,7 @@ const IntroWrap = styled.section`
   @media screen and (min-width: ${props => props.theme.breakpointSM}) {
     padding: 5rem 3rem 5rem;
   }
-`
+`;
 
 const IntroSubtitle = styled.h2`
   font-size: calc(15vw);
@@ -37,7 +36,7 @@ const IntroSubtitle = styled.h2`
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
     font-size: calc(50px + 2vw);
   }
-`
+`;
 
 const IntroText = styled.p`
   font-size: calc(1rem + 0.2vw);
@@ -53,14 +52,14 @@ const IntroText = styled.p`
   &:last-of-type {
     margin-bottom: 4rem;
   }
-`
+`;
 
 const IntroTextFirstLine = IntroText.extend`
   &::first-line {
     font-weight: bold;
     font-family: ${props => props.theme.fontPrimary};
   }
-`
+`;
 
 const QuizBubble = styled(Link)`
   position: relative;
@@ -74,7 +73,7 @@ const QuizBubble = styled(Link)`
       border-top-color: ${props => props.theme.primary};
     }
   }
-`
+`;
 
 const SpeechBubble = styled.p`
   background: ${props => props.theme.bg};
@@ -92,7 +91,7 @@ const SpeechBubble = styled.p`
   z-index: 10;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -3px;
     left: 50%;
@@ -107,7 +106,7 @@ const SpeechBubble = styled.p`
     transition: border-top-color 0.25s ease-out;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -121,30 +120,29 @@ const SpeechBubble = styled.p`
     margin-bottom: -10px;
     transition: border-top-color 0.25s ease-out;
   }
-`
+`;
 
 export default function IntroPage() {
   return (
     <IntroWrap>
-      <Helmet>        
+      <Helmet>
         <title>{siteInfo.title}</title>
-        <link rel='canonical' href={siteInfo.url} />
-        <meta name='description' content={siteInfo.description} />
+        <link rel="canonical" href={siteInfo.url} />
+        <meta name="description" content={siteInfo.description} />
       </Helmet>
       <QuizBubble to={siteInfo.mainNav[0].slug}>
         <SpeechBubble>Ready to test?</SpeechBubble>
         <SvgExperimenter />
       </QuizBubble>
-      <IntroSubtitle>
-        {introPageData.p1}
-      </IntroSubtitle>
-      <IntroTextFirstLine dangerouslySetInnerHTML={{ __html: introPageData.p2, }} />
-      <IntroText dangerouslySetInnerHTML={{ __html: introPageData.p3, }} />
-      <QuizButton text={siteInfo.mainNav[0].name} to={siteInfo.mainNav[0].slug} />
+      <IntroSubtitle>{introPageData.p1}</IntroSubtitle>
+      <IntroTextFirstLine
+        dangerouslySetInnerHTML={{ __html: introPageData.p2 }}
+      />
+      <IntroText dangerouslySetInnerHTML={{ __html: introPageData.p3 }} />
+      <QuizButton
+        text={siteInfo.mainNav[0].name}
+        to={siteInfo.mainNav[0].slug}
+      />
     </IntroWrap>
-  )
-}
-
-IntroPage.propTypes = {
-  content: PropTypes.object,
+  );
 }

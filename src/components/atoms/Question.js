@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const QuestionText = styled.h2`
   font-family: ${props => props.theme.fontPrimary};
@@ -31,16 +31,17 @@ const QuestionText = styled.h2`
     transition-delay: 1s;
     transform: translateY(0);
   }
-`
+`;
 
 export default function Question(props) {
   return (
-    <QuestionText className={`${ props.ready ? 'ready' : 'not-ready' }`}>
+    <QuestionText className={`${props.ready ? "ready" : "not-ready"}`}>
       {props.question}
     </QuestionText>
-  )
+  );
 }
 
 Question.propTypes = {
-  question: PropTypes.string,
-}
+  question: PropTypes.string.isRequired,
+  ready: PropTypes.string.isRequired
+};

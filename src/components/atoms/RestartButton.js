@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const RestartButton = styled.button`
   background: ${props => props.theme.primary};
-  border: 0;  
+  border: 0;
   border-radius: 40px;
   color: ${props => props.theme.bg};
   font-family: ${props => props.theme.fontPrimary};
@@ -23,21 +23,21 @@ const RestartButton = styled.button`
 
   &[disabled],
   &[disabled]:hover {
-  	background: ${props => props.theme.primary};
-  	cursor: not-allowed;
-  	opacity: 0.5;
+    background: ${props => props.theme.primary};
+    cursor: not-allowed;
+    opacity: 0.5;
 
     &::after,
     &::before {
       display: none;
     }
   }
-  
+
   &::before {
     background: ${props => props.theme.secondary};
     bottom: 0;
     border-radius: 40px;
-    content: '';
+    content: "";
     left: 0;
     perspective: 1000px;
     position: absolute;
@@ -53,12 +53,19 @@ const RestartButton = styled.button`
     cursor: pointer;
     transform: rotateY(0deg);
   }
-`
+`;
 
 export default function Restart(props) {
-  return <RestartButton id={`button${props.round}`} onClick={() => props.onClick()} disabled={props.disabled}><span>{props.restartText}</span></RestartButton>
+  return (
+    <RestartButton
+      onClick={() => props.onClick()}
+    >
+      <span>{props.restartText}</span>
+    </RestartButton>
+  );
 }
 
 Restart.propTypes = {
-  restartText: PropTypes.string.isRequired,
-}
+  onClick: PropTypes.func.isRequired,
+  restartText: PropTypes.string.isRequired
+};

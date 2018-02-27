@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link, } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const GoToQuizButton = styled(Link)`
   background: ${props => props.theme.primary};
@@ -38,12 +38,12 @@ const GoToQuizButton = styled(Link)`
       display: none;
     }
   }
-  
+
   &::before {
     background: ${props => props.theme.secondary};
     border-radius: 40px;
     bottom: 0;
-    content: '';
+    content: "";
     left: 0;
     perspective: 1000px;
     position: absolute;
@@ -59,13 +59,17 @@ const GoToQuizButton = styled(Link)`
     cursor: pointer;
     transform: rotateY(0deg);
   }
-`
+`;
 
 export default function QuizButton(props) {
-  return <GoToQuizButton to={props.to}><span dangerouslySetInnerHTML={{ __html: props.text, }} /></GoToQuizButton>
+  return (
+    <GoToQuizButton to={props.to}>
+      <span dangerouslySetInnerHTML={{ __html: props.text }} />
+    </GoToQuizButton>
+  );
 }
 
 QuizButton.propTypes = {
-  to: PropTypes.string,
-  text: PropTypes.string,
-}
+  to: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};

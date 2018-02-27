@@ -1,7 +1,7 @@
-import React from 'react'
-import Answer from '../atoms/Answer'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import Answer from "../atoms/Answer";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const AnswerUl = styled.ul`
   list-style-type: none;
@@ -30,7 +30,7 @@ const AnswerUl = styled.ul`
     width: 30px;
     z-index: 1;
   }
-`
+`;
 
 export default function AnswerChoices(props) {
   function renderAnswerChoices(key) {
@@ -43,18 +43,17 @@ export default function AnswerChoices(props) {
         answerType={key.type}
         answer={props.answer}
       />
-    )
+    );
   }
 
   return (
-    <AnswerUl role='group'>
+    <AnswerUl role="group">
       {props.answerChoices.map(renderAnswerChoices)}
     </AnswerUl>
-  )
+  );
 }
 
 AnswerChoices.propTypes = {
   answer: PropTypes.string,
-  answerChoices: PropTypes.array,
-}
-
+  answerChoices: PropTypes.array
+};

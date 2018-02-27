@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import personalityInfo from '../../api/personalityInfo'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import personalityInfo from "../../api/personalityInfo";
 
 const ElementsWrap = styled.section`
   margin: 0 auto;
   padding: 1rem;
-`
+`;
 
 const PersonalityElementsUl = styled.ul`
   text-align: center;
   margin: 0;
   padding: 0;
-`
+`;
 
 const PersonalityElementsLi = styled.li`
   display: inline-block;
@@ -23,7 +23,7 @@ const PersonalityElementsLi = styled.li`
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     height: 15px;
     left: 50%;
     position: absolute;
@@ -39,52 +39,52 @@ const PersonalityElementsLi = styled.li`
 
   &.personality-diverge::before {
     background-color: ${props => props.theme.personality.diverge};
-    -webkit-mask:  url('../images/SVG/icons/diverge.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/diverge.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/diverge.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/diverge.svg") no-repeat 50% 50%;
   }
-  
+
   &.personality-converge::before {
     background-color: ${props => props.theme.personality.converge};
-    -webkit-mask:  url('../images/SVG/icons/converge.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/converge.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/converge.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/converge.svg") no-repeat 50% 50%;
   }
 
   &.personality-abstract::before {
     background-color: ${props => props.theme.personality.abstract};
-    -webkit-mask:  url('../images/SVG/icons/abstract.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/abstract.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/abstract.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/abstract.svg") no-repeat 50% 50%;
   }
 
   &.personality-real::before {
     background-color: ${props => props.theme.personality.real};
-    -webkit-mask:  url('../images/SVG/icons/real.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/real.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/real.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/real.svg") no-repeat 50% 50%;
   }
 
   &.personality-individual::before {
     background-color: ${props => props.theme.personality.individual};
-    -webkit-mask:  url('../images/SVG/icons/individual.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/individual.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/individual.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/individual.svg") no-repeat 50% 50%;
   }
 
   &.personality-group::before {
     background-color: ${props => props.theme.personality.group};
-    -webkit-mask:  url('../images/SVG/icons/group.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/group.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/group.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/group.svg") no-repeat 50% 50%;
   }
 
   &.personality-sense::before {
     background-color: ${props => props.theme.personality.sense};
-    -webkit-mask:  url('../images/SVG/icons/sense.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/sense.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/sense.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/sense.svg") no-repeat 50% 50%;
   }
 
   &.personality-measure::before {
     background-color: ${props => props.theme.personality.measure};
-    -webkit-mask:  url('../images/SVG/icons/measure.svg') no-repeat 50% 50%;
-    mask: url('../images/SVG/icons/measure.svg') no-repeat 50% 50%;
+    -webkit-mask: url("../images/SVG/icons/measure.svg") no-repeat 50% 50%;
+    mask: url("../images/SVG/icons/measure.svg") no-repeat 50% 50%;
   }
-`
+`;
 
 const PersonalityElementTitle = styled.h5`
   color: ${props => props.theme.tertiary};
@@ -101,21 +101,21 @@ const PersonalityElementTitle = styled.h5`
     letter-spacing: 0;
     padding: 0 0 0.5rem;
   }
-`
+`;
 
-const ListPersonalityElements = (props) => {
-  let resultKeyArray = Array.from(props.resultKey)
-  let personalityKeys = Object.keys(personalityInfo)
+const ListPersonalityElements = props => {
+  const resultKeyArray = Array.from(props.resultKey);
+  const personalityKeys = Object.keys(personalityInfo);
 
-  let filteredInfo = []
+  let filteredInfo = [];
 
-  filteredInfo = personalityKeys.filter((personalityKey) => {
-    let infoFirstChar = personalityKey.charAt(0).toUpperCase()
-    return resultKeyArray.includes(infoFirstChar)
-  })
+  filteredInfo = personalityKeys.filter(personalityKey => {
+    const infoFirstChar = personalityKey.charAt(0).toUpperCase();
+    return resultKeyArray.includes(infoFirstChar);
+  });
 
-  let infoList = filteredInfo.map((infoKey) => {
-    let infoFirstChar = infoKey.charAt(0).toUpperCase()
+  const infoList = filteredInfo.map(infoKey => {
+    const infoFirstChar = infoKey.charAt(0).toUpperCase();
 
     return (
       <PersonalityElementsLi className={`personality-${infoKey}`} key={infoKey}>
@@ -124,20 +124,24 @@ const ListPersonalityElements = (props) => {
           {personalityInfo[infoKey].name}
         </PersonalityElementTitle>
       </PersonalityElementsLi>
-    )
-  })
+    );
+  });
 
-  return <PersonalityElementsUl>{ infoList }</PersonalityElementsUl>
-}
+  return <PersonalityElementsUl>{infoList}</PersonalityElementsUl>;
+};
 
 export default function PersonalityElements(props) {
   return (
     <ElementsWrap>
       <ListPersonalityElements resultKey={props.resultKey} />
     </ElementsWrap>
-  )
+  );
 }
 
 PersonalityElements.propTypes = {
-  resultKey: PropTypes.string
-}
+  resultKey: PropTypes.string.isRequired
+};
+
+ListPersonalityElements.propTypes = {
+  resultKey: PropTypes.string.isRequired
+};

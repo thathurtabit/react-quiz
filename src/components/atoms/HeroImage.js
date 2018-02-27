@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const IMG = styled.img`
   height: 250px;
@@ -13,15 +13,13 @@ const IMG = styled.img`
   @media screen and (min-width: ${props => props.theme.breakpointMD}) {
     height: 400px;
   }
-`
+`;
 
 export default function HeroImage(props) {
-  return (
-  	<IMG src={`../images/SVG/${props.src}.svg`} alt={props.alt} />
-  )
+  return <IMG src={`../images/SVG/${props.src}.svg`} alt={props.alt} />;
 }
 
 HeroImage.propTypes = {
-  moreLink: PropTypes.string,
-  title: PropTypes.string,
-}
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+};

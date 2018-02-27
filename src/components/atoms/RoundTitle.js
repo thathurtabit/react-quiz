@@ -16,4 +16,5 @@ export default function RoundTitle(props) {
 
 RoundTitle.propTypes = {
   roundTitle: PropTypes.string.isRequired,
+  showRound: PropTypes.bool.isRequired
 }

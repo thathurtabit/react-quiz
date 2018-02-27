@@ -1,5 +1,5 @@
-import React, { Component, } from 'react'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import styled from "styled-components";
 
 const FooterWrap = styled.div`
   background: ${props => props.theme.primary};
@@ -10,7 +10,7 @@ const FooterWrap = styled.div`
   padding: 0.75rem;
   position: relative;
   text-align: center;
-`
+`;
 
 const FeedbackWrap = styled.div`
   background: rgba(255, 255, 255, 0.05);
@@ -21,16 +21,17 @@ const FeedbackWrap = styled.div`
   padding: 0.75rem;
   position: relative;
   text-align: center;
-`
+`;
 
 const Link = styled.a`
-  color: ${props => props.dark ? props.theme.primary : props.theme.primaryLight };
+  color: ${props =>
+    props.dark ? props.theme.primary : props.theme.primaryLight};
   position: relative;
   text-decoration: none;
   transition: color 0.2s ease-out;
 
   &:hover {
-    color: ${props => props.dark ? props.theme.primaryLight : props.theme.bg };
+    color: ${props => (props.dark ? props.theme.primaryLight : props.theme.bg)};
 
     i {
       background-color: ${props => props.theme.primaryLight};
@@ -39,14 +40,14 @@ const Link = styled.a`
       border-top-color: ${props => props.theme.primaryLight};
     }
   }
-`
+`;
 
 const Col = styled.p`
   color: ${props => props.theme.primaryLight};
   text-align: center;
   text-decoration: none;
   transition: color 0.2s ease-out;
-`
+`;
 
 const Icon = styled.i`
   position: absolute;
@@ -59,7 +60,7 @@ const Icon = styled.i`
   width: 13px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -73,27 +74,48 @@ const Icon = styled.i`
     margin-bottom: -3px;
     transition: border-top-color 0.25s ease-out;
   }
-`
+`;
 
 const Copyright = () => {
-  let currentDate = new Date()
-  let currentYear = currentDate.getFullYear()
-  return <Col><span dangerouslySetInnerHTML={{ __html: '&copy;', }} /> {currentYear} <Link href='https://www.codecomputerlove.com/' target='_blank' rel='noopener'>Made with Computerlove</Link></Col>
-}
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  return (
+    <Col>
+      <span dangerouslySetInnerHTML={{ __html: "&copy;" }} /> {currentYear}{" "}
+      <Link
+        href="https://www.codecomputerlove.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Made with Computerlove
+      </Link>
+    </Col>
+  );
+};
 
-const Feedback = () => {
-  return <Col><Link href='https://goo.gl/PibK8C' target='_blank' rel='noopener' title="Have some thoughts you'd like to share?" dark><Icon />Feedback</Link></Col>
-}
+const Feedback = () => (
+  <Col>
+    <Link
+      href="https://goo.gl/PibK8C"
+      target="_blank"
+      rel="noopener"
+      title="Have some thoughts you'd like to share?"
+      dark
+    >
+      <Icon />Feedback
+    </Link>
+  </Col>
+);
 
 export default class MainFooter extends Component {
   // State constructor
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       display: {
-        footer: false,
-      },
-    }
+        footer: false
+      }
+    };
   }
 
   // React Lifecycle
@@ -102,16 +124,19 @@ export default class MainFooter extends Component {
     setTimeout(() => {
       this.setState({
         display: {
-          footer: true,
-        },
-      })
-    }, 1000)
+          footer: true
+        }
+      });
+    }, 1000);
   }
 
   // Render
   render() {
     return (
-      <footer style={{ display: this.state.display.footer ? 'block' : 'none', }} role='contentinfo'>
+      <footer
+        style={{ display: this.state.display.footer ? "block" : "none" }}
+        role="contentinfo"
+      >
         <FeedbackWrap>
           <Feedback />
         </FeedbackWrap>
@@ -119,7 +144,6 @@ export default class MainFooter extends Component {
           <Copyright />
         </FooterWrap>
       </footer>
-    )
+    );
   }
 }
-
