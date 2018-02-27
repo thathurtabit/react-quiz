@@ -47,13 +47,6 @@ const Wrapper = styled.section`
     transition: opacity 350ms ease-in, transform 350ms ease-out;
   }
 `
-
-const PageWrap = styled.section`
-	position: relative;
-	max-width: ${props => props.theme.maxContentWidth};
-	margin: ${props => props.extraSpacing ? '0 auto 10rem' : '0 auto 3rem'};
-`
-
 const LayoutWrap = styled.section`
   color: ${props => props.theme.primary};
   min-height: 100vh;
@@ -90,23 +83,6 @@ const SiteName = styled.h1`
 	a:active,
 	a:hover {
 		color: ${props => props.theme.secondary};
-	}
-`
-
-const PageTitle = styled.h1`
-	color: ${props => props.theme.primary};
-	font-family: ${props => props.theme.fontPrimary};
-	margin: 1rem 1rem 2rem;	
-	font-size: calc(13vw);
-
-	@media screen and (min-width: ${props => props.theme.breakpointSM}) {
-			font-size: calc(20px + 5vw);
-			margin: 1rem 1rem 4rem;	
-	}
-	
-	@media screen and (min-width: ${props => props.theme.breakpointMD}) {
-			font-size: calc(20px + 4vw);
-			margin: 1rem 1rem 5rem;	
 	}
 `
 
@@ -222,15 +198,6 @@ const MainNav = styled.nav`
     border-bottom: 10px solid ${props => props.theme.primary};
   }
 `
-
-
-const NotFound = () => (
-  <PageWrap>
-    <PageTitle>404</PageTitle>
-    <p>Page not found. ¯\_(ツ)_/¯</p>
-  </PageWrap>
-)
-
 const PageFade = (props) => (
   <CSSTransition
     {...props}
@@ -286,7 +253,7 @@ const SetUpRoutes = (props) => {
 	            <Route exact path={`${path}/user-champion`} render={() => <DesignPersonality dataKey='CRGS'{...props} />} />
 	            <Route exact path={`${path}/painter`} render={() => <DesignPersonality dataKey='CRIS'{...props} />} />
 
-	            <Route component={NotFound} />
+	            <Route path='*' component={IntroPage} />
 
 	          </Switch>
 	        </Wrapper>

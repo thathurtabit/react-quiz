@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
 import styled from 'styled-components'
 import resultData from '../../api/resultData'
 import siteInfo from '../../api/siteInfo'
+import { Helmet, } from 'react-helmet'
 
 const PageWrap = styled.section`
 	position: relative;
@@ -168,6 +169,11 @@ const ListPersonalities = () => {
     			<p dangerouslySetInnerHTML={{ __html: resultData[key].text }} />
     			<button>Learn More</button>
   			</More>
+				<Helmet>        
+					<title>{`${siteInfo.singularType.name}s | ${siteInfo.title}`}</title>
+					<link rel='canonical' href={`${siteInfo.url}/${siteInfo.mainNav[1].slug}`} />
+					<meta name='description' content='View the 16 different designer types' />
+				</Helmet>
   		</PersonalitiesLi>
     )
   })

@@ -1,6 +1,6 @@
 RewriteEngine On 
 RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://whatkindofdesigner.com/$1 [R,L]
+RewriteRule ^(.*)$ https://whatkindofdesigner.com/$1 [L,R=301]
 Options -MultiViews
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]

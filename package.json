@@ -8,6 +8,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-ga": "^2.4.1",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "react-transition-group": "^2.2.1",
@@ -39,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/thathurtabit/react-quiz/issues"
   },
-  "homepage": "https://design-quiz.surge.sh"
+  "homepage": "https://whatkindofdesigner.com"
 }

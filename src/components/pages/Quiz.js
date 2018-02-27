@@ -8,6 +8,8 @@ import QuestionHeader from '../molecules/QuestionHeader'
 import AnswerChoices from '../organisms/AnswerChoices'
 import Next from '../atoms/NextButton'
 import Results from '../organisms/Results'
+import siteInfo from '../../api/siteInfo'
+import { Helmet, } from 'react-helmet'
 
 const PageWrapper = styled.section`
   min-height: 100%;
@@ -483,9 +485,14 @@ export default class Quiz extends Component {
   // Render
   render() {
     return (
-      <PageWrapper>
+      <PageWrapper>        
         <Fade in={this.state.show}>
           <Wrapper>
+            <Helmet>        
+              <title>{`${siteInfo.quizTitle} | ${siteInfo.title}`}</title>
+              <link rel='canonical' href={`${siteInfo.url}/${siteInfo.mainNav[0].slug}}`} />
+              <meta name='description' content={`Learn which design type you are`} />
+            </Helmet>
             <QuizWrap style={{ display: this.state.display.quiz ? 'block' : 'none', }}>
               <QuestionHeader question={this.state.question} title={this.state.questionTitle} intro={this.state.questionIntro} showRound={this.state.display.quiz} round={this.state.round} roundsTotal={this.state.roundsTotal} />
               <QuizSection>            

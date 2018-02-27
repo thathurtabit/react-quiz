@@ -6,6 +6,7 @@ import { Link, } from 'react-router-dom'
 import siteInfo from '../../api/siteInfo'
 import introPageData from '../../api/introPageData'
 import PropTypes from 'prop-types'
+import { Helmet, } from 'react-helmet'
 
 const IntroWrap = styled.section`
   align-items: center;
@@ -125,6 +126,11 @@ const SpeechBubble = styled.p`
 export default function IntroPage() {
   return (
     <IntroWrap>
+      <Helmet>        
+        <title>{siteInfo.title}</title>
+        <link rel='canonical' href={siteInfo.url} />
+        <meta name='description' content={siteInfo.description} />
+      </Helmet>
       <QuizBubble to={siteInfo.mainNav[0].slug}>
         <SpeechBubble>Ready to test?</SpeechBubble>
         <SvgExperimenter />

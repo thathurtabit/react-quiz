@@ -8,6 +8,7 @@ import siteInfo from '../../api/siteInfo'
 import PersonalityInfoList from '../organisms/PersonalityInfoList'
 import SimilarsOpposite from '../organisms/SimilarsOpposite'
 import PropTypes from 'prop-types'
+import { Helmet, } from 'react-helmet'
 
 const PageWrap = styled.section`
   position: relative;
@@ -77,6 +78,12 @@ const HR = styled.hr`
 export default function DesignPersonality(props) {
   return (
     <section role='article'>
+      <Helmet>        
+        <title>{`${resultData[props.dataKey].title} | ${siteInfo.singularType.name}s | ${siteInfo.title}`}</title>
+        <link rel='canonical' href={`${siteInfo.url}/${siteInfo.singularType.slug}/${resultData[props.dataKey].slug}`} />
+        <meta name='description' content={`Learn about the ${resultData[props.dataKey].title} design type`} />
+      </Helmet>
+
       <PageWrap>
         <PageTitleIntro>{siteInfo.singularType.name}</PageTitleIntro>
         <PageTitle>{resultData[props.dataKey].title}</PageTitle>

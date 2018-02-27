@@ -1,5 +1,8 @@
 const siteInfo = {
   title: "What kind of designer are you?",
+  url: "https://whatkindofdesigner.com",
+  description: "A simple quiz to help understand who you are as a designer.",
+  quizTitle: "Take the Quiz",
   mainNav: [
     {
       name: "<i>Take the</i> Quiz",
