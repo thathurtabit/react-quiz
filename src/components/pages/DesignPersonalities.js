@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import resultData from "../../api/resultData";
 import siteInfo from "../../api/siteInfo";
-import { Helmet } from "react-helmet";
 
 const PageWrap = styled.section`
   position: relative;
@@ -193,13 +193,11 @@ const ListPersonalities = () => {
   return <PersonalitiesUl>{linkList}</PersonalitiesUl>;
 };
 
-const DesignPersonalities = () => {
-  return (
-    <PageWrap>
-      <PageTitle>{siteInfo.singularType.name}s</PageTitle>
-      <ListPersonalities />
-    </PageWrap>
-  );
-};
+const DesignPersonalities = () => (
+  <PageWrap>
+    <PageTitle>{siteInfo.singularType.name}s</PageTitle>
+    <ListPersonalities />
+  </PageWrap>
+);
 
 export default DesignPersonalities;

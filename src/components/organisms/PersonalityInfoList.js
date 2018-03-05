@@ -88,13 +88,11 @@ const ListPersonalities = props => {
     return resultKeyArray.includes(infoFirstChar);
   });
 
-  const infoList = filteredInfo.map(infoKey => {
-    return (
-      <PersonalitiesLi key={infoKey}>
-        <p>{personalityInfo[infoKey][props.info]}</p>
-      </PersonalitiesLi>
-    );
-  });
+const infoList = filteredInfo.map(infoKey => (
+  <PersonalitiesLi key={infoKey}>
+    <p>{personalityInfo[infoKey][props.info]}</p>
+  </PersonalitiesLi>
+));
 
   return <PersonalitiesUl>{infoList}</PersonalitiesUl>;
 };

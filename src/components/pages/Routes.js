@@ -338,21 +338,19 @@ const SetUpRoutes = props => {
   );
 };
 
-const SiteRoutes = () => {
-  return (
-    <BrowserRouter basename="/">
-      <ThemeProvider theme={theme}>
-        <ScrollToTop>
-          <Route
-            path="/"
-            component={GATracker(SetUpRoutes, {
-              /* additional attributes */
-            })}
-          />
-        </ScrollToTop>
-      </ThemeProvider>
-    </BrowserRouter>
-  );
-};
+const SiteRoutes = () => (
+  <BrowserRouter basename="/">
+    <ThemeProvider theme={theme}>
+      <ScrollToTop>
+        <Route
+          path="/"
+          component={GATracker(SetUpRoutes, {
+            /* additional attributes */
+          })}
+        />
+      </ScrollToTop>
+    </ThemeProvider>
+  </BrowserRouter>
+);
 
 export default SiteRoutes;

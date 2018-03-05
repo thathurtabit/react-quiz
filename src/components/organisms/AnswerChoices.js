@@ -1,7 +1,7 @@
 import React from "react";
-import Answer from "../atoms/Answer";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import Answer from "../atoms/Answer";
 
 const AnswerUl = styled.ul`
   list-style-type: none;
@@ -53,7 +53,6 @@ export default function AnswerChoices(props) {
   );
 }
 
-AnswerChoices.propTypes = {
-  answer: PropTypes.string,
-  answerChoices: PropTypes.array
+Answer.propTypes = {
+  answer: PropTypes.string.isRequired
 };

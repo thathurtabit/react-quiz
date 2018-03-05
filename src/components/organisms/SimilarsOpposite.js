@@ -108,10 +108,9 @@ const IMG = styled.img`
 
 // Similar Personalities
 const SimilarPersonalities = props => {
-  let similarsArray = resultData[props.resultKey].similars;
+  const similarsArray = resultData[props.resultKey].similars;
 
-  let similarsList = similarsArray.map(similarKey => {
-    return (
+  const similarsList = similarsArray.map(similarKey => (
       <PersonalitiesLi key={similarKey}>
         <More
           key={similarKey}
@@ -126,15 +125,15 @@ const SimilarPersonalities = props => {
           </PersonalitiesLiTitle>
         </More>
       </PersonalitiesLi>
-    );
-  });
+    )
+  );
 
   return <PersonalitiesUl>{similarsList}</PersonalitiesUl>;
 };
 
 // Opposite Personalities
 const OppositePersonalities = props => {
-  let oppositeKey = resultData[props.resultKey].opposite.key;
+  const oppositeKey = resultData[props.resultKey].opposite.key;
 
   return (
     <PersonalitiesUl>
@@ -187,6 +186,10 @@ SimilarPersonalities.propTypes = {
 };
 
 OppositePersonalities.propTypes = {
+  resultKey: PropTypes.string.isRequired
+};
+
+SimilarsOpposite.propTypes = {
   resultKey: PropTypes.string.isRequired
 };
 
