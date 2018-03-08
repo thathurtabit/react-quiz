@@ -6,6 +6,7 @@ import resultData from "../../api/resultData";
 import HeroImage from "../atoms/HeroImage";
 import QuizButton from "../atoms/QuizButton";
 import SocialShare from "../molecules/SocialShare";
+import RecommendedReading from "../molecules/RecommendedReading";
 import siteInfo from "../../api/siteInfo";
 import PersonalityInfoList from "../organisms/PersonalityInfoList";
 import SimilarsOpposite from "../organisms/SimilarsOpposite";
@@ -77,6 +78,7 @@ const HR = styled.hr`
 `;
 
 export default function DesignPersonality(props) {
+
   return (
     <section role="article">
       <Helmet>
@@ -115,9 +117,11 @@ export default function DesignPersonality(props) {
       <SimilarsOpposite resultKey={props.dataKey} />
       <HR />
 
+      <RecommendedReading books={resultData[props.dataKey].readingList} personality={resultData[props.dataKey].title} />
+
       <PageTitleIntro>Share</PageTitleIntro>
       <SocialShare personality={resultData[props.dataKey].title} />
-
+      
       <PageWrap extraSpacing>
         <PageTitleIntro>
           Are you a {resultData[props.dataKey].title}?

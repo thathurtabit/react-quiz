@@ -7,7 +7,39 @@ const resultData = {
     opposite: {
       key: 'CRGM',
       text: 'Likely to want to know when they can get on and make something - working together and making decisions based on the facts.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Creative Confidence',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+      },
+      {
+        title: 'A Smile in the Mind',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+      },
+      {
+        title: 'The Mom Test',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
+        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+      },
+      {
+        title: 'How to Make Sense of Any Mess',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+      },
+      {
+        title: 'Laws of Simplicity',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+      },
+      {
+        title: 'The A-Z of Visual Ideas',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+      }
+    ]
   },
   DAIM: {
     title: 'Number Cruncher',
@@ -17,7 +49,39 @@ const resultData = {
     opposite: {
       key: 'CRGS',
       text: 'May think you’re wasting time thinking about things too much and not getting on with solving the real problems that people have.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Creative Confidence',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+      },
+      {
+        title: 'A Smile in the Mind',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+      },
+      {
+        title: 'How to Measure Anything',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+      },
+      {
+        title: 'Change by Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+      },
+      {
+        title: 'Laws of Simplicity',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+      },
+      {
+        title: 'Lean Analytics',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+      }
+    ]
   },
   CAIM: {
     title: 'Planner',
@@ -27,7 +91,39 @@ const resultData = {
     opposite: {
       key: 'DRGS',
       text: 'Thinks plans are out of date as soon as they’re published and time is better spent working together to make decisions.'
-    }
+    },
+    readingList: [
+      {
+        title: 'The Art of Looking Sideways',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+      },
+      {
+        title: 'How to be a Graphic Designer, Without Losing Your Soul',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+      },
+      {
+        title: 'Lean UX',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+      },
+      {
+        title: 'Lean Analytics',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+      },
+      {
+        title: 'Laws of Simplicity',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+      },
+      {
+        title: 'Change by Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+      }
+    ]
   },
   CAIS: {
     title: 'Brand Builder',
@@ -37,7 +133,39 @@ const resultData = {
     opposite: {
       key: 'DRGM',
       text: 'Probably thinks you’re being vague.  They’ll believe it when they see it.'
-    }
+    },
+    readingList: [
+      {
+        title: 'The Art of Looking Sideways',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+      },
+      {
+        title: 'How to be a Graphic Designer, Without Losing Your Soul',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+      },
+      {
+        title: 'How to Make Sense of Any Mess',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+      },
+      {
+        title: 'Branding: In Five and a Half Steps',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+      },
+      {
+        title: 'Laws of Simplicity',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+      },
+      {
+        title: 'The A-Z of Visual Ideas',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+      }
+    ]
   },
   DAGS: {
     title: 'Party Animal',
@@ -47,7 +175,39 @@ const resultData = {
     opposite: {
       key: 'CRIM',
       text: 'Thinks they could do a good job if you would just leave them alone for a minute!'
-    }
+    },
+    readingList: [
+      {
+        title: 'Creative Confidence',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+      },
+      {
+        title: 'Game Storming',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+      },
+      {
+        title: 'The Mom Test',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
+        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+      },
+      {
+        title: 'Creativity Inc',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+      },
+      {
+        title: 'Change by Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+      },
+      {
+        title: 'The A-Z of Visual Ideas',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+      }
+    ]
   },
   DAGM: {
     title: 'Fortune Teller',
@@ -57,7 +217,39 @@ const resultData = {
     opposite: {
       key: 'CRIS',
       text: 'Prefers getting on with something rather than thinking too much about it - they’re happy to get feedback but wants something tangible to discuss.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Creative Confidence',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+      },
+      {
+        title: 'Radical Focus',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+      },
+      {
+        title: 'Game Storming',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+      },
+      {
+        title: 'Creativity Inc',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+      },
+      {
+        title: 'How to Measure Anything',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+      },
+      {
+        title: 'Change by Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+      }
+    ]
   },
   CAGM: {
     title: 'Conductor',
@@ -67,7 +259,39 @@ const resultData = {
     opposite: {
       key: 'DRIS',
       text: 'While you’re getting organised, they’ll probably be getting on with something.  They probably need your help b ut probably won’t admit it!'
-    }
+    },
+    readingList: [
+      {
+        title: 'The Art of Looking Sideways',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+      },
+      {
+        title: 'Lean UX',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+      },
+      {
+        title: 'Thinking Fast and Slow',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+      },
+      {
+        title: 'Creativity Inc',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+      },
+      {
+        title: 'Change by Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+      },
+      {
+        title: 'Radical Focus',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+      },
+    ]
   },
   CAGS: {
     title: 'Visionary',
@@ -77,7 +301,39 @@ const resultData = {
     opposite: {
       key: 'DRIM',
       text: 'Might think you’re sketchy on the details - and knowing you - they could be waiting for a long time.'
-    }
+    },
+    readingList: [
+      {
+        title: 'The Art of Looking Sideways',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+      },
+      {
+        title: 'Lean UX',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+      },
+      {
+        title: 'Thinking Fast and Slow',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+      },
+      {
+        title: 'Branding: In Five and a Half Steps',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+      },
+      {
+        title: 'Creativity Inc',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+      },
+      {
+        title: 'The A-Z of Visual Ideas',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+      }
+    ]
   },
   DRGS: {
     title: 'Workshop Warrior',
@@ -87,7 +343,39 @@ const resultData = {
     opposite: {
       key: 'CAIM',
       text: 'Needs a decision. Any decision!!'
-    }
+    },
+    readingList: [
+      {
+        title: 'Paper Prototyping',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+      },
+      {
+        title: 'The Mom Test',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
+        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+      },
+      {
+        title: 'Game Storming',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+      },
+      {
+        title: 'The Righteous Mind',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/411a4tVd1JL._SX323_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+      },
+      {
+        title: 'Don’t Make Me Think',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+      },
+      {
+        title: 'Sprint',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+      }
+    ]
   },  
   DRGM: {
     title: 'Data Driver',
@@ -97,7 +385,39 @@ const resultData = {
     opposite: {
       key: 'CAIS',
       text: 'Not everything that counts can be counted. Right?'
-    }
+    },
+    readingList: [
+      {
+        title: 'Paper Prototyping',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+      },
+      {
+        title: 'How to Measure Anything',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+      },
+      {
+        title: 'Game Storming',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+      },
+      {
+        title: 'Radical Focus',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+      },
+      {
+        title: 'Sprint',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+      },
+      {
+        title: 'The Lean Start-Up',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+      }
+    ]
   },
   CRGM: {
     title: 'Team Player',
@@ -107,7 +427,39 @@ const resultData = {
     opposite: {
       key: 'DAIS',
       text: 'Wants to be left alone for a minute - worried about missing something important for the sake of progress.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Grid Systems in Graphic Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+      },
+      {
+        title: 'Thinking Fast and Slow',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+      },
+      {
+        title: 'Lean UX',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+      },
+      {
+        title: 'Radical Focus',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+      },
+      {
+        title: 'Sprint',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+      },
+      {
+        title: 'The Lean Start-Up',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+      }
+    ]
   },
   CRGS: {
     title: 'User Champion',
@@ -117,7 +469,39 @@ const resultData = {
     opposite: {
       key: 'DAIM',
       text: 'Before you start - let’s just get the story straight...'
-    }
+    },
+    readingList: [
+      {
+        title: 'Grid Systems in Graphic Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+      },
+      {
+        title: 'Thinking Fast and Slow',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+      },
+      {
+        title: 'Branding: In Five and a Half Steps',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+      },
+      {
+        title: 'Don’t Make Me Think',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+      },
+      {
+        title: 'Sprint',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+      },
+      {
+        title: 'The Righteous Mind',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/411a4tVd1JL._SX323_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+      }
+    ]
   },  
   DRIS: {
     title: 'Prototyper',
@@ -127,7 +511,39 @@ const resultData = {
     opposite: {
       key: 'CAGM',
       text: 'Will want to get buy-in and agreement from everyone before you start changing things.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Paper Prototyping',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+      },
+      {
+        title: 'A Smile in the Mind',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+      },
+      {
+        title: 'The Mom Test',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
+        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+      },
+      {
+        title: 'About Face',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+      },
+      {
+        title: 'Don’t Make Me Think',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+      },
+      {
+        title: 'How to Make Sense of Any Mess',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+      }
+    ]
   },
   DRIM: {
     title: 'Experimenter',
@@ -137,7 +553,39 @@ const resultData = {
     opposite: {
       key: 'CAGS',
       text: 'Will be always be looking for the big picture. They’re thinking about the end result - not how you get there.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Paper Prototyping',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+      },
+      {
+        title: 'A Smile in the Mind',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+      },
+      {
+        title: 'How to Measure Anything',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+      },
+      {
+        title: 'About Face',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+      },
+      {
+        title: 'The Lean Start-Up',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+      },
+      {
+        title: 'Lean Analytics',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+      }
+    ]
   },
   CRIM: {
     title: 'Perfectionist',
@@ -147,7 +595,39 @@ const resultData = {
     opposite: {
       key: 'DAGS',
       text: 'Never mind all that... let’s party!'
-    }
+    },
+    readingList: [
+      {
+        title: 'Grid Systems in Graphic Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+      },
+      {
+        title: 'How to be a Graphic Designer, Without Losing Your Soul',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+      },
+      {
+        title: 'Lean UX',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+      },
+      {
+        title: 'About Face',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+      },
+      {
+        title: 'The Lean Start-Up',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+      },
+      {
+        title: 'Lean Analytics',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+      }
+    ]
   },
   CRIS: {
     title: 'Painter',
@@ -157,7 +637,39 @@ const resultData = {
     opposite: {
       key: 'DAGM',
       text: 'Where you like to keep it real - they’re more interested in the abstract - always uncovering new possibilities and unlikely to want to commit to one direction.'
-    }
+    },
+    readingList: [
+      {
+        title: 'Grid Systems in Graphic Design',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+      },
+      {
+        title: 'How to be a Graphic Designer, Without Losing Your Soul',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+      },
+      {
+        title: 'Branding: In Five and a Half Steps',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+      },
+      {
+        title: 'About Face',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+      },
+      {
+        title: 'Don’t Make Me Think',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+      },
+      {
+        title: 'How to Make Sense of Any Mess',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+      }
+    ]
   },
 }
 
