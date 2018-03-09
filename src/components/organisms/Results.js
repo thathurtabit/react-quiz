@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import GoogleAnalytics from "react-ga";
 import styled from "styled-components";
+import resultData from "../../api/resultData";
 import Restart from "../atoms/RestartButton";
 import HeroImage from "../atoms/HeroImage";
 import SocialShare from "../molecules/SocialShare";
 import PersonalityInfoList from "../organisms/PersonalityInfoList";
 import SimilarsOpposite from "../organisms/SimilarsOpposite";
-
+import RecommendedReading from "../molecules/RecommendedReading";
 
 const ResultsWrap = styled.section`
   margin-bottom: 6rem;
@@ -99,6 +100,8 @@ export default function Results(props) {
       <HR />
       <SimilarsOpposite resultKey={props.resultKey} />
       <HR />
+
+      <RecommendedReading books={resultData[props.resultKey].readingList} personality={resultData[props.resultKey].title} />
 
       <PageWrap>
         <ResultIntro>Share your result</ResultIntro>

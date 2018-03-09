@@ -12,6 +12,10 @@ const siteInfo = {
       name: "<i>Design</i> Types",
       slug: "/design-types"
     },
+    {
+      name: "<i>Design</i> Books",
+      slug: "/design-books"
+    }
   ],
   singularType: {
     name: 'Design Type',

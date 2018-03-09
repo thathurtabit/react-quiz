@@ -9,6 +9,7 @@ import DesignPersonality from "../pages/DesignPersonality";
 import MainFooter from "../molecules/MainFooter";
 import siteInfo from "../../api/siteInfo";
 import DesignPersonalities from "../pages/DesignPersonalities";
+import DesignBooks from "../pages/DesignBooks";
 import Quiz from "../pages/Quiz";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -29,9 +30,6 @@ const Wrapper = styled.section`
     opacity: 1;
     transform: translateY(0);
     transition: opacity 300ms ease-out, transform 350ms ease-out;
-
-    @media screen and (max-width: ${props => props.theme.breakpointSM}) {
-    }
   }
 
   &.fade-exit {
@@ -130,6 +128,10 @@ const MainNav = styled.nav`
     }
 
     @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+      min-width: 100px;
+    }
+
+    @media screen and (min-width: ${props => props.theme.breakpointMD}) {
       min-width: 160px;
     }
   }
@@ -156,7 +158,7 @@ const MainNav = styled.nav`
     display: none;
     font-style: normal;
 
-    @media screen and (min-width: ${props => props.theme.breakpointSM}) {
+    @media screen and (min-width: ${props => props.theme.breakpointMD}) {
       display: inline-block;
     }
   }
@@ -223,6 +225,13 @@ const Layout = ({ children }) => (
               />
             </NavLink>
           </li>
+          <li>
+            <NavLink to={siteInfo.mainNav[2].slug} activeClassName="active">
+              <span
+                dangerouslySetInnerHTML={{ __html: siteInfo.mainNav[2].name }}
+              />
+            </NavLink>
+          </li>
         </ul>
       </MainNav>
     </MainHeader>
@@ -247,6 +256,11 @@ const SetUpRoutes = props => {
                 exact
                 path={siteInfo.mainNav[1].slug}
                 component={DesignPersonalities}
+              />
+              <Route
+                exact
+                path={siteInfo.mainNav[2].slug}
+                component={DesignBooks}
               />
 
               <Route

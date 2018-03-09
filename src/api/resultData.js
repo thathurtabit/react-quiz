@@ -363,7 +363,7 @@ const resultData = {
       {
         title: 'The Righteous Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/411a4tVd1JL._SX323_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+        link: 'https://www.amazon.co.uk/Righteous-Mind-Divided-Politics-Religion/dp/0141039167/ref=sr_1_1?s=books&ie=UTF8&qid=1520072096&sr=1-1&keywords=the+righteous+mind&dpID=411a4tVd1JL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=srch'
       },
       {
         title: 'Don’t Make Me Think',
@@ -499,7 +499,7 @@ const resultData = {
       {
         title: 'The Righteous Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/411a4tVd1JL._SX323_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+        link: 'https://www.amazon.co.uk/Righteous-Mind-Divided-Politics-Religion/dp/0141039167/ref=sr_1_1?s=books&ie=UTF8&qid=1520072096&sr=1-1&keywords=the+righteous+mind&dpID=411a4tVd1JL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=srch'
       }
     ]
   },  

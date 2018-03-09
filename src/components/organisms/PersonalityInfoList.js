@@ -78,7 +78,7 @@ const PersonalitiesLi = styled.li`
 `;
 
 const ListPersonalities = props => {
-  const resultKeyArray = Array.from(props.resultKey);
+  const resultKeyArray = [...props.resultKey];
   const personalityKeys = Object.keys(personalityInfo);
 
   let filteredInfo = [];
