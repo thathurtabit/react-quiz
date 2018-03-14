@@ -342,7 +342,6 @@ const SetUpRoutes = props => {
                 path={`${path}/painter`}
                 render={() => <DesignPersonality dataKey="CRIS" {...props} />}
               />
-
               <Route path="*" component={IntroPage} />
             </Switch>
           </Wrapper>

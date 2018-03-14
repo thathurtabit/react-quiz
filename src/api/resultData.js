@@ -12,32 +12,32 @@ const resultData = {
       {
         title: 'Creative Confidence',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+        link: 'https://www.amazon.co.uk/gp/product/0008139385/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0008139385&linkId=3ac0a01038fde4481317b7cb84dde64d'
       },
       {
         title: 'A Smile in the Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+        link: 'https://www.amazon.co.uk/gp/product/071486935X/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=071486935X&linkId=c321ed88633333b970bb35d9330b1b70'
       },
       {
         title: 'The Mom Test',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
-        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+        link: 'https://www.amazon.co.uk/gp/product/1492180742/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1492180742&linkId=f55f5582128f1046f41c867e5307a9c9'
       },
       {
         title: 'How to Make Sense of Any Mess',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+        link: 'https://www.amazon.co.uk/gp/product/1500615994/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1500615994&linkId=275dbe204f19fefdf525e24e12e88098'
       },
       {
         title: 'Laws of Simplicity',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+        link: 'https://www.amazon.co.uk/gp/product/0262134721/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0262134721&linkId=e56664f775b734f52a25f02153205085'
       },
       {
         title: 'The A-Z of Visual Ideas',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+        link: 'https://www.amazon.co.uk/gp/product/1856697142/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697142&linkId=77bbf0ca145ec9df80cf60128aa84a05'
       }
     ]
   },
@@ -54,32 +54,32 @@ const resultData = {
       {
         title: 'Creative Confidence',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+        link: 'https://www.amazon.co.uk/gp/product/0008139385/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0008139385&linkId=3ac0a01038fde4481317b7cb84dde64d'
       },
       {
         title: 'A Smile in the Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+        link: 'https://www.amazon.co.uk/gp/product/071486935X/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=071486935X&linkId=c321ed88633333b970bb35d9330b1b70'
       },
       {
         title: 'How to Measure Anything',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+        link: 'https://www.amazon.co.uk/gp/product/0470539399/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0470539399&linkId=e8e40f542b780a67758a576e77747eb8'
       },
       {
         title: 'Change by Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+        link: 'https://www.amazon.co.uk/gp/product/0061766089/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0061766089&linkId=ddfa6234ce5d5cee3855862c3b908e31'
       },
       {
         title: 'Laws of Simplicity',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+        link: 'https://www.amazon.co.uk/gp/product/0262134721/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0262134721&linkId=e56664f775b734f52a25f02153205085'
       },
       {
         title: 'Lean Analytics',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+        link: 'https://www.amazon.co.uk/gp/product/1449335675/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1449335675&linkId=95e849ed9c9ccfc6f9dadcc55dc35a8f'
       }
     ]
   },
@@ -96,32 +96,32 @@ const resultData = {
       {
         title: 'The Art of Looking Sideways',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+        link: 'https://www.amazon.co.uk/gp/product/B01F9FS3U4/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01F9FS3U4&linkId=24b0cd436b0d2a2d4b401046114f3d8e'
       },
       {
         title: 'How to be a Graphic Designer, Without Losing Your Soul',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+        link: 'https://www.amazon.co.uk/gp/product/1856697096/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697096&linkId=2ce100e817f438f1abc5b854a6345383'
       },
       {
         title: 'Lean UX',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+        link: 'https://www.amazon.co.uk/gp/product/1491953608/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1491953608&linkId=c637a24a3bf218718678752f20756f0f'
       },
       {
         title: 'Lean Analytics',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+        link: 'https://www.amazon.co.uk/gp/product/1449335675/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1449335675&linkId=95e849ed9c9ccfc6f9dadcc55dc35a8f'
       },
       {
         title: 'Laws of Simplicity',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+        link: 'https://www.amazon.co.uk/gp/product/0262134721/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0262134721&linkId=e56664f775b734f52a25f02153205085'
       },
       {
         title: 'Change by Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+        link: 'https://www.amazon.co.uk/gp/product/0061766089/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0061766089&linkId=ddfa6234ce5d5cee3855862c3b908e31'
       }
     ]
   },
@@ -138,32 +138,32 @@ const resultData = {
       {
         title: 'The Art of Looking Sideways',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+        link: 'https://www.amazon.co.uk/gp/product/B01F9FS3U4/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01F9FS3U4&linkId=24b0cd436b0d2a2d4b401046114f3d8e'
       },
       {
         title: 'How to be a Graphic Designer, Without Losing Your Soul',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+        link: 'https://www.amazon.co.uk/gp/product/1856697096/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697096&linkId=2ce100e817f438f1abc5b854a6345383'
       },
       {
         title: 'How to Make Sense of Any Mess',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+        link: 'https://www.amazon.co.uk/gp/product/1500615994/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1500615994&linkId=275dbe204f19fefdf525e24e12e88098'
       },
       {
         title: 'Branding: In Five and a Half Steps',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+        link: 'https://www.amazon.co.uk/gp/product/0500518963/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0500518963&linkId=daa1d9f06d841b042501b191c123ccdd'
       },
       {
         title: 'Laws of Simplicity',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51NnCABg8nL._SX343_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1520067469&sr=1-1&keywords=laws+of+simplicity'
+        link: 'https://www.amazon.co.uk/gp/product/0262134721/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0262134721&linkId=e56664f775b734f52a25f02153205085'
       },
       {
         title: 'The A-Z of Visual Ideas',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+        link: 'https://www.amazon.co.uk/gp/product/1856697142/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697142&linkId=77bbf0ca145ec9df80cf60128aa84a05'
       }
     ]
   },
@@ -180,32 +180,32 @@ const resultData = {
       {
         title: 'Creative Confidence',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+        link: 'https://www.amazon.co.uk/gp/product/0008139385/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0008139385&linkId=3ac0a01038fde4481317b7cb84dde64d'
       },
       {
         title: 'Game Storming',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+        link: 'https://www.amazon.co.uk/gp/product/0596804172/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0596804172&linkId=37e66f1d1e0e4f12669b1d1e5dc7b6c7'
       },
       {
         title: 'The Mom Test',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
-        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+        link: 'https://www.amazon.co.uk/gp/product/1492180742/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1492180742&linkId=f55f5582128f1046f41c867e5307a9c9'
       },
       {
         title: 'Creativity Inc',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+        link: 'https://www.amazon.co.uk/gp/product/0593070097/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593070097&linkId=088b2a1a3bce75fef9746139846e1ac0'
       },
       {
         title: 'Change by Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+        link: 'https://www.amazon.co.uk/gp/product/0061766089/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0061766089&linkId=ddfa6234ce5d5cee3855862c3b908e31'
       },
       {
         title: 'The A-Z of Visual Ideas',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+        link: 'https://www.amazon.co.uk/gp/product/1856697142/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697142&linkId=77bbf0ca145ec9df80cf60128aa84a05'
       }
     ]
   },
@@ -222,32 +222,32 @@ const resultData = {
       {
         title: 'Creative Confidence',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/413CC-w35tL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creative-Confidence-Unleashing-Potential-within/dp/0008139385/ref=sr_1_1?ie=UTF8&qid=1519983840&sr=8-1&keywords=creative+confidence'
+        link: 'https://www.amazon.co.uk/gp/product/0008139385/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0008139385&linkId=3ac0a01038fde4481317b7cb84dde64d'
       },
       {
         title: 'Radical Focus',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+        link: 'https://www.amazon.co.uk/gp/product/0996006028/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0996006028&linkId=70b01ec074468ca670253afd06313643'
       },
       {
         title: 'Game Storming',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+        link: 'https://www.amazon.co.uk/gp/product/0596804172/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0596804172&linkId=37e66f1d1e0e4f12669b1d1e5dc7b6c7'
       },
       {
         title: 'Creativity Inc',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+        link: 'https://www.amazon.co.uk/gp/product/0593070097/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593070097&linkId=088b2a1a3bce75fef9746139846e1ac0'
       },
       {
         title: 'How to Measure Anything',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+        link: 'https://www.amazon.co.uk/gp/product/0470539399/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0470539399&linkId=e8e40f542b780a67758a576e77747eb8'
       },
       {
         title: 'Change by Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+        link: 'https://www.amazon.co.uk/gp/product/0061766089/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0061766089&linkId=ddfa6234ce5d5cee3855862c3b908e31'
       }
     ]
   },
@@ -264,32 +264,32 @@ const resultData = {
       {
         title: 'The Art of Looking Sideways',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+        link: 'https://www.amazon.co.uk/gp/product/B01F9FS3U4/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01F9FS3U4&linkId=24b0cd436b0d2a2d4b401046114f3d8e'
       },
       {
         title: 'Lean UX',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+        link: 'https://www.amazon.co.uk/gp/product/1491953608/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1491953608&linkId=c637a24a3bf218718678752f20756f0f'
       },
       {
         title: 'Thinking Fast and Slow',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+        link: 'https://www.amazon.co.uk/gp/product/0141033576/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141033576&linkId=69d973ef4d2e045cbc4e58ca94cdceca'
       },
       {
         title: 'Creativity Inc',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+        link: 'https://www.amazon.co.uk/gp/product/0593070097/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593070097&linkId=088b2a1a3bce75fef9746139846e1ac0'
       },
       {
         title: 'Change by Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41fFXV5Y5lL._SX337_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Change-Design-Transforms-Organizations-Innovation/dp/0061766089/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=2NN5F1671QP3T8DWSNHG'
+        link: 'https://www.amazon.co.uk/gp/product/0061766089/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0061766089&linkId=ddfa6234ce5d5cee3855862c3b908e31'
       },
       {
         title: 'Radical Focus',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+        link: 'https://www.amazon.co.uk/gp/product/0996006028/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0996006028&linkId=70b01ec074468ca670253afd06313643'
       },
     ]
   },
@@ -306,32 +306,32 @@ const resultData = {
       {
         title: 'The Art of Looking Sideways',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51b6UJmuP6L._SX427_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Looking-Sideways-Alan-Fletcher-2001-08-20/dp/B01F9FS3U4/ref=sr_1_1?s=books&ie=UTF8&qid=1519987229&sr=1-1&keywords=the+art+of+looking+sideways'
+        link: 'https://www.amazon.co.uk/gp/product/B01F9FS3U4/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01F9FS3U4&linkId=24b0cd436b0d2a2d4b401046114f3d8e'
       },
       {
         title: 'Lean UX',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+        link: 'https://www.amazon.co.uk/gp/product/1491953608/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1491953608&linkId=c637a24a3bf218718678752f20756f0f'
       },
       {
         title: 'Thinking Fast and Slow',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+        link: 'https://www.amazon.co.uk/gp/product/0141033576/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141033576&linkId=69d973ef4d2e045cbc4e58ca94cdceca'
       },
       {
         title: 'Branding: In Five and a Half Steps',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+        link: 'https://www.amazon.co.uk/gp/product/0500518963/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0500518963&linkId=daa1d9f06d841b042501b191c123ccdd'
       },
       {
         title: 'Creativity Inc',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41khu0mPSXL._SX308_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0593070097/ref=sr_1_1?s=books&ie=UTF8&qid=1520068791&sr=1-1&keywords=creativity+inc'
+        link: 'https://www.amazon.co.uk/gp/product/0593070097/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593070097&linkId=088b2a1a3bce75fef9746139846e1ac0'
       },
       {
         title: 'The A-Z of Visual Ideas',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41naDaOtOcL._SX418_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Z-Visual-Ideas-Solve-Creative/dp/1856697142/ref=pd_sim_14_5?_encoding=UTF8&psc=1&refRID=ZB7ZJE8YM8R7204A7R69'
+        link: 'https://www.amazon.co.uk/gp/product/1856697142/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697142&linkId=77bbf0ca145ec9df80cf60128aa84a05'
       }
     ]
   },
@@ -348,32 +348,32 @@ const resultData = {
       {
         title: 'Paper Prototyping',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+        link: 'https://www.amazon.co.uk/gp/product/1558608702/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1558608702&linkId=9fb476a95acaf36e170d60bd04592502'
       },
       {
         title: 'The Mom Test',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
-        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+        link: 'https://www.amazon.co.uk/gp/product/1492180742/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1492180742&linkId=f55f5582128f1046f41c867e5307a9c9'
       },
       {
         title: 'Game Storming',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+        link: 'https://www.amazon.co.uk/gp/product/0596804172/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0596804172&linkId=37e66f1d1e0e4f12669b1d1e5dc7b6c7'
       },
       {
         title: 'The Righteous Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/411a4tVd1JL._SX323_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Righteous-Mind-Divided-Politics-Religion/dp/0141039167/ref=sr_1_1?s=books&ie=UTF8&qid=1520072096&sr=1-1&keywords=the+righteous+mind&dpID=411a4tVd1JL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=srch'
+        link: 'https://www.amazon.co.uk/gp/product/0141039167/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141039167&linkId=958d0c1ef4e3f8faade9a3b741d93d7d'
       },
       {
         title: 'Don’t Make Me Think',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+        link: 'https://www.amazon.co.uk/gp/product/0321965515/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0321965515&linkId=5f7202b34bf2ca248b0307c24a61fbb5'
       },
       {
         title: 'Sprint',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+        link: 'https://www.amazon.co.uk/gp/product/0593076117/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593076117&linkId=3c11ad14ffe8105771e9f01c94b62379'
       }
     ]
   },  
@@ -390,32 +390,32 @@ const resultData = {
       {
         title: 'Paper Prototyping',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+        link: 'https://www.amazon.co.uk/gp/product/1558608702/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1558608702&linkId=9fb476a95acaf36e170d60bd04592502'
       },
       {
         title: 'How to Measure Anything',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+        link: 'https://www.amazon.co.uk/gp/product/0470539399/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0470539399&linkId=e8e40f542b780a67758a576e77747eb8'
       },
       {
         title: 'Game Storming',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51UVPlpDagL._SX379_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1519982464&sr=8-1&keywords=game+storming'
+        link: 'https://www.amazon.co.uk/gp/product/0596804172/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0596804172&linkId=37e66f1d1e0e4f12669b1d1e5dc7b6c7'
       },
       {
         title: 'Radical Focus',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+        link: 'https://www.amazon.co.uk/gp/product/0996006028/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0996006028&linkId=70b01ec074468ca670253afd06313643'
       },
       {
         title: 'Sprint',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+        link: 'https://www.amazon.co.uk/gp/product/0593076117/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593076117&linkId=3c11ad14ffe8105771e9f01c94b62379'
       },
       {
         title: 'The Lean Start-Up',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+        link: 'https://www.amazon.co.uk/gp/product/0670921602/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0670921602&linkId=e5368c5b1cb74ff58f104c58ef073e05'
       }
     ]
   },
@@ -432,32 +432,32 @@ const resultData = {
       {
         title: 'Grid Systems in Graphic Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+        link: 'https://www.amazon.co.uk/gp/product/3721201450/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=3721201450&linkId=d1184f7194557e5698059119c98ece97'
       },
       {
         title: 'Thinking Fast and Slow',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+        link: 'https://www.amazon.co.uk/gp/product/0141033576/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141033576&linkId=69d973ef4d2e045cbc4e58ca94cdceca'
       },
       {
         title: 'Lean UX',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+        link: 'https://www.amazon.co.uk/gp/product/1491953608/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1491953608&linkId=c637a24a3bf218718678752f20756f0f'
       },
       {
         title: 'Radical Focus',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41KEVf2eEpL._SX311_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Radical-Focus-Achieving-Important-Objectives/dp/0996006028/ref=sr_1_2?s=books&ie=UTF8&qid=1519982840&sr=1-2&keywords=okr'
+        link: 'https://www.amazon.co.uk/gp/product/0996006028/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0996006028&linkId=70b01ec074468ca670253afd06313643'
       },
       {
         title: 'Sprint',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+        link: 'https://www.amazon.co.uk/gp/product/0593076117/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593076117&linkId=3c11ad14ffe8105771e9f01c94b62379'
       },
       {
         title: 'The Lean Start-Up',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+        link: 'https://www.amazon.co.uk/gp/product/0670921602/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0670921602&linkId=e5368c5b1cb74ff58f104c58ef073e05'
       }
     ]
   },
@@ -474,32 +474,32 @@ const resultData = {
       {
         title: 'Grid Systems in Graphic Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+        link: 'https://www.amazon.co.uk/gp/product/3721201450/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=3721201450&linkId=d1184f7194557e5698059119c98ece97'
       },
       {
         title: 'Thinking Fast and Slow',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41U92%2BL6WlL._SX426_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0739357980/ref=sr_1_8?s=books&ie=UTF8&qid=1520071813&sr=1-8&keywords=group+decisions'
+        link: 'https://www.amazon.co.uk/gp/product/0141033576/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141033576&linkId=69d973ef4d2e045cbc4e58ca94cdceca'
       },
       {
         title: 'Branding: In Five and a Half Steps',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+        link: 'https://www.amazon.co.uk/gp/product/0500518963/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0500518963&linkId=daa1d9f06d841b042501b191c123ccdd'
       },
       {
         title: 'Don’t Make Me Think',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+        link: 'https://www.amazon.co.uk/gp/product/0321965515/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0321965515&linkId=5f7202b34bf2ca248b0307c24a61fbb5'
       },
       {
         title: 'Sprint',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51piBEV0clL._SX324_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/0593076117/ref=sr_1_1?s=books&ie=UTF8&qid=1519982862&sr=1-1&keywords=sprint'
+        link: 'https://www.amazon.co.uk/gp/product/0593076117/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0593076117&linkId=3c11ad14ffe8105771e9f01c94b62379'
       },
       {
         title: 'The Righteous Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/411a4tVd1JL._SX323_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Righteous-Mind-Divided-Politics-Religion/dp/0141039167/ref=sr_1_1?s=books&ie=UTF8&qid=1520072096&sr=1-1&keywords=the+righteous+mind&dpID=411a4tVd1JL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=srch'
+        link: 'https://www.amazon.co.uk/gp/product/0141039167/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141039167&linkId=958d0c1ef4e3f8faade9a3b741d93d7d'
       }
     ]
   },  
@@ -516,32 +516,32 @@ const resultData = {
       {
         title: 'Paper Prototyping',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+        link: 'https://www.amazon.co.uk/gp/product/1558608702/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1558608702&linkId=9fb476a95acaf36e170d60bd04592502'
       },
       {
         title: 'A Smile in the Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+        link: 'https://www.amazon.co.uk/gp/product/071486935X/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=071486935X&linkId=c321ed88633333b970bb35d9330b1b70'
       },
       {
         title: 'The Mom Test',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41-4HPFzkuL._SY400_.jpg',
-        link: 'https://www.amazon.co.uk/Mom-Test-customers-business-everyone/dp/1492180742/ref=sr_1_1?s=books&ie=UTF8&qid=1519982509&sr=1-1&keywords=the+mom+test'
+        link: 'https://www.amazon.co.uk/gp/product/1492180742/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1492180742&linkId=f55f5582128f1046f41c867e5307a9c9'
       },
       {
         title: 'About Face',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+        link: 'https://www.amazon.co.uk/gp/product/1118766571/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1118766571&linkId=0c45713b9105d241b9ebf91c1e25e5e4'
       },
       {
         title: 'Don’t Make Me Think',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+        link: 'https://www.amazon.co.uk/gp/product/0321965515/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0321965515&linkId=5f7202b34bf2ca248b0307c24a61fbb5'
       },
       {
         title: 'How to Make Sense of Any Mess',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+        link: 'https://www.amazon.co.uk/gp/product/1500615994/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1500615994&linkId=275dbe204f19fefdf525e24e12e88098'
       }
     ]
   },
@@ -558,32 +558,32 @@ const resultData = {
       {
         title: 'Paper Prototyping',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51G7NRV469L._SX376_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Paper-Prototyping-Interfaces-Interactive-Technologies/dp/1558608702/ref=sr_1_12?s=books&ie=UTF8&qid=1520067671&sr=1-12&keywords=prototyping'
+        link: 'https://www.amazon.co.uk/gp/product/1558608702/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1558608702&linkId=9fb476a95acaf36e170d60bd04592502'
       },
       {
         title: 'A Smile in the Mind',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41eDtdXO17L._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Smile-Mind-Revised-Expanded-Thinking/dp/071486935X/ref=sr_1_2?s=books&ie=UTF8&qid=1520072179&sr=1-2&keywords=smile+in+the+mind&dpID=41eDtdXO17L&preST=_SX218_BO1,204,203,200_QL40_&dpSrc=srch'
+        link: 'https://www.amazon.co.uk/gp/product/071486935X/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=071486935X&linkId=c321ed88633333b970bb35d9330b1b70'
       },
       {
         title: 'How to Measure Anything',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41cZDHYKtoL._SX329_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/0470539399/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+        link: 'https://www.amazon.co.uk/gp/product/0470539399/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0470539399&linkId=e8e40f542b780a67758a576e77747eb8'
       },
       {
         title: 'About Face',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+        link: 'https://www.amazon.co.uk/gp/product/1118766571/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1118766571&linkId=0c45713b9105d241b9ebf91c1e25e5e4'
       },
       {
         title: 'The Lean Start-Up',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+        link: 'https://www.amazon.co.uk/gp/product/0670921602/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0670921602&linkId=e5368c5b1cb74ff58f104c58ef073e05'
       },
       {
         title: 'Lean Analytics',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+        link: 'https://www.amazon.co.uk/gp/product/1449335675/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1449335675&linkId=95e849ed9c9ccfc6f9dadcc55dc35a8f'
       }
     ]
   },
@@ -600,32 +600,32 @@ const resultData = {
       {
         title: 'Grid Systems in Graphic Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+        link: 'https://www.amazon.co.uk/gp/product/3721201450/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=3721201450&linkId=d1184f7194557e5698059119c98ece97'
       },
       {
         title: 'How to be a Graphic Designer, Without Losing Your Soul',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+        link: 'https://www.amazon.co.uk/gp/product/1856697096/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697096&linkId=2ce100e817f438f1abc5b854a6345383'
       },
       {
         title: 'Lean UX',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51dyM%2BAnExL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-UX-2e-Jeff-Gothelf/dp/1491953608/ref=sr_1_1?s=books&ie=UTF8&qid=1519982545&sr=1-1&keywords=lean+ux'
+        link: 'https://www.amazon.co.uk/gp/product/1491953608/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1491953608&linkId=c637a24a3bf218718678752f20756f0f'
       },
       {
         title: 'About Face',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+        link: 'https://www.amazon.co.uk/gp/product/1118766571/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1118766571&linkId=0c45713b9105d241b9ebf91c1e25e5e4'
       },
       {
         title: 'The Lean Start-Up',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_4?s=books&ie=UTF8&qid=1520070604&sr=1-4&keywords=mvp'
+        link: 'https://www.amazon.co.uk/gp/product/0670921602/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0670921602&linkId=e5368c5b1cb74ff58f104c58ef073e05'
       },
       {
         title: 'Lean Analytics',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51paXS1DTpL._SX331_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Lean-Analytics-Better-Startup-OReilly/dp/1449335675/ref=sr_1_1?s=books&ie=UTF8&qid=1520066726&sr=1-1&keywords=lean+analytics'
+        link: 'https://www.amazon.co.uk/gp/product/1449335675/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1449335675&linkId=95e849ed9c9ccfc6f9dadcc55dc35a8f'
       }
     ]
   },
@@ -642,32 +642,32 @@ const resultData = {
       {
         title: 'Grid Systems in Graphic Design',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51KBThjsvqL._SX347_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Grid-Systems-Graphic-Design-Communication/dp/3721201450/ref=sr_1_1?s=books&ie=UTF8&qid=1519983182&sr=1-1&keywords=grid+systems+in+graphic+design'
+        link: 'https://www.amazon.co.uk/gp/product/3721201450/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=3721201450&linkId=d1184f7194557e5698059119c98ece97'
       },
       {
         title: 'How to be a Graphic Designer, Without Losing Your Soul',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51BRjHn5KrL._SX411_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Graphic-Designer-Without-Losing-Your/dp/1856697096/ref=pd_sim_14_10?_encoding=UTF8&psc=1&refRID=CYCKCP655NT0A3E6P8EF'
+        link: 'https://www.amazon.co.uk/gp/product/1856697096/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1856697096&linkId=2ce100e817f438f1abc5b854a6345383'
       },
       {
         title: 'Branding: In Five and a Half Steps',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41SGftJjhdL._SX429_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Branding-Five-Steps-Michael-Johnson/dp/0500518963/ref=pd_sim_14_2?_encoding=UTF8&psc=1&refRID=NRANPGP23NVBWZWX75M1'
+        link: 'https://www.amazon.co.uk/gp/product/0500518963/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0500518963&linkId=daa1d9f06d841b042501b191c123ccdd'
       },
       {
         title: 'About Face',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41aWGg6a8EL._SX400_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/About-Face-Essentials-Interaction-Design/dp/1118766571/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=P7QFKM0GXRVGPWHTD8Z7'
+        link: 'https://www.amazon.co.uk/gp/product/1118766571/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1118766571&linkId=0c45713b9105d241b9ebf91c1e25e5e4'
       },
       {
         title: 'Don’t Make Me Think',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L._SX387_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=8NE82TTSZ13MPBC5H41F'
+        link: 'https://www.amazon.co.uk/gp/product/0321965515/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0321965515&linkId=5f7202b34bf2ca248b0307c24a61fbb5'
       },
       {
         title: 'How to Make Sense of Any Mess',
         imgURL: 'https://images-na.ssl-images-amazon.com/images/I/41TzJq7t%2BhL._SX326_BO1,204,203,200_.jpg',
-        link: 'https://www.amazon.co.uk/How-Make-Sense-Any-Mess/dp/1500615994/ref=sr_1_1?s=books&ie=UTF8&qid=1520068282&sr=1-1&keywords=how+to+make+sense+of+any+mess'
+        link: 'https://www.amazon.co.uk/gp/product/1500615994/ref=as_li_tl?ie=UTF8&tag=codecomputerl-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1500615994&linkId=275dbe204f19fefdf525e24e12e88098'
       }
     ]
   },
