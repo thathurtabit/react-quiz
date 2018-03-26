@@ -20,6 +20,7 @@ const ReadingLink = styled.a`
     color: ${props => props.theme.secondary};
     
     img {
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
       transform: scale(1.1);
     }
     button {
@@ -29,10 +30,11 @@ const ReadingLink = styled.a`
 `;
 
 const IMG = styled.img`
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   height: 140px;
   max-width: 100%;
   transform: scale(1);
-  transition: transform 0.25s cubic-bezier(0.19, 1.01, 0.74, 1.18);
+  transition: transform 0.25s cubic-bezier(0.19, 1.01, 0.74, 1.18), box-shadow 0.25s ease-out;
 `;
 
 const BookWrap = styled.li`
@@ -70,22 +72,24 @@ const BookWrap = styled.li`
 
 const BookTitle = styled.h5`
   display: inline-block;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 0.95rem;
+  line-height: 1.5;
   margin-bottom: 0;
 `;
 
 const BookText = styled.p`
   color: ${props => props.theme.secondary};
-  font-size: 0.75rem;
+  font-size: 0.785rem;
   min-height: 40px;
 `;
 
 const BookButton = styled.button`
   background: ${props => props.theme.primary};
-  border: 0;
   border-radius: 20px;
+  border: 0;
   color: ${props => props.theme.bg};
-  font-size: 0.9rem;
+  font-family: ${props => props.theme.fontPrimary};
   padding: 5px 10px;
   transition: background-color 0.25s ease-out;
 
@@ -94,7 +98,6 @@ const BookButton = styled.button`
     cursor: pointer;
   }
 `;
-
 
 const Books = ({ books }) =>
 books.map(book => (

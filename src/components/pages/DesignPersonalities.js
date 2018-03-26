@@ -102,6 +102,7 @@ const PersonalitiesLi = styled.li`
     color: #fff;
     font-family: ${props => props.theme.fontPrimary};
     padding: 5px 10px;
+    border-radius: 40px;
 
     &:hover {
       background: ${props => props.theme.bg};
@@ -176,7 +177,7 @@ const ListPersonalities = () => {
           <button>Learn More</button>
         </More>
         <Helmet>
-          <title>{`${siteInfo.singularType.name}s | ${siteInfo.title}`}</title>
+          <title>Designer Personality Types | Which One Are You?</title>
           <link
             rel="canonical"
             href={`${siteInfo.url}/${siteInfo.mainNav[1].slug}`}

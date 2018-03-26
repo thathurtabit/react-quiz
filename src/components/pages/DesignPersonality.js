@@ -82,9 +82,7 @@ export default function DesignPersonality(props) {
   return (
     <section role="article">
       <Helmet>
-        <title>{`${resultData[props.dataKey].title} | ${
-          siteInfo.singularType.name
-        }s | ${siteInfo.title}`}</title>
+        <title>Are you a {resultData[props.dataKey].title}?</title>
         <link
           rel="canonical"
           href={`${siteInfo.url}/${siteInfo.singularType.slug}/${

@@ -126,9 +126,9 @@ export default function IntroPage() {
   return (
     <IntroWrap>
       <Helmet>
-        <title>{siteInfo.title}</title>
+        <title>What Kind of Designer Are You? | Take the Quiz Now</title>
         <link rel="canonical" href={siteInfo.url} />
-        <meta name="description" content={siteInfo.description} />
+        <meta name="description" content="Are you a designer? Maybe it's time to think differently about how you work. Try the Internet's favourite designer personality quiz to learn a bit more about yourself and be the designer everyone wants on their team. " />
       </Helmet>
       <QuizBubble to={siteInfo.mainNav[0].slug}>
         <SpeechBubble>Ready to test?</SpeechBubble>

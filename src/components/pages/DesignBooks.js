@@ -97,7 +97,7 @@ export default function DesignBooks() {
                 <Books books={booksUnique} />
             </ReadingWrap>
             <Helmet>
-                <title>{`${designBooksData.title} | ${siteInfo.title}`}</title>
+                <title>{`${designBooksData.title} | Recommended reading for Designers.`}</title>
                 <meta name="description" content={`Learn about the ${designBooksData.intro}`} />
             </Helmet>
         </PageWrap>
