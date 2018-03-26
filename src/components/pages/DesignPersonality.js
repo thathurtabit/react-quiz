@@ -110,14 +110,16 @@ export default function DesignPersonality(props) {
           dangerouslySetInnerHTML={{ __html: resultData[props.dataKey].text }}
         />
       </PageWrap>
+      
+      <HR />
+      <RecommendedReading books={resultData[props.dataKey].readingList} personality={resultData[props.dataKey].title} />
 
       <HR />
       <PersonalityInfoList resultKey={props.dataKey} />
       <HR />
       <SimilarsOpposite resultKey={props.dataKey} />
-      <HR />
 
-      <RecommendedReading books={resultData[props.dataKey].readingList} personality={resultData[props.dataKey].title} />
+      <HR />  
 
       <PageTitleIntro>Share</PageTitleIntro>
       <SocialShare personality={resultData[props.dataKey].title} />

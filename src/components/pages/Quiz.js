@@ -514,7 +514,7 @@ export default class Quiz extends Component {
               <title>{`${siteInfo.quizTitle} | ${siteInfo.title}`}</title>
               <link
                 rel="canonical"
-                href={`${siteInfo.url}/${siteInfo.mainNav[0].slug}}`}
+                href={siteInfo.url}
               />
               <meta
                 name="description"

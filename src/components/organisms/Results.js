@@ -96,12 +96,13 @@ export default function Results(props) {
       </PageWrap>
 
       <HR />
+      <RecommendedReading books={resultData[props.resultKey].readingList} personality={resultData[props.resultKey].title} />
+
+      <HR />
       <PersonalityInfoList resultKey={props.resultKey} />
       <HR />
       <SimilarsOpposite resultKey={props.resultKey} />
       <HR />
-
-      <RecommendedReading books={resultData[props.resultKey].readingList} personality={resultData[props.resultKey].title} />
 
       <PageWrap>
         <ResultIntro>Share your result</ResultIntro>
