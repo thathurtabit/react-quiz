@@ -3,7 +3,7 @@ const resultData = {
     title: 'People Watcher',
     text: "You’re fascinated by people, endlessly curious about what they do and why they do it, trying to work out what makes them tick. Through your natural empathy for others, you’re able to work out what people want and need, and then propose lots of new ways to help them lead more productive and fulfilling lives.",
     slug: 'people-watcher',
-    description: '',
+    description: 'Fascinated by people? Curious about what they do and why? Good at empathising with others? Your designer personality may well be ‘People Watcher’.',
     similars: ['DAGS', 'DAIM', 'CAIS', 'DRIS'],
     opposite: {
       key: 'CRGM',
@@ -52,6 +52,7 @@ const resultData = {
     title: 'Number Cruncher',
     text: "You can imagine scenarios that others can’t yet picture, taking the first steps towards describing a better way to do something.  Your attention to detail is immaculate, allowing you to suggest multiple solutions, each with a clear understanding of potential impact and likelihood of success.",
     slug: 'number-cruncher',
+    description: 'Good at imagining new scenarios? Known for attention to detail? Obsessive about outcomes? Your designer personality may well be ‘Number Cruncher’.',
     similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
     opposite: {
       key: 'CRGS',
@@ -100,6 +101,7 @@ const resultData = {
     title: 'Planner',
     text: "When the details are still fuzzy, you’re great at making a plan that people can understand and implement.  Without getting too close to a final solution, you’re able to set the boundaries for a project so that everyone on the team knows what to do and can pull in the same direction.",
     slug: 'planner',
+    description: 'Great at setting the direction when the details are still fuzzy? Do you love creating the conditions for a team to do what they do best? Your designer personality may well be ‘Planner’.',
     similars: ['DAIM', 'CRIM', 'CAGM', 'CAIS'],
     opposite: {
       key: 'DRGS',
@@ -148,6 +150,7 @@ const resultData = {
     title: 'Brand Builder',
     text: "You know that it’s the little details that count when it comes to delivering great experiences for people, so you take the time to work out how every element adds up to tell a coherent story.  There’s real craft in your work and nothing is left to chance.",
     slug: 'brand-builder',
+    description: 'Are you a detail-focussed designer who also knows how to create a coherent story? Do you care about the craft, and tend to trust your gut? Your designer personality may well be ‘Brand Builder’.',
     similars: ['DAIS', 'CRIS', 'CAGS', 'CAIM'],
     opposite: {
       key: 'DRGM',
@@ -196,6 +199,7 @@ const resultData = {
     title: 'Party Animal',
     text: "You’re a people person through and through - both in looking for problems that people have and working with others to come up with many possible solutions.  You can easily imagine a better future and then love to discuss how to make this a reality.",
     slug: 'party-animal',
+    description: 'Are you a people person? Do you find it easy to see how things could be improved and love exploring new ideas? Your designer personality may well be ‘Party Animal’.',
     similars: ['CAGS', 'DRGS', 'DAIS', 'DAGM'],
     opposite: {
       key: 'CRIM',
@@ -244,6 +248,7 @@ const resultData = {
     title: 'Fortune Teller',
     text: "Predicting the future is your superpower. Having gained a detailed knowledge of a problem space, you’re able to pull information together from lots of different sources, and then present it back and discuss in a way that everyone understands and is able to contribute.",
     slug: 'fortune-teller',
+    description: 'Great at predicting the future? Have a knack for pulling together information from several different places? Your designer personality may well be ‘Fortune Teller’.',
     similars: ['CAGM', 'DRGM', 'DAIM', 'DAGS'],
     opposite: {
       key: 'CRIS',
@@ -292,6 +297,7 @@ const resultData = {
     title: 'Conductor',
     text: "You get your kicks through the successes of other people, helping them work together to deliver something that is greater than the sum of its parts.  You can shape how you communicate seamlessly, playing sergeant major or cheerleader depending on what the situation requires, but always while focusing on the best possible end result.",
     slug: 'conductor',
+    description: 'Love seeing others succeed? Know exactly how to get your point across? Passionate about doing great work? Your designer personality may well be ‘Conductor’.',
     similars: ['DAGM', 'CRGM', 'CAIM', 'CAGS'],
     opposite: {
       key: 'DRIS',
@@ -340,6 +346,7 @@ const resultData = {
     title: 'Visionary',
     text: "You can see things that other people can’t. While you might not have all the details about how to get there, you always have a clear vision about where you’re going and are able to inspire others to come with you.",
     slug: 'visionary',
+    description: 'Always looking over the horizon? Dedicated to playing the long game? Excited by the destination just as much as the journey? Your design personality may well be ‘Visionary’.',
     similars: ['DAGS', 'CRGS', 'CAIS', 'CAGM'],
     opposite: {
       key: 'DRIM',
@@ -388,6 +395,7 @@ const resultData = {
     title: 'Workshop Warrior',
     text: "Working with other people and an endless supply of post-it notes is your forte. With a collection of techniques for every occasion, you’re able to run effective group sessions that bring the best out of everyone and result in actionable next steps.",
     slug: 'workshop-warrior',
+    description: 'Do you dream in Post-Its? Are you always at home in a busy meeting room? Do you have an exercise for every occasion? Your designer personality may well be ‘Workshop Warrior’.',
     similars: ['CRGS', 'DAGS', 'DRIS', 'DRGM'],
     opposite: {
       key: 'CAIM',
@@ -436,6 +444,7 @@ const resultData = {
     title: 'Data Driver',
     text: "You like helping people work out where they need to go. You can also suggest options and alternatives and work with people to find the best one.  Then, you’re also great at coming up with lots of ways to get there, and can give clear directions and information to help people recognise when they’re reached their destination.",
     slug: 'data-driver',
+    description: 'Always digging for the next game-changing insight? Enjoy research and know what to do with what you find? Your designer personality may well be ‘Data Driver’.',
     similars: ['CRGM', 'DAGM', 'DRIM', 'DAGS'],
     opposite: {
       key: 'CAIS',
@@ -484,6 +493,7 @@ const resultData = {
     title: 'Team Player',
     text: "Everyone thinks you’re a highly valuable member of the team. Your focus on getting things done is second to none, as is your desire to bring everyone with you, because you know the only way to deliver seamless experiences is if everyone works together.  You’re always focus on how the team can improve and what you can do personally to contribute.",
     slug: 'team-player',
+    description: 'Is collaboration your middle name? Do you know how to bring people together to get things done? Your designer personality may well be ‘Team Player’.',
     similars: ['DRGM', 'CAGM', 'CRIM', 'CRGS'],
     opposite: {
       key: 'DAIS',
@@ -532,6 +542,7 @@ const resultData = {
     title: 'User Champion',
     text: "You’re always looking out for the quality of the final outcome, making sure that no corners are cut in your pursuit of the best possible experience.  That said, you’re not bloody-minded, as you know that you need to be diplomatic to get the most from your team.",
     slug: 'user-champion',
+    description: 'Committed to creating great experiences for real people? Known for your exacting standards and popular in your team? Your designer personality may well be ‘User Champion’.',
     similars: ['DRGS', 'CAGS', 'CRIS', 'CRGM'],
     opposite: {
       key: 'DAIM',
@@ -580,6 +591,7 @@ const resultData = {
     title: 'Prototyper',
     text: "You know that the only way to be sure that something will work is to make a simple version of it and try it out.  You love fast-paced trial and error, iterating on the best bits until you have something that works for everyone.  You never get too attached to your ideas, always safe in the knowledge that the next big thing is just one prototype away.",
     slug: 'prototyper',
+    description: 'Like working quick and dirty, testing lots of things before you fully commit? Not scared to see an idea fail, if the end result is something that really works? Your designer personality may well be ‘Prototyper’.',
     similars: ['CRIS', 'DAIS', 'DRGS', 'DRIM'],
     opposite: {
       key: 'CAGM',
@@ -628,6 +640,7 @@ const resultData = {
     title: 'Experimenter',
     text: "You know there are many ways to solve a problem, but you’re always keen to find the best way to do it.  Based on your experience, you know that people’s opinions will only get you so far, as it’s only through experimentation that you’ll really discover what works and what doesn’t.  The more surprising the result the better as far as you’re concerned.",
     slug: 'experimenter',
+    description: 'Enjoy trial and error? Like to be led by experience, rather than ideas alone? Always open to something new? Your designer personality may well be ‘Experimenter’.',
     similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
     opposite: {
       key: 'CAGS',
@@ -676,6 +689,7 @@ const resultData = {
     title: 'Perfectionist',
     text: "For you, all the details matter. You want to make sure every element of an experience works beautifully, so you take the extra time that is needed to add those final layers of polish.  People might never notice, but for you that’s not an excuse to not do it.",
     slug: 'perfectionist',
+    description: 'Details. Details. Details. Does that sound like you? If you’re unashamedly obsessive about creating genuinely beautiful things, your designer personality may well be ‘Perfectionist’. ',
     similars: ['CAIM', 'DRIM', 'DAGM', 'DAIS'],
     opposite: {
       key: 'DAGS',
@@ -724,6 +738,7 @@ const resultData = {
     title: 'Painter',
     text: "To begin with, you like to work in broad brush strokes, getting a feel for a desirable outcome and then adding detail once you know where you’re heading.  You are happiest when you’re iterating on your own work, taking away elements that aren’t working and adding to the things that are.",
     slug: 'painter',
+    description: 'Enjoy working in broad brush strokes at first, then adding detail once youre clear what path you’re on? Happiest iterating on your own work? Your designer personality may well be ‘Painter’. ',
     similars: ['DRIS', 'CAIS', 'CRGS', 'CRIM'],
     opposite: {
       key: 'DAGM',

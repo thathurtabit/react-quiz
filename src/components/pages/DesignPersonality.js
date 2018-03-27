@@ -91,9 +91,7 @@ export default function DesignPersonality(props) {
         />
         <meta
           name="description"
-          content={`Learn about the ${
-            resultData[props.dataKey].title
-          } design type`}
+          content={resultData[props.dataKey].description}
         />
       </Helmet>
 
